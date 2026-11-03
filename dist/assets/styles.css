@@ -432,7 +432,7 @@ dialog::backdrop { background: rgba(2,4,8,.82); backdrop-filter: blur(11px); }
 .ai-message.pending i:nth-child(3) { animation-delay: .4s; }
 @keyframes ai-dot { to { opacity: .25; transform: translateY(-2px); } }
 .ai-question-form { margin-top: 14px; padding: 12px; border: 1px solid rgba(66,233,255,.22); border-radius: 15px; background: var(--panel); }
-.ai-question-form textarea { width: 100%; min-height: 54px; resize: vertical; border: 0; outline: 0; color: var(--text); background: transparent; font-size: 16px; line-height: 1.5; }
+.ai-question-form textarea { width: 100%; min-height: 54px; resize: vertical; border: 0; outline: 0; touch-action: manipulation; color: var(--text); background: transparent; font-size: 16px; line-height: 1.5; }
 .ai-question-form textarea::placeholder { color: #6e7689; }
 .ai-form-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
 .ai-form-footer > span { color: var(--muted); font-size: 9px; }

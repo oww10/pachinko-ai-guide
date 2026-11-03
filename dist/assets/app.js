@@ -497,10 +497,32 @@ document.querySelectorAll("[data-ai-prompt]").forEach((button) => {
   button.addEventListener("click", () => submitAIQuestion(button.dataset.aiPrompt));
 });
 
+function preventInAppInputZoom() {
+  const userAgent = navigator.userAgent;
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isSafari = /Safari/.test(userAgent)
+    && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA|DuckDuckGo|Instagram|FBAN|FBAV|KAKAOTALK|NAVER/.test(userAgent);
+  const viewport = document.querySelector('meta[name="viewport"]');
+  if (!isIOS || isSafari || !viewport) return;
+
+  const defaultContent = viewport.getAttribute("content");
+  const lockedContent = `${defaultContent}, maximum-scale=1`;
+  const lockZoom = () => viewport.setAttribute("content", lockedContent);
+  const restoreZoom = () => window.setTimeout(() => {
+    viewport.setAttribute("content", defaultContent);
+  }, 250);
+
+  elements.aiQuestion.addEventListener("touchstart", lockZoom, { passive: true });
+  elements.aiQuestion.addEventListener("focus", lockZoom);
+  elements.aiQuestion.addEventListener("blur", restoreZoom);
+}
+
 window.addEventListener("popstate", () => {
   const machineId = new URLSearchParams(window.location.search).get("machine");
   if (machineId) openMachine(machineId, false);
   else closeMachine(false);
 });
 
+preventInAppInputZoom();
 loadMachines();
