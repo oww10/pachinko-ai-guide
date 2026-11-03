@@ -233,6 +233,9 @@ function visualGameFlow(machine) {
   if (!guide?.mainImage || !Array.isArray(guide.steps)) return "";
   const sourceUrl = guide.mainImage.sourceUrl;
   const rushImage = guide.rushScreen || guide.steps.find((step) => step.phase.includes("RUSH"))?.image;
+  const officialImages = Array.isArray(guide.translatedImages)
+    ? guide.translatedImages
+    : guide.steps.map((step) => ({ phase: step.phase, title: step.title, ...step.image }));
   return `
     <div class="detail-section visual-flow-section">
       <div class="visual-section-heading">
@@ -294,19 +297,20 @@ function visualGameFlow(machine) {
       </section>
       <section class="official-flow-gallery" aria-label="대도기연 공식 게임 안내 이미지">
         <div class="official-gallery-heading">
-          <div><small>OFFICIAL VISUALS</small><h4>대도기연 공식 안내 이미지</h4></div>
+          <div><small>OFFICIAL VISUALS · KOREAN OVERLAY</small><h4>대도기연 공식 이미지 · 한국어 번역본</h4></div>
           <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">공식 제품 페이지 ↗</a>
         </div>
         <div class="official-gallery-grid">
-          ${guide.steps.map((step) => `
+          ${officialImages.map((item) => `
             <figure>
               <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">
-                <img src="${escapeHtml(step.image.url)}" alt="${escapeHtml(step.image.alt)}" loading="lazy" decoding="async">
+                <img src="${escapeHtml(item.url)}" alt="${escapeHtml(item.alt)}" loading="lazy" decoding="async">
               </a>
-              <figcaption><small>${escapeHtml(step.phase)}</small><strong>${escapeHtml(step.title)}</strong></figcaption>
+              <figcaption><small>${escapeHtml(item.phase)}</small><strong>${escapeHtml(item.title)}</strong></figcaption>
             </figure>
           `).join("")}
         </div>
+        <p class="official-translation-note">원본 이미지의 수치와 구성은 유지하고 일본어 핵심 안내를 한국어로 덧입힌 번역본입니다.</p>
       </section>
       <div class="distribution-charts">
         ${donutChart("초기 당첨 배분", machine.payouts.initial, "55%", "RUSH 진입")}
