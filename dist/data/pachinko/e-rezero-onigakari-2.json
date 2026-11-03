@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-rezero-onigakari-2",
+  "officialNameJa": "ｅ Re:ゼロから始める異世界生活 鬼がかり２",
+  "nameKo": "e Re:제로부터 시작하는 이세계 생활 오니가카리 2",
+  "aliases": ["eリゼロ鬼がかり2", "鬼がかり2"],
+  "modelCode": null,
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "大都技研",
+  "brand": "大都技研",
+  "releaseDate": "2026-10-05",
+  "probabilities": { "base": "1/349.9", "symbolHit": null, "charge": null, "highState": null, "rushHit": "1/99.9" },
+  "rush": { "nameJa": "鬼がかりRUSH", "type": "ST", "entryRatePercent": 55, "totalEntryRatePercent": 55, "continuationRatePercent": 77, "spins": 144, "remainingHolds": null, "timeShortSpins": null, "gates": [] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "3000個＋RUSH", "payoutBalls": 3000, "ratePercent": 10, "destination": "鬼がかりRUSH", "confidence": "secondary", "notes": ["1500個×2"] },
+      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 45, "destination": "鬼がかりRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "1500個・通常", "payoutBalls": 1500, "ratePercent": 45, "destination": null, "confidence": "secondary", "notes": [] }
+    ],
+    "rush": [
+      { "label": "6000個＋RUSH", "payoutBalls": 6000, "ratePercent": 25, "destination": "鬼がかりRUSH", "confidence": "secondary", "notes": ["1500個×4"] },
+      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 55, "destination": "鬼がかりRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "300個＋RUSH", "payoutBalls": 300, "ratePercent": 6, "destination": "鬼がかりRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "出玉なし・STリセット", "payoutBalls": 0, "ratePercent": 14, "destination": "鬼がかりRUSH", "confidence": "secondary", "notes": [] }
+    ]
+  },
+  "gameFlow": ["通常時に大当りを目指す", "初当りの55%で鬼がかりRUSHへ", "RUSHは144回転、継続率約77%"],
+  "notes": ["配分値は専門媒体照合値。公開前に公式小冊子で再確認する。"],
+  "sources": [
+    { "title": "大都技研 公式製品情報", "url": "https://www.daitogiken.com/contents/product/pachinko/onirezero2/info.html", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "パチマガスロマガ機種情報", "url": "https://pachimaga.com/free/mach/maker-p/daitogiken/e_rezero_onigakari2.php", "type": "secondary", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial", "payouts.rush"] }
+}

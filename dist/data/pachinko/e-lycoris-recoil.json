@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-lycoris-recoil",
+  "officialNameJa": "eリコリス・リコイル",
+  "nameKo": "e 리코리스 리코일",
+  "aliases": ["eリコリコ", "リコリス・リコイル"],
+  "modelCode": null,
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "ニューギン",
+  "brand": "Newgin",
+  "releaseDate": "2026-04-06",
+  "probabilities": { "base": "約1/259.7", "symbolHit": null, "charge": null, "highState": null, "rushHit": "約1/97.1" },
+  "rush": { "nameJa": "リコリコRUSH", "type": "ST・二段階RUSH", "entryRatePercent": 50, "totalEntryRatePercent": 50, "continuationRatePercent": 75, "spins": 132, "remainingHolds": null, "timeShortSpins": null, "gates": ["通常RUSHと上位RUSHの二段階", "上位ではUltimate Drive抽選あり"] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 0.1, "destination": "リコリコRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "600個＋RUSH", "payoutBalls": 600, "ratePercent": 44.9, "destination": "リコリコRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "約300個＋RUSH", "payoutBalls": 300, "ratePercent": 5, "destination": "リコリコRUSH", "confidence": "needs-review", "notes": ["媒体により300個/310個表記差あり"] },
+      { "label": "600個・通常", "payoutBalls": 600, "ratePercent": 30, "destination": null, "confidence": "secondary", "notes": [] },
+      { "label": "約300個・通常", "payoutBalls": 300, "ratePercent": 20, "destination": null, "confidence": "needs-review", "notes": ["媒体により300個/310個表記差あり"] }
+    ],
+    "rush": [
+      { "label": "通常RUSH大当り", "payoutBalls": 750, "ratePercent": 100, "destination": "リコリコRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "上位RUSH 6000個＋Ultimate Drive", "payoutBalls": 6000, "ratePercent": 50, "destination": "Ultimate Drive", "confidence": "secondary", "notes": [] },
+      { "label": "上位RUSH 3000個", "payoutBalls": 3000, "ratePercent": 50, "destination": "上位RUSH", "confidence": "secondary", "notes": [] }
+    ]
+  },
+  "gameFlow": ["初当りの約50%でリコリコRUSHへ", "通常RUSH中は750個大当りで継続を目指す", "上位RUSHでは3000個または6000個＋Ultimate Drive"],
+  "notes": ["Ultimate Driveは3000個を50%で上乗せ継続する仕組み。"],
+  "sources": [
+    { "title": "ニューギン 公式スペック", "url": "https://www.newgin.co.jp/pub/machine/elycorisrecoil/spec.html", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "パチ7 機種情報", "url": "https://pachiseven.jp/articles/detail/25918", "type": "secondary", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial[2].payoutBalls", "payouts.initial[4].payoutBalls", "payouts.rush"] }
+}

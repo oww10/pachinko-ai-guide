@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-tokyo-ghoul-super-deka-cho-ichigeki",
+  "officialNameJa": "ｅ 東京喰種 超デカ 超一撃 ver.",
+  "nameKo": "e 도쿄 구울 초대형 초일격 ver.",
+  "aliases": ["東京喰種 超デカ", "東京喰種 超一撃"],
+  "modelCode": "ｅ東京喰種ＭＷ",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "ビスティ",
+  "brand": "Bisty",
+  "releaseDate": "2026-06-08",
+  "probabilities": { "base": "約1/349.9", "symbolHit": "約1/999.9", "charge": "約1/538.8", "highState": null, "rushHit": "約1/7.7" },
+  "rush": { "nameJa": "超デカRUSH", "type": "5回転決着", "entryRatePercent": 50, "totalEntryRatePercent": 50, "continuationRatePercent": 50, "spins": 5, "remainingHolds": null, "timeShortSpins": null, "gates": [] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "7500個＋RUSH", "payoutBalls": 7500, "ratePercent": 50, "destination": "超デカRUSH", "confidence": "secondary", "notes": ["図柄揃い時"] },
+      { "label": "3000個・通常", "payoutBalls": 3000, "ratePercent": 50, "destination": null, "confidence": "secondary", "notes": ["図柄揃い時"] }
+    ],
+    "rush": [
+      { "label": "9000個＋α＋RUSH", "payoutBalls": 9000, "ratePercent": 12.5, "destination": "超デカRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "9000個＋RUSH", "payoutBalls": 9000, "ratePercent": 12.5, "destination": "超デカRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "6000個＋RUSH", "payoutBalls": 6000, "ratePercent": 25, "destination": "超デカRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "3000個・終了", "payoutBalls": 3000, "ratePercent": 50, "destination": null, "confidence": "secondary", "notes": [] }
+    ]
+  },
+  "gameFlow": ["図柄揃いまたは喰種チャージを契機にする", "図柄揃いの50%で7500個獲得後に超デカRUSHへ", "RUSHは5回転、継続率約50%"],
+  "notes": ["詳細配分は専門媒体値。公式スペック表との最終照合が必要。"],
+  "sources": [
+    { "title": "東京喰種プロジェクト公式", "url": "https://www.ps-tokyoghoul-project.jp/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "SANKYO 製品コレクション", "url": "https://www.sankyo-fever.jp/collection/980/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "スロベース機種情報", "url": "https://slobase.jp/pachinko/tokyo-ghoul", "type": "secondary", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "payouts.initial", "payouts.rush"] }
+}

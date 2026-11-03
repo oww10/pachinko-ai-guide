@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "p-big-sea-story-5",
+  "officialNameJa": "P大海物語5",
+  "nameKo": "P 대해이야기 5",
+  "aliases": ["大海5", "P大海5"],
+  "modelCode": null,
+  "machineType": "pachinko",
+  "format": "P",
+  "maker": "三洋物産",
+  "brand": "SANYO",
+  "releaseDate": "2023-02-06",
+  "probabilities": { "base": "約1/319.6", "symbolHit": null, "charge": null, "highState": "約1/31.9", "rushHit": null },
+  "rush": { "nameJa": "確変", "type": "確変ループ", "entryRatePercent": 60, "totalEntryRatePercent": 60, "continuationRatePercent": 60, "spins": null, "remainingHolds": null, "timeShortSpins": 100, "gates": ["確変大当りは次回大当りまで継続", "通常大当り後は時短100回"] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "大当り", "payoutBalls": 1500, "ratePercent": 100, "destination": "確変または時短100回", "confidence": "official", "notes": ["ALL 1500"] }
+    ],
+    "rush": [
+      { "label": "大当り", "payoutBalls": 1500, "ratePercent": 100, "destination": "確変または時短100回", "confidence": "official", "notes": ["ALL 1500"] }
+    ]
+  },
+  "gameFlow": ["通常時は約1/319.6の大当りを目指す", "大当りはすべて1500個", "60%で次回までの確変、40%で時短100回"],
+  "notes": ["BIG3000は保留内連続大当りの告知表現であり、単一当りの3000個振分ではない。"],
+  "sources": [
+    { "title": "SANYO P大海物語5 公式", "url": "https://www.sanyobussan.co.jp/products/pk_bigsea5/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "SANYO 公式プレスリリース", "url": "https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20221205_1.pdf", "type": "official", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode"] }
+}

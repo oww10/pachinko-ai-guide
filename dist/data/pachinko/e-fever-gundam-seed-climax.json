@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-fever-gundam-seed-climax",
+  "officialNameJa": "eフィーバー機動戦士ガンダムSEED クライマックス",
+  "nameKo": "e 피버 기동전사 건담 SEED 클라이맥스",
+  "aliases": ["ガンダムSEED クライマックス", "SEEDクライマックス"],
+  "modelCode": null,
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "SANKYO",
+  "brand": "SANKYO",
+  "releaseDate": "2026-08-03",
+  "probabilities": { "base": "約1/349.9", "symbolHit": "約1/399.9", "charge": null, "highState": null, "rushHit": "約1/95.6" },
+  "rush": { "nameJa": "クライマックスRUSH", "type": "ST・二段階RUSH", "entryRatePercent": 52, "totalEntryRatePercent": 52, "continuationRatePercent": 75, "spins": 130, "remainingHolds": null, "timeShortSpins": null, "gates": ["初当りの52%でクライマックスRUSH", "通常RUSHから上位クライマックスRUSHへの昇格あり"] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "1500個＋クライマックスRUSH", "payoutBalls": 1500, "ratePercent": 52, "destination": "クライマックスRUSH", "confidence": "secondary", "notes": [] },
+      { "label": "1500個・通常", "payoutBalls": 1500, "ratePercent": 48, "destination": null, "confidence": "secondary", "notes": [] }
+    ],
+    "rush": [
+      { "label": "4500個＋クライマックスRUSH", "payoutBalls": 4500, "ratePercent": 3, "destination": "クライマックスRUSH", "confidence": "secondary", "notes": ["通常RUSH中", "1500個×3"] },
+      { "label": "3000個＋クライマックスRUSH", "payoutBalls": 3000, "ratePercent": 47, "destination": "クライマックスRUSH", "confidence": "secondary", "notes": ["通常RUSH中", "1500個×2"] },
+      { "label": "1500個＋通常RUSH", "payoutBalls": 1500, "ratePercent": 50, "destination": "通常RUSH", "confidence": "secondary", "notes": ["通常RUSH中"] }
+    ]
+  },
+  "gameFlow": ["初当りの52%でクライマックスRUSHへ", "通常RUSH中は大当りの50%で上位RUSHへ", "上位RUSH中は4500個51%、3000個49%"],
+  "notes": ["上位RUSHの4500個51%・3000個49%は画面説明用。payouts.rushは通常RUSH配分を格納。"],
+  "sources": [
+    { "title": "SANKYO 公式製品ページ", "url": "https://www.sankyo-fever.jp/products/machine_list/poq/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "ちょんぼりすた機種情報", "url": "https://chonborista.com/pachinko/sankyo/260700/", "type": "secondary", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial", "payouts.rush"] }
+}

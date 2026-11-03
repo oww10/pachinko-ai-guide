@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "p-evangelion-mirai-e-no-houkou",
+  "officialNameJa": "新世紀エヴァンゲリオン ～未来への咆哮～",
+  "nameKo": "신세기 에반게리온 ~미래로의 포효~",
+  "aliases": ["エヴァ15", "未来への咆哮"],
+  "modelCode": null,
+  "machineType": "pachinko",
+  "format": "P",
+  "maker": "ビスティ",
+  "brand": "Bisty",
+  "releaseDate": "2021-12-20",
+  "probabilities": { "base": "約1/319.7", "symbolHit": null, "charge": null, "highState": "約1/99.4", "rushHit": "約1/99.4" },
+  "rush": { "nameJa": "IMPACT MODE", "type": "ST", "entryRatePercent": 59, "totalEntryRatePercent": 70, "continuationRatePercent": 81, "spins": 163, "remainingHolds": 4, "timeShortSpins": 100, "gates": ["直行59%", "通常当り後の時短100回引き戻し込みで約70%", "継続率は残保留4個を含む"] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "3R＋IMPACT MODE", "payoutBalls": 450, "ratePercent": 59, "destination": "IMPACT MODE", "confidence": "multi-source", "notes": [] },
+      { "label": "3R＋時短100回", "payoutBalls": 450, "ratePercent": 41, "destination": "時短100回", "confidence": "multi-source", "notes": [] }
+    ],
+    "rush": [
+      { "label": "10R大当り", "payoutBalls": 1500, "ratePercent": 100, "destination": "IMPACT MODEまたは終了", "confidence": "official", "notes": ["右打ち中ALL 1500"] }
+    ]
+  },
+  "gameFlow": ["通常時は約1/319.7の大当りを目指す", "59%でIMPACT MODEへ直行", "非突入時は時短100回", "IMPACT MODEは163回転、残保留込み継続率約81%"],
+  "notes": ["長期稼働機。導入日や設置状況は店舗ごとに異なる。"],
+  "sources": [
+    { "title": "SANKYO 製品コレクション", "url": "https://www.sankyo-fever.jp/collection/925/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "HAZUSE 機種データ", "url": "https://data.hazuse.com/?machine_code=1P0653", "type": "secondary", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial"] }
+}

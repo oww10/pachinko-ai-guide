@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/wrangler.json",
+  "name": "pachinko-ai-gemini",
+  "main": "src/index.js",
+  "compatibility_date": "2026-11-03",
+  "secrets": {
+    "required": ["GEMINI_API_KEY"]
+  },
+  "placement": {
+    "region": "gcp:us-east4"
+  },
+  "vars": {
+    "ALLOWED_ORIGIN": "http://localhost:4173,http://127.0.0.1:4173,https://oww10.github.io"
+  }
+}

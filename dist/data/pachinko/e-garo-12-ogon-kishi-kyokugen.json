@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-garo-12-ogon-kishi-kyokugen",
+  "officialNameJa": "e牙狼12黄金騎士極限",
+  "nameKo": "e 가로 12 황금기사 극한",
+  "aliases": ["牙狼12極限", "e牙狼12"],
+  "modelCode": null,
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "サンセイR&D",
+  "brand": "サンセイR&D",
+  "releaseDate": "2025-08-04",
+  "probabilities": { "base": "1/349.99", "symbolHit": "約1/437", "charge": null, "highState": null, "rushHit": null },
+  "rush": { "nameJa": "魔戒CHANCE LT", "type": "LT・1回転決着", "entryRatePercent": null, "totalEntryRatePercent": 25, "continuationRatePercent": 76, "spins": 1, "remainingHolds": null, "timeShortSpins": null, "gates": ["図柄揃いの約50%で極限7500バトル", "極限7500バトル成功率約50%で魔戒CHANCE LT"] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "極限7500バトル", "payoutBalls": 7500, "ratePercent": 50, "destination": "極限7500バトル", "confidence": "official", "notes": ["図柄揃い時", "1500個×5"] },
+      { "label": "通常ルート", "payoutBalls": null, "ratePercent": 50, "destination": null, "confidence": "official", "notes": ["図柄揃い時"] }
+    ],
+    "rush": [
+      { "label": "7500個", "payoutBalls": 7500, "ratePercent": 25, "destination": "魔戒CHANCE LT", "confidence": "official", "notes": ["1500個×5"] },
+      { "label": "1500個", "payoutBalls": 1500, "ratePercent": 75, "destination": "魔戒CHANCE LTまたは終了", "confidence": "official", "notes": [] }
+    ]
+  },
+  "gameFlow": ["通常時の図柄揃いを目指す", "約50%で極限7500バトルへ", "バトル成功で魔戒CHANCE LTへ", "LTは継続率約76%、7500個比率25%"],
+  "notes": ["LT突入率25%は50%×50%の編集上の算出値。"],
+  "sources": [
+    { "title": "サンセイR&D 牙狼アーカイブ", "url": "https://www.sansei-rd.co.jp/p_garo_archive/archive/p_garo12_ok.html", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "サンセイR&D 製品ページ", "url": "https://www.sansei-rd.co.jp/products23/e_garo12_ok/index.html", "type": "official", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "rush.totalEntryRatePercent", "payouts.initial[1].payoutBalls"] }
+}

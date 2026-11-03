@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="일본 파칭코 기종의 확률, RUSH, 출옥 정보를 한국어로 탐색하는 정적 가이드">
+  <meta name="theme-color" content="#090b12">
+  <title>파치스펙 AI — 일본 파칭코 기종 가이드</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#machine-list">기종 목록으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="파치스펙 AI 홈">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><strong>파치스펙</strong><small>AI GUIDE</small></span>
+      </a>
+      <nav aria-label="주요 메뉴">
+        <a href="#explore">기종 찾기</a>
+        <button class="ghost-button" type="button" data-open-ai>Gemini 질문 <span>무료</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">PACHINKO MACHINE INTELLIGENCE</p>
+          <h1>숫자는 정확하게,<br><em>이해는 쉽게.</em></h1>
+          <p class="lede">일본어 기종 정보를 한국어로 정리했습니다. 확률부터 RUSH 흐름, 출옥 배분과 근거 출처까지 한 화면에서 확인하세요.</p>
+
+          <form class="hero-search" id="search-form" role="search">
+            <label class="sr-only" for="machine-search">기종 검색</label>
+            <span aria-hidden="true">⌕</span>
+            <input id="machine-search" name="q" type="search" autocomplete="off" placeholder="기종명, 제조사, 일본어로 검색">
+            <button type="submit">찾기</button>
+          </form>
+
+          <div class="trust-row" aria-label="서비스 특징">
+            <span><b>10</b>개 시작 기종</span>
+            <span><b>공식</b> 출처 우선</span>
+            <span><b>0원</b> 정적 운영</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="파칭코 스펙 카드 미리보기">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <article class="hero-card">
+            <div class="hero-card-top"><span>FEATURED / 2026</span><span class="live-dot">DATA</span></div>
+            <p class="jp">ｅ 東京喰種 超デカ 超一撃 ver.</p>
+            <h2>도쿄 구울<br><strong>초일격</strong></h2>
+            <div class="hero-specs">
+              <div><small>기본 확률</small><b>1/349.9</b></div>
+              <div><small>RUSH</small><b>5회전</b></div>
+              <div><small>최대 표기</small><b>9000+</b></div>
+            </div>
+          </article>
+          <div class="floating-chip chip-a">RUSH 50%</div>
+          <div class="floating-chip chip-b">공식 출처 포함</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore shell" id="explore">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MACHINE DATABASE</p>
+          <h2>지금 확인할 기종</h2>
+        </div>
+        <p>오너가 선정한 시작 목록입니다. 인기 순위가 아니며, 검토가 필요한 숫자는 상세 화면에 따로 표시합니다.</p>
+      </div>
+
+      <div class="filter-bar" aria-label="기종 필터">
+        <div class="filter-group" id="year-filters" role="group" aria-label="출시 연도">
+          <button class="filter-pill is-active" type="button" data-year="all" aria-pressed="true">전체</button>
+        </div>
+        <label class="select-wrap">
+          <span>검증 상태</span>
+          <select id="status-filter">
+            <option value="all">모든 상태</option>
+            <option value="verified">검증 완료</option>
+            <option value="needs-review">재확인 필요</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="result-line" aria-live="polite">
+        <p><strong id="result-count">0</strong>개 기종</p>
+        <button id="clear-search" type="button" hidden>검색 초기화</button>
+      </div>
+
+      <div class="machine-grid" id="machine-list" aria-live="polite" aria-busy="true">
+        <div class="loading-card"></div>
+        <div class="loading-card"></div>
+        <div class="loading-card"></div>
+      </div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <span>⌕</span>
+        <h3>검색 결과가 없습니다</h3>
+        <p>다른 기종명이나 제조사 이름으로 찾아보세요.</p>
+        <button type="button" data-clear>전체 기종 보기</button>
+      </div>
+    </section>
+
+    <section class="ai-preview shell" aria-labelledby="ai-title">
+      <div class="ai-panel">
+        <div>
+          <p class="eyebrow">NEXT: ASK WITH AI</p>
+          <h2 id="ai-title">스펙을 읽고,<br>바로 질문하세요.</h2>
+          <p>“초보자가 이해하기 쉽게 설명해줘”, “RUSH 진입 구조는?”처럼 궁금한 점을 선택한 기종 데이터와 함께 Gemini에 질문합니다.</p>
+          <button class="ai-start-button" type="button" data-open-ai>무료 Gemini에게 질문하기 <span>→</span></button>
+        </div>
+        <div class="chat-mock" aria-hidden="true">
+          <div class="chat-head"><span>AI 스펙 도우미</span><i></i></div>
+          <div class="bubble user">도쿄 구울 두 버전의 차이는?</div>
+          <div class="bubble bot"><span></span><span></span><span></span></div>
+          <div class="provider-row"><b>Gemini 3.1 Flash-Lite</b><b>무료 등급</b></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div><strong>파치스펙 AI</strong><p>기종 이해를 돕는 정보 서비스</p></div>
+      <p>도박을 권장하지 않습니다. 예산과 중단 기준을 정하고 건전하게 즐기세요.</p>
+    </div>
+  </footer>
+
+  <dialog class="machine-dialog" id="machine-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" data-close-dialog aria-label="상세 닫기">×</button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <dialog class="ai-dialog" id="ai-dialog" aria-labelledby="ai-dialog-title">
+    <div class="ai-chat-shell">
+      <header class="ai-chat-header">
+        <div>
+          <p class="ai-model-label"><span></span> GEMINI 3.1 FLASH-LITE</p>
+          <h2 id="ai-dialog-title">기종 정보 질문</h2>
+        </div>
+        <button class="ai-close" type="button" data-close-ai aria-label="AI 질문 닫기">×</button>
+      </header>
+
+      <div class="ai-context-row">
+        <label for="ai-machine-select">질문할 기종</label>
+        <select id="ai-machine-select" aria-label="질문할 기종 선택"></select>
+        <span class="ai-mode-badge" id="ai-mode-badge">테스트 모드</span>
+      </div>
+
+      <div class="ai-data-notice">
+        선택한 기종 정보와 질문만 전송합니다. 무료 Gemini 사용 시 입력 내용이 Google 제품 개선에 사용될 수 있습니다.
+      </div>
+
+      <div class="ai-suggestions" aria-label="추천 질문">
+        <button type="button" data-ai-prompt="초보자도 이해하기 쉽게 이 기종의 게임 흐름을 설명해줘.">초보자용 요약</button>
+        <button type="button" data-ai-prompt="RUSH 진입 조건과 계속률을 중심으로 설명해줘.">RUSH 구조</button>
+        <button type="button" data-ai-prompt="출옥 배분에서 주의해서 볼 점을 알려줘.">출옥 배분</button>
+      </div>
+
+      <div class="ai-messages" id="ai-messages" role="log" aria-live="polite">
+        <div class="ai-message assistant">
+          <span class="ai-avatar">✦</span>
+          <div><b>Gemini 스펙 도우미</b><p>기종을 선택하고 궁금한 내용을 물어보세요. 확인된 JSON 정보 안에서 답변합니다.</p></div>
+        </div>
+      </div>
+
+      <form class="ai-question-form" id="ai-question-form">
+        <label class="sr-only" for="ai-question">Gemini에게 질문</label>
+        <textarea id="ai-question" maxlength="500" rows="2" placeholder="예: 이 기종의 RUSH 흐름을 쉽게 설명해줘"></textarea>
+        <div class="ai-form-footer">
+          <span><b id="ai-character-count">0</b>/500</span>
+          <button type="submit" id="ai-submit">질문하기</button>
+        </div>
+      </form>
+      <p class="ai-error" id="ai-error" role="alert" hidden></p>
+    </div>
+  </dialog>
+
+  <script src="./assets/config.js"></script>
+</body>
+</html>

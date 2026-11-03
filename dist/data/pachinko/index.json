@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-11-03",
+  "category": "pachinko",
+  "selectionBasis": "owner-selected starter set; not a popularity ranking",
+  "machines": [
+    { "id": "e-rezero-onigakari-2", "file": "e-rezero-onigakari-2.json", "releaseDate": "2026-10-05" },
+    { "id": "e-garo-12-ogon-kishi-kyokugen", "file": "e-garo-12-ogon-kishi-kyokugen.json", "releaseDate": "2025-08-04" },
+    { "id": "e-tokyo-ghoul-super-deka-cho-ichigeki", "file": "e-tokyo-ghoul-super-deka-cho-ichigeki.json", "releaseDate": "2026-06-08" },
+    { "id": "e-tokyo-ghoul", "file": "e-tokyo-ghoul.json", "releaseDate": "2025-04-21" },
+    { "id": "p-big-sea-story-5", "file": "p-big-sea-story-5.json", "releaseDate": "2023-02-06" },
+    { "id": "e-fever-gundam-seed-climax", "file": "e-fever-gundam-seed-climax.json", "releaseDate": "2026-08-03" },
+    { "id": "e-lycoris-recoil", "file": "e-lycoris-recoil.json", "releaseDate": "2026-04-06" },
+    { "id": "e-evangelion-hajimari-no-kioku", "file": "e-evangelion-hajimari-no-kioku.json", "releaseDate": "2025-12-22" },
+    { "id": "e-hokuto-no-ken-11-boukyousei", "file": "e-hokuto-no-ken-11-boukyousei.json", "releaseDate": "2025-12-08" },
+    { "id": "p-evangelion-mirai-e-no-houkou", "file": "p-evangelion-mirai-e-no-houkou.json", "releaseDate": "2021-12-20" }
+  ]
+}

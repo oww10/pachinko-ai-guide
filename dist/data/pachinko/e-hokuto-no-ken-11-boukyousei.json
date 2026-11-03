@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-hokuto-no-ken-11-boukyousei",
+  "officialNameJa": "e 北斗の拳11 暴凶星",
+  "nameKo": "e 북두의 권 11 폭흉성",
+  "aliases": ["北斗11暴凶星", "e暴凶星"],
+  "modelCode": null,
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "サミー",
+  "brand": "Sammy",
+  "releaseDate": "2025-12-08",
+  "probabilities": { "base": "約1/399.8", "symbolHit": "約1/399.8", "charge": null, "highState": null, "rushHit": "約1/10.7" },
+  "rush": { "nameJa": "暴凶星RUSH", "type": "10回転＋残保留4個", "entryRatePercent": 61, "totalEntryRatePercent": 61, "continuationRatePercent": 75, "spins": 10, "remainingHolds": 4, "timeShortSpins": null, "gates": ["継続率はC時短を含む"] },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "4500個＋RUSH", "payoutBalls": 4500, "ratePercent": 5, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
+      { "label": "1800個＋RUSH", "payoutBalls": 1800, "ratePercent": 4, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
+      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 52, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
+      { "label": "1500個・通常", "payoutBalls": 1500, "ratePercent": 39, "destination": null, "confidence": "secondary", "notes": [] }
+    ],
+    "rush": [
+      { "label": "6000個＋RUSH", "payoutBalls": 6000, "ratePercent": 10, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
+      { "label": "4500個＋RUSH", "payoutBalls": 4500, "ratePercent": 40, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
+      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 30, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
+      { "label": "出玉なし・RUSHリセット", "payoutBalls": 0, "ratePercent": 20, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] }
+    ]
+  },
+  "gameFlow": ["初当りの61%で暴凶星RUSHへ", "RUSHは10回転＋残保留4個", "C時短を含む継続率は約75%", "複数当選が絡む極限BATTLEでは最大12000個の可能性あり"],
+  "notes": ["振分値は専門媒体照合値。公開前に公式小冊子で再確認する。"],
+  "sources": [
+    { "title": "Sammy 公式製品ページ", "url": "https://www.sammy.co.jp/japanese/product/pachinko/hok_ke11/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "HAZUSE 機種情報", "url": "https://hazuse.com/machine/pachinko/5P1070/", "type": "secondary", "checkedAt": "2026-11-03" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial", "payouts.rush"] }
+}
