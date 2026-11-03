@@ -228,14 +228,36 @@ function donutChart(title, items, centerValue, centerLabel) {
   `;
 }
 
+function flowOutcome(item) {
+  const allowedTones = new Set(["return", "rush", "premium", "reset"]);
+  const tone = allowedTones.has(item.tone) ? ` is-${item.tone}` : "";
+  const description = escapeHtml(item.description || "").replace(/\n/g, "<br>");
+  return `
+    <article class="flow-outcome${tone}" role="listitem">
+      <small>${escapeHtml(item.rate)}</small>
+      <h4>${escapeHtml(item.title)}</h4>
+      <p>${description}</p>
+      <span class="flow-route-label">${escapeHtml(item.route)}</span>
+    </article>
+  `;
+}
+
 function visualGameFlow(machine) {
   const guide = machine.visualGuide;
-  if (!guide?.mainImage || !Array.isArray(guide.steps)) return "";
+  if (!guide?.mainImage || !Array.isArray(guide.steps) || !guide.flowDiagram) return "";
+  const flow = guide.flowDiagram;
   const sourceUrl = guide.mainImage.sourceUrl;
   const rushImage = guide.rushScreen || guide.steps.find((step) => step.phase.includes("RUSH"))?.image;
   const officialImages = Array.isArray(guide.translatedImages)
     ? guide.translatedImages
     : guide.steps.map((step) => ({ phase: step.phase, title: step.title, ...step.image }));
+  const keyStats = Array.isArray(guide.keyStats) ? guide.keyStats : [
+    { value: machine.probabilities.base, label: "통상시 대당첨" },
+    { value: `${machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent}%`, label: "RUSH 진입" },
+    { value: `${machine.rush.continuationRatePercent}%`, label: "RUSH 계속률" }
+  ];
+  const initialCenter = `${machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent}%`;
+  const premiumRush = [...machine.payouts.rush].sort((a, b) => (b.payoutBalls || 0) - (a.payoutBalls || 0))[0];
   return `
     <div class="detail-section visual-flow-section">
       <div class="visual-section-heading">
@@ -252,52 +274,31 @@ function visualGameFlow(machine) {
         </figure>
         <div class="flow-key-numbers">
           <p>핵심 구조</p>
-          <strong>1/349.9</strong><span>통상시 대당첨</span>
-          <strong>55%</strong><span>RUSH 진입</span>
-          <strong>77%</strong><span>RUSH 계속률</span>
+          ${keyStats.map((item) => `<strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label)}</span>`).join("")}
         </div>
       </div>
-      <section class="game-flow-map" aria-label="리제로 오니가카리 2 게임 진행 흐름">
+      <section class="game-flow-map" aria-label="${escapeHtml(flow.ariaLabel || `${machine.nameKo} 게임 진행 흐름`)}">
         <header class="flow-stage flow-normal-stage">
-          <small>NORMAL</small><strong>통상시</strong><span>대당첨 확률 약 1/349.9</span>
+          <small>${escapeHtml(flow.normal.eyebrow)}</small><strong>${escapeHtml(flow.normal.title)}</strong><span>${escapeHtml(flow.normal.detail)}</span>
         </header>
-        <div class="flow-connector flow-connector-down" aria-hidden="true"><span>초당첨</span></div>
-        <div class="flow-branch-group flow-initial-group" role="list" aria-label="초당첨 결과 3가지">
-          <article class="flow-outcome is-return" role="listitem">
-            <small>45%</small><h4>1500개</h4><p>챌린지 종료 후<br>통상시 복귀</p><span class="flow-route-label">↩ 통상 복귀</span>
-          </article>
-          <article class="flow-outcome is-rush" role="listitem">
-            <small>45%</small><h4>1500개</h4><p>Re:제로 BONUS<br>RUSH 직행</p><span class="flow-route-label">RUSH</span>
-          </article>
-          <article class="flow-outcome is-premium" role="listitem">
-            <small>10%</small><h4>3000개</h4><p>10R × 2회<br>RUSH 직행</p><span class="flow-route-label">RUSH</span>
-          </article>
+        <div class="flow-connector flow-connector-down" aria-hidden="true"><span>${escapeHtml(flow.initialConnector)}</span></div>
+        <div class="flow-branch-group" style="--branch-count:${flow.initialOutcomes.length}" role="list" aria-label="${escapeHtml(flow.initialAriaLabel)}">
+          ${flow.initialOutcomes.map(flowOutcome).join("")}
         </div>
-        <div class="flow-merge" aria-hidden="true"><span>55% 진입</span></div>
+        <div class="flow-merge" aria-hidden="true"><span>${escapeHtml(flow.mergeLabel)}</span></div>
         <article class="flow-stage flow-rush-stage">
           ${rushImage ? `<a class="flow-rush-image" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener"><img src="${escapeHtml(rushImage.url)}" alt="${escapeHtml(rushImage.alt)}" loading="lazy" decoding="async"><span>이미지 출처 ↗</span></a>` : ""}
-          <div><small>ONIGAKARI RUSH</small><h4>鬼がかりRUSH</h4><p>ST 144회 · 당첨 약 1/99.9 · 계속률 약 77%</p></div>
+          <div><small>${escapeHtml(flow.rush.eyebrow)}</small><h4>${escapeHtml(flow.rush.title)}</h4><p>${escapeHtml(flow.rush.detail)}</p></div>
         </article>
-        <div class="flow-connector flow-connector-down" aria-hidden="true"><span>RUSH 중 당첨</span></div>
-        <div class="flow-branch-group flow-rush-group" role="list" aria-label="RUSH 당첨 결과 4가지">
-          <article class="flow-outcome is-reset" role="listitem">
-            <small>14%</small><h4>Re:Start</h4><p>출옥 없이<br>ST 144회 재시작</p><span class="flow-route-label">↻ ST 리셋</span>
-          </article>
-          <article class="flow-outcome is-rush" role="listitem">
-            <small>6%</small><h4>300개</h4><p>2R BONUS<br>RUSH 계속</p><span class="flow-route-label">↻ 계속</span>
-          </article>
-          <article class="flow-outcome is-rush" role="listitem">
-            <small>55%</small><h4>1500개</h4><p>10R BONUS<br>RUSH 계속</p><span class="flow-route-label">↻ 계속</span>
-          </article>
-          <article class="flow-outcome is-premium" role="listitem">
-            <small>25%</small><h4>6000개</h4><p>10R × 4회<br>RUSH 계속</p><span class="flow-route-label">↻ 계속</span>
-          </article>
+        <div class="flow-connector flow-connector-down" aria-hidden="true"><span>${escapeHtml(flow.rushConnector)}</span></div>
+        <div class="flow-branch-group" style="--branch-count:${flow.rushOutcomes.length}" role="list" aria-label="${escapeHtml(flow.rushAriaLabel)}">
+          ${flow.rushOutcomes.map(flowOutcome).join("")}
         </div>
-        <p class="flow-loop-note"><span aria-hidden="true">↖</span> RUSH 중 결과는 모두 RUSH/ST로 복귀</p>
+        <p class="flow-loop-note"><span aria-hidden="true">↖</span> ${escapeHtml(flow.loopNote)}</p>
       </section>
-      <section class="official-flow-gallery" aria-label="대도기연 공식 게임 안내 이미지">
+      <section class="official-flow-gallery" aria-label="${escapeHtml(machine.maker)} 공식 게임 안내 이미지">
         <div class="official-gallery-heading">
-          <div><small>OFFICIAL VISUALS · KOREAN OVERLAY</small><h4>대도기연 공식 이미지 · 한국어 번역본</h4></div>
+          <div><small>OFFICIAL VISUALS · KOREAN OVERLAY</small><h4>${escapeHtml(machine.maker)} 공식 이미지 · 한국어 번역본</h4></div>
           <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">공식 제품 페이지 ↗</a>
         </div>
         <div class="official-gallery-grid">
@@ -313,8 +314,8 @@ function visualGameFlow(machine) {
         <p class="official-translation-note">원본 이미지의 수치와 구성은 유지하고 일본어 핵심 안내를 한국어로 덧입힌 번역본입니다.</p>
       </section>
       <div class="distribution-charts">
-        ${donutChart("초기 당첨 배분", machine.payouts.initial, "55%", "RUSH 진입")}
-        ${donutChart("RUSH 중 배분", machine.payouts.rush, "25%", "6000개")}
+        ${donutChart("초기 당첨 배분", machine.payouts.initial, initialCenter, "RUSH 진입")}
+        ${donutChart("RUSH 중 배분", machine.payouts.rush, `${premiumRush?.ratePercent ?? "-"}%`, premiumRush ? `${premiumRush.payoutBalls}개` : "최대 출옥")}
       </div>
       <p class="visual-source-note">이미지: ${escapeHtml(guide.mainImage.credit)} · 수치: 공개 스펙 자료 대조 · 출옥은 지급 기준</p>
     </div>

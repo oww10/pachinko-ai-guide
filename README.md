@@ -12,6 +12,10 @@ python3 -m http.server 4173 --directory dist
 
 공개 사이트: `https://oww10.github.io/pachinko-ai-guide/`
 
+## 기종 상세 디자인 재사용
+
+새 기종에 현재 상세 화면의 이미지·분기 플로우·원그래프 디자인을 동일하게 적용하려면 [`docs/machine-detail-design-system.md`](docs/machine-detail-design-system.md)를 따릅니다. 복사용 `visualGuide` JSON은 [`docs/templates/machine-detail-visual-guide.template.json`](docs/templates/machine-detail-visual-guide.template.json)에 있습니다.
+
 ## 현재 범위
 
 - 10개 파칭코 기종 목록

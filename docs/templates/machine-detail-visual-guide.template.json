@@ -1,0 +1,128 @@
+{
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/XXX.X", "label": "통상시 대당첨" },
+      { "value": "XX%", "label": "RUSH 진입" },
+      { "value": "XX%", "label": "RUSH 계속률" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "기종명 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 확률 약 1/XXX.X"
+      },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과",
+      "initialOutcomes": [
+        {
+          "rate": "XX%",
+          "title": "보너스명 또는 출옥",
+          "description": "결과 설명\n통상시 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "XX%",
+          "title": "보너스명 또는 출옥",
+          "description": "결과 설명\nRUSH 직행",
+          "route": "RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "XX%",
+          "title": "상위 보너스",
+          "description": "상위 결과 설명\nRUSH 직행",
+          "route": "RUSH",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "XX% 진입",
+      "rush": {
+        "eyebrow": "RUSH NAME",
+        "title": "RUSH 정식 명칭",
+        "detail": "ST XXX회 · 당첨 약 1/XX.X · 계속률 약 XX%"
+      },
+      "rushConnector": "RUSH 중 당첨",
+      "rushAriaLabel": "RUSH 당첨 결과",
+      "rushOutcomes": [
+        {
+          "rate": "XX%",
+          "title": "리셋",
+          "description": "리셋 설명\nRUSH 재시작",
+          "route": "↻ 리셋",
+          "tone": "reset"
+        },
+        {
+          "rate": "XX%",
+          "title": "기본 출옥",
+          "description": "보너스 설명\nRUSH 계속",
+          "route": "↻ 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "XX%",
+          "title": "최상위 출옥",
+          "description": "상위 보너스 설명\nRUSH 계속",
+          "route": "↻ 계속",
+          "tone": "premium"
+        }
+      ],
+      "loopNote": "RUSH 중 결과는 RUSH/ST로 복귀"
+    },
+    "mainImage": {
+      "url": "./assets/images/official/<asset-folder>/machine.png",
+      "alt": "제조사 기종명 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "제조사 공식 제품 사이트",
+      "sourceUrl": "https://official.example/product"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/<asset-folder>/rush-screen.png",
+      "alt": "기종명 RUSH 플레이 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·RUSH·대당첨 배분",
+        "url": "./assets/images/official/<asset-folder>/basic-ko.png",
+        "alt": "제조사 공식 기본 정보 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시부터 RUSH까지",
+        "url": "./assets/images/official/<asset-folder>/gameflow-ko.png",
+        "alt": "제조사 공식 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "통상시 목표",
+        "description": "통상시 게임 진행을 한두 문장으로 설명한다.",
+        "image": {
+          "url": "./assets/images/official/<asset-folder>/gameflow.jpg",
+          "alt": "제조사 공식 기종명 게임 플로우"
+        }
+      },
+      {
+        "phase": "STEP 02 · 초당첨 판정",
+        "title": "RUSH 진입 판정",
+        "description": "초당첨 배분과 이동 경로를 설명한다.",
+        "image": {
+          "url": "./assets/images/official/<asset-folder>/bonus.jpg",
+          "alt": "제조사 공식 기종명 보너스 안내"
+        }
+      },
+      {
+        "phase": "STEP 03 · RUSH",
+        "title": "RUSH 핵심 구조",
+        "description": "회전 수, 당첨 확률, 계속률과 주요 배분을 설명한다.",
+        "image": {
+          "url": "./assets/images/official/<asset-folder>/rush-st.jpg",
+          "alt": "제조사 공식 기종명 RUSH 안내"
+        }
+      }
+    ]
+  }
+}

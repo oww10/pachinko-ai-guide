@@ -385,13 +385,9 @@ dialog::backdrop { background: rgba(2,4,8,.82); backdrop-filter: blur(11px); }
 .flow-connector::before { content: ""; position: absolute; top: 0; bottom: 8px; left: 50%; width: 1px; background: var(--flow-line); }
 .flow-connector::after { content: ""; position: absolute; bottom: 4px; left: calc(50% - 4px); width: 7px; height: 7px; border-right: 1px solid var(--cyan); border-bottom: 1px solid var(--cyan); transform: rotate(45deg); }
 .flow-connector span { z-index: 1; padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; background: #0d111b; }
-.flow-branch-group { position: relative; display: grid; gap: 10px; padding-top: 20px; }
-.flow-initial-group { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.flow-rush-group { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.flow-branch-group { position: relative; display: grid; grid-template-columns: repeat(var(--branch-count), minmax(0, 1fr)); gap: 10px; padding-top: 20px; }
 .flow-branch-group::before { content: ""; position: absolute; top: 0; left: calc(100% / var(--branch-count) / 2); right: calc(100% / var(--branch-count) / 2); height: 1px; background: var(--flow-line); }
 .flow-branch-group::after { content: ""; position: absolute; top: -20px; left: 50%; width: 1px; height: 20px; background: var(--flow-line); }
-.flow-initial-group { --branch-count: 3; }
-.flow-rush-group { --branch-count: 4; }
 .flow-outcome { position: relative; min-height: 152px; padding: 20px 12px 34px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.025); text-align: center; }
 .flow-outcome::before { content: ""; position: absolute; top: -20px; left: 50%; width: 1px; height: 20px; background: var(--flow-line); }
 .flow-outcome small { color: var(--cyan); font-size: 19px; font-weight: 900; }
@@ -571,7 +567,7 @@ dialog::backdrop { background: rgba(2,4,8,.82); backdrop-filter: blur(11px); }
   .visual-section-heading { align-items: start; gap: 9px; }
   .machine-product-shot { grid-template-rows: minmax(260px, 360px) auto; }
   .game-flow-map { padding: 18px 12px; }
-  .flow-branch-group, .flow-initial-group, .flow-rush-group { grid-template-columns: 1fr; padding-top: 0; }
+  .flow-branch-group { grid-template-columns: 1fr; padding-top: 0; }
   .flow-branch-group::before, .flow-branch-group::after, .flow-outcome::before, .flow-merge::before { display: none; }
   .flow-outcome { min-height: 0; padding: 15px 12px 34px; }
   .flow-outcome + .flow-outcome { margin-top: 22px; }

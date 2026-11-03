@@ -27,6 +27,33 @@
     ]
   },
   "visualGuide": {
+    "keyStats": [
+      { "value": "1/349.9", "label": "통상시 대당첨" },
+      { "value": "55%", "label": "RUSH 진입" },
+      { "value": "77%", "label": "RUSH 계속률" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "리제로 오니가카리 2 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "대당첨 확률 약 1/349.9" },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 3가지",
+      "initialOutcomes": [
+        { "rate": "45%", "title": "1500개", "description": "챌린지 종료 후\n통상시 복귀", "route": "↩ 통상 복귀", "tone": "return" },
+        { "rate": "45%", "title": "1500개", "description": "Re:제로 BONUS\nRUSH 직행", "route": "RUSH", "tone": "rush" },
+        { "rate": "10%", "title": "3000개", "description": "10R × 2회\nRUSH 직행", "route": "RUSH", "tone": "premium" }
+      ],
+      "mergeLabel": "55% 진입",
+      "rush": { "eyebrow": "ONIGAKARI RUSH", "title": "鬼がかりRUSH", "detail": "ST 144회 · 당첨 약 1/99.9 · 계속률 약 77%" },
+      "rushConnector": "RUSH 중 당첨",
+      "rushAriaLabel": "RUSH 당첨 결과 4가지",
+      "rushOutcomes": [
+        { "rate": "14%", "title": "Re:Start", "description": "출옥 없이\nST 144회 재시작", "route": "↻ ST 리셋", "tone": "reset" },
+        { "rate": "6%", "title": "300개", "description": "2R BONUS\nRUSH 계속", "route": "↻ 계속", "tone": "rush" },
+        { "rate": "55%", "title": "1500개", "description": "10R BONUS\nRUSH 계속", "route": "↻ 계속", "tone": "rush" },
+        { "rate": "25%", "title": "6000개", "description": "10R × 4회\nRUSH 계속", "route": "↻ 계속", "tone": "premium" }
+      ],
+      "loopNote": "RUSH 중 결과는 모두 RUSH/ST로 복귀"
+    },
     "mainImage": {
       "url": "./assets/images/official/onirezero2/machine.png",
       "alt": "대도기연 리제로 오니가카리 2 파칭코 기기 외관",
