@@ -292,6 +292,22 @@ function visualGameFlow(machine) {
         </div>
         <p class="flow-loop-note"><span aria-hidden="true">↖</span> RUSH 중 결과는 모두 RUSH/ST로 복귀</p>
       </section>
+      <section class="official-flow-gallery" aria-label="대도기연 공식 게임 안내 이미지">
+        <div class="official-gallery-heading">
+          <div><small>OFFICIAL VISUALS</small><h4>대도기연 공식 안내 이미지</h4></div>
+          <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">공식 제품 페이지 ↗</a>
+        </div>
+        <div class="official-gallery-grid">
+          ${guide.steps.map((step) => `
+            <figure>
+              <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">
+                <img src="${escapeHtml(step.image.url)}" alt="${escapeHtml(step.image.alt)}" loading="lazy" decoding="async">
+              </a>
+              <figcaption><small>${escapeHtml(step.phase)}</small><strong>${escapeHtml(step.title)}</strong></figcaption>
+            </figure>
+          `).join("")}
+        </div>
+      </section>
       <div class="distribution-charts">
         ${donutChart("초기 당첨 배분", machine.payouts.initial, "55%", "RUSH 진입")}
         ${donutChart("RUSH 중 배분", machine.payouts.rush, "25%", "6000개")}
