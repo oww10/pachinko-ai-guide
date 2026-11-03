@@ -4,31 +4,121 @@
   "officialNameJa": "eフィーバー機動戦士ガンダムSEED クライマックス",
   "nameKo": "e 피버 기동전사 건담 SEED 클라이맥스",
   "aliases": ["ガンダムSEED クライマックス", "SEEDクライマックス"],
-  "modelCode": null,
+  "modelCode": "eフィーバー機動戦士ガンダムSEED2A",
   "machineType": "pachinko",
   "format": "e",
   "maker": "SANKYO",
   "brand": "SANKYO",
   "releaseDate": "2026-08-03",
   "probabilities": { "base": "約1/349.9", "symbolHit": "約1/399.9", "charge": null, "highState": null, "rushHit": "約1/95.6" },
-  "rush": { "nameJa": "クライマックスRUSH", "type": "ST・二段階RUSH", "entryRatePercent": 52, "totalEntryRatePercent": 52, "continuationRatePercent": 75, "spins": 130, "remainingHolds": null, "timeShortSpins": null, "gates": ["初当りの52%でクライマックスRUSH", "通常RUSHから上位クライマックスRUSHへの昇格あり"] },
+  "rush": { "nameJa": "FULLBURST RUSH CLIMAX / FULLBURST RUSH", "type": "LT・ST・二段階RUSH", "entryRatePercent": 52, "totalEntryRatePercent": 52, "continuationRatePercent": 75, "spins": 130, "remainingHolds": null, "timeShortSpins": null, "gates": ["초당첨의 약 52%로 FULLBURST RUSH CLIMAX 진입", "FULLBURST RUSH 중 당첨의 약 50%로 CLIMAX 승격"] },
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "1500個＋クライマックスRUSH", "payoutBalls": 1500, "ratePercent": 52, "destination": "クライマックスRUSH", "confidence": "secondary", "notes": [] },
-      { "label": "1500個・通常", "payoutBalls": 1500, "ratePercent": 48, "destination": null, "confidence": "secondary", "notes": [] }
+      { "label": "1500개 + CLIMAX", "payoutBalls": 1500, "ratePercent": 52, "destination": "FULLBURST RUSH CLIMAX", "confidence": "official", "notes": [] },
+      { "label": "1500개 + 통상 복귀", "payoutBalls": 1500, "ratePercent": 48, "destination": null, "confidence": "official", "notes": [] }
+    ],
+    "climax": [
+      { "label": "4500개 + CLIMAX 유지", "payoutBalls": 4500, "ratePercent": 51, "destination": "FULLBURST RUSH CLIMAX", "confidence": "official", "notes": ["1500개×3"] },
+      { "label": "3000개 + RUSH 이동", "payoutBalls": 3000, "ratePercent": 49, "destination": "FULLBURST RUSH", "confidence": "official", "notes": ["1500개×2"] }
     ],
     "rush": [
-      { "label": "4500個＋クライマックスRUSH", "payoutBalls": 4500, "ratePercent": 3, "destination": "クライマックスRUSH", "confidence": "secondary", "notes": ["通常RUSH中", "1500個×3"] },
-      { "label": "3000個＋クライマックスRUSH", "payoutBalls": 3000, "ratePercent": 47, "destination": "クライマックスRUSH", "confidence": "secondary", "notes": ["通常RUSH中", "1500個×2"] },
-      { "label": "1500個＋通常RUSH", "payoutBalls": 1500, "ratePercent": 50, "destination": "通常RUSH", "confidence": "secondary", "notes": ["通常RUSH中"] }
+      { "label": "4500개 + CLIMAX 승격", "payoutBalls": 4500, "ratePercent": 3, "destination": "FULLBURST RUSH CLIMAX", "confidence": "official", "notes": ["1500개×3"] },
+      { "label": "3000개 + CLIMAX 승격", "payoutBalls": 3000, "ratePercent": 47, "destination": "FULLBURST RUSH CLIMAX", "confidence": "official", "notes": ["1500개×2"] },
+      { "label": "1500개 + RUSH 유지", "payoutBalls": 1500, "ratePercent": 50, "destination": "FULLBURST RUSH", "confidence": "official", "notes": [] }
     ]
   },
-  "gameFlow": ["初当りの52%でクライマックスRUSHへ", "通常RUSH中は大当りの50%で上位RUSHへ", "上位RUSH中は4500個51%、3000個49%"],
-  "notes": ["上位RUSHの4500個51%・3000個49%は画面説明用。payouts.rushは通常RUSH配分を格納。"],
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/399.9", "label": "도안 당첨" },
+      { "value": "52%", "label": "LT·CLIMAX 진입" },
+      { "value": "75%", "label": "LT 계속률" }
+    ],
+    "distributionCharts": [
+      { "title": "초기 당첨 배분", "source": "initial", "centerValue": "52%", "centerLabel": "CLIMAX 진입" },
+      { "title": "CLIMAX 중 배분", "source": "climax", "centerValue": "51%", "centerLabel": "4500개" },
+      { "title": "FULLBURST RUSH 중 배분", "source": "rush", "centerValue": "50%", "centerLabel": "CLIMAX 승격" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "건담 SEED 클라이맥스 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "도안 당첨 약 1/399.9 · 대당첨 약 1/349.9" },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 2가지",
+      "initialOutcomes": [
+        { "rate": "48%", "title": "1500개", "description": "10R BONUS 후\n통상시 복귀", "route": "↩ 통상 복귀", "tone": "return" },
+        { "rate": "52%", "title": "1500개", "description": "10R BONUS 후\nCLIMAX 직행", "route": "CLIMAX", "tone": "premium" }
+      ],
+      "mergeLabel": "52% 진입",
+      "rush": { "eyebrow": "UPPER LT", "title": "FULLBURST RUSH CLIMAX", "detail": "ST 130회 · 당첨 약 1/95.6 · LT 계속률 약 75%" },
+      "rushConnector": "CLIMAX 중 당첨",
+      "rushAriaLabel": "CLIMAX 당첨 결과 2가지",
+      "rushOutcomes": [
+        { "rate": "51%", "title": "4500개", "description": "1500개 × 3회\nCLIMAX 유지", "route": "↻ CLIMAX", "tone": "premium" },
+        { "rate": "49%", "title": "3000개", "description": "1500개 × 2회\n일반 RUSH 이동", "route": "↓ RUSH 이동", "tone": "rush" }
+      ],
+      "secondaryConnector": "3000개 당첨 시 이동",
+      "secondaryRush": { "eyebrow": "LT", "title": "FULLBURST RUSH", "detail": "ST 130회 · 당첨 약 1/95.6 · CLIMAX 승격 기회" },
+      "secondaryRushConnector": "RUSH 중 당첨",
+      "secondaryAriaLabel": "FULLBURST RUSH 당첨 결과 3가지",
+      "secondaryOutcomes": [
+        { "rate": "3%", "title": "4500개", "description": "1500개 × 3회\nCLIMAX 승격", "route": "↑ CLIMAX", "tone": "premium" },
+        { "rate": "47%", "title": "3000개", "description": "1500개 × 2회\nCLIMAX 승격", "route": "↑ CLIMAX", "tone": "rush" },
+        { "rate": "50%", "title": "1500개", "description": "10R BONUS 후\n일반 RUSH 유지", "route": "↻ RUSH", "tone": "rush" }
+      ],
+      "loopNote": "CLIMAX과 RUSH는 당첨 결과에 따라 오가며 각각 ST 130회로 진행"
+    },
+    "mainImage": {
+      "url": "./assets/images/official/gundam-seed-climax/machine.png",
+      "alt": "SANKYO e 피버 기동전사 건담 SEED 클라이맥스 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "SANKYO 공식 제품 사이트",
+      "sourceUrl": "https://www.sankyo-fever.jp/products/machine_list/poq/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/gundam-seed-climax/rush-screen.png",
+      "alt": "SANKYO 공식 건담 SEED 클라이맥스 메인 비주얼"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우 요약",
+        "title": "통상시부터 CLIMAX와 RUSH 순환까지",
+        "url": "./assets/images/official/gundam-seed-climax/flow-ko.png",
+        "alt": "SANKYO 공식 메인 비주얼에 한국어 게임 플로우를 덧입힌 이미지"
+      },
+      {
+        "phase": "공식 대당첨 배분",
+        "title": "통상시·CLIMAX·FULLBURST RUSH 배분",
+        "url": "./assets/images/official/gundam-seed-climax/spec-ko.png",
+        "alt": "SANKYO 공식 대당첨 배분 원그래프의 한국어 핵심 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "도안 당첨의 52%로 CLIMAX 진입",
+        "description": "도안 당첨 확률은 약 1/399.9. 1500개 초당첨의 약 52%가 상위 상태인 FULLBURST RUSH CLIMAX로 직행한다.",
+        "image": { "url": "./assets/images/official/gundam-seed-climax/hero.jpg", "alt": "SANKYO 공식 건담 SEED 클라이맥스 메인 비주얼" }
+      },
+      {
+        "phase": "STEP 02 · FULLBURST RUSH CLIMAX",
+        "title": "4500개 51%면 CLIMAX 유지",
+        "description": "ST 130회 동안 약 1/95.6의 당첨을 노린다. 당첨 시 4500개 51%는 CLIMAX 유지, 3000개 49%는 일반 FULLBURST RUSH로 이동한다.",
+        "image": { "url": "./assets/images/official/gundam-seed-climax/spec.jpg", "alt": "SANKYO 공식 CLIMAX 대당첨 배분 원그래프" }
+      },
+      {
+        "phase": "STEP 03 · FULLBURST RUSH",
+        "title": "절반은 3000개 이상과 CLIMAX 승격",
+        "description": "4500개 3%와 3000개 47%는 CLIMAX로 승격하며, 1500개 50%는 일반 RUSH를 유지한다.",
+        "image": { "url": "./assets/images/official/gundam-seed-climax/spec.jpg", "alt": "SANKYO 공식 FULLBURST RUSH 대당첨 배분 원그래프" }
+      }
+    ]
+  },
+  "gameFlow": ["초당첨의 약 52%로 FULLBURST RUSH CLIMAX 진입", "CLIMAX 중 4500개 51%는 CLIMAX 유지, 3000개 49%는 일반 RUSH 이동", "일반 RUSH 중 3000개 이상 50%로 CLIMAX 승격"],
+  "notes": ["출옥은 지급 기준. 3000개는 1500개×2회, 4500개는 1500개×3회의 합계이며 특도2에 한한다."],
   "sources": [
     { "title": "SANKYO 公式製品ページ", "url": "https://www.sankyo-fever.jp/products/machine_list/poq/", "type": "official", "checkedAt": "2026-11-03" },
-    { "title": "ちょんぼりすた機種情報", "url": "https://chonborista.com/pachinko/sankyo/260700/", "type": "secondary", "checkedAt": "2026-11-03" }
+    { "title": "P-WORLD 기종 데이터베이스", "url": "https://www.p-world.co.jp/machine/database/10506", "type": "secondary", "checkedAt": "2026-11-03" },
+    { "title": "パチマガスロマガFREE 기종 정보", "url": "https://pachimaga.com/free/mach/maker-p/sankyo/gundam_seed_climax.php", "type": "secondary", "checkedAt": "2026-11-03" }
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial", "payouts.rush"] }
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode"] }
 }

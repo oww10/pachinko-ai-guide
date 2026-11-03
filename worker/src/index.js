@@ -62,6 +62,7 @@ export function sanitizeMachine(machine) {
     payouts: {
       basis: String(machine.payouts?.basis || "").slice(0, 40),
       initial: sanitizePayouts(machine.payouts?.initial),
+      climax: sanitizePayouts(machine.payouts?.climax),
       rush: sanitizePayouts(machine.payouts?.rush)
     },
     gameFlow: Array.isArray(machine.gameFlow) ? machine.gameFlow.slice(0, 10).map((value) => String(value).slice(0, 300)) : [],

@@ -99,6 +99,20 @@ dist/
 
 `steps`는 번역 이미지가 없을 때 갤러리 대체 데이터로도 쓰이므로 유지한다. 단계는 통상시, 초당첨 판정, RUSH 순으로 3개를 권장한다.
 
+### 다단계 RUSH 기종
+
+상위 RUSH와 일반 RUSH를 오가는 기종은 `flowDiagram.secondaryRush`, `secondaryOutcomes`를 추가한다. 이 필드가 있으면 첫 번째 RUSH 결과 아래에 두 번째 RUSH 상태와 분기가 자동으로 표시된다.
+
+배분 원그래프가 3개 이상이면 `payouts`에 `climax` 같은 기종별 배열을 추가하고 `visualGuide.distributionCharts`로 표시 순서를 지정한다.
+
+```json
+"distributionCharts": [
+  { "title": "초기 당첨 배분", "source": "initial", "centerValue": "52%", "centerLabel": "CLIMAX 진입" },
+  { "title": "CLIMAX 중 배분", "source": "climax", "centerValue": "51%", "centerLabel": "4500개" },
+  { "title": "일반 RUSH 중 배분", "source": "rush", "centerValue": "50%", "centerLabel": "CLIMAX 승격" }
+]
+```
+
 ### 수치 연결 규칙
 
 - 원그래프는 `payouts.initial`과 `payouts.rush`를 그대로 사용한다.

@@ -258,6 +258,10 @@ function visualGameFlow(machine) {
   ];
   const initialCenter = `${machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent}%`;
   const premiumRush = [...machine.payouts.rush].sort((a, b) => (b.payoutBalls || 0) - (a.payoutBalls || 0))[0];
+  const distributionCharts = Array.isArray(guide.distributionCharts) ? guide.distributionCharts : [
+    { title: "초기 당첨 배분", source: "initial", centerValue: initialCenter, centerLabel: "RUSH 진입" },
+    { title: "RUSH 중 배분", source: "rush", centerValue: `${premiumRush?.ratePercent ?? "-"}%`, centerLabel: premiumRush ? `${premiumRush.payoutBalls}개` : "최대 출옥" }
+  ];
   return `
     <div class="detail-section visual-flow-section">
       <div class="visual-section-heading">
@@ -294,6 +298,16 @@ function visualGameFlow(machine) {
         <div class="flow-branch-group" style="--branch-count:${flow.rushOutcomes.length}" role="list" aria-label="${escapeHtml(flow.rushAriaLabel)}">
           ${flow.rushOutcomes.map(flowOutcome).join("")}
         </div>
+        ${flow.secondaryRush ? `
+          <div class="flow-connector flow-connector-down" aria-hidden="true"><span>${escapeHtml(flow.secondaryConnector)}</span></div>
+          <article class="flow-stage flow-rush-stage is-text-only">
+            <div><small>${escapeHtml(flow.secondaryRush.eyebrow)}</small><h4>${escapeHtml(flow.secondaryRush.title)}</h4><p>${escapeHtml(flow.secondaryRush.detail)}</p></div>
+          </article>
+          <div class="flow-connector flow-connector-down" aria-hidden="true"><span>${escapeHtml(flow.secondaryRushConnector)}</span></div>
+          <div class="flow-branch-group" style="--branch-count:${flow.secondaryOutcomes.length}" role="list" aria-label="${escapeHtml(flow.secondaryAriaLabel)}">
+            ${flow.secondaryOutcomes.map(flowOutcome).join("")}
+          </div>
+        ` : ""}
         <p class="flow-loop-note"><span aria-hidden="true">↖</span> ${escapeHtml(flow.loopNote)}</p>
       </section>
       <section class="official-flow-gallery" aria-label="${escapeHtml(machine.maker)} 공식 게임 안내 이미지">
@@ -314,8 +328,12 @@ function visualGameFlow(machine) {
         <p class="official-translation-note">원본 이미지의 수치와 구성은 유지하고 일본어 핵심 안내를 한국어로 덧입힌 번역본입니다.</p>
       </section>
       <div class="distribution-charts">
-        ${donutChart("초기 당첨 배분", machine.payouts.initial, initialCenter, "RUSH 진입")}
-        ${donutChart("RUSH 중 배분", machine.payouts.rush, `${premiumRush?.ratePercent ?? "-"}%`, premiumRush ? `${premiumRush.payoutBalls}개` : "최대 출옥")}
+        ${distributionCharts.map((chart) => donutChart(
+          chart.title,
+          machine.payouts[chart.source] || [],
+          chart.centerValue,
+          chart.centerLabel
+        )).join("")}
       </div>
       <p class="visual-source-note">이미지: ${escapeHtml(guide.mainImage.credit)} · 수치: 공개 스펙 자료 대조 · 출옥은 지급 기준</p>
     </div>
@@ -348,6 +366,7 @@ function renderDetail(machine) {
         <ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
       </div>
       ${payoutTable("초기 당첨 배분", machine.payouts.initial)}
+      ${Array.isArray(machine.payouts.climax) ? payoutTable("CLIMAX 배분", machine.payouts.climax) : ""}
       ${payoutTable("RUSH 배분", machine.payouts.rush)}
       <div class="detail-section">
         <h3>확인 출처</h3>
