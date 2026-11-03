@@ -28,11 +28,15 @@
   },
   "visualGuide": {
     "mainImage": {
-      "url": "./assets/images/official/onirezero2/basic.jpg",
-      "alt": "대도기연 공식 리제로 오니가카리 2 기본 정보와 기기 이미지",
-      "caption": "공식 기본 정보 · 기기 외관 · 당첨 배분",
+      "url": "./assets/images/official/onirezero2/machine.png",
+      "alt": "대도기연 리제로 오니가카리 2 파칭코 기기 외관",
+      "caption": "기기 외관",
       "credit": "株式会社大都技研 공식 제품 사이트",
       "sourceUrl": "https://www.daitogiken.com/contents/product/pachinko/onirezero2/info.html"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/onirezero2/rush-screen.png",
+      "alt": "리제로 오니가카리 2 RUSH 플레이 화면"
     },
     "steps": [
       {

@@ -232,7 +232,7 @@ function visualGameFlow(machine) {
   const guide = machine.visualGuide;
   if (!guide?.mainImage || !Array.isArray(guide.steps)) return "";
   const sourceUrl = guide.mainImage.sourceUrl;
-  const rushImage = guide.steps.find((step) => step.phase.includes("RUSH"))?.image;
+  const rushImage = guide.rushScreen || guide.steps.find((step) => step.phase.includes("RUSH"))?.image;
   return `
     <div class="detail-section visual-flow-section">
       <div class="visual-section-heading">
