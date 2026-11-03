@@ -193,6 +193,87 @@ function payoutTable(title, items) {
   `;
 }
 
+const chartColors = ["#42e9ff", "#9f8cff", "#ff4fd8", "#ffca62", "#8cf5ba"];
+
+function donutGradient(items) {
+  let cursor = 0;
+  const segments = items.map((item, index) => {
+    const rate = Number(item.ratePercent) || 0;
+    const start = cursor;
+    cursor += rate;
+    return `${chartColors[index % chartColors.length]} ${start}% ${cursor}%`;
+  });
+  if (cursor < 100) segments.push(`#252b39 ${cursor}% 100%`);
+  return `conic-gradient(${segments.join(", ")})`;
+}
+
+function donutChart(title, items, centerValue, centerLabel) {
+  return `
+    <article class="donut-card">
+      <h4>${escapeHtml(title)}</h4>
+      <div class="donut-layout">
+        <div class="donut" style="--donut:${donutGradient(items)}" role="img"
+          aria-label="${escapeHtml(items.map((item) => `${item.label} ${item.ratePercent}%`).join(", "))}">
+          <div><strong>${escapeHtml(centerValue)}</strong><span>${escapeHtml(centerLabel)}</span></div>
+        </div>
+        <ul class="donut-legend">
+          ${items.map((item, index) => `
+            <li><i style="--legend:${chartColors[index % chartColors.length]}"></i>
+              <span>${escapeHtml(item.label)}</span><b>${escapeHtml(item.ratePercent)}%</b>
+            </li>
+          `).join("")}
+        </ul>
+      </div>
+    </article>
+  `;
+}
+
+function visualGameFlow(machine) {
+  const guide = machine.visualGuide;
+  if (!guide?.mainImage || !Array.isArray(guide.steps)) return "";
+  const sourceUrl = guide.mainImage.sourceUrl;
+  return `
+    <div class="detail-section visual-flow-section">
+      <div class="visual-section-heading">
+        <div><span>VISUAL GUIDE</span><h3>게임 플로우 한눈에 보기</h3></div>
+        <p>초당첨에서 RUSH까지의 이동과 출옥 배분을 이미지와 비율로 정리했습니다.</p>
+      </div>
+      <div class="machine-visual-intro">
+        <figure class="machine-product-shot">
+          <img src="${escapeHtml(guide.mainImage.url)}" alt="${escapeHtml(guide.mainImage.alt)}"
+            loading="lazy" decoding="async">
+          <figcaption>${escapeHtml(guide.mainImage.caption)} ·
+            <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">${escapeHtml(guide.mainImage.credit)} ↗</a>
+          </figcaption>
+        </figure>
+        <div class="flow-key-numbers">
+          <p>핵심 구조</p>
+          <strong>1/349.9</strong><span>통상시 대당첨</span>
+          <strong>55%</strong><span>RUSH 진입</span>
+          <strong>77%</strong><span>RUSH 계속률</span>
+        </div>
+      </div>
+      <div class="visual-flow-steps">
+        ${guide.steps.map((step, index) => `
+          <article class="visual-flow-step">
+            <a class="flow-image" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">
+              <img src="${escapeHtml(step.image.url)}" alt="${escapeHtml(step.image.alt)}" loading="lazy" decoding="async">
+              <span>이미지 출처 ↗</span>
+            </a>
+            <div><small>${escapeHtml(step.phase)}</small><h4>${escapeHtml(step.title)}</h4><p>${escapeHtml(step.description)}</p></div>
+            ${index < guide.steps.length - 1 ? '<i class="flow-arrow" aria-hidden="true">↓</i>' : ""}
+          </article>
+        `).join("")}
+      </div>
+      <div class="distribution-charts">
+        ${donutChart("초기 당첨 배분", machine.payouts.initial, "55%", "RUSH 진입")}
+        ${donutChart("RUSH 중 배분", machine.payouts.rush, "25%", "6000개")}
+      </div>
+      <p class="visual-source-note">이미지: ${escapeHtml(guide.mainImage.credit)} · 수치: 공개 스펙 자료 대조 · 출옥은 지급 기준</p>
+    </div>
+  `;
+}
+
 function renderDetail(machine) {
   const accent = accentFor(machine);
   const reviewFields = machine.verification.needsReviewFields || [];
@@ -213,6 +294,7 @@ function renderDetail(machine) {
         <h3>핵심 스펙</h3>
         <div class="spec-table">${detailSpecs(machine)}</div>
       </div>
+      ${visualGameFlow(machine)}
       <div class="detail-section">
         <h3>플레이 흐름</h3>
         <ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>

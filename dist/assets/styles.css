@@ -361,6 +361,43 @@ dialog::backdrop { background: rgba(2,4,8,.82); backdrop-filter: blur(11px); }
 .spec-table div { padding: 15px; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.025); }
 .spec-table small { display: block; color: var(--muted); font-size: 10px; }
 .spec-table b { display: block; margin-top: 5px; font-size: 15px; }
+.visual-flow-section { padding-top: 42px; border-top: 1px solid var(--line); }
+.visual-section-heading { display: grid; grid-template-columns: 1fr minmax(240px, 390px); align-items: end; gap: 24px; }
+.visual-section-heading span { color: var(--cyan); font-size: 9px; font-weight: 800; letter-spacing: .15em; }
+.visual-section-heading h3 { margin: 4px 0 0; font-size: 26px; }
+.visual-section-heading p { margin: 0; color: var(--muted); font-size: 12px; }
+.machine-visual-intro { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(220px, .65fr); gap: 13px; margin-top: 22px; }
+.machine-product-shot { display: grid; grid-template-rows: minmax(300px, 440px) auto; margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: radial-gradient(circle at center, rgba(159,140,255,.14), transparent 55%), #080b12; }
+.machine-product-shot img { width: 100%; height: 100%; min-height: 0; object-fit: contain; padding: 18px; }
+.machine-product-shot figcaption { padding: 11px 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; }
+.machine-product-shot a { color: var(--cyan); text-decoration: none; }
+.flow-key-numbers { display: grid; grid-template-columns: 1fr auto; align-content: center; gap: 11px 14px; padding: 25px; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(145deg, rgba(66,233,255,.08), rgba(159,140,255,.08)); }
+.flow-key-numbers p { grid-column: 1 / -1; margin-bottom: 10px; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.flow-key-numbers strong { color: #f5f7fb; font-size: clamp(27px, 4vw, 39px); line-height: 1; letter-spacing: -.05em; }
+.flow-key-numbers span { align-self: center; color: #9ba3b4; font-size: 11px; }
+.visual-flow-steps { display: grid; gap: 12px; margin-top: 13px; }
+.visual-flow-step { position: relative; display: grid; grid-template-columns: minmax(180px, 250px) 1fr; gap: 20px; align-items: center; padding: 13px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.022); }
+.flow-image { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: #05070c; }
+.flow-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
+.flow-image:hover img { transform: scale(1.025); }
+.flow-image span { position: absolute; right: 7px; bottom: 7px; padding: 5px 7px; border-radius: 7px; background: rgba(4,6,11,.78); color: #d7dbe4; font-size: 8px; backdrop-filter: blur(7px); }
+.visual-flow-step small { color: var(--cyan); font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.visual-flow-step h4 { margin: 6px 0; font-size: 18px; }
+.visual-flow-step p { margin: 0; color: #a4abb9; font-size: 12px; }
+.flow-arrow { position: absolute; left: calc(125px + 13px); bottom: -20px; z-index: 2; display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--bg-soft); color: var(--cyan); font-style: normal; }
+.distribution-charts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin-top: 22px; }
+.donut-card { padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.022); }
+.donut-card h4 { margin: 0 0 17px; font-size: 15px; }
+.donut-layout { display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; }
+.donut { width: 150px; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: var(--donut); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); }
+.donut > div { width: 88px; aspect-ratio: 1; display: grid; place-content: center; border-radius: 50%; background: #0d111b; text-align: center; box-shadow: 0 0 0 1px var(--line); }
+.donut strong { display: block; font-size: 24px; line-height: 1; }
+.donut span { display: block; margin-top: 5px; color: var(--muted); font-size: 8px; }
+.donut-legend { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+.donut-legend li { display: grid; grid-template-columns: 8px 1fr auto; gap: 7px; align-items: center; color: #aeb5c3; font-size: 9px; }
+.donut-legend i { width: 7px; height: 7px; border-radius: 50%; background: var(--legend); }
+.donut-legend b { color: #eef1f7; font-size: 10px; }
+.visual-source-note { margin: 11px 2px 0; color: #6f7789; font-size: 9px; }
 .flow-list { display: grid; gap: 8px; padding: 0; list-style: none; counter-reset: flow; }
 .flow-list li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: center; padding: 12px; border-radius: 12px; background: rgba(255,255,255,.03); color: #c7cbd4; font-size: 13px; }
 .flow-list li::before { counter-increment: flow; content: counter(flow); display: grid; place-items: center; width: 25px; height: 25px; border-radius: 8px; background: var(--cyan-soft); color: var(--cyan); font-weight: 800; }
@@ -484,6 +521,14 @@ dialog::backdrop { background: rgba(2,4,8,.82); backdrop-filter: blur(11px); }
   .detail-hero { padding: 45px 24px 30px; }
   .detail-body { padding: 28px 24px 40px; }
   .spec-table { grid-template-columns: repeat(2, 1fr); }
+  .visual-section-heading, .machine-visual-intro, .distribution-charts { grid-template-columns: 1fr; }
+  .visual-section-heading { align-items: start; gap: 9px; }
+  .machine-product-shot { grid-template-rows: minmax(260px, 360px) auto; }
+  .visual-flow-step { grid-template-columns: 1fr; gap: 13px; }
+  .flow-arrow { left: calc(50% - 14px); }
+  .donut-layout { grid-template-columns: 130px 1fr; gap: 14px; }
+  .donut { width: 130px; }
+  .donut > div { width: 76px; }
   .dialog-close { left: calc(100% - 52px); }
   .ai-chat-shell { padding: 21px 16px; }
   .ai-context-row { grid-template-columns: 1fr auto; }
