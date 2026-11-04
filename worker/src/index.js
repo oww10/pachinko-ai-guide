@@ -63,7 +63,9 @@ export function sanitizeMachine(machine) {
       basis: String(machine.payouts?.basis || "").slice(0, 40),
       initial: sanitizePayouts(machine.payouts?.initial),
       climax: sanitizePayouts(machine.payouts?.climax),
-      rush: sanitizePayouts(machine.payouts?.rush)
+      rush: sanitizePayouts(machine.payouts?.rush),
+      modeB: sanitizePayouts(machine.payouts?.modeB),
+      ultimateDrive: sanitizePayouts(machine.payouts?.ultimateDrive)
     },
     gameFlow: Array.isArray(machine.gameFlow) ? machine.gameFlow.slice(0, 10).map((value) => String(value).slice(0, 300)) : [],
     notes: Array.isArray(machine.notes) ? machine.notes.slice(0, 8).map((value) => String(value).slice(0, 300)) : [],

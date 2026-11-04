@@ -367,7 +367,9 @@ function renderDetail(machine) {
       </div>
       ${payoutTable("초기 당첨 배분", machine.payouts.initial)}
       ${Array.isArray(machine.payouts.climax) ? payoutTable("CLIMAX 배분", machine.payouts.climax) : ""}
-      ${payoutTable("RUSH 배분", machine.payouts.rush)}
+      ${payoutTable(Array.isArray(machine.payouts.modeB) ? "RUSH 모드 A 배분" : "RUSH 배분", machine.payouts.rush)}
+      ${Array.isArray(machine.payouts.modeB) ? payoutTable("RUSH 모드 B 배분", machine.payouts.modeB) : ""}
+      ${Array.isArray(machine.payouts.ultimateDrive) ? payoutTable("ULTIMATE DRIVE 배분", machine.payouts.ultimateDrive) : ""}
       <div class="detail-section">
         <h3>확인 출처</h3>
         <ul class="source-list">

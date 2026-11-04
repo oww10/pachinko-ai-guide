@@ -3,35 +3,382 @@
   "id": "e-lycoris-recoil",
   "officialNameJa": "eリコリス・リコイル",
   "nameKo": "e 리코리스 리코일",
-  "aliases": ["eリコリコ", "リコリス・リコイル"],
-  "modelCode": null,
+  "aliases": ["eリコリコ", "リコリス・リコイル", "리코리코"],
+  "modelCode": "eリコリス・リコイルM3",
   "machineType": "pachinko",
   "format": "e",
   "maker": "ニューギン",
   "brand": "Newgin",
   "releaseDate": "2026-04-06",
-  "probabilities": { "base": "約1/259.7", "symbolHit": null, "charge": null, "highState": null, "rushHit": "約1/97.1" },
-  "rush": { "nameJa": "リコリコRUSH", "type": "ST・二段階RUSH", "entryRatePercent": 50, "totalEntryRatePercent": 50, "continuationRatePercent": 75, "spins": 132, "remainingHolds": null, "timeShortSpins": null, "gates": ["通常RUSHと上位RUSHの二段階", "上位ではUltimate Drive抽選あり"] },
+  "probabilities": {
+    "base": "約1/259.7",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": "約1/97.1"
+  },
+  "rush": {
+    "nameJa": "SPECIAL LycoReco RUSH HYPER DELUXE",
+    "type": "LT・ST 132回・モードA/B",
+    "entryRatePercent": 50,
+    "totalEntryRatePercent": 50,
+    "continuationRatePercent": 75,
+    "spins": 132,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "모드 A 당첨은 750개, 당첨 후 50%로 모드 B 이동",
+      "모드 B 당첨은 3000개 또는 6000개+ULTIMATE DRIVE",
+      "ULTIMATE DRIVE는 3000개 추가가 50%로 반복"
+    ]
+  },
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 0.1, "destination": "リコリコRUSH", "confidence": "secondary", "notes": [] },
-      { "label": "600個＋RUSH", "payoutBalls": 600, "ratePercent": 44.9, "destination": "リコリコRUSH", "confidence": "secondary", "notes": [] },
-      { "label": "約300個＋RUSH", "payoutBalls": 300, "ratePercent": 5, "destination": "リコリコRUSH", "confidence": "needs-review", "notes": ["媒体により300個/310個表記差あり"] },
-      { "label": "600個・通常", "payoutBalls": 600, "ratePercent": 30, "destination": null, "confidence": "secondary", "notes": [] },
-      { "label": "約300個・通常", "payoutBalls": 300, "ratePercent": 20, "destination": null, "confidence": "needs-review", "notes": ["媒体により300個/310個表記差あり"] }
+      {
+        "label": "1500개 + RUSH",
+        "payoutBalls": 1500,
+        "ratePercent": 0.1,
+        "destination": "SPECIAL LycoReco RUSH",
+        "confidence": "official",
+        "notes": ["10R", "Premium LycoReco BONUS"]
+      },
+      {
+        "label": "600개 + RUSH",
+        "payoutBalls": 600,
+        "ratePercent": 44.9,
+        "destination": "SPECIAL LycoReco RUSH",
+        "confidence": "official",
+        "notes": ["4R"]
+      },
+      {
+        "label": "310개 + RUSH",
+        "payoutBalls": 310,
+        "ratePercent": 5,
+        "destination": "SPECIAL LycoReco RUSH",
+        "confidence": "official",
+        "notes": ["3R", "친아나고 BONUS 성공"]
+      },
+      {
+        "label": "600개 + 통상 복귀",
+        "payoutBalls": 600,
+        "ratePercent": 30,
+        "destination": null,
+        "confidence": "official",
+        "notes": ["4R"]
+      },
+      {
+        "label": "310개 + 통상 복귀",
+        "payoutBalls": 310,
+        "ratePercent": 20,
+        "destination": null,
+        "confidence": "official",
+        "notes": ["3R", "친아나고 BONUS 실패"]
+      }
     ],
     "rush": [
-      { "label": "通常RUSH大当り", "payoutBalls": 750, "ratePercent": 100, "destination": "リコリコRUSH", "confidence": "secondary", "notes": [] },
-      { "label": "上位RUSH 6000個＋Ultimate Drive", "payoutBalls": 6000, "ratePercent": 50, "destination": "Ultimate Drive", "confidence": "secondary", "notes": [] },
-      { "label": "上位RUSH 3000個", "payoutBalls": 3000, "ratePercent": 50, "destination": "上位RUSH", "confidence": "secondary", "notes": [] }
+      {
+        "label": "750개 + 모드 A",
+        "payoutBalls": 750,
+        "ratePercent": 50,
+        "destination": "RUSH 모드 A",
+        "confidence": "secondary",
+        "notes": ["모드 A 당첨은 합계 750개 100%", "당첨 후 내부 모드 재추첨"]
+      },
+      {
+        "label": "750개 + 모드 B",
+        "payoutBalls": 750,
+        "ratePercent": 50,
+        "destination": "RUSH 모드 B",
+        "confidence": "secondary",
+        "notes": ["모드 A 당첨은 합계 750개 100%", "당첨 후 내부 모드 재추첨"]
+      }
+    ],
+    "modeB": [
+      {
+        "label": "3000개 + RUSH",
+        "payoutBalls": 3000,
+        "ratePercent": 50,
+        "destination": "SPECIAL LycoReco RUSH",
+        "confidence": "official",
+        "notes": ["750개 × 4회"]
+      },
+      {
+        "label": "6000개 + ULTIMATE DRIVE",
+        "payoutBalls": 6000,
+        "ratePercent": 50,
+        "destination": "ULTIMATE DRIVE",
+        "confidence": "official",
+        "notes": ["750개 × 8회"]
+      }
+    ],
+    "ultimateDrive": [
+      {
+        "label": "6000개 + RUSH",
+        "payoutBalls": 6000,
+        "ratePercent": 50,
+        "destination": "SPECIAL LycoReco RUSH",
+        "confidence": "official",
+        "notes": ["추가 3000개 없음"]
+      },
+      {
+        "label": "9000개 + RUSH",
+        "payoutBalls": 9000,
+        "ratePercent": 25,
+        "destination": "SPECIAL LycoReco RUSH",
+        "confidence": "official",
+        "notes": ["3000개 추가 1회"]
+      },
+      {
+        "label": "9001개 이상 + RUSH",
+        "payoutBalls": 9001,
+        "ratePercent": 25,
+        "destination": "SPECIAL LycoReco RUSH",
+        "confidence": "official",
+        "notes": ["3000개 추가 2회 이상"]
+      }
     ]
   },
-  "gameFlow": ["初当りの約50%でリコリコRUSHへ", "通常RUSH中は750個大当りで継続を目指す", "上位RUSHでは3000個または6000個＋Ultimate Drive"],
-  "notes": ["Ultimate Driveは3000個を50%で上乗せ継続する仕組み。"],
-  "sources": [
-    { "title": "ニューギン 公式スペック", "url": "https://www.newgin.co.jp/pub/machine/elycorisrecoil/spec.html", "type": "official", "checkedAt": "2026-11-03" },
-    { "title": "パチ7 機種情報", "url": "https://pachiseven.jp/articles/detail/25918", "type": "secondary", "checkedAt": "2026-11-03" }
+  "gameFlow": [
+    "통상시 대당첨 확률은 약 1/259.7이며 전체 초당첨의 50%가 SPECIAL LycoReco RUSH로 진입",
+    "RUSH는 ST 132회·당첨 약 1/97.1·계속률 약 75%이며 내부적으로 모드 A와 B를 이동",
+    "모드 A 당첨은 750개. 당첨 후 50%로 모드 B에 이동하며 초기 RUSH도 약 30%가 모드 B로 시작",
+    "모드 B 당첨은 3000개 50% 또는 6000개+ULTIMATE DRIVE 50%",
+    "ULTIMATE DRIVE는 6000개가 기본이며 3000개 추가가 50%로 반복되고 종료 후 RUSH로 복귀"
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial[2].payoutBalls", "payouts.initial[4].payoutBalls", "payouts.rush"] }
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/259.7", "label": "통상시 대당첨" },
+      { "value": "50%", "label": "RUSH 진입" },
+      { "value": "75%", "label": "RUSH 계속률" }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초당첨 배분",
+        "source": "initial",
+        "centerValue": "50%",
+        "centerLabel": "RUSH 진입"
+      },
+      {
+        "title": "모드 A 당첨 후 이동",
+        "source": "rush",
+        "centerValue": "750개",
+        "centerLabel": "100%"
+      },
+      {
+        "title": "모드 B 당첨 배분",
+        "source": "modeB",
+        "centerValue": "50%",
+        "centerLabel": "UD 진입"
+      },
+      {
+        "title": "ULTIMATE DRIVE 총 출옥",
+        "source": "ultimateDrive",
+        "centerValue": "50%",
+        "centerLabel": "9000개 이상"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "리코리스 리코일 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 약 1/259.7 · 전체 RUSH 진입률 50%"
+      },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 5가지",
+      "initialOutcomes": [
+        {
+          "rate": "0.1%",
+          "title": "1500개",
+          "description": "Premium BONUS\nRUSH 직행",
+          "route": "RUSH",
+          "tone": "premium"
+        },
+        {
+          "rate": "44.9%",
+          "title": "600개",
+          "description": "First BONUS\nRUSH 직행",
+          "route": "RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "5%",
+          "title": "310개",
+          "description": "친아나고 성공\nRUSH 진입",
+          "route": "RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "30%",
+          "title": "600개",
+          "description": "챌린지 실패\n통상시 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "20%",
+          "title": "310개",
+          "description": "친아나고 실패\n통상시 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        }
+      ],
+      "mergeLabel": "총 50% 진입",
+      "rush": {
+        "eyebrow": "LT · MODE A",
+        "title": "SPECIAL LycoReco RUSH",
+        "detail": "ST 132회 · 당첨 약 1/97.1 · 계속률 약 75%"
+      },
+      "rushConnector": "모드 A 중 당첨",
+      "rushAriaLabel": "모드 A 당첨 후 내부 모드 이동",
+      "rushOutcomes": [
+        {
+          "rate": "50%",
+          "title": "750개",
+          "description": "모드 A 유지\nRUSH 계속",
+          "route": "↻ MODE A",
+          "tone": "rush"
+        },
+        {
+          "rate": "50%",
+          "title": "750개",
+          "description": "모드 B 이동\n고출옥 기회",
+          "route": "↓ MODE B",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "내부 모드 B 진입",
+      "secondaryRush": {
+        "eyebrow": "LT · MODE B",
+        "title": "SPECIAL LycoReco RUSH · MODE B",
+        "detail": "당첨 시 최소 3000개 · 50%로 ULTIMATE DRIVE"
+      },
+      "secondaryRushConnector": "모드 B 중 당첨",
+      "secondaryAriaLabel": "모드 B 당첨 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "50%",
+          "title": "3000개",
+          "description": "750개 × 4회\nRUSH 계속",
+          "route": "↻ RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "50%",
+          "title": "6000개 + UD",
+          "description": "750개 × 8회\n3000개 추가 루프",
+          "route": "ULTIMATE DRIVE",
+          "tone": "premium"
+        }
+      ],
+      "loopNote": "ULTIMATE DRIVE는 6000개에서 시작해 3000개 추가가 50%로 반복. 종료 후 SPECIAL LycoReco RUSH로 복귀"
+    },
+    "mainImage": {
+      "url": "./assets/images/official/lycoris-recoil/machine.png",
+      "alt": "Newgin e 리코리스 리코일 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "Newgin 공식 제품 사이트",
+      "sourceUrl": "https://www.newgin.co.jp/pub/machine/elycorisrecoil/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/lycoris-recoil/rush-screen.png",
+      "alt": "Newgin 공식 SPECIAL LycoReco RUSH 안내 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우 · 통상시",
+        "title": "초당첨부터 RUSH 진입까지",
+        "url": "./assets/images/official/lycoris-recoil/flow-initial-ko.png",
+        "alt": "Newgin 공식 리코리스 리코일 통상시 게임 플로우의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · RUSH",
+        "title": "모드 A/B와 ULTIMATE DRIVE",
+        "url": "./assets/images/official/lycoris-recoil/flow-rush-ko.png",
+        "alt": "Newgin 공식 리코리스 리코일 RUSH 게임 플로우의 한국어 번역본"
+      },
+      {
+        "phase": "공식 사양·당첨 배분",
+        "title": "확률·모드별 출옥·UD 배분",
+        "url": "./assets/images/official/lycoris-recoil/spec-ko.png",
+        "alt": "Newgin 공식 리코리스 리코일 사양 이미지의 한국어 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "약 1/259.7의 초당첨",
+        "description": "초당첨 전체의 50%가 SPECIAL LycoReco RUSH로 진입한다. 1500개·600개 직행과 친아나고 BONUS 성공 경로가 있다.",
+        "image": {
+          "url": "./assets/images/official/lycoris-recoil/hero.png",
+          "alt": "Newgin 공식 e 리코리스 리코일 메인 비주얼"
+        }
+      },
+      {
+        "phase": "STEP 02 · RUSH 모드 A",
+        "title": "ST 132회, 계속률 약 75%",
+        "description": "모드 A 당첨은 750개이며 당첨 후 내부 모드를 다시 정한다. 약 50%로 고출옥 구간인 모드 B로 이동한다.",
+        "image": {
+          "url": "./assets/images/official/lycoris-recoil/rush-01.png",
+          "alt": "Newgin 공식 SPECIAL LycoReco RUSH 안내"
+        }
+      },
+      {
+        "phase": "STEP 03 · RUSH 모드 B",
+        "title": "3000개 또는 6000개+UD",
+        "description": "모드 B 당첨은 3000개+RUSH 50%, 6000개+ULTIMATE DRIVE 50%로 나뉜다.",
+        "image": {
+          "url": "./assets/images/official/lycoris-recoil/flow-02.png",
+          "alt": "Newgin 공식 RUSH 모드 B와 ULTIMATE DRIVE 플로우"
+        }
+      },
+      {
+        "phase": "STEP 04 · ULTIMATE DRIVE",
+        "title": "6000개에서 3000개 추가 50% 루프",
+        "description": "6000개 획득 후 3000개 추가 판정을 50%로 반복한다. 최종 배분은 6000개 50%, 9000개 25%, 9001개 이상 25%다.",
+        "image": {
+          "url": "./assets/images/official/lycoris-recoil/ud-01.png",
+          "alt": "Newgin 공식 ULTIMATE DRIVE 기대 출옥 안내"
+        }
+      }
+    ]
+  },
+  "notes": [
+    "RUSH 중 당첨 확률 약 1/97.1은 전동 튤립 롱 개방 확률.",
+    "RUSH 진입 시 약 30%로 모드 B에서 시작하며, 모드 A 당첨 후 약 50%로 모드 B에 이동한다.",
+    "3000개=750개×4회, 6000개=750개×8회, 9000개=750개×12회의 지급 기준.",
+    "ULTIMATE DRIVE 종료 후 SPECIAL LycoReco RUSH로 복귀."
+  ],
+  "sources": [
+    {
+      "title": "Newgin e 리코리스 리코일 공식 사이트",
+      "url": "https://www.newgin.co.jp/pub/machine/elycorisrecoil/",
+      "type": "official",
+      "checkedAt": "2026-11-04"
+    },
+    {
+      "title": "Newgin 공식 스펙",
+      "url": "https://www.newgin.co.jp/pub/machine/elycorisrecoil/spec.html",
+      "type": "official",
+      "checkedAt": "2026-11-04"
+    },
+    {
+      "title": "Newgin 공식 게임 플로우",
+      "url": "https://www.newgin.co.jp/pub/machine/elycorisrecoil/flow.html",
+      "type": "official",
+      "checkedAt": "2026-11-04"
+    },
+    {
+      "title": "PachiMaga 기종 정보",
+      "url": "https://pachimaga.com/free/mach/maker-p/newgin/064864.php",
+      "type": "secondary",
+      "checkedAt": "2026-11-04"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "checkedAt": "2026-11-04",
+    "needsReviewFields": []
+  }
 }

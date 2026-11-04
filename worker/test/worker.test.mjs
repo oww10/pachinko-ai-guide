@@ -15,7 +15,14 @@ const machine = {
   releaseDate: "2025-04-21",
   probabilities: { base: "약 1/199.9", symbolHit: "약 1/399.9" },
   rush: { type: "ST", totalEntryRatePercent: 51, continuationRatePercent: 75, spins: 130, gates: [] },
-  payouts: { basis: "払い出し", initial: [], climax: [{ label: "4500개", payoutBalls: 4500, ratePercent: 51 }], rush: [] },
+  payouts: {
+    basis: "払い出し",
+    initial: [],
+    climax: [{ label: "4500개", payoutBalls: 4500, ratePercent: 51 }],
+    rush: [],
+    modeB: [{ label: "6000개+UD", payoutBalls: 6000, ratePercent: 50 }],
+    ultimateDrive: [{ label: "9000개", payoutBalls: 9000, ratePercent: 25 }]
+  },
   gameFlow: ["합산 약 51%로 RUSH 진입"],
   notes: [],
   verification: { status: "needs-review", needsReviewFields: ["nameKo"] },
@@ -34,6 +41,8 @@ test("machine fields are allowlisted before prompt construction", () => {
   const clean = sanitizeMachine(machine);
   assert.equal(clean.nameKo, machine.nameKo);
   assert.equal(clean.payouts.climax[0].ratePercent, 51);
+  assert.equal(clean.payouts.modeB[0].payoutBalls, 6000);
+  assert.equal(clean.payouts.ultimateDrive[0].ratePercent, 25);
   assert.equal("injected" in clean, false);
   const prompt = buildPrompt("RUSH를 설명해줘", clean);
   assert.match(prompt, /e 도쿄 구울/);
