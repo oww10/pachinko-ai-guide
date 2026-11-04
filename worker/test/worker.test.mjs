@@ -49,6 +49,23 @@ test("machine fields are allowlisted before prompt construction", () => {
   assert.doesNotMatch(prompt, /전달되면 안 됨/);
 });
 
+test("slot settings and AT fields are preserved for Gemini", () => {
+  const clean = sanitizeMachine({
+    ...machine,
+    id: "l-tokyo-ghoul",
+    nameKo: "L 도쿄 구울",
+    machineType: "slot",
+    slot: { type: "AT", netIncrease: "약 4.0매/G", atCeiling: "1200G+α" },
+    settings: [
+      { setting: 1, czProbability: "1/262.6", atProbability: "1/394.4", payoutRate: "97.5%" },
+      { setting: 6, czProbability: "1/203.7", atProbability: "1/261.3", payoutRate: "114.9%" }
+    ]
+  });
+  assert.equal(clean.machineType, "slot");
+  assert.equal(clean.slot.netIncrease, "약 4.0매/G");
+  assert.equal(clean.settings[1].payoutRate, "114.9%");
+});
+
 test("rejects origins outside the allowlist", async () => {
   const response = await worker.fetch(askRequest({ question: "설명해줘", machine }, "https://evil.example"), env);
   assert.equal(response.status, 403);

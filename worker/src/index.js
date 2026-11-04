@@ -3,7 +3,7 @@ const MAX_QUESTION_LENGTH = 500;
 const MAX_BODY_BYTES = 48_000;
 const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`;
 
-const SYSTEM_INSTRUCTION = `당신은 한국어 파칭코 기종 정보 도우미입니다.
+const SYSTEM_INSTRUCTION = `당신은 한국어 파칭코·파치슬롯 기종 정보 도우미입니다.
 제공된 구조화 데이터 안에서만 답하고, 데이터에 없는 내용은 모른다고 말하세요.
 확정 수치와 needs-review 항목을 명확히 구분하세요.
 당첨을 예측하거나 수익을 보장하지 말고, 사행성을 조장하지 마세요.
@@ -43,9 +43,29 @@ export function sanitizeMachine(machine) {
     nameKo: String(machine.nameKo || "").slice(0, 200),
     maker: String(machine.maker || "").slice(0, 120),
     releaseDate: String(machine.releaseDate || "").slice(0, 20),
+    machineType: String(machine.machineType || "pachinko").slice(0, 20),
     probabilities: machine.probabilities && typeof machine.probabilities === "object"
       ? Object.fromEntries(Object.entries(machine.probabilities).slice(0, 10).map(([key, value]) => [String(key).slice(0, 40), value === null ? null : String(value).slice(0, 80)]))
       : {},
+    slot: machine.slot && typeof machine.slot === "object"
+      ? {
+          type: String(machine.slot.type || "").slice(0, 160),
+          netIncrease: String(machine.slot.netIncrease || "").slice(0, 80),
+          baseGames: String(machine.slot.baseGames || "").slice(0, 80),
+          initialATCoins: String(machine.slot.initialATCoins || "").slice(0, 80),
+          czCeiling: String(machine.slot.czCeiling || "").slice(0, 80),
+          atCeiling: String(machine.slot.atCeiling || "").slice(0, 80),
+          resetCeiling: String(machine.slot.resetCeiling || "").slice(0, 80)
+        }
+      : {},
+    settings: Array.isArray(machine.settings)
+      ? machine.settings.slice(0, 6).map((row) => ({
+          setting: Number.isFinite(row?.setting) ? row.setting : null,
+          czProbability: String(row?.czProbability || "").slice(0, 40),
+          atProbability: String(row?.atProbability || "").slice(0, 40),
+          payoutRate: String(row?.payoutRate || "").slice(0, 40)
+        }))
+      : [],
     rush: machine.rush && typeof machine.rush === "object"
       ? {
           nameJa: machine.rush.nameJa ?? null,

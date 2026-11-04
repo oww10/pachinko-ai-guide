@@ -1,0 +1,266 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-tokyo-ghoul",
+  "officialNameJa": "L 東京喰種",
+  "nameKo": "L 도쿄 구울",
+  "aliases": ["L東京喰種", "スマスロ東京喰種", "스마트 슬롯 도쿄 구울", "도쿄구울 슬롯"],
+  "modelCode": "L東京喰種CT / L東京喰種FT",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "スパイキー / クロスアルファ",
+  "brand": "SPIKY · CROSSALPHA",
+  "releaseDate": "2025-02-03",
+  "probabilities": {
+    "base": "설정1 AT 1/394.4",
+    "cz": "설정1 1/262.6",
+    "at": "설정1 1/394.4",
+    "episodeBonus": "설정1 1/6620.2"
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 차감 매수 관리형 AT",
+    "netIncrease": "약 4.0매/G",
+    "baseGames": "50매당 약 31G",
+    "initialATCoins": "약 150매",
+    "czCeiling": "최대 600G+α",
+    "atCeiling": "실게임 1200G+α",
+    "resetCeiling": "CZ 최대 200G+α"
+  },
+  "settings": [
+    { "setting": 1, "czProbability": "1/262.6", "atProbability": "1/394.4", "payoutRate": "97.5%" },
+    { "setting": 2, "czProbability": "1/255.6", "atProbability": "1/380.5", "payoutRate": "99.0%" },
+    { "setting": 3, "czProbability": "1/246.5", "atProbability": "1/357.0", "payoutRate": "101.6%" },
+    { "setting": 4, "czProbability": "1/233.1", "atProbability": "1/325.9", "payoutRate": "105.6%" },
+    { "setting": 5, "czProbability": "1/216.4", "atProbability": "1/291.2", "payoutRate": "110.3%" },
+    { "setting": 6, "czProbability": "1/203.7", "atProbability": "1/261.3", "payoutRate": "114.9%" }
+  ],
+  "rush": {
+    "nameJa": "東京喰種咬",
+    "type": "AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 레미니센스는 8G·성공 기대 약 50%",
+      "상위 CZ 대식가 리제는 8G·성공 기대 약 75%",
+      "AT 중 구울 대결은 실질 약 1/49·승리 기대 약 50%",
+      "아리마 키쇼 저지먼트는 5G·성공 기대 약 61%"
+    ]
+  },
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 희귀역과 규정 게임 수를 계기로 전조·CZ·에피소드 보너스를 노린다.",
+    "CZ 레미니센스는 8G·성공 기대 약 50%, 상위 CZ 대식가 리제는 8G·성공 기대 약 75%이며 성공하면 AT로 진입한다.",
+    "에피소드 보너스는 100매 획득 후 AT 도쿄 구울 咬로 직행한다.",
+    "AT는 초기 약 150매·순증 약 4.0매/G이며, 희귀역으로 매수 추가와 구울 대결을 함께 추첨한다.",
+    "구울 대결 승리 시 BITES, 구울 도안 정렬 시 백족 각성 또는 외눈박이 올빼미 특화 구간을 노린다.",
+    "아리마 키쇼 저지먼트는 5G·성공 기대 약 61%이며 성공 시 CCG의 사신, 실패 시 AT 종료로 이어진다."
+  ],
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/394.4", "label": "설정1 AT 초당첨" },
+      { "value": "약 4.0매/G", "label": "AT 순증" },
+      { "value": "114.9%", "label": "설정6 기계할" }
+    ],
+    "distributionCharts": [],
+    "flowDiagram": {
+      "ariaLabel": "L 도쿄 구울 슬롯 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "희귀역 · 규정 게임 수 · 혁안 상태에서 CZ와 AT를 노림"
+      },
+      "initialConnector": "전조 · CZ · 보너스",
+      "initialAriaLabel": "AT 진입 전 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "성공 약 50%",
+          "title": "레미니센스",
+          "description": "8G 자력 CZ\n성공 시 AT",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 75%",
+          "title": "대식가 리제",
+          "description": "8G 상위 CZ\n성공 시 AT",
+          "route": "AT 진입",
+          "tone": "premium"
+        },
+        {
+          "rate": "100매",
+          "title": "EP BONUS",
+          "description": "소화 중 매수 추가\n종료 후 AT",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 4.0매/G",
+        "title": "도쿄 구울 咬",
+        "detail": "초기 약 150매 · 희귀역으로 매수 추가와 구울 대결을 이중 추첨"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "실질 약 1/49",
+          "title": "구울 대결",
+          "description": "4G · 승리 기대 약 50%\n승리 시 BITES",
+          "route": "BITES",
+          "tone": "rush"
+        },
+        {
+          "rate": "구울 도안",
+          "title": "특화 구간",
+          "description": "백족 각성 또는\n외눈박이 올빼미",
+          "route": "매수 추가",
+          "tone": "premium"
+        },
+        {
+          "rate": "아리마 승리",
+          "title": "저지먼트",
+          "description": "상위 CZ\n5G 자력 판정",
+          "route": "상위 구간",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "아리마 키쇼 출현 · 승리",
+      "secondaryRush": {
+        "eyebrow": "UPPER CZ",
+        "title": "아리마 키쇼 저지먼트",
+        "detail": "5G · 성공 기대 약 61%"
+      },
+      "secondaryRushConnector": "5G 판정",
+      "secondaryAriaLabel": "아리마 키쇼 저지먼트 결과",
+      "secondaryOutcomes": [
+        {
+          "rate": "약 61%",
+          "title": "성공",
+          "description": "CCG의 사신\n특화 구간 진입",
+          "route": "상위 전개",
+          "tone": "premium"
+        },
+        {
+          "rate": "약 39%",
+          "title": "실패",
+          "description": "AT 종료\n통상시로 이동",
+          "route": "통상 복귀",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "BITES와 특화 구간에서 매수를 늘려 AT를 이어가고, AT 종료 후에는 통상시로 복귀"
+    },
+    "mainImage": {
+      "url": "./assets/images/official/l-tokyo-ghoul/machine-hero.png",
+      "alt": "필즈 공식 L 도쿄 구울 스마트 슬롯 기기 외관",
+      "caption": "기기 외관",
+      "credit": "Fields 공식 기종 목록",
+      "sourceUrl": "https://www.slot-l-tokyoghoul.jp/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/l-tokyo-ghoul/at-screen.png",
+      "alt": "스파이키 공식 L 도쿄 구울 AT 안내 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 전체 플로우",
+        "title": "통상시부터 BITES까지",
+        "url": "./assets/images/official/l-tokyo-ghoul/flow-overview-ko.png",
+        "alt": "L 도쿄 구울 공식 전체 게임 플로우의 한국어 제목 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · 통상시",
+        "title": "CZ와 AT 진입 경로",
+        "url": "./assets/images/official/l-tokyo-ghoul/flow-normal-ko.png",
+        "alt": "L 도쿄 구울 공식 통상시 안내 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · AT",
+        "title": "도쿄 구울 咬와 BITES",
+        "url": "./assets/images/official/l-tokyo-ghoul/flow-at-ko.png",
+        "alt": "L 도쿄 구울 공식 AT 안내 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · 특화",
+        "title": "BITES와 특화 구간",
+        "url": "./assets/images/official/l-tokyo-ghoul/flow-special-ko.png",
+        "alt": "L 도쿄 구울 공식 특화 구간 안내 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · 상위",
+        "title": "아리마 저지먼트와 CCG의 사신",
+        "url": "./assets/images/official/l-tokyo-ghoul/flow-upper-ko.png",
+        "alt": "L 도쿄 구울 공식 상위 구간 안내 이미지의 한국어 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "희귀역과 규정 게임 수",
+        "description": "전조를 거쳐 CZ 또는 에피소드 보너스를 노린다.",
+        "image": { "url": "./assets/images/official/l-tokyo-ghoul/flow-normal-ko.png", "alt": "L 도쿄 구울 통상시 공식 안내" }
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "도쿄 구울 咬",
+        "description": "초기 약 150매·순증 약 4.0매/G. 구울 대결 승리로 BITES를 노린다.",
+        "image": { "url": "./assets/images/official/l-tokyo-ghoul/flow-at-ko.png", "alt": "L 도쿄 구울 AT 공식 안내" }
+      },
+      {
+        "phase": "STEP 03 · 상위 구간",
+        "title": "아리마 키쇼 저지먼트",
+        "description": "5G·성공 기대 약 61%. 성공하면 CCG의 사신으로 이어진다.",
+        "image": { "url": "./assets/images/official/l-tokyo-ghoul/flow-upper-ko.png", "alt": "L 도쿄 구울 상위 CZ 공식 안내" }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "title": "스파이키 · L 東京喰種 공식 제품 사이트",
+      "url": "https://www.slot-l-tokyoghoul.jp/",
+      "accessedAt": "2026-11-04",
+      "supports": ["공식 이미지", "게임 플로우", "브랜드·저작권"]
+    },
+    {
+      "type": "official",
+      "title": "Fields 2025년 유기기 목록 · L 東京喰種",
+      "url": "https://www.fields.biz/products/ps/machine_list2025.html",
+      "accessedAt": "2026-11-04",
+      "supports": ["기기 외관", "공식 기종명", "브랜드"]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD · L 東京喰種 기종 데이터",
+      "url": "https://www.p-world.co.jp/machine/database/10207",
+      "accessedAt": "2026-11-04",
+      "supports": ["설정별 CZ·AT 확률", "기계할", "AT·CZ·천장·게임 흐름"]
+    },
+    {
+      "type": "official",
+      "title": "広島県公安委員会 · L東京喰種CT 검정 공고",
+      "url": "https://www.pref.hiroshima.lg.jp/soumu/kenpo-pdf/2024/t092/2024-t092-012.pdf",
+      "accessedAt": "2026-11-04",
+      "supports": ["형식명", "제조사"]
+    }
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "공식 이미지에는 원본 일본어를 유지하고 핵심 이해를 위한 한국어 안내를 PhotoCraft로 덧입혔다."
+  ],
+  "verification": {
+    "status": "verified",
+    "needsReviewFields": [],
+    "lastReviewedAt": "2026-11-04",
+    "reviewedBy": "Codex"
+  }
+}

@@ -1,10 +1,14 @@
-const DATA_ROOT = "./data/pachinko";
+const DATA_SOURCES = [
+  { category: "pachinko", root: "./data/pachinko" },
+  { category: "slot", root: "./data/slots" }
+];
 const accents = ["#42e9ff", "#ff4fd8", "#ffca62", "#8cf5ba", "#9f8cff"];
 const AI_CONFIG = window.PACHI_AI_CONFIG || { mode: "mock", endpoint: "" };
 
 const state = {
   machines: [],
   query: "",
+  category: "all",
   year: "all",
   status: "all",
   aiBusy: false,
@@ -18,6 +22,7 @@ const elements = {
   searchForm: document.querySelector("#search-form"),
   clearSearch: document.querySelector("#clear-search"),
   empty: document.querySelector("#empty-state"),
+  categoryFilters: document.querySelector("#category-filters"),
   yearFilters: document.querySelector("#year-filters"),
   statusFilter: document.querySelector("#status-filter"),
   machineDialog: document.querySelector("#machine-dialog"),
@@ -38,7 +43,10 @@ const probabilityLabels = {
   symbolHit: "도안 당첨",
   charge: "차지",
   highState: "고확률",
-  rushHit: "RUSH 중"
+  rushHit: "RUSH 중",
+  cz: "CZ 합산",
+  at: "AT 초당첨",
+  episodeBonus: "에피소드 보너스"
 };
 
 const confidenceLabels = {
@@ -83,9 +91,10 @@ function currentResults() {
   const query = normalize(state.query.trim());
   return state.machines.filter((machine) => {
     const matchesQuery = !query || machineSearchText(machine).includes(query);
+    const matchesCategory = state.category === "all" || machine.machineType === state.category;
     const matchesYear = state.year === "all" || machine.releaseDate.startsWith(state.year);
     const matchesStatus = state.status === "all" || machine.verification.status === state.status;
-    return matchesQuery && matchesYear && matchesStatus;
+    return matchesQuery && matchesCategory && matchesYear && matchesStatus;
   });
 }
 
@@ -111,20 +120,23 @@ function renderYearFilters() {
 
 function machineCard(machine) {
   const accent = accentFor(machine);
+  const isSlot = machine.machineType === "slot";
+  const primarySpec = isSlot ? machine.settings?.[0]?.atProbability : machine.probabilities.base;
+  const secondarySpec = isSlot ? machine.settings?.[machine.settings.length - 1]?.payoutRate : valueOrDash(machine.rush.continuationRatePercent, "%");
   return `
     <article class="machine-card" tabindex="0" role="button"
       aria-label="${escapeHtml(machine.nameKo)} 상세 보기"
       data-machine-id="${escapeHtml(machine.id)}" style="--card-accent:${accent}">
       <div class="card-top">
-        <span class="format-badge">${escapeHtml(machine.format)}</span>
+        <span class="format-badge">${escapeHtml(machine.format)} · ${isSlot ? "슬롯" : "파칭코"}</span>
         <span class="date">${escapeHtml(formatDate(machine.releaseDate))}</span>
       </div>
       <p class="maker">${escapeHtml(machine.brand || machine.maker)}</p>
       <h3>${escapeHtml(machine.nameKo)}</h3>
       <p class="official-name" lang="ja">${escapeHtml(machine.officialNameJa)}</p>
       <div class="card-specs">
-        <div><small>기본 확률</small><b>${escapeHtml(valueOrDash(machine.probabilities.base))}</b></div>
-        <div><small>RUSH 계속률</small><b>${escapeHtml(valueOrDash(machine.rush.continuationRatePercent, "%"))}</b></div>
+        <div><small>${isSlot ? "설정1 AT" : "기본 확률"}</small><b>${escapeHtml(valueOrDash(primarySpec))}</b></div>
+        <div><small>${isSlot ? "설정6 기계할" : "RUSH 계속률"}</small><b>${escapeHtml(valueOrDash(secondarySpec))}</b></div>
       </div>
       <span class="review-chip">${machine.verification.status === "verified" ? "검증 완료" : "일부 수치 재확인 필요"}</span>
     </article>
@@ -138,20 +150,43 @@ function renderMachines() {
   elements.list.innerHTML = results.map(machineCard).join("");
   elements.list.hidden = results.length === 0;
   elements.empty.hidden = results.length !== 0;
-  elements.clearSearch.hidden = !state.query && state.year === "all" && state.status === "all";
+  elements.clearSearch.hidden = !state.query && state.category === "all" && state.year === "all" && state.status === "all";
 }
 
 function resetFilters() {
   state.query = "";
+  state.category = "all";
   state.year = "all";
   state.status = "all";
   elements.search.value = "";
   elements.statusFilter.value = "all";
+  renderCategoryFilters();
   renderYearFilters();
   renderMachines();
 }
 
+function renderCategoryFilters() {
+  const labels = { all: "전체", pachinko: "파칭코", slot: "슬롯" };
+  elements.categoryFilters.innerHTML = Object.entries(labels).map(([category, label]) => `
+    <button class="filter-pill ${category === state.category ? "is-active" : ""}"
+      type="button" data-category="${category}" aria-pressed="${category === state.category}">
+      ${label}
+    </button>
+  `).join("");
+}
+
 function detailSpecs(machine) {
+  if (machine.machineType === "slot") {
+    const items = [
+      ["구분", machine.slot?.type],
+      ["순증", machine.slot?.netIncrease],
+      ["베이스", machine.slot?.baseGames],
+      ["AT 초기", machine.slot?.initialATCoins],
+      ["CZ 천장", machine.slot?.czCeiling],
+      ["AT 천장", machine.slot?.atCeiling]
+    ];
+    return items.map(([label, value]) => `<div><small>${label}</small><b>${escapeHtml(valueOrDash(value))}</b></div>`).join("");
+  }
   const probabilityItems = Object.entries(machine.probabilities)
     .filter(([, value]) => value)
     .map(([key, value]) => `<div><small>${escapeHtml(probabilityLabels[key] || key)}</small><b>${escapeHtml(value)}</b></div>`);
@@ -164,6 +199,26 @@ function detailSpecs(machine) {
   ].map(([label, value]) => `<div><small>${label}</small><b>${escapeHtml(value)}</b></div>`);
 
   return [...probabilityItems, ...rushItems].join("");
+}
+
+function slotSettingsTable(machine) {
+  if (machine.machineType !== "slot" || !Array.isArray(machine.settings)) return "";
+  return `
+    <div class="detail-section">
+      <div class="slot-setting-heading">
+        <h3>설정별 확률 · 기계할</h3>
+        <span>공개 스펙 기준</span>
+      </div>
+      <div class="payout-wrap">
+        <table class="payout-table slot-settings-table">
+          <thead><tr><th>설정</th><th>CZ 합산</th><th>AT 초당첨</th><th>기계할</th></tr></thead>
+          <tbody>${machine.settings.map((row) => `
+            <tr><td><b>${escapeHtml(row.setting)}</b></td><td>${escapeHtml(row.czProbability)}</td><td>${escapeHtml(row.atProbability)}</td><td>${escapeHtml(row.payoutRate)}</td></tr>
+          `).join("")}</tbody>
+        </table>
+      </div>
+    </div>
+  `;
 }
 
 function payoutRows(items) {
@@ -251,13 +306,15 @@ function visualGameFlow(machine) {
   const officialImages = Array.isArray(guide.translatedImages)
     ? guide.translatedImages
     : guide.steps.map((step) => ({ phase: step.phase, title: step.title, ...step.image }));
+  const isSlot = machine.machineType === "slot";
   const keyStats = Array.isArray(guide.keyStats) ? guide.keyStats : [
     { value: machine.probabilities.base, label: "통상시 대당첨" },
     { value: `${machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent}%`, label: "RUSH 진입" },
     { value: `${machine.rush.continuationRatePercent}%`, label: "RUSH 계속률" }
   ];
-  const initialCenter = `${machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent}%`;
-  const premiumRush = [...machine.payouts.rush].sort((a, b) => (b.payoutBalls || 0) - (a.payoutBalls || 0))[0];
+  const initialRate = machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent;
+  const initialCenter = initialRate === null || initialRate === undefined ? "—" : `${initialRate}%`;
+  const premiumRush = [...(machine.payouts?.rush || [])].sort((a, b) => (b.payoutBalls || 0) - (a.payoutBalls || 0))[0];
   const distributionCharts = Array.isArray(guide.distributionCharts) ? guide.distributionCharts : [
     { title: "초기 당첨 배분", source: "initial", centerValue: initialCenter, centerLabel: "RUSH 진입" },
     { title: "RUSH 중 배분", source: "rush", centerValue: `${premiumRush?.ratePercent ?? "-"}%`, centerLabel: premiumRush ? `${premiumRush.payoutBalls}개` : "최대 출옥" }
@@ -266,7 +323,7 @@ function visualGameFlow(machine) {
     <div class="detail-section visual-flow-section">
       <div class="visual-section-heading">
         <div><span>VISUAL GUIDE</span><h3>게임 플로우 한눈에 보기</h3></div>
-        <p>초당첨에서 RUSH까지의 이동과 출옥 배분을 이미지와 비율로 정리했습니다.</p>
+        <p>${isSlot ? "통상시에서 CZ·AT와 상위 구간까지의 이동을 이미지와 수치로 정리했습니다." : "초당첨에서 RUSH까지의 이동과 출옥 배분을 이미지와 비율로 정리했습니다."}</p>
       </div>
       <div class="machine-visual-intro">
         <figure class="machine-product-shot">
@@ -325,7 +382,7 @@ function visualGameFlow(machine) {
             </figure>
           `).join("")}
         </div>
-        <p class="official-translation-note">원본 이미지의 수치와 구성은 유지하고 일본어 핵심 안내를 한국어로 덧입힌 번역본입니다.</p>
+        <p class="official-translation-note">원본 이미지의 수치와 구성은 유지하고 일본어 핵심 안내를 PhotoCraft로 한국어 덧입힘 처리한 번역본입니다.</p>
       </section>
       <div class="distribution-charts">
         ${distributionCharts.map((chart) => donutChart(
@@ -335,13 +392,14 @@ function visualGameFlow(machine) {
           chart.centerLabel
         )).join("")}
       </div>
-      <p class="visual-source-note">이미지: ${escapeHtml(guide.mainImage.credit)} · 수치: 공개 스펙 자료 대조 · 출옥은 지급 기준</p>
+      <p class="visual-source-note">이미지: ${escapeHtml(guide.mainImage.credit)} · 수치: 공개 스펙 자료 대조${isSlot ? " · 기계할은 이론상 장기 평균" : " · 출옥은 지급 기준"}</p>
     </div>
   `;
 }
 
 function renderDetail(machine) {
   const accent = accentFor(machine);
+  const isSlot = machine.machineType === "slot";
   const reviewFields = machine.verification.needsReviewFields || [];
   elements.dialogContent.innerHTML = `
     <section class="detail-hero" style="--detail-accent:${accent}">
@@ -349,9 +407,9 @@ function renderDetail(machine) {
       <h2 id="dialog-title">${escapeHtml(machine.nameKo)}</h2>
       <p class="detail-official" lang="ja">${escapeHtml(machine.officialNameJa)}</p>
       <div class="detail-badges">
-        <span>${escapeHtml(machine.format)} 타입</span>
+        <span>${escapeHtml(machine.format)} · ${isSlot ? "스마트 슬롯" : "파칭코"}</span>
         <span>${escapeHtml(machine.rush.nameJa || machine.rush.type)}</span>
-        <span>출옥 기준</span>
+        <span>${isSlot ? "AT 타입" : "출옥 기준"}</span>
         ${machine.modelCode ? `<span>${escapeHtml(machine.modelCode)}</span>` : ""}
       </div>
     </section>
@@ -360,16 +418,17 @@ function renderDetail(machine) {
         <h3>핵심 스펙</h3>
         <div class="spec-table">${detailSpecs(machine)}</div>
       </div>
+      ${slotSettingsTable(machine)}
       ${visualGameFlow(machine)}
       <div class="detail-section">
         <h3>플레이 흐름</h3>
         <ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
       </div>
-      ${payoutTable("초기 당첨 배분", machine.payouts.initial)}
-      ${Array.isArray(machine.payouts.climax) ? payoutTable("CLIMAX 배분", machine.payouts.climax) : ""}
-      ${payoutTable(Array.isArray(machine.payouts.modeB) ? "RUSH 모드 A 배분" : "RUSH 배분", machine.payouts.rush)}
-      ${Array.isArray(machine.payouts.modeB) ? payoutTable("RUSH 모드 B 배분", machine.payouts.modeB) : ""}
-      ${Array.isArray(machine.payouts.ultimateDrive) ? payoutTable("ULTIMATE DRIVE 배분", machine.payouts.ultimateDrive) : ""}
+      ${isSlot ? "" : payoutTable("초기 당첨 배분", machine.payouts.initial)}
+      ${!isSlot && Array.isArray(machine.payouts.climax) ? payoutTable("CLIMAX 배분", machine.payouts.climax) : ""}
+      ${isSlot ? "" : payoutTable(Array.isArray(machine.payouts.modeB) ? "RUSH 모드 A 배분" : "RUSH 배분", machine.payouts.rush)}
+      ${!isSlot && Array.isArray(machine.payouts.modeB) ? payoutTable("RUSH 모드 B 배분", machine.payouts.modeB) : ""}
+      ${!isSlot && Array.isArray(machine.payouts.ultimateDrive) ? payoutTable("ULTIMATE DRIVE 배분", machine.payouts.ultimateDrive) : ""}
       <div class="detail-section">
         <h3>확인 출처</h3>
         <ul class="source-list">
@@ -468,6 +527,13 @@ function appendPendingMessage() {
 }
 
 function buildMockAnswer(machine) {
+  if (machine.machineType === "slot") {
+    const settings = machine.settings || [];
+    const settingOne = settings[0];
+    const settingSix = settings[settings.length - 1];
+    const flow = machine.gameFlow.slice(0, 4).map((step, index) => `${index + 1}. ${step}`).join("\n");
+    return `[연결 전 테스트 응답]\n${machine.nameKo}은 ${machine.slot?.type || "AT 슬롯"}입니다. 설정1 AT 초당첨은 ${settingOne?.atProbability || "—"}, 설정6 기계할은 ${settingSix?.payoutRate || "—"}, AT 순증은 ${machine.slot?.netIncrease || "—"}입니다.\n\n${flow}`;
+  }
   const entry = valueOrDash(machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent, "%");
   const continuation = valueOrDash(machine.rush.continuationRatePercent, "%");
   const flow = machine.gameFlow.slice(0, 3).map((step, index) => `${index + 1}. ${step}`).join("\n");
@@ -541,13 +607,18 @@ async function submitAIQuestion(question) {
 
 async function loadMachines() {
   try {
-    const indexResponse = await fetch(`${DATA_ROOT}/index.json`);
-    if (!indexResponse.ok) throw new Error(`index ${indexResponse.status}`);
-    const index = await indexResponse.json();
-    const machineResponses = await Promise.all(index.machines.map(({ file }) => fetch(`${DATA_ROOT}/${file}`)));
+    const indexResponses = await Promise.all(DATA_SOURCES.map((source) => fetch(`${source.root}/index.json`)));
+    if (indexResponses.some((response) => !response.ok)) throw new Error("machine index response failed");
+    const indexes = await Promise.all(indexResponses.map((response) => response.json()));
+    const entries = indexes.flatMap((index, indexPosition) => index.machines.map((machine) => ({
+      ...machine,
+      root: DATA_SOURCES[indexPosition].root
+    })));
+    const machineResponses = await Promise.all(entries.map(({ root, file }) => fetch(`${root}/${file}`)));
     if (machineResponses.some((response) => !response.ok)) throw new Error("machine data response failed");
     const machines = await Promise.all(machineResponses.map((response) => response.json()));
     state.machines = machines.sort((a, b) => b.releaseDate.localeCompare(a.releaseDate));
+    renderCategoryFilters();
     renderYearFilters();
     renderMachines();
     populateAIMachines();
@@ -583,6 +654,14 @@ elements.yearFilters.addEventListener("click", (event) => {
   if (!button) return;
   state.year = button.dataset.year;
   renderYearFilters();
+  renderMachines();
+});
+
+elements.categoryFilters.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-category]");
+  if (!button) return;
+  state.category = button.dataset.category;
+  renderCategoryFilters();
   renderMachines();
 });
 

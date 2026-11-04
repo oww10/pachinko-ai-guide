@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="일본 파칭코 기종의 확률, RUSH, 출옥 정보를 한국어로 탐색하는 정적 가이드">
+  <meta name="description" content="일본 파칭코·파치슬롯 기종의 확률, RUSH, AT 정보를 한국어로 탐색하는 정적 가이드">
   <meta name="theme-color" content="#090b12">
-  <title>파치스펙 AI — 일본 파칭코 기종 가이드</title>
-  <link rel="stylesheet" href="./assets/styles.css?v=20261104-2">
-  <script src="./assets/app.js?v=20261104-2" defer></script>
+  <title>파치스펙 AI — 일본 파칭코·슬롯 기종 가이드</title>
+  <link rel="stylesheet" href="./assets/styles.css?v=20261104-3">
+  <script src="./assets/app.js?v=20261104-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#machine-list">기종 목록으로 건너뛰기</a>
@@ -29,9 +29,9 @@
     <section class="hero">
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">PACHINKO MACHINE INTELLIGENCE</p>
+          <p class="eyebrow">PACHINKO · PACHISLOT INTELLIGENCE</p>
           <h1>숫자는 정확하게,<br><em>이해는 쉽게.</em></h1>
-          <p class="lede">일본어 기종 정보를 한국어로 정리했습니다. 확률부터 RUSH 흐름, 출옥 배분과 근거 출처까지 한 화면에서 확인하세요.</p>
+          <p class="lede">일본어 기종 정보를 한국어로 정리했습니다. 파칭코의 RUSH부터 슬롯의 CZ·AT·설정별 기계할까지 한 화면에서 확인하세요.</p>
 
           <form class="hero-search" id="search-form" role="search">
             <label class="sr-only" for="machine-search">기종 검색</label>
@@ -41,7 +41,7 @@
           </form>
 
           <div class="trust-row" aria-label="서비스 특징">
-            <span><b>10</b>개 시작 기종</span>
+            <span><b>11</b>개 시작 기종</span>
             <span><b>공식</b> 출처 우선</span>
             <span><b>0원</b> 정적 운영</span>
           </div>
@@ -76,6 +76,11 @@
       </div>
 
       <div class="filter-bar" aria-label="기종 필터">
+        <div class="filter-group" id="category-filters" role="group" aria-label="기종 종류">
+          <button class="filter-pill is-active" type="button" data-category="all" aria-pressed="true">전체</button>
+          <button class="filter-pill" type="button" data-category="pachinko" aria-pressed="false">파칭코</button>
+          <button class="filter-pill" type="button" data-category="slot" aria-pressed="false">슬롯</button>
+        </div>
         <div class="filter-group" id="year-filters" role="group" aria-label="출시 연도">
           <button class="filter-pill is-active" type="button" data-year="all" aria-pressed="true">전체</button>
         </div>
@@ -162,8 +167,8 @@
 
       <div class="ai-suggestions" aria-label="추천 질문">
         <button type="button" data-ai-prompt="초보자도 이해하기 쉽게 이 기종의 게임 흐름을 설명해줘.">초보자용 요약</button>
-        <button type="button" data-ai-prompt="RUSH 진입 조건과 계속률을 중심으로 설명해줘.">RUSH 구조</button>
-        <button type="button" data-ai-prompt="출옥 배분에서 주의해서 볼 점을 알려줘.">출옥 배분</button>
+        <button type="button" data-ai-prompt="이 기종의 핵심 진입 구조와 진행 흐름을 설명해줘.">진입 구조</button>
+        <button type="button" data-ai-prompt="파칭코면 출옥 배분을, 슬롯이면 설정별 확률과 AT 구조에서 주의할 점을 알려줘.">핵심 수치</button>
       </div>
 
       <div class="ai-messages" id="ai-messages" role="log" aria-live="polite">

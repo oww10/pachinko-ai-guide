@@ -1,6 +1,6 @@
 # 기종 상세 화면 디자인 시스템
 
-이 문서는 리제로 오니가카리 2 상세 화면을 기준으로 다른 기종에도 같은 정보 구조와 시각 디자인을 적용하기 위한 제작 규칙이다. 기준 구현은 `dist/data/pachinko/e-rezero-onigakari-2.json`이며, 새 기종은 JavaScript나 CSS를 수정하지 않고 기종 JSON과 이미지 자산만 추가하는 것을 원칙으로 한다.
+이 문서는 리제로 오니가카리 2와 L 도쿄 구울 상세 화면을 기준으로 파칭코·슬롯 기종에 같은 정보 구조와 시각 디자인을 적용하기 위한 제작 규칙이다. 기준 구현은 `dist/data/pachinko/e-rezero-onigakari-2.json`과 `dist/data/slots/l-tokyo-ghoul.json`이며, 새 기종은 JavaScript나 CSS를 수정하지 않고 기종 JSON과 이미지 자산만 추가하는 것을 원칙으로 한다.
 
 ## 1. 상세 화면의 고정 순서
 
@@ -10,9 +10,10 @@
 2. 핵심 스펙
 3. **게임 플로우 한눈에 보기**
    - 기기 외관과 핵심 수치 3개
-   - 통상시 → 초당첨 결과 → RUSH → RUSH 중 결과 분기
+   - 파칭코: 통상시 → 초당첨 결과 → RUSH → RUSH 중 결과 분기
+   - 슬롯: 통상시 → CZ/보너스 → AT → 특화/상위 구간 분기
    - 공식 이미지의 한국어 핵심 번역본
-   - 초기 당첨 및 RUSH 배분 원그래프
+   - 파칭코의 초기 당첨 및 RUSH 배분 원그래프(슬롯은 확정된 배분 데이터가 있을 때만 사용)
 4. 텍스트 플레이 흐름
 5. 배분표
 6. 확인 출처와 검수 상태
@@ -27,6 +28,9 @@
 ```text
 dist/
 ├── data/pachinko/
+│   ├── index.json
+│   └── <machine-id>.json
+├── data/slots/
 │   ├── index.json
 │   └── <machine-id>.json
 └── assets/images/official/<asset-folder>/
@@ -65,6 +69,8 @@ dist/
   { "value": "77%", "label": "RUSH 계속률" }
 ]
 ```
+
+슬롯은 `machineType: "slot"`, `slot`, `settings`를 추가한다. `settings`는 설정 1~6의 CZ 합산, AT 초당첨, 기계할을 같은 행에 기록한다. 파칭코 호환용 `payouts.initial`과 `payouts.rush`는 빈 배열로 유지할 수 있으며, 근거 없는 배분 원그래프는 만들지 않는다.
 
 ### `flowDiagram`
 
@@ -148,7 +154,7 @@ PHOTOCRAFT_CLI=/Users/oww/.local/bin/photocraft-cli \
 3. `visualGuide`를 템플릿에 맞게 작성한다.
 4. 공식 이미지를 `dist/assets/images/official/<asset-folder>/`에 저장한다.
 5. PhotoCraft로 한국어 핵심 번역 이미지를 별도 생성한다.
-6. `dist/data/pachinko/index.json`의 `machines` 배열에 새 파일을 추가한다.
+6. 파칭코는 `dist/data/pachinko/index.json`, 슬롯은 `dist/data/slots/index.json`의 `machines` 배열에 새 파일을 추가한다.
 7. 아래 자동 검사와 수동 화면 검수를 수행한다.
 
 ## 6. 검수 체크리스트
@@ -156,7 +162,7 @@ PHOTOCRAFT_CLI=/Users/oww/.local/bin/photocraft-cli \
 ### 데이터
 
 - [ ] 기종 ID와 JSON 파일명이 일치한다.
-- [ ] 출시일, 확률, 진입률, 계속률, ST 회전 수를 출처와 대조했다.
+- [ ] 출시일과 핵심 확률을 출처와 대조했다. 파칭코는 진입률·계속률·ST, 슬롯은 CZ·AT·기계할·순증을 확인한다.
 - [ ] 초기 당첨 배분과 RUSH 배분의 각 합계가 100이다.
 - [ ] 게임 플로우와 배분표가 서로 모순되지 않는다.
 - [ ] 공식 출처와 확인일이 기록되어 있다.
@@ -182,6 +188,7 @@ PHOTOCRAFT_CLI=/Users/oww/.local/bin/photocraft-cli \
 
 ```sh
 jq empty dist/data/pachinko/index.json dist/data/pachinko/<machine-id>.json
+jq empty dist/data/slots/index.json dist/data/slots/<machine-id>.json
 node --check dist/assets/app.js
 git diff --check
 
