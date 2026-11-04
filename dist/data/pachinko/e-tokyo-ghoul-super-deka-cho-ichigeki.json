@@ -3,34 +3,260 @@
   "id": "e-tokyo-ghoul-super-deka-cho-ichigeki",
   "officialNameJa": "ｅ 東京喰種 超デカ 超一撃 ver.",
   "nameKo": "e 도쿄 구울 초대형 초일격 ver.",
-  "aliases": ["東京喰種 超デカ", "東京喰種 超一撃"],
+  "aliases": ["東京喰種 超デカ", "東京喰種 超一撃", "도쿄 구울 초일격"],
   "modelCode": "ｅ東京喰種ＭＷ",
   "machineType": "pachinko",
   "format": "e",
   "maker": "ビスティ",
   "brand": "Bisty",
   "releaseDate": "2026-06-08",
-  "probabilities": { "base": "約1/349.9", "symbolHit": "約1/999.9", "charge": "約1/538.8", "highState": null, "rushHit": "約1/7.7" },
-  "rush": { "nameJa": "超デカRUSH", "type": "5回転決着", "entryRatePercent": 50, "totalEntryRatePercent": 50, "continuationRatePercent": 50, "spins": 5, "remainingHolds": null, "timeShortSpins": null, "gates": [] },
+  "probabilities": {
+    "base": "約1/349.9",
+    "symbolHit": "約1/999.9",
+    "charge": "約1/538.3",
+    "highState": null,
+    "rushHit": "約1/7.7"
+  },
+  "rush": {
+    "nameJa": "HYPER喰種RUSH",
+    "type": "LT・ST 5回",
+    "entryRatePercent": 50,
+    "totalEntryRatePercent": 50,
+    "continuationRatePercent": 50,
+    "spins": 5,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": []
+  },
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "7500個＋RUSH", "payoutBalls": 7500, "ratePercent": 50, "destination": "超デカRUSH", "confidence": "secondary", "notes": ["図柄揃い時"] },
-      { "label": "3000個・通常", "payoutBalls": 3000, "ratePercent": 50, "destination": null, "confidence": "secondary", "notes": ["図柄揃い時"] }
+      {
+        "label": "7500개 + RUSH",
+        "payoutBalls": 7500,
+        "ratePercent": 50,
+        "destination": "HYPER喰種RUSH",
+        "confidence": "official",
+        "notes": ["도안 당첨 시", "1500개 × 5회"]
+      },
+      {
+        "label": "3000개 + 통상 복귀",
+        "payoutBalls": 3000,
+        "ratePercent": 50,
+        "destination": null,
+        "confidence": "official",
+        "notes": ["도안 당첨 시", "1500개 × 2회"]
+      }
     ],
     "rush": [
-      { "label": "9000個＋α＋RUSH", "payoutBalls": 9000, "ratePercent": 12.5, "destination": "超デカRUSH", "confidence": "secondary", "notes": [] },
-      { "label": "9000個＋RUSH", "payoutBalls": 9000, "ratePercent": 12.5, "destination": "超デカRUSH", "confidence": "secondary", "notes": [] },
-      { "label": "6000個＋RUSH", "payoutBalls": 6000, "ratePercent": 25, "destination": "超デカRUSH", "confidence": "secondary", "notes": [] },
-      { "label": "3000個・終了", "payoutBalls": 3000, "ratePercent": 50, "destination": null, "confidence": "secondary", "notes": [] }
+      {
+        "label": "9000개+α + RUSH",
+        "payoutBalls": 9000,
+        "ratePercent": 12.5,
+        "destination": "HYPER喰種RUSH",
+        "confidence": "official",
+        "notes": ["3000개 추가 루프 3회 이상 성공"]
+      },
+      {
+        "label": "9000개 + RUSH",
+        "payoutBalls": 9000,
+        "ratePercent": 12.5,
+        "destination": "HYPER喰種RUSH",
+        "confidence": "official",
+        "notes": ["1500개 × 6회"]
+      },
+      {
+        "label": "6000개 + RUSH",
+        "payoutBalls": 6000,
+        "ratePercent": 25,
+        "destination": "HYPER喰種RUSH",
+        "confidence": "official",
+        "notes": ["1500개 × 4회"]
+      },
+      {
+        "label": "3000개 + RUSH",
+        "payoutBalls": 3000,
+        "ratePercent": 50,
+        "destination": "HYPER喰種RUSH",
+        "confidence": "official",
+        "notes": ["1500개 × 2회"]
+      }
     ]
   },
-  "gameFlow": ["図柄揃いまたは喰種チャージを契機にする", "図柄揃いの50%で7500個獲得後に超デカRUSHへ", "RUSHは5回転、継続率約50%"],
-  "notes": ["詳細配分は専門媒体値。公式スペック表との最終照合が必要。"],
-  "sources": [
-    { "title": "東京喰種プロジェクト公式", "url": "https://www.ps-tokyoghoul-project.jp/", "type": "official", "checkedAt": "2026-11-03" },
-    { "title": "SANKYO 製品コレクション", "url": "https://www.sankyo-fever.jp/collection/980/", "type": "official", "checkedAt": "2026-11-03" },
-    { "title": "スロベース機種情報", "url": "https://slobase.jp/pachinko/tokyo-ghoul", "type": "secondary", "checkedAt": "2026-11-03" }
+  "gameFlow": [
+    "통상시는 도안 당첨 약 1/999.9와 구울 차지 약 1/538.3을 합산한 대당첨 약 1/349.9",
+    "도안 당첨의 약 50%는 7500개 획득 후 HYPER 구울 RUSH, 약 50%는 3000개 획득 후 통상 복귀",
+    "RUSH는 ST 5회·당첨 약 1/7.7·계속률 약 50%",
+    "RUSH 당첨은 3000개가 기본이며 약 50%에 성공할 때마다 3000개가 추가되는 구울 MAX 루프"
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "payouts.initial", "payouts.rush"] }
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/349.9", "label": "통상시 대당첨" },
+      { "value": "50%", "label": "RUSH 진입" },
+      { "value": "50%", "label": "RUSH 계속률" }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초당첨 배분",
+        "source": "initial",
+        "centerValue": "50%",
+        "centerLabel": "RUSH 진입"
+      },
+      {
+        "title": "RUSH 당첨 배분",
+        "source": "rush",
+        "centerValue": "50%",
+        "centerLabel": "6000개 이상"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "도쿄 구울 초대형 초일격 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "도안 당첨 약 1/999.9 · 구울 차지 약 1/538.3 · 합산 약 1/349.9"
+      },
+      "initialConnector": "도안 당첨",
+      "initialAriaLabel": "도안 초당첨 결과 2가지",
+      "initialOutcomes": [
+        {
+          "rate": "50%",
+          "title": "3000개",
+          "description": "1500개 × 2회\n통상시 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "50%",
+          "title": "7500개",
+          "description": "1500개 × 5회\nRUSH 직행",
+          "route": "HYPER RUSH",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "총 50% 진입",
+      "rush": {
+        "eyebrow": "LUCKY TRIGGER",
+        "title": "HYPER喰種RUSH",
+        "detail": "ST 5회 · 당첨 약 1/7.7 · 계속률 약 50%"
+      },
+      "rushConnector": "RUSH 중 당첨 · 喰MAX 루프",
+      "rushAriaLabel": "RUSH 당첨 총 출옥 결과 4가지",
+      "rushOutcomes": [
+        {
+          "rate": "50%",
+          "title": "3000개",
+          "description": "추가 루프 실패\nRUSH는 계속",
+          "route": "↻ RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "25%",
+          "title": "6000개",
+          "description": "3000개 추가 1회\nRUSH 계속",
+          "route": "↻ RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "12.5%",
+          "title": "9000개",
+          "description": "3000개 추가 2회\nRUSH 계속",
+          "route": "↻ RUSH",
+          "tone": "premium"
+        },
+        {
+          "rate": "12.5%",
+          "title": "9000개+α",
+          "description": "추가 루프 3회 이상\nRUSH 계속",
+          "route": "↻ RUSH",
+          "tone": "premium"
+        }
+      ],
+      "loopNote": "RUSH 당첨은 3000개가 기본. 약 50%에 성공할 때마다 3000개가 추가되며, 출옥 후 ST 5회로 복귀"
+    },
+    "mainImage": {
+      "url": "./assets/images/official/tokyo-ghoul-super-deka/machine.png",
+      "alt": "Bisty e 도쿄 구울 초대형 초일격 버전 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "도쿄 구울 파칭코 공식 사이트",
+      "sourceUrl": "https://www.pachi-e-tokyoghoul.jp/chodeka.html"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/tokyo-ghoul-super-deka/rush-screen.png",
+      "alt": "도쿄 구울 초대형 초일격 HYPER 구울 RUSH 공식 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시부터 HYPER 구울 RUSH까지",
+        "url": "./assets/images/official/tokyo-ghoul-super-deka/flow-ko.png",
+        "alt": "도쿄 구울 공식 게임 플로우 이미지의 한국어 핵심 번역본"
+      },
+      {
+        "phase": "공식 대당첨 배분",
+        "title": "초당첨과 RUSH 중 출옥 배분",
+        "url": "./assets/images/official/tokyo-ghoul-super-deka/spec-ko.png",
+        "alt": "도쿄 구울 공식 대당첨 원그래프의 한국어 핵심 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "도안 당첨과 구울 차지",
+        "description": "도안 당첨 약 1/999.9와 구울 차지 약 1/538.3을 합산한 대당첨 확률은 약 1/349.9다.",
+        "image": {
+          "url": "./assets/images/official/tokyo-ghoul-super-deka/ogp.png",
+          "alt": "도쿄 구울 초대형 초일격 공식 메인 비주얼"
+        }
+      },
+      {
+        "phase": "STEP 02 · 도안 초당첨",
+        "title": "절반은 7500개와 RUSH 진입",
+        "description": "도안 당첨 시 약 50%는 7500개 획득 후 HYPER 구울 RUSH로 직행하며, 약 50%는 3000개 획득 후 통상으로 돌아간다.",
+        "image": {
+          "url": "./assets/images/official/tokyo-ghoul-super-deka/spec-original.png",
+          "alt": "도쿄 구울 공식 초당첨 배분 원그래프"
+        }
+      },
+      {
+        "phase": "STEP 03 · HYPER 구울 RUSH",
+        "title": "ST 5회와 구울 MAX 루프",
+        "description": "RUSH 중 당첨 확률은 약 1/7.7. 당첨 시 3000개를 획득하고 약 50%의 추가 판정을 반복해 6000개·9000개·9000개+α로 늘어난다.",
+        "image": {
+          "url": "./assets/images/official/tokyo-ghoul-super-deka/rush-screen.png",
+          "alt": "도쿄 구울 공식 HYPER 구울 RUSH 화면"
+        }
+      }
+    ]
+  },
+  "notes": [
+    "도안 당첨 초당첨 배분과 RUSH 출옥 배분은 공식 사이트 원그래프 기준.",
+    "3000개=1500개×2, 6000개=1500개×4, 7500개=1500개×5, 9000개=1500개×6의 지급 기준.",
+    "공식 페이지 일부 이미지 대체 설명에는 이전 버전 문구가 남아 있어 실제 현행 사양표와 이미지 수치를 우선 적용."
+  ],
+  "sources": [
+    {
+      "title": "e 도쿄 구울 초대형 초일격 ver. 공식 사이트",
+      "url": "https://www.pachi-e-tokyoghoul.jp/chodeka.html",
+      "type": "official",
+      "checkedAt": "2026-11-04"
+    },
+    {
+      "title": "SANKYO 제품 컬렉션",
+      "url": "https://www.sankyo-fever.jp/collection/980/",
+      "type": "official",
+      "checkedAt": "2026-11-04"
+    },
+    {
+      "title": "PachiMaga 기종 정보",
+      "url": "https://pachimaga.com/free/mach/maker-p/bisty/065284.php",
+      "type": "secondary",
+      "checkedAt": "2026-11-04"
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "checkedAt": "2026-11-04",
+    "needsReviewFields": []
+  }
 }
