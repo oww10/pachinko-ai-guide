@@ -182,7 +182,7 @@ function detailSpecs(machine) {
       ["순증", machine.slot?.netIncrease],
       ["베이스", machine.slot?.baseGames],
       ["AT 초기", machine.slot?.initialATCoins],
-      ["CZ 천장", machine.slot?.czCeiling],
+      [machine.slot?.primaryCeilingLabel || "CZ 천장", machine.slot?.czCeiling],
       ["AT 천장", machine.slot?.atCeiling]
     ];
     return items.map(([label, value]) => `<div><small>${label}</small><b>${escapeHtml(valueOrDash(value))}</b></div>`).join("");
@@ -211,7 +211,7 @@ function slotSettingsTable(machine) {
       </div>
       <div class="payout-wrap">
         <table class="payout-table slot-settings-table">
-          <thead><tr><th>설정</th><th>CZ 합산</th><th>AT 초당첨</th><th>기계할</th></tr></thead>
+          <thead><tr><th>설정</th><th>${escapeHtml(machine.slot?.settingsPrimaryLabel || "CZ 합산")}</th><th>AT 초당첨</th><th>기계할</th></tr></thead>
           <tbody>${machine.settings.map((row) => `
             <tr><td><b>${escapeHtml(row.setting)}</b></td><td>${escapeHtml(row.czProbability)}</td><td>${escapeHtml(row.atProbability)}</td><td>${escapeHtml(row.payoutRate)}</td></tr>
           `).join("")}</tbody>

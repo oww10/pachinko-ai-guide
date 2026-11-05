@@ -1,0 +1,267 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-godzilla-vs-evangelion-2",
+  "officialNameJa": "Ｌパチスロ ゴジラ対エヴァンゲリオン ２",
+  "nameKo": "L 파치슬롯 고지라 대 에반게리온 2",
+  "aliases": ["Lゴジラ対エヴァンゲリオン2", "ゴジエヴァ2", "고지에바2", "고질라 대 에반게리온 2"],
+  "modelCode": "Ｌゴジラ対エヴァンゲリオン２Ｓ",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "ビスティ / フィールズ",
+  "brand": "Bisty · Fields",
+  "releaseDate": "2026-11-02",
+  "probabilities": {
+    "base": "설정1 보너스 1/234.2",
+    "bonus": "설정1 1/234.2",
+    "at": "설정1 1/460.5"
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 보너스 경유 게임 수 추가형 AT",
+    "netIncrease": "약 5.2매/G",
+    "baseGames": "50매당 약 30G",
+    "initialATCoins": "50G 이상",
+    "settingsPrimaryLabel": "보너스",
+    "primaryCeilingLabel": "BONUS 천장",
+    "czCeiling": "최대 850G+α",
+    "atCeiling": "최대 1500G+α",
+    "resetCeiling": "BONUS 400G+α / AT 750G+α"
+  },
+  "settings": [
+    { "setting": 1, "czProbability": "1/234.2", "atProbability": "1/460.5", "payoutRate": "97.7%" },
+    { "setting": 2, "czProbability": "1/229.0", "atProbability": "1/446.5", "payoutRate": "98.9%" },
+    { "setting": 3, "czProbability": "1/221.8", "atProbability": "1/425.5", "payoutRate": "101.2%" },
+    { "setting": 4, "czProbability": "1/207.0", "atProbability": "1/390.4", "payoutRate": "105.8%" },
+    { "setting": 5, "czProbability": "1/201.5", "atProbability": "1/374.2", "payoutRate": "110.6%" },
+    { "setting": 6, "czProbability": "1/195.0", "atProbability": "1/355.5", "payoutRate": "114.9%" }
+  ],
+  "rush": {
+    "nameJa": "ゴジエヴァRUSH",
+    "type": "AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 집결 BATTLE은 9G+α·돌파 기대 약 50%",
+      "에반게리온 보너스 후 AT 기대 약 41%",
+      "고지라 보너스 후 AT 기대 약 64%",
+      "AT 종료 후 카이저 기도라 결전 승리 시 상위 AT"
+    ]
+  },
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 희귀역·규정 게임 수·G침식역 변이를 계기로 전조, CZ 또는 보너스를 노린다.",
+    "CZ 집결 BATTLE은 9G+α·돌파 기대 약 50%이며 성공하면 보너스로 이어진다.",
+    "에반게리온 보너스와 고지라 보너스는 평균 약 73매. 종료 후 각각 초호기 대 기도라 0호기 또는 고지라 챌린지에서 AT를 노린다.",
+    "AT 고지에바 RUSH는 순증 약 5.2매/G·초기 50G 이상이며, 고지에바 ATTACK으로 초기 게임 수를 결정한다.",
+    "AT 중 임팩트 배틀 승리 후 진격 찬스에 성공하면 추가한 게임 수가 10배가 되는 전개를 노릴 수 있다.",
+    "AT 종료 후 일부에서 카이저 기도라 결전으로 이동하고 승리하면 상위 AT G각성 RUSH로 진입한다."
+  ],
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/460.5", "label": "설정1 AT 초당첨" },
+      { "value": "약 5.2매/G", "label": "AT 순증" },
+      { "value": "114.9%", "label": "설정6 기계할" }
+    ],
+    "distributionCharts": [],
+    "flowDiagram": {
+      "ariaLabel": "L 파치슬롯 고지라 대 에반게리온 2 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "희귀역 · 규정 G수 · G침식역 변이로 전조와 CZ, 보너스를 노림"
+      },
+      "initialConnector": "전조 · CZ · 보너스",
+      "initialAriaLabel": "AT 진입 전 주요 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "돌파 약 50%",
+          "title": "집결 BATTLE",
+          "description": "9G+α 자력 CZ\n성공 시 보너스",
+          "route": "BONUS",
+          "tone": "rush"
+        },
+        {
+          "rate": "AT 기대 약 41%",
+          "title": "에바 BONUS",
+          "description": "평균 약 73매\n초호기 VS 기도라 0호기",
+          "route": "AT 도전",
+          "tone": "premium"
+        },
+        {
+          "rate": "AT 기대 약 64%",
+          "title": "고지라 BONUS",
+          "description": "평균 약 73매\n고지라 챌린지",
+          "route": "AT 도전",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "도전 성공 · AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 5.2매/G",
+        "title": "고지에바 RUSH",
+        "detail": "고지에바 ATTACK으로 초기 50G 이상 · 게임 수 추가형 고순증 AT"
+      },
+      "rushConnector": "AT 중 핵심 전개",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "G침식역",
+          "title": "소역 변이",
+          "description": "소역 강화·증식\nG세포 활성화",
+          "route": "추첨 강화",
+          "tone": "rush"
+        },
+        {
+          "rate": "임팩트 배틀",
+          "title": "진격 찬스",
+          "description": "자력 성공 시\n추가 G수 10배",
+          "route": "10배 추가",
+          "tone": "premium"
+        },
+        {
+          "rate": "AT 종료 후 일부",
+          "title": "카이저 기도라 결전",
+          "description": "4G 승부\n승리 시 상위 AT",
+          "route": "상위 도전",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "카이저 기도라 격파",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT",
+        "title": "G각성 RUSH",
+        "detail": "추가 성능이 강화된 순증 약 5.2매/G 상위 AT"
+      },
+      "secondaryRushConnector": "AT 종료 시 결전",
+      "secondaryAriaLabel": "G각성 RUSH 종료 후 전개",
+      "secondaryOutcomes": [
+        {
+          "rate": "결전 승리",
+          "title": "상위 AT 재진입",
+          "description": "카이저 기도라 격파\nG각성 RUSH 계속",
+          "route": "상위 루프",
+          "tone": "premium"
+        },
+        {
+          "rate": "결전 패배",
+          "title": "AT 종료",
+          "description": "50G 인리턴 상태 후\n통상시 복귀",
+          "route": "통상 복귀",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "G침식역과 10배 추가로 게임 수를 늘리고, 카이저 기도라 결전을 통해 G각성 RUSH를 노리는 구조"
+    },
+    "mainImage": {
+      "url": "./assets/images/official/l-godzilla-vs-evangelion-2/machine-hero.png",
+      "alt": "SANKYO 공식 L 파치슬롯 고지라 대 에반게리온 2 기기 외관",
+      "caption": "기기 외관",
+      "credit": "SANKYO 공식 기종 사이트",
+      "sourceUrl": "https://www.eva-project.jp/l_godzilla_vs_eva2/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/l-godzilla-vs-evangelion-2/at-screen.png",
+      "alt": "Fields 공식 L 파치슬롯 고지라 대 에반게리온 2 프로모션 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 전체 플로우",
+        "title": "통상시부터 G각성 RUSH까지",
+        "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-overview-ko.png",
+        "alt": "고지라 대 에반게리온 2 공식 전체 게임 플로우 한국어 제목 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · 통상시",
+        "title": "G침식역과 보너스 경로",
+        "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-normal-ko.png",
+        "alt": "고지라 대 에반게리온 2 공식 통상시 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · 보너스",
+        "title": "두 보너스와 AT 도전",
+        "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-bonus-ko.png",
+        "alt": "고지라 대 에반게리온 2 공식 보너스 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · AT",
+        "title": "고지에바 RUSH와 10배 추가",
+        "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-at-ko.png",
+        "alt": "고지라 대 에반게리온 2 공식 AT 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우 · 상위",
+        "title": "카이저 기도라 결전과 G각성 RUSH",
+        "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-upper-ko.png",
+        "alt": "고지라 대 에반게리온 2 공식 상위 AT 안내의 한국어 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "희귀역 · 규정 G수 · G침식역",
+        "description": "전조와 CZ를 거쳐 두 종류의 보너스를 노린다.",
+        "image": { "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-normal-ko.png", "alt": "고지라 대 에반게리온 2 통상시 공식 안내" }
+      },
+      {
+        "phase": "STEP 02 · 보너스와 AT",
+        "title": "고지에바 RUSH",
+        "description": "보너스 후 도전에 성공하면 순증 약 5.2매/G의 AT로 진입한다.",
+        "image": { "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-at-ko.png", "alt": "고지라 대 에반게리온 2 AT 공식 안내" }
+      },
+      {
+        "phase": "STEP 03 · 상위 AT",
+        "title": "카이저 기도라 결전",
+        "description": "AT 종료 후 결전에서 승리하면 G각성 RUSH로 이어진다.",
+        "image": { "url": "./assets/images/official/l-godzilla-vs-evangelion-2/flow-upper-ko.png", "alt": "고지라 대 에반게리온 2 상위 AT 공식 안내" }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "title": "고지라 대 에반게리온 2 공식 기종 사이트",
+      "url": "https://www.eva-project.jp/l_godzilla_vs_eva2/",
+      "accessedAt": "2026-11-05",
+      "supports": ["공식 이미지", "게임 플로우", "AT 구조", "천장", "브랜드·저작권"]
+    },
+    {
+      "type": "official",
+      "title": "SANKYO 온라인 박물관 · L 파치슬롯 고지라 대 에반게리온 2",
+      "url": "https://www.sankyo-fever.jp/collection/1001/",
+      "accessedAt": "2026-11-05",
+      "supports": ["형식명", "설정별 보너스·AT 확률", "도입 시기", "제조 브랜드"]
+    },
+    {
+      "type": "official",
+      "title": "Fields 공식 PV 제2탄",
+      "url": "https://www.youtube.com/watch?v=GwV0vN_MV5I",
+      "accessedAt": "2026-11-05",
+      "supports": ["순증", "10배 추가", "G침식역", "공식 프로모션"]
+    },
+    {
+      "type": "secondary",
+      "title": "파치슬롯 필승본 · L 파치슬롯 고지라 대 에반게리온 2",
+      "url": "https://p.hisshobon.jp/vpage/2825/1",
+      "accessedAt": "2026-11-05",
+      "supports": ["기계할", "보너스 평균 획득", "AT 기대도", "AT·상위 AT 흐름"]
+    }
+  ],
+  "notes": [
+    "확률과 기계할은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "공식 이미지에는 원본 일본어를 유지하고 핵심 이해를 위한 한국어 안내를 PhotoCraft로 덧입혔다."
+  ],
+  "verification": {
+    "status": "verified",
+    "needsReviewFields": [],
+    "lastReviewedAt": "2026-11-05",
+    "reviewedBy": "Codex"
+  }
+}

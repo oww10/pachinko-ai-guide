@@ -66,6 +66,22 @@ test("slot settings and AT fields are preserved for Gemini", () => {
   assert.equal(clean.settings[1].payoutRate, "114.9%");
 });
 
+test("slot primary probability labels distinguish bonus from CZ", () => {
+  const machine = sanitizeMachine({
+    id: "l-godzilla-vs-evangelion-2",
+    nameKo: "L 파치슬롯 고지라 대 에반게리온 2",
+    machineType: "slot",
+    slot: {
+      settingsPrimaryLabel: "보너스",
+      primaryCeilingLabel: "BONUS 천장",
+      czCeiling: "최대 850G+α"
+    }
+  });
+
+  assert.equal(machine.slot.settingsPrimaryLabel, "보너스");
+  assert.equal(machine.slot.primaryCeilingLabel, "BONUS 천장");
+});
+
 test("rejects origins outside the allowlist", async () => {
   const response = await worker.fetch(askRequest({ question: "설명해줘", machine }, "https://evil.example"), env);
   assert.equal(response.status, 403);

@@ -53,6 +53,8 @@ export function sanitizeMachine(machine) {
           netIncrease: String(machine.slot.netIncrease || "").slice(0, 80),
           baseGames: String(machine.slot.baseGames || "").slice(0, 80),
           initialATCoins: String(machine.slot.initialATCoins || "").slice(0, 80),
+          settingsPrimaryLabel: String(machine.slot.settingsPrimaryLabel || "CZ 합산").slice(0, 40),
+          primaryCeilingLabel: String(machine.slot.primaryCeilingLabel || "CZ 천장").slice(0, 40),
           czCeiling: String(machine.slot.czCeiling || "").slice(0, 80),
           atCeiling: String(machine.slot.atCeiling || "").slice(0, 80),
           resetCeiling: String(machine.slot.resetCeiling || "").slice(0, 80)

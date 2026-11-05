@@ -1,6 +1,6 @@
 # 기종 상세 화면 디자인 시스템
 
-이 문서는 리제로 오니가카리 2와 L 도쿄 구울 상세 화면을 기준으로 파칭코·슬롯 기종에 같은 정보 구조와 시각 디자인을 적용하기 위한 제작 규칙이다. 기준 구현은 `dist/data/pachinko/e-rezero-onigakari-2.json`과 `dist/data/slots/l-tokyo-ghoul.json`이며, 새 기종은 JavaScript나 CSS를 수정하지 않고 기종 JSON과 이미지 자산만 추가하는 것을 원칙으로 한다.
+이 문서는 리제로 오니가카리 2, L 도쿄 구울, L 파치슬롯 고지라 대 에반게리온 2 상세 화면을 기준으로 파칭코·슬롯 기종에 같은 정보 구조와 시각 디자인을 적용하기 위한 제작 규칙이다. 기준 구현은 `dist/data/pachinko/e-rezero-onigakari-2.json`, `dist/data/slots/l-tokyo-ghoul.json`, `dist/data/slots/l-godzilla-vs-evangelion-2.json`이며, 새 기종은 JavaScript나 CSS를 수정하지 않고 기종 JSON과 이미지 자산만 추가하는 것을 원칙으로 한다.
 
 ## 1. 상세 화면의 고정 순서
 
