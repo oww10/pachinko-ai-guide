@@ -1,0 +1,258 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-monster-hunter-rise-sunbreak",
+  "officialNameJa": "スマスロ モンスターハンターライズ：サンブレイク",
+  "nameKo": "몬스터 헌터 라이즈: 선브레이크",
+  "aliases": ["スマスロ MHRサンブレイク", "スマスロ モンハンライズ サンブレイク", "モンハン サンブレイク", "MHRSB", "몬헌 라이즈 선브레이크", "몬헌 선브레이크", "스마스로 몬스터 헌터 라이즈 선브레이크"],
+  "modelCode": "L MHRサンブレイクXA",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "エンターライズ / アデリオン",
+  "brand": "Enterrise · Adelion",
+  "releaseDate": "2026-10-05",
+  "probabilities": {
+    "base": "설정1 AT 1/349.9",
+    "cz": "설정1 BREAK ZONE 1/111.4",
+    "at": "설정1 1/349.9"
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 게임 수 상승형 AT",
+    "netIncrease": "AT 약 2.7매/G · 상위 AT 약 6.6매/G",
+    "initialATCoins": "40G+α · 상위 AT 50G 이상",
+    "settingsPrimaryLabel": "BREAK ZONE",
+    "primaryCeilingLabel": "CZ 천장",
+    "czCeiling": "CZ간 최대 333G+α",
+    "atCeiling": "AT간 최대 999G+α"
+  },
+  "settings": [
+    { "setting": 1, "czProbability": "1/111.4", "atProbability": "1/349.9", "payoutRate": "97.5%" },
+    { "setting": 2, "czProbability": "1/108.8", "atProbability": "1/337.0", "payoutRate": "98.8%" },
+    { "setting": 3, "czProbability": "1/105.6", "atProbability": "1/319.8", "payoutRate": "100.8%" },
+    { "setting": 4, "czProbability": "1/99.3", "atProbability": "1/283.6", "payoutRate": "105.2%" },
+    { "setting": 5, "czProbability": "1/97.2", "atProbability": "1/264.0", "payoutRate": "108.4%" },
+    { "setting": 6, "czProbability": "1/95.8", "atProbability": "1/242.3", "payoutRate": "112.4%" }
+  ],
+  "rush": {
+    "nameJa": "サンブレイクRUSH",
+    "type": "AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ BREAK ZONE은 1세트 5G·AT 기대 약 37%",
+      "CZ 아이루 복권은 10G+α·AT 기대 약 60%",
+      "상위 CZ 용기의 증명은 4G·상위 AT 기대 약 40%",
+      "상위 CZ 멸정의 심판은 4G·상위 AT 기대 약 47%"
+    ]
+  },
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 4종 스테이지에서 레어역이나 규정 회수 달성으로 CZ를 노린다.",
+    "CZ BREAK ZONE은 1세트 5G의 계속률 관리형(AT 기대 약 37%)이고, CZ 아이루 복권은 10G+α의 자력형(AT 기대 약 60%)이다.",
+    "AT 선브레이크 RUSH는 초기 40G+α·순증 약 2.7매/G의 게임 수 상승형이며, 맹용 퀘스트에서 토벌에 성공하면 G수가 늘어난다.",
+    "맹용 퀘스트는 ST 파트(5G+α), 토벌 파트(3G), 결착 파트(1G)로 구성되고, 토벌 성공 시 G수를 상승시키며 퀘스트를 다시 세트할 수 있다.",
+    "AT 중 선브레이크 보너스(평균 약 200매·평균 상승 약 100G), 큐리아 찬스, 아마츠마가츠치(토벌 성공 시 +500G)가 획득 트리거가 된다.",
+    "AT 종료 시 일부에서 상위 CZ 용기의 증명(약 40%)·멸정의 심판(약 47%)으로 이행해 상위 AT 선브레이크 RUSH G(초기 50G 이상·순증 약 6.6매/G)를 노린다."
+  ],
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/349.9", "label": "설정1 AT 초당첨" },
+      { "value": "2.7매/G", "label": "AT 순증 (약)" },
+      { "value": "112.4%", "label": "설정6 기계할" }
+    ],
+    "distributionCharts": [],
+    "flowDiagram": {
+      "ariaLabel": "몬스터 헌터 라이즈: 선브레이크 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "4종 스테이지 · 레어역과 규정 회수로 CZ를 노림"
+      },
+      "initialConnector": "CZ 2종",
+      "initialAriaLabel": "AT 진입 전 CZ 2가지",
+      "initialOutcomes": [
+        {
+          "rate": "AT 기대 약 37%",
+          "title": "BREAK ZONE",
+          "description": "1세트 5G 계속률 관리형\n맹염일섬으로 상위 AT 기회",
+          "route": "CZ",
+          "tone": "rush"
+        },
+        {
+          "rate": "AT 기대 약 60%",
+          "title": "아이루 복권",
+          "description": "10G+α 자력형\n소역 성립마다 AT 추첨",
+          "route": "CZ",
+          "tone": "rush"
+        }
+      ],
+      "mergeLabel": "CZ 성공 · AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 2.7매/G",
+        "title": "선브레이크 RUSH",
+        "detail": "초기 40G+α · 게임 수 상승형 AT · 맹용 퀘스트로 G수 상승"
+      },
+      "rushConnector": "AT 중 핵심 전개",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "레어역 · 정렬",
+          "title": "사냥 찬스",
+          "description": "성공 시\n맹용 퀘스트 돌입",
+          "route": "퀘스트",
+          "tone": "rush"
+        },
+        {
+          "rate": "ST · 토벌 · 결착",
+          "title": "맹용 퀘스트",
+          "description": "토벌 성공 시 G수 상승\n퀘스트 재세트",
+          "route": "G수 상승",
+          "tone": "premium"
+        },
+        {
+          "rate": "획득 트리거",
+          "title": "보너스 · 큐리아 · 아마츠",
+          "description": "보너스 평균 약 200매\n아마츠 토벌 +500G",
+          "route": "상승",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "AT 종료 시 일부 · 상위 CZ",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT",
+        "title": "선브레이크 RUSH G",
+        "detail": "초기 50G 이상 · 순증 약 6.6매/G · 게임성은 그대로 순증 강화"
+      },
+      "secondaryRushConnector": "상위 AT 소화",
+      "secondaryAriaLabel": "상위 AT 소화 후 전개",
+      "secondaryOutcomes": [
+        {
+          "rate": "엔딩 도달",
+          "title": "상위 AT 재돌입",
+          "description": "엔딩에 도달하면\n상위 AT에 다시 돌입",
+          "route": "상위 루프",
+          "tone": "premium"
+        },
+        {
+          "rate": "엔딩 미도달",
+          "title": "AT 종료",
+          "description": "상위 AT 종료 후\n통상시 복귀",
+          "route": "통상 복귀",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "맹용 퀘스트 토벌로 G수를 늘리고, AT 종료 시 상위 CZ(용기의 증명 약 40% · 멸정의 심판 약 47%)로 상위 AT를 노리는 구조"
+    },
+    "mainImage": {
+      "url": "./assets/images/official/mhrsb/key-visual.png",
+      "alt": "エンターライズ 공식 스마스로 몬스터 헌터 라이즈: 선브레이크 키 비주얼",
+      "caption": "공식 키 비주얼",
+      "credit": "エンターライズ 공식 제품 사이트",
+      "sourceUrl": "https://www.enterrise.co.jp/slot/mhrsb/guide.php"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/mhrsb/at-screen.png",
+      "alt": "エンターライズ 공식 스마스로 몬스터 헌터 라이즈: 선브레이크 AT G수 상승(+200G) 연출 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시부터 상위 AT까지",
+        "url": "./assets/images/official/mhrsb/gameflow-ko.png",
+        "alt": "몬스터 헌터 라이즈: 선브레이크 공식 게임 플로우 한국어 번역본"
+      },
+      {
+        "phase": "공식 CZ",
+        "title": "BREAK ZONE과 아이루 복권",
+        "url": "./assets/images/official/mhrsb/cz-ko.png",
+        "alt": "몬스터 헌터 라이즈: 선브레이크 공식 CZ 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 AT",
+        "title": "선브레이크 RUSH와 사냥 찬스",
+        "url": "./assets/images/official/mhrsb/at-ko.png",
+        "alt": "몬스터 헌터 라이즈: 선브레이크 공식 AT 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 맹용 퀘스트",
+        "title": "ST · 토벌 · 결착 파트",
+        "url": "./assets/images/official/mhrsb/quest-ko.png",
+        "alt": "몬스터 헌터 라이즈: 선브레이크 공식 맹용 퀘스트 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 획득 트리거와 상위",
+        "title": "상위 CZ와 상위 AT",
+        "url": "./assets/images/official/mhrsb/trigger-ko.png",
+        "alt": "몬스터 헌터 라이즈: 선브레이크 공식 획득 트리거와 상위 구간 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 기본 스펙",
+        "title": "배당표와 추천 조작",
+        "url": "./assets/images/official/mhrsb/spec-ko.png",
+        "alt": "몬스터 헌터 라이즈: 선브레이크 공식 기본 스펙의 한국어 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시와 CZ",
+        "title": "BREAK ZONE · 아이루 복권",
+        "description": "스테이지에서 레어역과 규정 회수로 CZ를 노리고, 2종 CZ에서 AT를 노린다.",
+        "image": { "url": "./assets/images/official/mhrsb/cz-ko.png", "alt": "몬스터 헌터 라이즈: 선브레이크 CZ 공식 안내" }
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "선브레이크 RUSH",
+        "description": "순증 약 2.7매/G의 게임 수 상승형 AT. 맹용 퀘스트 토벌로 G수를 늘린다.",
+        "image": { "url": "./assets/images/official/mhrsb/at-ko.png", "alt": "몬스터 헌터 라이즈: 선브레이크 AT 공식 안내" }
+      },
+      {
+        "phase": "STEP 03 · 상위",
+        "title": "상위 CZ와 상위 AT",
+        "description": "AT 종료 시 일부에서 상위 CZ로 이행하고, 순증 약 6.6매/G의 상위 AT를 노린다.",
+        "image": { "url": "./assets/images/official/mhrsb/trigger-ko.png", "alt": "몬스터 헌터 라이즈: 선브레이크 상위 구간 공식 안내" }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "title": "エンターライズ スマスロ モンスターハンターライズ：サンブレイク 製品ページ",
+      "url": "https://www.enterrise.co.jp/slot/mhrsb/",
+      "accessedAt": "2026-11-24",
+      "supports": ["기종명", "메이커·저작권 표기", "공식 PV·가이드"]
+    },
+    {
+      "type": "official",
+      "title": "エンターライズ スマスロ モンスターハンターライズ：サンブレイク ガイドブック",
+      "url": "https://www.enterrise.co.jp/slot/mhrsb/guide.php",
+      "accessedAt": "2026-11-24",
+      "supports": ["게임 플로우", "CZ·AT·상위 AT 구조", "순증", "AT·상위 AT 기대도", "배당표·추천 조작", "공식 이미지"]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 기종 데이터베이스 · スマスロ モンスターハンターライズ:サンブレイク",
+      "url": "https://www.p-world.co.jp/machine/database/10570",
+      "accessedAt": "2026-11-24",
+      "supports": ["설정별 확률·기계할", "천장", "형식명", "도입일"]
+    }
+  ],
+  "notes": [
+    "확률과 기계할은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 확률·기계할, 천장, 형식명, 도입일은 공식 가이드북에 없어 보조 출처(P-WORLD, 복수 사이트 일치)의 값이며 재확인이 필요하다.",
+    "천장은 CZ간 최대 333G+α, AT간 최대 999G+α, CZ에서 AT 비당첨이 최대 6회 이어지면 천장이다(보조 출처).",
+    "컴플리트 기능 탑재기로 1일 19000매 획득 시 우치도메(打ち止め) 상태가 되어 유기가 종료된다(보조 출처).",
+    "공식 이미지에는 원본 일본어를 유지하고 핵심 이해를 위한 한국어 안내를 PhotoCraft로 덧입혔다."
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-24",
+    "needsReviewFields": ["modelCode", "releaseDate", "settings", "slot.czCeiling", "slot.atCeiling"]
+  }
+}
