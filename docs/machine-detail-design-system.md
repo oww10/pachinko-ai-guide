@@ -149,6 +149,8 @@ PHOTOCRAFT_CLI=/Users/oww/.local/bin/photocraft-cli \
 
 ## 5. 새 기종 추가 절차
 
+이미지 탐색은 [리제로 2 실제 출처와 다음 기종의 이미지 조사 절차](image-sourcing-workflow.md)를 먼저 따른다. 이미지 수집·PhotoCraft 번역·페이지 레이아웃을 한 번에 재현할 때는 [상세페이지 제작 플레이북](machine-detail-production-playbook.md)을 사용한다. 리제로 첫 화면은 전문 매체 이미지를 직접 참조했고 이후 공식 자료로 교체했으므로, 현재 JSON의 `sourceUrl`을 최초 수집 출처로 해석하지 않는다.
+
 1. 공식 제품 페이지와 검증 가능한 보조 출처를 확보한다.
 2. 기존 JSON을 `<machine-id>.json`으로 복사하고 기본 스펙, 배분, 출처를 수정한다.
 3. `visualGuide`를 템플릿에 맞게 작성한다.

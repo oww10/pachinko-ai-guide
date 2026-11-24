@@ -3,30 +3,253 @@
   "id": "p-evangelion-mirai-e-no-houkou",
   "officialNameJa": "新世紀エヴァンゲリオン ～未来への咆哮～",
   "nameKo": "신세기 에반게리온 ~미래로의 포효~",
-  "aliases": ["エヴァ15", "未来への咆哮"],
+  "aliases": [
+    "エヴァ15",
+    "未来への咆哮"
+  ],
   "modelCode": null,
   "machineType": "pachinko",
   "format": "P",
   "maker": "ビスティ",
   "brand": "Bisty",
   "releaseDate": "2021-12-20",
-  "probabilities": { "base": "約1/319.7", "symbolHit": null, "charge": null, "highState": "約1/99.4", "rushHit": "約1/99.4" },
-  "rush": { "nameJa": "IMPACT MODE", "type": "ST", "entryRatePercent": 59, "totalEntryRatePercent": 70, "continuationRatePercent": 81, "spins": 163, "remainingHolds": 4, "timeShortSpins": 100, "gates": ["直行59%", "通常当り後の時短100回引き戻し込みで約70%", "継続率は残保留4個を含む"] },
+  "probabilities": {
+    "base": "約1/319.7",
+    "symbolHit": null,
+    "charge": null,
+    "highState": "約1/99.4",
+    "rushHit": "約1/99.4"
+  },
+  "rush": {
+    "nameJa": "IMPACT MODE",
+    "type": "ST",
+    "entryRatePercent": 59,
+    "totalEntryRatePercent": 70,
+    "continuationRatePercent": 81,
+    "spins": 163,
+    "remainingHolds": 4,
+    "timeShortSpins": 100,
+    "gates": [
+      "直行59%",
+      "通常当り後の時短100回引き戻し込みで約70%",
+      "継続率は残保留4個を含む"
+    ]
+  },
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "3R＋IMPACT MODE", "payoutBalls": 450, "ratePercent": 59, "destination": "IMPACT MODE", "confidence": "multi-source", "notes": [] },
-      { "label": "3R＋時短100回", "payoutBalls": 450, "ratePercent": 41, "destination": "時短100回", "confidence": "multi-source", "notes": [] }
+      {
+        "label": "3R確変（ST 163回）",
+        "payoutBalls": 450,
+        "ratePercent": 56,
+        "destination": "IMPACT MODE",
+        "confidence": "official",
+        "notes": [
+          "特図1",
+          "出玉は払い出し"
+        ]
+      },
+      {
+        "label": "10R確変（ST 163回）",
+        "payoutBalls": 1500,
+        "ratePercent": 3,
+        "destination": "IMPACT MODE",
+        "confidence": "official",
+        "notes": [
+          "特図1",
+          "出玉は払い出し"
+        ]
+      },
+      {
+        "label": "3R通常（時短100回）",
+        "payoutBalls": 450,
+        "ratePercent": 41,
+        "destination": "時短100回",
+        "confidence": "official",
+        "notes": [
+          "特図1",
+          "出玉は払い出し"
+        ]
+      }
     ],
     "rush": [
-      { "label": "10R大当り", "payoutBalls": 1500, "ratePercent": 100, "destination": "IMPACT MODEまたは終了", "confidence": "official", "notes": ["右打ち中ALL 1500"] }
+      {
+        "label": "10R大当り",
+        "payoutBalls": 1500,
+        "ratePercent": 100,
+        "destination": "IMPACT MODEまたは終了",
+        "confidence": "official",
+        "notes": [
+          "右打ち中ALL 1500",
+          "特図2"
+        ]
+      }
     ]
   },
-  "gameFlow": ["通常時は約1/319.7の大当りを目指す", "59%でIMPACT MODEへ直行", "非突入時は時短100回", "IMPACT MODEは163回転、残保留込み継続率約81%"],
-  "notes": ["長期稼働機。導入日や設置状況は店舗ごとに異なる。"],
-  "sources": [
-    { "title": "SANKYO 製品コレクション", "url": "https://www.sankyo-fever.jp/collection/925/", "type": "official", "checkedAt": "2026-11-03" },
-    { "title": "HAZUSE 機種データ", "url": "https://data.hazuse.com/?machine_code=1P0653", "type": "secondary", "checkedAt": "2026-11-03" }
+  "gameFlow": [
+    "通常時は約1/319.7の大当りを目指す",
+    "59%でIMPACT MODEへ直行",
+    "非突入時は時短100回",
+    "IMPACT MODEは163回転、残保留込み継続率約81%"
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial"] }
+  "notes": [
+    "長期稼働機。導入日や設置状況は店舗ごとに異なる。"
+  ],
+  "sources": [
+    {
+      "title": "SANKYO 製品コレクション",
+      "url": "https://www.sankyo-fever.jp/collection/925/",
+      "type": "official",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "title": "HAZUSE 機種データ",
+      "url": "https://data.hazuse.com/?machine_code=1P0653",
+      "type": "secondary",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "title": "eva-project.jp 公式 P 新世紀エヴァンゲリオン ～未来への咆哮～",
+      "url": "https://www.eva-project.jp/asuhenohoukou/",
+      "type": "official",
+      "checkedAt": "2026-11-23"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-23",
+    "needsReviewFields": [
+      "nameKo",
+      "modelCode"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/evangelion-mirai/visual_05.png",
+      "alt": "P 신세기 에반게리온 ~미래로의 포효~ 공식 비주얼(초호기)",
+      "caption": "공식 비주얼",
+      "credit": "eva-project.jp 공식 사이트",
+      "sourceUrl": "https://www.eva-project.jp/asuhenohoukou/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/evangelion-mirai/rush-screen.png",
+      "alt": "공식 IMPACT MODE 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시 → 초당첨 → IMPACT MODE",
+        "url": "./assets/images/official/evangelion-mirai/flow-ko.png",
+        "alt": "공식 게임 플로우 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·ST·시단·출옥",
+        "url": "./assets/images/official/evangelion-mirai/spec-ko.png",
+        "alt": "공식 스펙 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 배분",
+        "title": "특도 1/2 출옥 배분",
+        "url": "./assets/images/official/evangelion-mirai/chart-ko.png",
+        "alt": "공식 특도 배분 원그래프의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      {
+        "value": "1/319.7",
+        "label": "통상시 대당첨 (저확률)"
+      },
+      {
+        "value": "약 70%",
+        "label": "ST 돌입 (시단 인계 포함)"
+      },
+      {
+        "value": "약 81%",
+        "label": "ST 계속률"
+      }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초당첨 배분 (특도 1)",
+        "source": "initial",
+        "centerValue": "59%",
+        "centerLabel": "ST 직행"
+      },
+      {
+        "title": "IMPACT MODE 중 배분 (특도 2)",
+        "source": "rush",
+        "centerValue": "100%",
+        "centerLabel": "ALL 1500개"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "신세기 에반게리온 미래로의 포효 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 약 1/319.7 · 시단 인계 포함 ST 돌입 약 70%"
+      },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "56%",
+          "title": "450개",
+          "description": "3R 확변 (홀수 도안·135 정렬 포함)\nIMPACT MODE 직행",
+          "route": "IMPACT MODE",
+          "tone": "rush"
+        },
+        {
+          "rate": "3%",
+          "title": "1500개",
+          "description": "10R 확변 (전회전 등)\nIMPACT MODE 직행",
+          "route": "IMPACT MODE",
+          "tone": "premium"
+        },
+        {
+          "rate": "41%",
+          "title": "450개",
+          "description": "3R 통상 (짝수 도안)\n시단 100회 → 인계 약 26.9%",
+          "route": "↩ 시단 100회",
+          "tone": "return"
+        }
+      ],
+      "mergeLabel": "합계 59% 직행 · 시단 인계 포함 약 70%",
+      "rush": {
+        "eyebrow": "IMPACT MODE · ST",
+        "title": "IMPACT MODE",
+        "detail": "ST 163회 · 당첨 약 1/99.4 · 계속률 약 81%"
+      },
+      "rushConnector": "ST 중 당첨",
+      "rushAriaLabel": "ST 중 당첨 결과",
+      "rushOutcomes": [
+        {
+          "rate": "100%",
+          "title": "1500개",
+          "description": "10R 확변 ALL 1500개\nST 163회 재개",
+          "route": "↻ 계속 (약 81%)",
+          "tone": "rush"
+        }
+      ],
+      "loopNote": "특도 2는 ALL 1500개(10R 확변)입니다. ST 계속률 약 81%는 ST 계속률 약 80.7%에 잔여 보류 인계 약 1.2%를 포함한 수치입니다. 출옥은 지급 구슬 수 기준입니다. 확률 변동은 특정 라운드에서의 V 입상이 조건입니다."
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "도안 당첨 노리기",
+        "description": "통상(저확률) 시 대당첨 확률은 약 1/319.7입니다. 노멀·심플 2가지 연출 모드를 고를 수 있고, 135 정렬이면 폭주 BONUS(3R 확변)로 이어집니다."
+      },
+      {
+        "phase": "STEP 02 · 초당첨 판정",
+        "title": "ST 직행 59% + 시단 100회",
+        "description": "특도 1 배분은 3R 확변(450개) 56%, 10R 확변(1500개) 3%가 IMPACT MODE 직행이고, 3R 통상(450개) 41%는 시단 100회로 갑니다. 시단 중 인계 약 26.9%와 잔여 보류 인계 약 1.2%를 포함하면 ST 돌입률은 약 70%입니다."
+      },
+      {
+        "phase": "STEP 03 · IMPACT MODE",
+        "title": "ST 163회 · ALL 1500개",
+        "description": "고확률 시 대당첨 약 1/99.4, 특도 2는 ALL 1500개(10R 확변)입니다. ST 계속률은 약 81%이며 유타임은 탑재되어 있지 않습니다."
+      }
+    ]
+  }
 }

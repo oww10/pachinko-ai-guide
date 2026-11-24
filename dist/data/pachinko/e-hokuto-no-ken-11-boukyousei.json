@@ -11,27 +11,91 @@
   "brand": "Sammy",
   "releaseDate": "2025-12-08",
   "probabilities": { "base": "約1/399.8", "symbolHit": "約1/399.8", "charge": null, "highState": null, "rushHit": "約1/10.7" },
-  "rush": { "nameJa": "暴凶星RUSH", "type": "10回転＋残保留4個", "entryRatePercent": 61, "totalEntryRatePercent": 61, "continuationRatePercent": 75, "spins": 10, "remainingHolds": 4, "timeShortSpins": null, "gates": ["継続率はC時短を含む"] },
+  "rush": { "nameJa": "拳王RUSH／救世主RUSH", "type": "10回転＋残保留4個", "entryRatePercent": 61, "totalEntryRatePercent": 61, "continuationRatePercent": 75, "spins": 10, "remainingHolds": 4, "timeShortSpins": null, "gates": ["継続率はC時短を含む"] },
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "4500個＋RUSH", "payoutBalls": 4500, "ratePercent": 5, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
-      { "label": "1800個＋RUSH", "payoutBalls": 1800, "ratePercent": 4, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
-      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 52, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
-      { "label": "1500個・通常", "payoutBalls": 1500, "ratePercent": 39, "destination": null, "confidence": "secondary", "notes": [] }
+      { "label": "4500個＋RUSH", "payoutBalls": 4500, "ratePercent": 5, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] },
+      { "label": "1800個＋RUSH", "payoutBalls": 1800, "ratePercent": 4, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] },
+      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 52, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] },
+      { "label": "1500個・通常", "payoutBalls": 1500, "ratePercent": 39, "destination": null, "confidence": "official", "notes": [] }
     ],
     "rush": [
-      { "label": "6000個＋RUSH", "payoutBalls": 6000, "ratePercent": 10, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
-      { "label": "4500個＋RUSH", "payoutBalls": 4500, "ratePercent": 40, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
-      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 30, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] },
-      { "label": "出玉なし・RUSHリセット", "payoutBalls": 0, "ratePercent": 20, "destination": "暴凶星RUSH", "confidence": "secondary", "notes": [] }
+      { "label": "6000個＋RUSH", "payoutBalls": 6000, "ratePercent": 10, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] },
+      { "label": "4500個＋RUSH", "payoutBalls": 4500, "ratePercent": 40, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] },
+      { "label": "1500個＋RUSH", "payoutBalls": 1500, "ratePercent": 30, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] },
+      { "label": "出玉なし・RUSHリセット", "payoutBalls": 0, "ratePercent": 20, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] }
     ]
   },
-  "gameFlow": ["初当りの61%で暴凶星RUSHへ", "RUSHは10回転＋残保留4個", "C時短を含む継続率は約75%", "複数当選が絡む極限BATTLEでは最大12000個の可能性あり"],
-  "notes": ["振分値は専門媒体照合値。公開前に公式小冊子で再確認する。"],
+  "gameFlow": ["初当りの61%で暴凶星RUSHへ", "RUSHは10回転＋残保留4個", "C時短を含む継続率は約75%", "極闘(EXTREME BATTLE)では6000個〜最大12000個の可能性あり"],
+  "notes": ["振分値はSammy公式のスペック(基本情報)とデジタル小冊子で確認済み。"],
   "sources": [
-    { "title": "Sammy 公式製品ページ", "url": "https://www.sammy.co.jp/japanese/product/pachinko/hok_ke11/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "Sammy 公式製品ページ(基本情報・デジタル小冊子)", "url": "https://www.sammy.co.jp/japanese/product/pachinko/hok_ke11/", "type": "official", "checkedAt": "2026-11-23" },
     { "title": "HAZUSE 機種情報", "url": "https://hazuse.com/machine/pachinko/5P1070/", "type": "secondary", "checkedAt": "2026-11-03" }
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "payouts.initial", "payouts.rush"] }
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-23", "needsReviewFields": ["nameKo", "modelCode", "releaseDate"] },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/hokuto-11/key-visual.jpg",
+      "alt": "Sammy e 북두의 권 11 폭흉성 공식 키 비주얼",
+      "caption": "공식 키 비주얼",
+      "credit": "Sammy 공식 제품 사이트",
+      "sourceUrl": "https://www.sammy.co.jp/japanese/product/pachinko/hok_ke11/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/hokuto-11/rush-screen.png",
+      "alt": "Sammy 공식 TRIPLE HYPER BONUS 4500 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시 → 3가지 초당첨 → 拳王 RUSH · 極闘",
+        "url": "./assets/images/official/hokuto-11/flow-ko.png",
+        "alt": "Sammy 공식 게임 플로우 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·특도 1/2 출옥 배분",
+        "url": "./assets/images/official/hokuto-11/spec-ko.png",
+        "alt": "Sammy 공식 스펙 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      { "value": "1/399.8", "label": "통상시 도안 당첨" },
+      { "value": "약 61%", "label": "RUSH 진입" },
+      { "value": "약 75%", "label": "RUSH 계속률 (C 시단 포함)" }
+    ],
+    "distributionCharts": [
+      { "title": "초당첨 배분 (특도 1 · 헤소)", "source": "initial", "centerValue": "61%", "centerLabel": "RUSH 진입" },
+      { "title": "RUSH 중 배분 (특도 2 · 전동 튤립)", "source": "rush", "centerValue": "50%", "centerLabel": "4500개 이상" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 북두의 권 11 폭흉성 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "도안 당첨 약 1/399.8 · 전체 RUSH 진입률 약 61%" },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 4가지",
+      "initialOutcomes": [
+        { "rate": "5%", "title": "4500개", "description": "TRIPLE HYPER BONUS\n1500개 × 3 · RUSH 직행", "route": "RUSH", "tone": "premium" },
+        { "rate": "4%", "title": "1800개", "description": "권왕 각성(300 + 1500개)\nRUSH 직행", "route": "RUSH", "tone": "rush" },
+        { "rate": "52%", "title": "1500개", "description": "BATTLE BONUS 연출 성공\nRUSH 직행", "route": "RUSH", "tone": "rush" },
+        { "rate": "39%", "title": "1500개", "description": "BATTLE BONUS 연출 실패\n통상시 복귀", "route": "↩ 통상 복귀", "tone": "return" }
+      ],
+      "mergeLabel": "합계 약 61% 진입",
+      "rush": { "eyebrow": "LT 3.0 PLUS · ST", "title": "拳王 RUSH / 救世主 RUSH", "detail": "고를 수 있는 2가지 RUSH · ST 10회 + 잔여 보류 4개 · 당첨 약 1/10.7 · 계속률 약 75%" },
+      "rushConnector": "RUSH 중 당첨",
+      "rushAriaLabel": "RUSH 중 당첨 결과 4가지",
+      "rushOutcomes": [
+        { "rate": "10%", "title": "6000개", "description": "1500개 × 4 · 극투 시 최대 12,000개\nRUSH 계속", "route": "↻ 계속", "tone": "premium" },
+        { "rate": "40%", "title": "4500개", "description": "1500개 × 3\nRUSH 계속", "route": "↻ 계속", "tone": "premium" },
+        { "rate": "30%", "title": "1500개", "description": "RUSH 계속", "route": "↻ 계속", "tone": "rush" },
+        { "rate": "20%", "title": "ST 리셋", "description": "ST 재시작\nRUSH 계속", "route": "↻ 리셋", "tone": "reset" }
+      ],
+      "loopNote": "RUSH 중 배분은 특도 2(전동 서포트 중) 기준. 잔여 보류 당첨 시는 약 80%가 1500개, 약 20%가 ST 리셋. 극투 발생 시 6000개~최대 12000개(잔여 보류 4개가 모두 당첨이고 마지막이 6000개일 때). 출옥은 지급 기준"
+    },
+    "steps": [
+      { "phase": "STEP 01 · 통상시", "title": "도안 당첨 노리기", "description": "통상시 도안 당첨은 약 1/399.8입니다(도안 당첨 연출과 권왕 각성 성공의 합산값)." },
+      { "phase": "STEP 02 · 초당첨 판정", "title": "RUSH 진입 약 61%", "description": "도안 당첨은 3가지 경로로 갈립니다: TRIPLE HYPER BONUS 4500개, BATTLE BONUS 1500개(연출 성공 시 RUSH), 권왕 각성 찬스(300개, 각성 시 1500개 상승 + RUSH). 특도 1 배분은 4500개 5%, 1800개 4%, 1500개 52%가 RUSH 직행이고, 1500개 39%는 통상으로 돌아갑니다." },
+      { "phase": "STEP 03 · RUSH", "title": "ST 10회 + 잔여 보류 4개", "description": "권왕과 구세주 중 고를 수 있는 2가지 RUSH입니다. 당첨 확률은 약 1/10.7, 계속률은 약 75%이며, 특도 2 배분은 6000개 10%, 4500개 40%, 1500개 30%, ST 리셋 20%입니다. 극투가 발생하면 6000개~최대 12000개까지 노릴 수 있습니다." }
+    ]
+  }
 }
