@@ -131,11 +131,11 @@
   },
   "visualGuide": {
     "mainImage": {
-      "url": "./assets/images/official/evangelion-hajimari/img-kv_pc.jpg",
-      "alt": "e 신세기 에반게리온 ~はじまりの記憶~ 공식 키 비주얼",
-      "caption": "공식 키 비주얼",
-      "credit": "eva-project.jp 공식 사이트",
-      "sourceUrl": "https://www.eva-project.jp/hajimarinokioku/"
+      "url": "./assets/images/official/evangelion-hajimari/machine.png",
+      "alt": "e 신세기 에반게리온 ~はじまりの記憶~ 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10353"
     },
     "rushScreen": {
       "url": "./assets/images/official/evangelion-hajimari/rush-screen.png",
@@ -170,7 +170,7 @@
     "keyStats": [
       {
         "value": "1/399.9",
-        "label": "도안 정렬 (통상·시단 중)"
+        "label": "당첨 (통상·시단 중)"
       },
       {
         "value": "약 61.4%",
@@ -200,7 +200,7 @@
       "normal": {
         "eyebrow": "NORMAL",
         "title": "통상시",
-        "detail": "도안 정렬 약 1/399.9 · 대당첨 약 1/349.9(차지 합산)"
+        "detail": "당첨 약 1/399.9 · 대당첨 약 1/349.9(챠지 합산)"
       },
       "initialConnector": "초당첨",
       "initialAriaLabel": "초당첨 결과 3가지",
@@ -251,13 +251,13 @@
           "tone": "rush"
         }
       ],
-      "loopNote": "특도 2 기준 배분입니다. ST 계속률 약 80%, 우타 중 출옥은 ALL 2400개+α입니다. 대당첨 약 1/349.9는 도안 정렬과 차지 돌입의 합산이며, 출옥은 지급 구슬 수 기준입니다."
+      "loopNote": "특도 2 기준 배분입니다. ST 계속률 약 80%, 우타 중 출옥은 ALL 2400개+α입니다. 대당첨 약 1/349.9는 당첨과 챠지 돌입의 합산이며, 출옥은 지급 구슬 수 기준입니다."
     },
     "steps": [
       {
         "phase": "STEP 01 · 통상시",
-        "title": "도안 정렬 · 차지",
-        "description": "통상 시·시단 중 도안 정렬은 약 1/399.9이고, 차지에서의 돌입을 합친 대당첨은 약 1/349.9입니다. 폭주 연출이 발생하면 차지 계열의 기대가 높아집니다."
+        "title": "당첨 · 챠지",
+        "description": "통상 시·시단 중 당첨은 약 1/399.9이고, 챠지에서의 돌입을 합친 대당첨은 약 1/349.9입니다. 폭주 연출이 발생하면 챠지 계열의 기대가 높아집니다."
       },
       {
         "phase": "STEP 02 · 초당첨 판정",
@@ -267,7 +267,7 @@
       {
         "phase": "STEP 03 · IMPACT RUSH",
         "title": "ST 157회 · ALL 2400개+α",
-        "description": "ST 중 도안 정렬 확률은 약 1/99.6, 계속률은 약 80%입니다. 특도 2 배분은 4800개 0.5%, 2400개 99.5%이며, IMPACT 모드와 폭주 모드 중 연출을 고를 수 있습니다."
+        "description": "ST 중 당첨 확률은 약 1/99.6, 계속률은 약 80%입니다. 특도 2 배분은 4800개 0.5%, 2400개 99.5%이며, IMPACT 모드와 폭주 모드 중 연출을 고를 수 있습니다."
       }
     ]
   }

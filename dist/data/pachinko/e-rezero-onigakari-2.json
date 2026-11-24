@@ -94,8 +94,8 @@
     "steps": [
       {
         "phase": "STEP 01 · 통상시",
-        "title": "도안 당첨 또는 백경 토벌",
-        "description": "약 1/349.9의 대당첨을 노린다. 7도안 당첨이나 백경 토벌 성공은 약 3000개와 RUSH 진입이 확정적인 경로다.",
+        "title": "당첨 또는 백경 토벌",
+        "description": "약 1/349.9의 대당첨을 노린다. 7 당첨이나 백경 토벌 성공은 약 3000개와 RUSH 진입이 확정적인 경로다.",
       "image": {
         "url": "./assets/images/official/onirezero2/gameflow.jpg",
         "alt": "대도기연 공식 리제로 오니가카리 2 게임 플로우"
