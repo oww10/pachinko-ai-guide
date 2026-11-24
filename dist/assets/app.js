@@ -451,7 +451,7 @@ function visualGameFlow(machine) {
       </section>
       <section class="official-flow-gallery" aria-label="${escapeHtml(machine.maker)} 공식 게임 안내 이미지">
         <div class="official-gallery-heading">
-          <div><small>OFFICIAL VISUALS · KOREAN OVERLAY</small><h4>${escapeHtml(machine.maker)} 공식 이미지 · 한국어 번역본</h4></div>
+          <div><h4>${escapeHtml(machine.maker)} 공식 이미지 · 한국어 번역본</h4></div>
           <a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noreferrer noopener">공식 제품 페이지 ↗</a>
         </div>
         <div class="official-gallery-grid">
@@ -501,7 +501,7 @@ function renderDetail(machine) {
         <div class="spec-table">${detailSpecs(machine)}</div>
       </div>
       ${slotSettingsTable(machine)}
-      ${foldSection("게임 플로우 한눈에 보기", visualGameFlow(machine), { kind: "VISUAL GUIDE", className: "fold-visual" })}
+      ${foldSection("게임 플로우 한눈에 보기", visualGameFlow(machine), { className: "fold-visual" })}
       ${foldSection("플레이 흐름", `<ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>`)}
       ${analysisSections(machine)}
       ${isSlot ? "" : payoutTable("초기 당첨 배분", machine.payouts.initial)}
