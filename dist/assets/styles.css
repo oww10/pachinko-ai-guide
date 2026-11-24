@@ -29,19 +29,19 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0a0a0a;
+    --bg: #404040;
     --bg-soft: #171717;
     --panel: #171717;
     --panel-high: #262626;
-    --inset: #0f0f0f;
+    --inset: #09090b;
     --line: #262626;
-    --line-strong: #404040;
-    --text: #fafafa;
+    --line-strong: #525252;
+    --text: #ffffff;
     --text-soft: #d4d4d4;
     --muted: #a3a3a3;
-    --faint: #8a8a8a;
+    --faint: #999999;
     --accent-soft: rgba(255, 77, 0, .16);
-    --accent-text: #ff7a3d;
+    --accent-text: #ff6200;
     --danger: #f87171;
     --track: #262626;
     --ov: 255, 255, 255;
@@ -51,19 +51,19 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0a0a0a;
+  --bg: #404040;
   --bg-soft: #171717;
   --panel: #171717;
   --panel-high: #262626;
-  --inset: #0f0f0f;
+  --inset: #09090b;
   --line: #262626;
-  --line-strong: #404040;
-  --text: #fafafa;
+  --line-strong: #525252;
+  --text: #ffffff;
   --text-soft: #d4d4d4;
   --muted: #a3a3a3;
-  --faint: #8a8a8a;
+  --faint: #999999;
   --accent-soft: rgba(255, 77, 0, .16);
-  --accent-text: #ff7a3d;
+  --accent-text: #ff6200;
   --danger: #f87171;
   --track: #262626;
   --ov: 255, 255, 255;
