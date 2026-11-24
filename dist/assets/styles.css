@@ -499,7 +499,7 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 .ai-close { width: 39px; height: 39px; border: 1px solid var(--line); border-radius: 50%; background: rgba(var(--ov), .035); font-size: 23px; cursor: pointer; }
 .ai-context-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 11px; margin-top: 25px; }
 .ai-context-row label { color: var(--muted); font-size: 11px; }
-.ai-context-row select { min-width: 0; height: 41px; padding: 0 34px 0 12px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel); }
+.ai-context-row select { min-width: 0; height: 41px; padding: 0 34px 0 12px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ai-mode-badge { padding: 7px 9px; border: 1px solid rgba(var(--accent-rgb), .25); border-radius: 8px; color: var(--accent); background: rgba(var(--accent-rgb), .06); font-size: 11px; font-weight: 800; }
 .ai-data-notice { margin-top: 13px; padding: 11px 13px; border-radius: 6px; background: rgba(var(--ov), .035); color: var(--muted); font-size: 11px; }
 .ai-suggestions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
