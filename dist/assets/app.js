@@ -221,6 +221,19 @@ function slotSettingsTable(machine) {
   `;
 }
 
+function foldSection(title, bodyHtml, { kind = "", className = "" } = {}) {
+  if (!bodyHtml) return "";
+  return `
+    <details class="analysis-item detail-fold ${className}">
+      <summary>
+        <span class="analysis-title">${escapeHtml(title)}</span>
+        ${kind ? `<small>${escapeHtml(kind)}</small>` : ""}
+      </summary>
+      <div class="detail-fold-body">${bodyHtml}</div>
+    </details>
+  `;
+}
+
 const analysisKindLabels = { mode: "모드·구간", condition: "스루·천국", return: "引き戻し" };
 
 function analysisCell(value) {
@@ -302,17 +315,14 @@ function payoutRows(items) {
 
 function payoutTable(title, items) {
   if (!items.length) return "";
-  return `
-    <div class="detail-section">
-      <h3>${escapeHtml(title)}</h3>
-      <div class="payout-wrap">
-        <table class="payout-table">
-          <thead><tr><th>구분</th><th>출옥</th><th>비율</th><th>이동</th><th>근거</th></tr></thead>
-          <tbody>${payoutRows(items)}</tbody>
-        </table>
-      </div>
+  return foldSection(title, `
+    <div class="payout-wrap">
+      <table class="payout-table">
+        <thead><tr><th>구분</th><th>출옥</th><th>비율</th><th>이동</th><th>근거</th></tr></thead>
+        <tbody>${payoutRows(items)}</tbody>
+      </table>
     </div>
-  `;
+  `);
 }
 
 const chartColors = ["#42e9ff", "#9f8cff", "#ff4fd8", "#ffca62", "#8cf5ba"];
@@ -387,9 +397,8 @@ function visualGameFlow(machine) {
     { title: "RUSH 중 배분", source: "rush", centerValue: `${premiumRush?.ratePercent ?? "-"}%`, centerLabel: premiumRush ? `${premiumRush.payoutBalls}개` : "최대 출옥" }
   ];
   return `
-    <div class="detail-section visual-flow-section">
+    <div class="visual-flow-section">
       <div class="visual-section-heading">
-        <div><span>VISUAL GUIDE</span><h3>게임 플로우 한눈에 보기</h3></div>
         <p>${isSlot ? "통상시에서 CZ·AT와 상위 구간까지의 이동을 이미지와 수치로 정리했습니다." : "초당첨에서 RUSH까지의 이동과 출옥 배분을 이미지와 비율로 정리했습니다."}</p>
       </div>
       <div class="machine-visual-intro">
@@ -486,19 +495,15 @@ function renderDetail(machine) {
         <div class="spec-table">${detailSpecs(machine)}</div>
       </div>
       ${slotSettingsTable(machine)}
-      ${visualGameFlow(machine)}
-      <div class="detail-section">
-        <h3>플레이 흐름</h3>
-        <ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
-      </div>
+      ${foldSection("게임 플로우 한눈에 보기", visualGameFlow(machine), { kind: "VISUAL GUIDE", className: "fold-visual" })}
+      ${foldSection("플레이 흐름", `<ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>`)}
       ${analysisSections(machine)}
       ${isSlot ? "" : payoutTable("초기 당첨 배분", machine.payouts.initial)}
       ${!isSlot && Array.isArray(machine.payouts.climax) ? payoutTable("CLIMAX 배분", machine.payouts.climax) : ""}
       ${isSlot ? "" : payoutTable(Array.isArray(machine.payouts.modeB) ? "RUSH 모드 A 배분" : "RUSH 배분", machine.payouts.rush)}
       ${!isSlot && Array.isArray(machine.payouts.modeB) ? payoutTable("RUSH 모드 B 배분", machine.payouts.modeB) : ""}
       ${!isSlot && Array.isArray(machine.payouts.ultimateDrive) ? payoutTable("ULTIMATE DRIVE 배분", machine.payouts.ultimateDrive) : ""}
-      <div class="detail-section">
-        <h3>확인 출처</h3>
+      ${foldSection("확인 출처", `
         <ul class="source-list">
           ${machine.sources.map((source) => `
             <li><a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer noopener">
@@ -506,7 +511,7 @@ function renderDetail(machine) {
             </a></li>
           `).join("")}
         </ul>
-      </div>
+      `)}
       ${reviewFields.length ? `
         <div class="review-box">
           <strong>데이터 검토 안내</strong><br>
