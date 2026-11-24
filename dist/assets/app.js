@@ -40,8 +40,8 @@ const elements = {
 
 const probabilityLabels = {
   base: "기본 확률",
-  symbolHit: "도안 당첨",
-  charge: "차지",
+  symbolHit: "당첨",
+  charge: "챠지",
   highState: "고확률",
   rushHit: "RUSH 중",
   cz: "CZ 합산",
@@ -118,13 +118,42 @@ function renderYearFilters() {
   `).join("");
 }
 
+function formatApprox(value) {
+  return typeof value === "string" ? value.replace(/^約\s*/, "약 ") : value;
+}
+
+function hasSplitHit(machine) {
+  const { base, symbolHit, charge } = machine.probabilities;
+  return Boolean(charge) || Boolean(symbolHit && symbolHit !== base);
+}
+
+function rushEntryRate(machine) {
+  return machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent;
+}
+
+function pachinkoCardSpecs(machine) {
+  const { base, symbolHit, charge } = machine.probabilities;
+  const hits = charge
+    ? [["당첨", formatApprox(valueOrDash(symbolHit))], ["챠지", formatApprox(valueOrDash(charge))]]
+    : [["기본 확률", formatApprox(valueOrDash(base))]];
+  return [
+    ...hits,
+    ["RUSH 돌입률", valueOrDash(rushEntryRate(machine), "%")],
+    ["계속률", valueOrDash(machine.rush.continuationRatePercent, "%")]
+  ];
+}
+
 function machineCard(machine) {
   const accent = accentFor(machine);
   const fullImageUrl = machine.visualGuide?.mainImage?.url;
   const thumbUrl = fullImageUrl && `./assets/images/thumbs/${machine.id}.webp`;
   const isSlot = machine.machineType === "slot";
-  const primarySpec = isSlot ? machine.settings?.[0]?.atProbability : machine.probabilities.base;
-  const secondarySpec = isSlot ? machine.settings?.[machine.settings.length - 1]?.payoutRate : valueOrDash(machine.rush.continuationRatePercent, "%");
+  const cardSpecs = isSlot
+    ? [
+      ["설정1 AT", valueOrDash(machine.settings?.[0]?.atProbability)],
+      ["설정6 기계할", valueOrDash(machine.settings?.[machine.settings.length - 1]?.payoutRate)]
+    ]
+    : pachinkoCardSpecs(machine);
   return `
     <article class="machine-card" tabindex="0" role="button"
       aria-label="${escapeHtml(machine.nameKo)} 상세 보기"
@@ -139,9 +168,8 @@ function machineCard(machine) {
       <p class="maker">${escapeHtml(machine.brand || machine.maker)}</p>
       <h3>${escapeHtml(machine.nameKo)}</h3>
       <p class="official-name" lang="ja">${escapeHtml(machine.officialNameJa)}</p>
-      <div class="card-specs">
-        <div><small>${isSlot ? "설정1 AT" : "기본 확률"}</small><b>${escapeHtml(valueOrDash(primarySpec))}</b></div>
-        <div><small>${isSlot ? "설정6 기계할" : "RUSH 계속률"}</small><b>${escapeHtml(valueOrDash(secondarySpec))}</b></div>
+      <div class="card-specs" data-count="${cardSpecs.length}">
+        ${cardSpecs.map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
       </div>
       <span class="review-chip">${machine.verification.status === "verified" ? "검증 완료" : "일부 수치 재확인 필요"}</span>
       </div>
@@ -193,12 +221,20 @@ function detailSpecs(machine) {
     ];
     return items.map(([label, value]) => `<div><small>${label}</small><b>${escapeHtml(valueOrDash(value))}</b></div>`).join("");
   }
-  const probabilityItems = Object.entries(machine.probabilities)
-    .filter(([, value]) => value)
-    .map(([key, value]) => `<div><small>${escapeHtml(probabilityLabels[key] || key)}</small><b>${escapeHtml(value)}</b></div>`);
+  const probabilities = machine.probabilities;
+  const split = hasSplitHit(machine);
+  const probabilityOrder = split
+    ? ["symbolHit", "charge", "base", "highState", "rushHit"]
+    : ["base", "symbolHit", "charge", "highState", "rushHit"];
+  const probabilityItems = probabilityOrder
+    .filter((key) => probabilities[key] && !(key === "symbolHit" && !split))
+    .map((key) => {
+      const label = key === "base" && split ? "합산 확률" : (probabilityLabels[key] || key);
+      return `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(formatApprox(probabilities[key]))}</b></div>`;
+    });
 
   const rushItems = [
-    ["RUSH 진입", valueOrDash(machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent, "%")],
+    ["RUSH 진입", valueOrDash(rushEntryRate(machine), "%")],
     ["계속률", valueOrDash(machine.rush.continuationRatePercent, "%")],
     ["회전수", valueOrDash(machine.rush.spins, "회")],
     ["잔여 보류", valueOrDash(machine.rush.remainingHolds, "개")]

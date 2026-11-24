@@ -151,11 +151,11 @@
       "loopNote": "맹용 퀘스트 토벌로 G수를 늘리고, AT 종료 시 상위 CZ(용기의 증명 약 40% · 멸정의 심판 약 47%)로 상위 AT를 노리는 구조"
     },
     "mainImage": {
-      "url": "./assets/images/official/mhrsb/key-visual.png",
-      "alt": "エンターライズ 공식 스마스로 몬스터 헌터 라이즈: 선브레이크 키 비주얼",
-      "caption": "공식 키 비주얼",
-      "credit": "エンターライズ 공식 제품 사이트",
-      "sourceUrl": "https://www.enterrise.co.jp/slot/mhrsb/guide.php"
+      "url": "./assets/images/official/mhrsb/machine.png",
+      "alt": "엔터라이즈 공식 스마스로 몬스터 헌터 라이즈: 선브레이크 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10570"
     },
     "rushScreen": {
       "url": "./assets/images/official/mhrsb/at-screen.png",

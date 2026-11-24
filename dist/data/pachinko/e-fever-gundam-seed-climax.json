@@ -30,7 +30,7 @@
   },
   "visualGuide": {
     "keyStats": [
-      { "value": "1/399.9", "label": "도안 당첨" },
+      { "value": "1/399.9", "label": "당첨" },
       { "value": "52%", "label": "LT·CLIMAX 진입" },
       { "value": "75%", "label": "LT 계속률" }
     ],
@@ -41,7 +41,7 @@
     ],
     "flowDiagram": {
       "ariaLabel": "건담 SEED 클라이맥스 게임 진행 흐름",
-      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "도안 당첨 약 1/399.9 · 대당첨 약 1/349.9" },
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "당첨 약 1/399.9 · 대당첨 약 1/349.9" },
       "initialConnector": "초당첨",
       "initialAriaLabel": "초당첨 결과 2가지",
       "initialOutcomes": [
@@ -95,8 +95,8 @@
     "steps": [
       {
         "phase": "STEP 01 · 통상시",
-        "title": "도안 당첨의 52%로 CLIMAX 진입",
-        "description": "도안 당첨 확률은 약 1/399.9. 1500개 초당첨의 약 52%가 상위 상태인 FULLBURST RUSH CLIMAX로 직행한다.",
+        "title": "당첨의 52%로 CLIMAX 진입",
+        "description": "당첨 확률은 약 1/399.9. 1500개 초당첨의 약 52%가 상위 상태인 FULLBURST RUSH CLIMAX로 직행한다.",
         "image": { "url": "./assets/images/official/gundam-seed-climax/hero.jpg", "alt": "SANKYO 공식 건담 SEED 클라이맥스 메인 비주얼" }
       },
       {

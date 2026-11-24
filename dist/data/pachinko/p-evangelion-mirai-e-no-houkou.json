@@ -125,9 +125,9 @@
   },
   "visualGuide": {
     "mainImage": {
-      "url": "./assets/images/official/evangelion-mirai/visual_05.png",
-      "alt": "P 신세기 에반게리온 ~미래로의 포효~ 공식 비주얼(초호기)",
-      "caption": "공식 비주얼",
+      "url": "./assets/images/official/evangelion-mirai/machine.png",
+      "alt": "P 신세기 에반게리온 ~미래로의 포효~ 파칭코 기기 외관",
+      "caption": "기기 외관",
       "credit": "eva-project.jp 공식 사이트",
       "sourceUrl": "https://www.eva-project.jp/asuhenohoukou/"
     },
@@ -237,7 +237,7 @@
     "steps": [
       {
         "phase": "STEP 01 · 통상시",
-        "title": "도안 당첨 노리기",
+        "title": "당첨 노리기",
         "description": "통상(저확률) 시 대당첨 확률은 약 1/319.7입니다. 노멀·심플 2가지 연출 모드를 고를 수 있고, 135 정렬이면 폭주 BONUS(3R 확변)로 이어집니다."
       },
       {
