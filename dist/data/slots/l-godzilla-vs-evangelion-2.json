@@ -223,6 +223,198 @@
       }
     ]
   },
+  "analysis": {
+    "notice": "해석 사이트(なな徹·1geki 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-24.",
+    "sections": [
+      {
+        "title": "규정 G수와 내부 상태",
+        "kind": "mode",
+        "intro": "이 기종에는 통상 모드가 없고, 규정 G수 구간과 내부 상태(통상·고확·초고확)로 보너스를 노립니다. 기대도 표기: △<○<◎, '천장'은 천장 도달 구간입니다.",
+        "tables": [
+          {
+            "caption": "규정 G수별 보너스 기대도",
+            "columns": ["규정 G수", "기대도"],
+            "rows": [
+              ["100G", "△"],
+              ["250G", "○"],
+              ["400G", "△"],
+              ["550G", "△"],
+              ["700G", "◎"],
+              ["850G", "천장"]
+            ],
+            "note": "설정 변경 시 보너스 간 천장은 400G로 단축됩니다."
+          },
+          {
+            "caption": "통상 체류 시 이행 추첨 (설정1)",
+            "columns": ["이행 먼저", "벨", "약 체리(청 찬스)", "강 레어(적 찬스)"],
+            "rows": [
+              ["통상", "98.4%", "75.0%", "75.0%"],
+              ["고확", "1.6%", "25.0%", "25.0%"],
+              ["초고확", "—", "—", "—"]
+            ]
+          },
+          {
+            "caption": "고확 체류 시 이행 추첨 (설정1)",
+            "columns": ["이행 먼저", "벨", "약 체리(청 찬스)", "강 레어(적 찬스)"],
+            "rows": [
+              ["통상", "—", "—", "—"],
+              ["고확", "99.8%", "82.8%", "100%"],
+              ["초고확", "0.2%", "17.2%", "—"]
+            ],
+            "note": "강 레어는 강 체리·찬스목입니다."
+          },
+          {
+            "caption": "체류 스테이지의 내부 상태 시사",
+            "columns": ["스테이지", "시사"],
+            "rows": [
+              ["山頂探索アスカ", "디폴트"],
+              ["地下探索マリ", "디폴트"],
+              ["樹海探索レイ", "고확 시사"],
+              ["G調査室", "고확 농후"],
+              ["火山上空", "초고확 농후"]
+            ]
+          },
+          {
+            "caption": "천장",
+            "columns": ["천장", "통상", "설정 변경 시"],
+            "rows": [
+              ["보너스 간", "850G", "400G"],
+              ["AT 간", "1500G 도달 후 보너스가 AT 농후", "750G 도달 후 보너스"]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "전락",
+            "value": "고확·초고확에서 꽝 성립 시 약 4%"
+          },
+          {
+            "label": "평균 체류",
+            "value": "약 31G"
+          },
+          {
+            "label": "초고확에서 전락 시",
+            "value": "50% 통상 / 50% 고확(이후 평균 약 31G)"
+          }
+        ],
+        "notes": ["보너스 抽選표의 일부 칸(벨 4연·약 레어 2연의 초고확 열)은 사이트에 따라 값이 비어 보여 원본 확인이 필요합니다.", "규정 G수는 100G·250G·400G…처럼 150G 간격입니다."],
+        "sources": [
+          {
+            "title": "なな徹 通常時のゲーム性",
+            "url": "https://nana-press.com/kaiseki/machine/1247/39899/"
+          },
+          {
+            "title": "なな徹 規定G数",
+            "url": "https://nana-press.com/kaiseki/machine/1247/40135/"
+          },
+          {
+            "title": "1geki 規定ゲーム数",
+            "url": "https://1geki.jp/slot/l_goji_eva2/44/"
+          },
+          {
+            "title": "1geki 通常時の抽選",
+            "url": "https://1geki.jp/slot/l_goji_eva2/43/"
+          },
+          {
+            "title": "なな徹 天井・ヤメ時",
+            "url": "https://nana-press.com/kaiseki/machine/1247/39896/"
+          }
+        ]
+      },
+      {
+        "title": "스루 · 구제",
+        "kind": "condition",
+        "tables": [
+          {
+            "caption": "CZ 전조 G수별 당첨률",
+            "columns": ["전조 G수", "당첨률"],
+            "rows": [
+              ["3G", "52.6%"],
+              ["4G", "49.5%"],
+              ["5G", "43.0%"],
+              ["6G", "16.7%"],
+              ["7G", "79.8%"]
+            ],
+            "note": "전조는 최대 7G입니다."
+          }
+        ],
+        "items": [
+          {
+            "label": "CZ·보너스 스루 횟수 천장",
+            "value": "이번 작품은 기재 없음",
+            "note": "전작은 천장 1000G+스루 9회"
+          },
+          {
+            "label": "CZ 집결 BATTLE",
+            "value": "9G+α, 성공 기대 약 50%",
+            "note": "저지 파트에서 실패해도 동료가 참전해 다음 저지 파트 G수가 늘어남"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 CZ 集結バトル",
+            "url": "https://nana-press.com/kaiseki/machine/1247/39900/"
+          },
+          {
+            "title": "1geki 集結バトル",
+            "url": "https://1geki.jp/slot/l_goji_eva2/45/"
+          },
+          {
+            "title": "なな徹 通常時のゲーム性",
+            "url": "https://nana-press.com/kaiseki/machine/1247/39899/"
+          }
+        ]
+      },
+      {
+        "title": "AT 종료 후 引き戻し",
+        "kind": "return",
+        "tables": [
+          {
+            "caption": "引き戻し률",
+            "columns": ["설정", "引き戻し률"],
+            "rows": [
+              ["1", "17.6%"]
+            ],
+            "note": "설정 2~6의 수치는 확인되지 않았습니다."
+          }
+        ],
+        "items": [
+          {
+            "label": "구간",
+            "value": "AT 종료 후 50G",
+            "note": "구간 중 매 G 引き戻し 추첨"
+          },
+          {
+            "label": "구간 중 시사",
+            "value": "액정 상부가 붉게 발광"
+          },
+          {
+            "label": "상위 AT 종료 후",
+            "value": "상위 CZ '결전 카이저 기도라' 패배로 상위 AT가 끝나도 50G 引き戻し 추첨, 50G 이내면 상위 AT 재돌입",
+            "note": "なな徹 기준. 1geki는 통상 AT 말미에 이행한 결전 실패 후 50G 引き戻し는 통상 AT로 복귀한다고 적음"
+          },
+          {
+            "label": "50G 소화 권장",
+            "value": "즉시 멈추지 말고 50G까지 소화"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 天井・ヤメ時",
+            "url": "https://nana-press.com/kaiseki/machine/1247/39896/"
+          },
+          {
+            "title": "なな徹 AT ゴジエヴァラッシュ",
+            "url": "https://nana-press.com/kaiseki/machine/1247/39902/"
+          },
+          {
+            "title": "1geki ゴジエヴァラッシュ",
+            "url": "https://1geki.jp/slot/l_goji_eva2/83/"
+          }
+        ]
+      }
+    ]
+  },
   "sources": [
     {
       "type": "official",
@@ -251,6 +443,20 @@
       "url": "https://p.hisshobon.jp/vpage/2825/1",
       "accessedAt": "2026-11-05",
       "supports": ["기계할", "보너스 평균 획득", "AT 기대도", "AT·상위 AT 흐름"]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 Lパチスロ ゴジラ対エヴァンゲリオン 2 解析",
+      "url": "https://nana-press.com/kaiseki/machine/1247/",
+      "accessedAt": "2026-11-24",
+      "supports": ["해석 정보(모드·스루·引き戻し)"]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki Lパチスロ ゴジラ対エヴァンゲリオン 2 解析",
+      "url": "https://1geki.jp/slot/l_goji_eva2/",
+      "accessedAt": "2026-11-24",
+      "supports": ["해석 정보(모드·스루·引き戻し)"]
     }
   ],
   "notes": [
@@ -259,8 +465,8 @@
     "공식 이미지에는 원본 일본어를 유지하고 핵심 이해를 위한 한국어 안내를 PhotoCraft로 덧입혔다."
   ],
   "verification": {
-    "status": "verified",
-    "needsReviewFields": [],
+    "status": "needs-review",
+    "needsReviewFields": ["analysis"],
     "lastReviewedAt": "2026-11-05",
     "reviewedBy": "Codex"
   }
