@@ -1,0 +1,248 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-sword-art-online-2",
+  "officialNameJa": "スロット ソード・アート・オンライン2",
+  "nameKo": "소드 아트 온라인 2",
+  "aliases": ["スロット ソードアート・オンラインⅡ", "スロットSAO2", "スロ SAO2", "SAO2", "소드 아트 온라인Ⅱ", "소아온2", "스로 소드 아트 온라인 2"],
+  "modelCode": null,
+  "machineType": "slot",
+  "format": "L",
+  "maker": "大都技研",
+  "brand": "大都技研",
+  "releaseDate": "2026-06-08",
+  "probabilities": {
+    "base": "설정1 AT 1/386.2",
+    "cz": "설정1 초당첨 1/238.4",
+    "at": "설정1 1/386.2"
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 차매수 상승형 AT",
+    "netIncrease": "AT 약 3.6매/G · 상위 AT 약 7.2매/G",
+    "initialATCoins": "150매+α",
+    "settingsPrimaryLabel": "초당첨"
+  },
+  "settings": [
+    { "setting": 1, "czProbability": "1/238.4", "atProbability": "1/386.2", "payoutRate": "97.6%" },
+    { "setting": 2, "czProbability": "1/232.3", "atProbability": "1/364.3", "payoutRate": "98.8%" },
+    { "setting": 3, "czProbability": "1/232.7", "atProbability": "1/368.1", "payoutRate": "100.2%" },
+    { "setting": 4, "czProbability": "1/218.9", "atProbability": "1/326.8", "payoutRate": "105.3%" },
+    { "setting": 5, "czProbability": "1/225.2", "atProbability": "1/340.6", "payoutRate": "110.4%" },
+    { "setting": 6, "czProbability": "1/191.7", "atProbability": "1/269.6", "payoutRate": "114.9%" }
+  ],
+  "rush": {
+    "nameJa": "Bullet of Bullets",
+    "type": "AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 스코드론 배틀은 전반 10G + 저지 4G·승리 기대 약 55%",
+      "스나이퍼 찬스는 승리 기대 약 50%이며 최대 3전 승리로 데스건 배틀 권리 획득",
+      "데스건 배틀은 승리 기대 50% OVER, 최종 G 연출 성공으로 상위 AT",
+      "상위 구간은 Bullet of Bullets FULL DIVE 또는 절검(絶剣)으로 이행"
+    ]
+  },
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 규정 액정 게임 수 도달이나 바레트 카운터 MAX로 CZ를 노린다. 슈팅 차지에 당첨되면 액정 게임 수가 크게 가산된다.",
+    "CZ 스코드론 배틀은 전반 10G와 저지 4G로 이루어지며 승리 기대도는 약 55%다. CZ 실패 일부에서 광야의 결투가 발생하면 40G 에피소드 후 AT로 이어진다.",
+    "AT Bullet of Bullets는 순증 약 3.6매/G·초기 150매+α의 차매수 상승형이다. 희귀역과 액정 게임 수로 스나이퍼 찬스를 추첨한다.",
+    "스나이퍼 찬스(승리 기대 약 50%) 승리 보수는 차매수 상승(+100매 등)이나 특화 상승(나이트 배틀)이다. 차매수 소화 후에는 라스트 어택 찬스 5G(기대 약 35%)로 이어진다.",
+    "AT 중 최대 3전 승리하면 데스건 배틀 권리를 얻고, 승리하면 Bullet of Bullets FULL DIVE(순증 약 7.2매/G) 또는 절검(상승 2200매+α)으로 이행한다.",
+    "상위 구간을 소화한 뒤에는 다시 데스건 배틀로 돌아간다. 상위 AT 이후에는 승률이 오른다."
+  ],
+  "visualGuide": {
+    "keyStats": [
+      { "value": "1/386.2", "label": "설정1 AT 초당첨" },
+      { "value": "3.6매/G", "label": "AT 순증 (약)" },
+      { "value": "114.9%", "label": "설정6 기계할" }
+    ],
+    "distributionCharts": [],
+    "flowDiagram": {
+      "ariaLabel": "소드 아트 온라인 2 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "규정 액정 G수 · 바레트 카운터 MAX로 CZ를 노림"
+      },
+      "initialConnector": "CZ · 슈팅 차지",
+      "initialAriaLabel": "AT 진입 전 주요 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "승리 기대 약 55%",
+          "title": "스코드론 배틀",
+          "description": "전반 10G + 저지 4G\n탄흔이 많을수록 유리",
+          "route": "CZ",
+          "tone": "rush"
+        },
+        {
+          "rate": "CZ 실패 일부",
+          "title": "광야의 결투",
+          "description": "40G 에피소드 후\nAT 돌입",
+          "route": "AT",
+          "tone": "premium"
+        },
+        {
+          "rate": "레어역에서 돌입",
+          "title": "슈팅 차지",
+          "description": "액정 게임 수\n대량 가산 기회",
+          "route": "↻ 통상 계속",
+          "tone": "return"
+        }
+      ],
+      "mergeLabel": "CZ 성공 · AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 3.6매/G",
+        "title": "Bullet of Bullets",
+        "detail": "초기 150매+α · 차매수 상승형 AT · 스나이퍼 찬스로 상위 도전"
+      },
+      "rushConnector": "AT 중 핵심 전개",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "승리 기대 약 50%",
+          "title": "스나이퍼 찬스",
+          "description": "레어역 · 액정 G수로 추첨\n최대 3전 승리",
+          "route": "데스건 권리",
+          "tone": "rush"
+        },
+        {
+          "rate": "승리 보수",
+          "title": "차매수 · 특화 상승",
+          "description": "+100매 등 직상승\n나이트 배틀 특화 상승",
+          "route": "상승",
+          "tone": "premium"
+        },
+        {
+          "rate": "기대 약 35%",
+          "title": "라스트 어택 찬스",
+          "description": "차매수 소화 후 5G\n스나이퍼 찬스 고확률",
+          "route": "마지막 기회",
+          "tone": "reset"
+        }
+      ],
+      "secondaryConnector": "데스건 배틀 승리",
+      "secondaryRush": {
+        "eyebrow": "DEATH GUN BATTLE",
+        "title": "데스건 배틀",
+        "detail": "승리 기대 50% OVER · 승리하면 둘 중 하나로 이행 · 상위 AT 이후에는 승률 상승"
+      },
+      "secondaryRushConnector": "승리 시 이행",
+      "secondaryAriaLabel": "데스건 배틀 승리 후 상위 구간",
+      "secondaryOutcomes": [
+        {
+          "rate": "순증 약 7.2매/G",
+          "title": "FULL DIVE",
+          "description": "상위 AT · 특화 존 시작\n직상승 3자리 이상 기대",
+          "route": "상위 AT",
+          "tone": "premium"
+        },
+        {
+          "rate": "상승 2200매+α",
+          "title": "절검(絶剣)",
+          "description": "본기 최강 트리거\n에피소드 마더즈 로자리오",
+          "route": "최강 트리거",
+          "tone": "premium"
+        }
+      ],
+      "loopNote": "스나이퍼 찬스로 차매수를 쌓고, 데스건 배틀 승리로 FULL DIVE나 절검에 닿는 구조. 소화 후에는 다시 데스건 배틀로 돌아간다."
+    },
+    "mainImage": {
+      "url": "./assets/images/official/sao2/machine.png",
+      "alt": "大都技研 공식 스로 소드 아트 온라인 2 기기 외관",
+      "caption": "기기 외관",
+      "credit": "大都技研 공식 제품 사이트",
+      "sourceUrl": "https://www.daitogiken.com/contents/product/slot/sao2/info.html"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/sao2/at-screen.png",
+      "alt": "大都技研 공식 스로 소드 아트 온라인 2 AT 소개 이미지의 장면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시부터 데스건 배틀까지",
+        "url": "./assets/images/official/sao2/gameflow-ko.png",
+        "alt": "소드 아트 온라인 2 공식 전체 게임 플로우 한국어 번역본"
+      },
+      {
+        "phase": "공식 기본 정보",
+        "title": "설정별 확률 · 기계할과 배당",
+        "url": "./assets/images/official/sao2/basic-ko.png",
+        "alt": "소드 아트 온라인 2 공식 기본 정보 한국어 번역본"
+      },
+      {
+        "phase": "공식 CZ",
+        "title": "스코드론 배틀",
+        "url": "./assets/images/official/sao2/cz-ko.png",
+        "alt": "소드 아트 온라인 2 공식 CZ 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 AT",
+        "title": "Bullet of Bullets",
+        "url": "./assets/images/official/sao2/at-ko.png",
+        "alt": "소드 아트 온라인 2 공식 AT 안내의 한국어 번역본"
+      },
+      {
+        "phase": "공식 상위 구간",
+        "title": "데스건 배틀과 FULL DIVE",
+        "url": "./assets/images/official/sao2/upper-ko.png",
+        "alt": "소드 아트 온라인 2 공식 데스건 배틀과 상위 AT 안내의 한국어 번역본"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시와 CZ",
+        "title": "스코드론 배틀",
+        "description": "규정 G수와 바레트 카운터로 CZ를 노리고 승리 기대도 약 55%의 CZ에서 AT를 노린다.",
+        "image": { "url": "./assets/images/official/sao2/cz-ko.png", "alt": "소드 아트 온라인 2 CZ 공식 안내" }
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "Bullet of Bullets",
+        "description": "순증 약 3.6매/G의 차매수 상승형 AT. 스나이퍼 찬스로 상승과 상위 도전권을 얻는다.",
+        "image": { "url": "./assets/images/official/sao2/at-ko.png", "alt": "소드 아트 온라인 2 AT 공식 안내" }
+      },
+      {
+        "phase": "STEP 03 · 상위 구간",
+        "title": "데스건 배틀과 FULL DIVE",
+        "description": "데스건 배틀에 승리하면 순증 약 7.2매/G의 FULL DIVE 또는 절검으로 이행한다.",
+        "image": { "url": "./assets/images/official/sao2/upper-ko.png", "alt": "소드 아트 온라인 2 상위 구간 공식 안내" }
+      }
+    ]
+  },
+  "sources": [
+    {
+      "type": "official",
+      "title": "大都技研 スロット ソード・アート・オンライン2 製品サイト",
+      "url": "https://www.daitogiken.com/contents/product/slot/sao2/",
+      "accessedAt": "2026-11-24",
+      "supports": ["기종명", "제조사", "설치점 검색 공개일", "저작권 표기"]
+    },
+    {
+      "type": "official",
+      "title": "大都技研 スロット ソード・アート・オンライン2 機種情報",
+      "url": "https://www.daitogiken.com/contents/product/slot/sao2/info.html",
+      "accessedAt": "2026-11-24",
+      "supports": ["설정별 확률·기계할", "게임 플로우", "AT·CZ·상위 AT 구조", "공식 이미지"]
+    }
+  ],
+  "notes": [
+    "확률과 기계할은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 확률·기계할은 공식 표기상 시뮬레이션 값이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "공식 자료에서 천장과 형식명은 확인하지 못해 비워 두었다. 도입일은 공식 설치점 검색 공개일(2026-06-08)을 기준으로 기재했으며 재확인이 필요하다.",
+    "공식 이미지에는 원본 일본어를 유지하고 핵심 이해를 위한 한국어 안내를 PhotoCraft로 덧입혔다."
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-24",
+    "needsReviewFields": ["modelCode", "releaseDate", "slot.czCeiling", "slot.atCeiling"]
+  }
+}

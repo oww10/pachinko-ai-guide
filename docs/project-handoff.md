@@ -10,7 +10,7 @@
 - 배포 방식: `main` 푸시 → GitHub Actions → GitHub Pages
 - Worker: `pachinko-ai-gemini`
 - Worker URL: `https://pachinko-ai-gemini.pachinko-ai-gemini-worker.workers.dev`
-- 데이터: 파칭코 10기종, 슬롯 2기종
+- 데이터: 파칭코 10기종, 슬롯 3기종
 - DB: 사용하지 않음
 
 ## 2. 구조

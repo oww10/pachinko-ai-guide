@@ -1,10 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-24",
   "category": "slot",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
     { "id": "l-godzilla-vs-evangelion-2", "file": "l-godzilla-vs-evangelion-2.json", "releaseDate": "2026-11-02" },
+    { "id": "l-sword-art-online-2", "file": "l-sword-art-online-2.json", "releaseDate": "2026-06-08" },
     { "id": "l-tokyo-ghoul", "file": "l-tokyo-ghoul.json", "releaseDate": "2025-02-03" }
   ]
 }
