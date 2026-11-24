@@ -3,31 +3,272 @@
   "id": "e-evangelion-hajimari-no-kioku",
   "officialNameJa": "e 新世紀エヴァンゲリオン 〜はじまりの記憶〜",
   "nameKo": "e 신세기 에반게리온 ~시작의 기억~",
-  "aliases": ["エヴァ17", "はじまりの記憶"],
+  "aliases": [
+    "エヴァ17",
+    "はじまりの記憶"
+  ],
   "modelCode": "ｅ新世紀エヴァンゲリオン１７　はじまりの記憶Ｒ",
   "machineType": "pachinko",
   "format": "e",
   "maker": "ビスティ",
   "brand": "Bisty",
   "releaseDate": "2025-12-22",
-  "probabilities": { "base": "約1/349.9", "symbolHit": "約1/399.9", "charge": null, "highState": null, "rushHit": "約1/99.6" },
-  "rush": { "nameJa": "IMPACT RUSH", "type": "ST", "entryRatePercent": null, "totalEntryRatePercent": 61.4, "continuationRatePercent": 80, "spins": 157, "remainingHolds": null, "timeShortSpins": 100, "gates": ["非ST当選後は時短100回", "時短引き戻し込みのRUSH突入率約61.4%"] },
+  "probabilities": {
+    "base": "約1/349.9",
+    "symbolHit": "約1/399.9",
+    "charge": null,
+    "highState": null,
+    "rushHit": "約1/99.6"
+  },
+  "rush": {
+    "nameJa": "IMPACT RUSH",
+    "type": "ST",
+    "entryRatePercent": 50.5,
+    "totalEntryRatePercent": 61.4,
+    "continuationRatePercent": 80,
+    "spins": 157,
+    "remainingHolds": null,
+    "timeShortSpins": 100,
+    "gates": [
+      "特図1の50.5%はST直行",
+      "非ST当選後は時短100回で引き戻し",
+      "図柄揃い大当り・チャージ・チャンスタイム引き戻しの合算でST突入率約61.4%"
+    ]
+  },
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "金7図柄", "payoutBalls": 1500, "ratePercent": null, "destination": "IMPACT RUSH", "confidence": "official", "notes": [] },
-      { "label": "その他図柄", "payoutBalls": 300, "ratePercent": null, "destination": "IMPACT RUSHまたは時短100回", "confidence": "official", "notes": [] },
-      { "label": "チャージ", "payoutBalls": 300, "ratePercent": null, "destination": null, "confidence": "official", "notes": [] }
+      {
+        "label": "1500個（ST 157回）",
+        "payoutBalls": 1500,
+        "ratePercent": 0.5,
+        "destination": "IMPACT RUSH",
+        "confidence": "official",
+        "notes": [
+          "特図1",
+          "全回転（金7揃い）",
+          "出玉は払い出し"
+        ]
+      },
+      {
+        "label": "300個（ST 157回）",
+        "payoutBalls": 300,
+        "ratePercent": 50,
+        "destination": "IMPACT RUSH",
+        "confidence": "official",
+        "notes": [
+          "特図1",
+          "出玉は払い出し"
+        ]
+      },
+      {
+        "label": "300個（時短100回）",
+        "payoutBalls": 300,
+        "ratePercent": 49.5,
+        "destination": "時短100回",
+        "confidence": "official",
+        "notes": [
+          "特図1",
+          "出玉は払い出し"
+        ]
+      }
     ],
     "rush": [
-      { "label": "4800個", "payoutBalls": 4800, "ratePercent": null, "destination": "IMPACT RUSH", "confidence": "official", "notes": ["1200個×4"] },
-      { "label": "2400個", "payoutBalls": 2400, "ratePercent": null, "destination": "IMPACT RUSHまたは終了", "confidence": "official", "notes": ["1200個×2", "RUSH中はALL 2400個以上"] }
+      {
+        "label": "4800個",
+        "payoutBalls": 4800,
+        "ratePercent": 0.5,
+        "destination": "IMPACT RUSH",
+        "confidence": "official",
+        "notes": [
+          "1200個×4",
+          "特図2"
+        ]
+      },
+      {
+        "label": "2400個",
+        "payoutBalls": 2400,
+        "ratePercent": 99.5,
+        "destination": "IMPACT RUSHまたは終了",
+        "confidence": "official",
+        "notes": [
+          "1200個×2",
+          "右打ち中ALL 2400個＋α",
+          "特図2"
+        ]
+      }
     ]
   },
-  "gameFlow": ["図柄揃いまたはチャージを契機にする", "非ST当選時も時短100回で引き戻しを狙う", "IMPACT RUSHは157回転、継続率約80%", "RUSH中は2400個以上"],
-  "notes": ["4800個・2400個の比率は公式資料の最終確認待ち。"],
-  "sources": [
-    { "title": "SANKYO 製品コレクション", "url": "https://www.sankyo-fever.jp/collection/989/", "type": "official", "checkedAt": "2026-11-03" }
+  "gameFlow": [
+    "図柄揃いまたはチャージを契機にする",
+    "非ST当選時も時短100回で引き戻しを狙う",
+    "IMPACT RUSHは157回転、継続率約80%",
+    "RUSH中は2400個以上"
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "rush.entryRatePercent", "payouts.initial.ratePercent", "payouts.rush.ratePercent"] }
+  "notes": [
+    "大当り確率 約1/349.9は図柄揃い大当りとチャージからの突入大当りの合算。図柄揃い確率は通常時・時短中 約1/399.9、ST中 約1/99.6。"
+  ],
+  "sources": [
+    {
+      "title": "SANKYO 製品コレクション",
+      "url": "https://www.sankyo-fever.jp/collection/989/",
+      "type": "official",
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "title": "eva-project.jp 公式 e 新世紀エヴァンゲリオン ～はじまりの記憶～",
+      "url": "https://www.eva-project.jp/hajimarinokioku/",
+      "type": "official",
+      "checkedAt": "2026-11-23"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-23",
+    "needsReviewFields": [
+      "nameKo"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/evangelion-hajimari/img-kv_pc.jpg",
+      "alt": "e 신세기 에반게리온 ~はじまりの記憶~ 공식 키 비주얼",
+      "caption": "공식 키 비주얼",
+      "credit": "eva-project.jp 공식 사이트",
+      "sourceUrl": "https://www.eva-project.jp/hajimarinokioku/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/evangelion-hajimari/rush-screen.png",
+      "alt": "공식 IMPACT 모드 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시 → 초당첨 → ST(IMPACT RUSH)",
+        "url": "./assets/images/official/evangelion-hajimari/flow-ko.png",
+        "alt": "공식 게임 플로우 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·ST·시단·출옥",
+        "url": "./assets/images/official/evangelion-hajimari/spec-ko.png",
+        "alt": "공식 스펙 패널 6장을 합친 한국어 번역본"
+      },
+      {
+        "phase": "공식 배분",
+        "title": "특도 1 출옥 배분",
+        "url": "./assets/images/official/evangelion-hajimari/chart1-ko.png",
+        "alt": "공식 특도 1 배분 원그래프의 한국어 번역본"
+      },
+      {
+        "phase": "공식 배분",
+        "title": "특도 2 출옥 배분",
+        "url": "./assets/images/official/evangelion-hajimari/chart2-ko.png",
+        "alt": "공식 특도 2 배분 원그래프의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      {
+        "value": "1/399.9",
+        "label": "도안 정렬 (통상·시단 중)"
+      },
+      {
+        "value": "약 61.4%",
+        "label": "ST 돌입 (시단 인계 포함)"
+      },
+      {
+        "value": "약 80%",
+        "label": "ST 계속률"
+      }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초당첨 배분 (특도 1)",
+        "source": "initial",
+        "centerValue": "50.5%",
+        "centerLabel": "ST 직행"
+      },
+      {
+        "title": "ST 중 배분 (특도 2)",
+        "source": "rush",
+        "centerValue": "99.5%",
+        "centerLabel": "2400개"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 신세기 에반게리온 시작의 기억 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "도안 정렬 약 1/399.9 · 대당첨 약 1/349.9(차지 합산)"
+      },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "0.5%",
+          "title": "1500개",
+          "description": "전회전(금 7 정렬)\nST 157회 직행",
+          "route": "IMPACT RUSH",
+          "tone": "premium"
+        },
+        {
+          "rate": "50%",
+          "title": "300개",
+          "description": "135 정렬·홀수 도안 등\nST 157회 직행",
+          "route": "IMPACT RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "49.5%",
+          "title": "300개",
+          "description": "짝수 도안\n시단 100회로 이동",
+          "route": "↩ 시단 100회",
+          "tone": "return"
+        }
+      ],
+      "mergeLabel": "합계 50.5% 직행 · 시단 인계 포함 약 61.4%",
+      "rush": {
+        "eyebrow": "LT · ST",
+        "title": "IMPACT RUSH",
+        "detail": "ST 157회 · 당첨 약 1/99.6 · 계속률 약 80% · 선택 가능한 2가지 모드(IMPACT·폭주)"
+      },
+      "rushConnector": "ST 중 당첨",
+      "rushAriaLabel": "ST 중 당첨 결과 2가지",
+      "rushOutcomes": [
+        {
+          "rate": "0.5%",
+          "title": "4800개",
+          "description": "1200개 × 4\nST 157회 재개",
+          "route": "↻ 계속",
+          "tone": "premium"
+        },
+        {
+          "rate": "99.5%",
+          "title": "2400개",
+          "description": "1200개 × 2 · 우타 중 ALL 2400개+α\nST 157회 재개",
+          "route": "↻ 계속",
+          "tone": "rush"
+        }
+      ],
+      "loopNote": "특도 2 기준 배분입니다. ST 계속률 약 80%, 우타 중 출옥은 ALL 2400개+α입니다. 대당첨 약 1/349.9는 도안 정렬과 차지 돌입의 합산이며, 출옥은 지급 구슬 수 기준입니다."
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "도안 정렬 · 차지",
+        "description": "통상 시·시단 중 도안 정렬은 약 1/399.9이고, 차지에서의 돌입을 합친 대당첨은 약 1/349.9입니다. 폭주 연출이 발생하면 차지 계열의 기대가 높아집니다."
+      },
+      {
+        "phase": "STEP 02 · 초당첨 판정",
+        "title": "ST 직행 50.5% + 시단 100회",
+        "description": "특도 1 배분은 1500개 0.5%, 300개 50%가 ST 157회 직행이고, 300개 49.5%는 시단 100회로 갑니다. 시단 중 대당첨하면 LT 돌입을 노릴 수 있고(공식 표기: 「대당첨되면 반드시 LT 돌입!?」), 시단 인계까지 합친 ST 돌입률은 약 61.4%입니다."
+      },
+      {
+        "phase": "STEP 03 · IMPACT RUSH",
+        "title": "ST 157회 · ALL 2400개+α",
+        "description": "ST 중 도안 정렬 확률은 약 1/99.6, 계속률은 약 80%입니다. 특도 2 배분은 4800개 0.5%, 2400개 99.5%이며, IMPACT 모드와 폭주 모드 중 연출을 고를 수 있습니다."
+      }
+    ]
+  }
 }

@@ -4,7 +4,7 @@
   "officialNameJa": "P大海物語5",
   "nameKo": "P 대해이야기 5",
   "aliases": ["大海5", "P大海5"],
-  "modelCode": null,
+  "modelCode": "P大海物語5 MTE2",
   "machineType": "pachinko",
   "format": "P",
   "maker": "三洋物産",
@@ -15,17 +15,79 @@
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "大当り", "payoutBalls": 1500, "ratePercent": 100, "destination": "確変または時短100回", "confidence": "official", "notes": ["ALL 1500"] }
+      { "label": "확변 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 60, "destination": "확변(다음 대당첨까지)", "confidence": "official", "notes": ["10R", "헤소·전동 튤립 공통"] },
+      { "label": "통상 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 40, "destination": "시단 100회", "confidence": "official", "notes": ["10R", "헤소·전동 튤립 공통"] }
     ],
     "rush": [
-      { "label": "大当り", "payoutBalls": 1500, "ratePercent": 100, "destination": "確変または時短100回", "confidence": "official", "notes": ["ALL 1500"] }
+      { "label": "확변 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 60, "destination": "확변(다음 대당첨까지)", "confidence": "official", "notes": ["10R", "헤소·전동 튤립 공통"] },
+      { "label": "통상 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 40, "destination": "시단 100회", "confidence": "official", "notes": ["10R", "헤소·전동 튤립 공통"] }
     ]
   },
   "gameFlow": ["通常時は約1/319.6の大当りを目指す", "大当りはすべて1500個", "60%で次回までの確変、40%で時短100回"],
   "notes": ["BIG3000は保留内連続大当りの告知表現であり、単一当りの3000個振分ではない。"],
   "sources": [
-    { "title": "SANYO P大海物語5 公式", "url": "https://www.sanyobussan.co.jp/products/pk_bigsea5/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "SANYO P大海物語5 公式", "url": "https://www.sanyobussan.co.jp/products/pk_bigsea5/", "type": "official", "checkedAt": "2026-11-23" },
     { "title": "SANYO 公式プレスリリース", "url": "https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20221205_1.pdf", "type": "official", "checkedAt": "2026-11-03" }
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode"] }
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-23", "needsReviewFields": ["nameKo", "releaseDate"] },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/big-sea-story-5/machine.png",
+      "alt": "SANYO P 대해이야기 5 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "SANYO 공식 제품 사이트",
+      "sourceUrl": "https://www.sanyobussan.co.jp/products/pk_bigsea5/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/big-sea-story-5/rush-screen.png",
+      "alt": "SANYO 공식 BIG 3000 BONUS 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·확변 비율·대당첨 내역",
+        "url": "./assets/images/official/big-sea-story-5/spec-ko.png",
+        "alt": "SANYO 공식 대해이야기 5 스펙 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 특징",
+        "title": "BIG 3000 보너스와 대당첨 도안",
+        "url": "./assets/images/official/big-sea-story-5/feature-ko.png",
+        "alt": "SANYO 공식 대해이야기 5 특징 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      { "value": "1/319.6", "label": "통상시 대당첨" },
+      { "value": "1/31.9", "label": "확변 중 대당첨" },
+      { "value": "60%", "label": "확변 비율" }
+    ],
+    "distributionCharts": [
+      { "title": "대당첨 배분 (헤소·전동 튤립 공통)", "source": "initial", "centerValue": "60%", "centerLabel": "확변" },
+      { "title": "확변 중 대당첨 배분", "source": "rush", "centerValue": "60%", "centerLabel": "확변 계속" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "P 대해이야기 5 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "대당첨 약 1/319.6 · 대당첨은 모두 10R 1500개" },
+      "initialConnector": "대당첨",
+      "initialAriaLabel": "대당첨 결과 2가지",
+      "initialOutcomes": [
+        { "rate": "40%", "title": "통상 대당첨", "description": "1500개\n시단 100회 후 통상 복귀", "route": "↩ 시단 100회", "tone": "return" },
+        { "rate": "60%", "title": "확변 대당첨", "description": "1500개\n다음 대당첨까지 확변", "route": "확변", "tone": "rush" }
+      ],
+      "mergeLabel": "60%로 확변",
+      "rush": { "eyebrow": "KAKUHEN", "title": "확변", "detail": "다음 대당첨까지 계속 · 당첨 약 1/31.9" },
+      "rushConnector": "확변 중 대당첨",
+      "rushAriaLabel": "확변 중 대당첨 결과 2가지",
+      "rushOutcomes": [
+        { "rate": "40%", "title": "통상 대당첨", "description": "1500개\n시단 100회 후 통상 복귀", "route": "↩ 시단 100회", "tone": "return" },
+        { "rate": "60%", "title": "확변 대당첨", "description": "1500개\n확변 계속", "route": "↻ 확변 계속", "tone": "rush" }
+      ],
+      "loopNote": "확변은 다음 대당첨까지 이어지고, 대당첨마다 확변 60% / 통상 40%를 다시 추첨"
+    },
+    "steps": [
+      { "phase": "STEP 01 · 통상시", "title": "대당첨 노리기", "description": "약 1/319.6 확률의 대당첨을 노립니다. 대당첨은 헤소·전동 튤립 공통으로 10R 1500개입니다." },
+      { "phase": "STEP 02 · 대당첨 판정", "title": "확변 60% / 통상 40%", "description": "대당첨 후 60%는 다음 대당첨까지 확변, 40%는 통상 대당첨(시단 100회)으로 갈립니다." },
+      { "phase": "STEP 03 · 확변과 시단", "title": "확변 중에는 약 1/31.9", "description": "확변 중 대당첨 확률은 약 1/31.9입니다. 확변 대당첨이면 이어지고, 통상 대당첨이면 시단 100회 후 통상으로 돌아갑니다." }
+    ]
+  }
 }

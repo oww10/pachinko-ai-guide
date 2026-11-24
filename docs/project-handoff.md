@@ -39,8 +39,11 @@ worker/                       Gemini 보안 프록시 Cloudflare Worker
 4. 상세 시각화는 [`machine-detail-design-system.md`](machine-detail-design-system.md)를 따릅니다.
 5. 모든 외부 정보는 JSON의 `sources`에 공식/보조 출처를 구분해 기록합니다.
 
+다음 기종의 실제 작업 순서와 리제로 기준 레이아웃·PhotoCraft 번역 단계는 [`machine-detail-production-playbook.md`](machine-detail-production-playbook.md)에 정리했습니다.
+
 ### 이미지
 
+- 리제로 2 최초 제작 때 사용한 전문 매체 이미지와 이후 공식 자료 교체 이력, 다음 기종의 이미지별 출처 기록 방식은 [`image-sourcing-workflow.md`](image-sourcing-workflow.md)를 따릅니다.
 - 원본과 결과물은 `dist/assets/images/official/{machine-id}/`에 함께 둡니다.
 - 원본은 `*-source.*`, 사이트용 결과는 의미가 드러나는 파일명으로 구분합니다.
 - 일본어 안내를 한국어로 덧씌운 이미지는 PhotoCraft CLI 스크립트를 `scripts/`에 남겨 재생성 가능하게 합니다.

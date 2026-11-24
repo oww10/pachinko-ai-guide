@@ -15,8 +15,9 @@
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "図柄揃い", "payoutBalls": 1500, "ratePercent": null, "destination": "超RUSHまたは通常", "confidence": "official", "notes": [] },
-      { "label": "喰種チャージ", "payoutBalls": 300, "ratePercent": null, "destination": "超RUSHまたは通常", "confidence": "official", "notes": [] }
+      { "label": "1500개 · 통상으로", "payoutBalls": 1500, "ratePercent": 49, "destination": "통상", "confidence": "official", "notes": ["특도 1 배분"] },
+      { "label": "1500개 · ST 130회", "payoutBalls": 1500, "ratePercent": 50, "destination": "HYPER喰種RUSH", "confidence": "official", "notes": ["특도 1 배분"] },
+      { "label": "300개 · ST 130회", "payoutBalls": 300, "ratePercent": 1, "destination": "HYPER喰種RUSH", "confidence": "official", "notes": ["특도 1 배분"] }
     ],
     "rush": [
       { "label": "6000個＋α", "payoutBalls": 6000, "ratePercent": 3, "destination": "超RUSH", "confidence": "official", "notes": ["約3%"] },
@@ -26,8 +27,69 @@
   "gameFlow": ["図柄揃いまたは喰種チャージを契機にする", "合算約51%で超RUSHへ", "超RUSHは130回転、継続率約75%", "RUSH中の大当りは3000個または6000個＋α"],
   "notes": ["既存の東京喰種399ファクトシートを優先ソースとして構造化した。"],
   "sources": [
-    { "title": "東京喰種プロジェクト公式", "url": "https://www.pachi-e-tokyoghoul.jp/", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "東京喰種プロジェクト公式", "url": "https://www.pachi-e-tokyoghoul.jp/", "type": "official", "checkedAt": "2026-11-23" },
     { "title": "SANKYO 製品コレクション", "url": "https://www.sankyo-fever.jp/collection/980/", "type": "official", "checkedAt": "2026-11-03" }
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "payouts.initial.ratePercent"] }
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-23", "needsReviewFields": ["nameKo", "releaseDate"] },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/tokyo-ghoul/machine.png",
+      "alt": "Bisty e 도쿄 구울 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "도쿄 구울 파칭코 공식 사이트",
+      "sourceUrl": "https://www.pachi-e-tokyoghoul.jp/"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/tokyo-ghoul/rush-screen.png",
+      "alt": "도쿄 구울 HYPER喰種RUSH 공식 HYPER 6000 BONUS 화면"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시부터 HYPER喰種RUSH까지",
+        "url": "./assets/images/official/tokyo-ghoul/gameflow-ko.png",
+        "alt": "도쿄 구울 공식 게임 플로우 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 배분",
+        "title": "특도 1 · 특도 2 출옥 배분",
+        "url": "./assets/images/official/tokyo-ghoul/spec-ko.png",
+        "alt": "도쿄 구울 공식 배분 원그래프의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      { "value": "1/399.9", "label": "통상시 도안 당첨" },
+      { "value": "약 51%", "label": "RUSH 진입 (차지 포함)" },
+      { "value": "약 75%", "label": "RUSH 계속률" }
+    ],
+    "distributionCharts": [
+      { "title": "초당첨 배분 (특도 1)", "source": "initial", "centerValue": "51%", "centerLabel": "RUSH 진입" },
+      { "title": "RUSH 중 배분 (특도 2)", "source": "rush", "centerValue": "97%", "centerLabel": "3000개" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 도쿄 구울 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "도안 당첨 약 1/399.9 · 대당첨 약 1/199.9 (喰種차지 포함)" },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 경로 3가지",
+      "initialOutcomes": [
+        { "rate": "약 49%", "title": "1500개", "description": "도안 당첨 · 챌린지 실패\n통상시 복귀", "route": "↩ 통상 복귀", "tone": "return" },
+        { "rate": "약 50%", "title": "1500개", "description": "챌린지 성공\nST 130회 RUSH", "route": "RUSH", "tone": "rush" },
+        { "rate": "약 1%", "title": "300개", "description": "喰種차지 경유\nST 130회 RUSH", "route": "RUSH", "tone": "premium" }
+      ],
+      "mergeLabel": "합계 약 51% 진입 (50% + 1%)",
+      "rush": { "eyebrow": "LT · LUCKY TRIGGER", "title": "HYPER喰種RUSH", "detail": "ST 130회 · 당첨 약 1/95.3 · 계속률 약 75%" },
+      "rushConnector": "RUSH 중 대당첨",
+      "rushAriaLabel": "RUSH 중 출옥 2가지",
+      "rushOutcomes": [
+        { "rate": "ALL 3000개", "title": "기본 출옥", "description": "1500개 × 2\nST 계속 또는 종료", "route": "↻ 계속 / 종료", "tone": "rush" },
+        { "rate": "6000개+α", "title": "HYPER 6000 BONUS", "description": "1500개 × 4\n상위 출옥", "route": "↻ 계속 / 종료", "tone": "premium" }
+      ],
+      "loopNote": "RUSH 중 대당첨은 3000개 또는 6000개+α. 출옥은 특도 2 한정, 지급 기준"
+    },
+    "steps": [
+      { "phase": "STEP 01 · 통상시", "title": "도안 당첨과 喰種차지", "description": "통상시 도안 당첨은 약 1/399.9, 喰種차지(300개)는 약 1/399.9입니다. 차지를 포함한 대당첨 확률은 약 1/199.9입니다." },
+      { "phase": "STEP 02 · 초당첨 판정", "title": "챌린지로 RUSH 결정", "description": "도안 당첨(1500개) 후 亜門突破 / 一発告知 중 게임성을 골라 챌린지에 성공하면 HYPER喰種RUSH를 얻습니다. 喰種차지에서도 RUSH에 진입할 수 있고, 합계 진입률은 약 51%이고, 특도 1 배분은 1500개 약 49%(통상), 1500개 약 50%(RUSH), 300개 약 1%(RUSH)입니다." },
+      { "phase": "STEP 03 · RUSH", "title": "ST 130회 · 계속률 약 75%", "description": "RUSH 중 당첨 확률은 약 1/95.3이며, 당첨 시 ALL 3000개 또는 6000개+α입니다." }
+    ]
+  }
 }

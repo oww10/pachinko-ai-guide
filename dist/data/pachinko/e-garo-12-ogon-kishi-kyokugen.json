@@ -11,23 +11,92 @@
   "brand": "サンセイR&D",
   "releaseDate": "2025-08-04",
   "probabilities": { "base": "1/349.99", "symbolHit": "約1/437", "charge": null, "highState": null, "rushHit": null },
-  "rush": { "nameJa": "魔戒CHANCE LT", "type": "LT・1回転決着", "entryRatePercent": null, "totalEntryRatePercent": 25, "continuationRatePercent": 76, "spins": 1, "remainingHolds": null, "timeShortSpins": null, "gates": ["図柄揃いの約50%で極限7500バトル", "極限7500バトル成功率約50%で魔戒CHANCE LT"] },
+  "rush": { "nameJa": "魔戒CHANCE LT", "type": "LT", "entryRatePercent": null, "totalEntryRatePercent": 25, "continuationRatePercent": 76, "spins": null, "remainingHolds": null, "timeShortSpins": null, "gates": ["図柄揃いの約50%で極限7500バトル", "極限7500バトル成功率約50%で魔戒CHANCE LT"] },
   "payouts": {
     "basis": "払い出し",
     "initial": [
-      { "label": "極限7500バトル", "payoutBalls": 7500, "ratePercent": 50, "destination": "極限7500バトル", "confidence": "official", "notes": ["図柄揃い時", "1500個×5"] },
-      { "label": "通常ルート", "payoutBalls": null, "ratePercent": 50, "destination": null, "confidence": "official", "notes": ["図柄揃い時"] }
+      { "label": "승리 1500개 → 극한 7500 배틀", "payoutBalls": 1500, "ratePercent": 50, "destination": "극한 7500 배틀", "confidence": "official", "notes": ["1st 배틀"] },
+      { "label": "패배 1500개 → 통상", "payoutBalls": 1500, "ratePercent": 50, "destination": "통상", "confidence": "official", "notes": ["1st 배틀"] }
+    ],
+    "battle2": [
+      { "label": "7500개 + LT", "payoutBalls": 7500, "ratePercent": 50, "destination": "魔戒CHANCE LT", "confidence": "official", "notes": ["극한 7500 배틀", "10R×5회"] },
+      { "label": "1500개 통상", "payoutBalls": 1500, "ratePercent": 50, "destination": "통상", "confidence": "official", "notes": ["극한 7500 배틀", "1st 배틀과 합쳐 3000개"] }
     ],
     "rush": [
-      { "label": "7500個", "payoutBalls": 7500, "ratePercent": 25, "destination": "魔戒CHANCE LT", "confidence": "official", "notes": ["1500個×5"] },
-      { "label": "1500個", "payoutBalls": 1500, "ratePercent": 75, "destination": "魔戒CHANCE LTまたは終了", "confidence": "official", "notes": [] }
+      { "label": "7500개 + LT 계속", "payoutBalls": 7500, "ratePercent": 25, "destination": "魔戒CHANCE LT", "confidence": "official", "notes": ["10R×5회"] },
+      { "label": "1500개 + LT 계속", "payoutBalls": 1500, "ratePercent": 51, "destination": "魔戒CHANCE LT", "confidence": "official", "notes": [] },
+      { "label": "1500개 통상", "payoutBalls": 1500, "ratePercent": 24, "destination": "통상", "confidence": "official", "notes": [] }
     ]
   },
   "gameFlow": ["通常時の図柄揃いを目指す", "約50%で極限7500バトルへ", "バトル成功で魔戒CHANCE LTへ", "LTは継続率約76%、7500個比率25%"],
   "notes": ["LT突入率25%は50%×50%の編集上の算出値。"],
   "sources": [
-    { "title": "サンセイR&D 牙狼アーカイブ", "url": "https://www.sansei-rd.co.jp/p_garo_archive/archive/p_garo12_ok.html", "type": "official", "checkedAt": "2026-11-03" },
+    { "title": "サンセイR&D 牙狼アーカイブ", "url": "https://www.sansei-rd.co.jp/p_garo_archive/archive/p_garo12_ok.html", "type": "official", "checkedAt": "2026-11-23" },
+    { "title": "サンセイR&D e牙狼12 製品PDF(スペック・ゲームフロー)", "url": "https://www.sansei-rd.co.jp/products23/e_garo12_ok/assets/pdf/e_garo12_ok.pdf", "type": "official", "checkedAt": "2026-11-23" },
     { "title": "サンセイR&D 製品ページ", "url": "https://www.sansei-rd.co.jp/products23/e_garo12_ok/index.html", "type": "official", "checkedAt": "2026-11-03" }
   ],
-  "verification": { "status": "needs-review", "checkedAt": "2026-11-03", "needsReviewFields": ["nameKo", "modelCode", "rush.totalEntryRatePercent", "payouts.initial[1].payoutBalls"] }
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-23", "needsReviewFields": ["nameKo", "modelCode", "releaseDate", "rush.totalEntryRatePercent"] },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/e-garo-12/machine.png",
+      "alt": "サンセイR&D e 가로 12 황금기사 극한 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "サンセイR&D 공식 牙狼 아카이브",
+      "sourceUrl": "https://www.sansei-rd.co.jp/p_garo_archive/archive/p_garo12_ok.html"
+    },
+    "rushScreen": {
+      "url": "./assets/images/official/e-garo-12/rush-screen.png",
+      "alt": "サンセイR&D 공식 액정 캡처(가로 vs 누에 배틀)"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시 → 1st 배틀 → 극한 7500 배틀 → LT",
+        "url": "./assets/images/official/e-garo-12/flow-ko.png",
+        "alt": "サンセイR&D 공식 게임 플로우 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 스펙",
+        "title": "확률·출옥 배분·LT 계속률",
+        "url": "./assets/images/official/e-garo-12/spec-ko.png",
+        "alt": "サンセイR&D 공식 스펙 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      { "value": "1/349.99", "label": "통상시 대당첨" },
+      { "value": "25%", "label": "LT 진입 (50%×50% 산출)" },
+      { "value": "약 76%", "label": "LT 계속률" }
+    ],
+    "distributionCharts": [
+      { "title": "1st 배틀 결과", "source": "initial", "centerValue": "50%", "centerLabel": "승리" },
+      { "title": "극한 7500 배틀 결과", "source": "battle2", "centerValue": "50%", "centerLabel": "7500개+LT" },
+      { "title": "LT 중 출옥 배분", "source": "rush", "centerValue": "76%", "centerLabel": "LT 계속" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 가로 12 황금기사 극한 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "대당첨 약 1/349 · 액정 도안 당첨 약 1/437 (ガロ차지 2R 약 1/1749 제외)" },
+      "initialConnector": "액정 도안 당첨 → 1st 배틀 → 극한 7500 배틀",
+      "initialAriaLabel": "초당첨 이후 경로 3가지",
+      "initialOutcomes": [
+        { "rate": "50%", "title": "1st 배틀 패배", "description": "1500개\n통상시 복귀", "route": "↩ 통상 복귀", "tone": "return" },
+        { "rate": "25% (50%×50%)", "title": "극한 7500 배틀 실패", "description": "1st 승리 1500개 + 1500개\n합쳐 3000개 · 통상 복귀", "route": "↩ 통상 복귀", "tone": "return" },
+        { "rate": "25% (50%×50%)", "title": "극한 7500 배틀 성공", "description": "7500개 + LT\n10R × 5회", "route": "LT", "tone": "premium" }
+      ],
+      "mergeLabel": "LT 진입 25% (1st 승리 50% × 7500 배틀 성공 50%)",
+      "rush": { "eyebrow": "LT 3.0 PLUS", "title": "魔戒CHANCE LT", "detail": "계속률 약 76% · 우타 중 실질 확률 1/1 (루프 타입)" },
+      "rushConnector": "LT 중 출옥",
+      "rushAriaLabel": "LT 중 출옥 3가지",
+      "rushOutcomes": [
+        { "rate": "약 25%", "title": "7500개", "description": "10R × 5회\n+ LT 계속", "route": "↻ LT 계속", "tone": "premium" },
+        { "rate": "약 51%", "title": "1500개", "description": "+ LT 계속", "route": "↻ LT 계속", "tone": "rush" },
+        { "rate": "약 24%", "title": "1500개", "description": "LT 종료\n통상시 복귀", "route": "↩ 통상 복귀", "tone": "return" }
+      ],
+      "loopNote": "LT 중 출옥은 1500개 또는 7500개뿐(3000·4500개 없음). 출옥은 지급 기준이며, 우타 중 헤소 대당첨은 해당되지 않음"
+    },
+    "steps": [
+      { "phase": "STEP 01 · 통상시", "title": "도안 당첨 노리기", "description": "대당첨 확률은 약 1/349, 액정 도안 당첨은 약 1/437입니다. ガロ차지(2R 대당첨)는 약 1/1749로 별도입니다." },
+      { "phase": "STEP 02 · 1st 배틀 → 극한 7500 배틀", "title": "각 50% 두 번", "description": "도안 당첨 후 1st 배틀에서 승리하면(50%) 1500개를 얻고 극한 7500 배틀로 갑니다. 패배(50%)는 1500개로 통상 복귀합니다. 7500 배틀은 성공 50%로 7500개 + LT, 실패 50%는 1500개(1st 배틀과 합쳐 3000개)로 통상 복귀합니다." },
+      { "phase": "STEP 03 · 魔戒CHANCE LT", "title": "계속률 약 76%", "description": "LT 중 출옥은 7500개 약 25%, 1500개 약 51%(LT 계속), 1500개 약 24%(종료)입니다. 7500개는 10R×5회입니다." }
+    ]
+  }
 }
