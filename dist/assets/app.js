@@ -2,7 +2,7 @@ const DATA_SOURCES = [
   { category: "pachinko", root: "./data/pachinko" },
   { category: "slot", root: "./data/slots" }
 ];
-const accents = ["#42e9ff", "#ff4fd8", "#ffca62", "#8cf5ba", "#9f8cff"];
+const accents = ["var(--accent-text)"];
 const AI_CONFIG = window.PACHI_AI_CONFIG || { mode: "mock", endpoint: "" };
 
 const state = {
@@ -120,6 +120,8 @@ function renderYearFilters() {
 
 function machineCard(machine) {
   const accent = accentFor(machine);
+  const fullImageUrl = machine.visualGuide?.mainImage?.url;
+  const thumbUrl = fullImageUrl && `./assets/images/thumbs/${machine.id}.webp`;
   const isSlot = machine.machineType === "slot";
   const primarySpec = isSlot ? machine.settings?.[0]?.atProbability : machine.probabilities.base;
   const secondarySpec = isSlot ? machine.settings?.[machine.settings.length - 1]?.payoutRate : valueOrDash(machine.rush.continuationRatePercent, "%");
@@ -127,6 +129,9 @@ function machineCard(machine) {
     <article class="machine-card" tabindex="0" role="button"
       aria-label="${escapeHtml(machine.nameKo)} 상세 보기"
       data-machine-id="${escapeHtml(machine.id)}" style="--card-accent:${accent}">
+      ${thumbUrl ? `<div class="card-thumb"><img src="${escapeHtml(thumbUrl)}" alt="" loading="lazy" decoding="async"
+        onerror="this.onerror=null;this.src='${escapeHtml(fullImageUrl)}'"></div>` : ""}
+      <div class="card-body">
       <div class="card-top">
         <span class="format-badge">${escapeHtml(machine.format)} · ${isSlot ? "슬롯" : "파칭코"}</span>
         <span class="date">${escapeHtml(formatDate(machine.releaseDate))}</span>
@@ -139,6 +144,7 @@ function machineCard(machine) {
         <div><small>${isSlot ? "설정6 기계할" : "RUSH 계속률"}</small><b>${escapeHtml(valueOrDash(secondarySpec))}</b></div>
       </div>
       <span class="review-chip">${machine.verification.status === "verified" ? "검증 완료" : "일부 수치 재확인 필요"}</span>
+      </div>
     </article>
   `;
 }
@@ -325,7 +331,7 @@ function payoutTable(title, items) {
   `);
 }
 
-const chartColors = ["#42e9ff", "#9f8cff", "#ff4fd8", "#ffca62", "#8cf5ba"];
+const chartColors = ["#ff4d00", "#ff8a50", "#ffb899", "#a3a3a3", "#525252"];
 
 function donutGradient(items) {
   let cursor = 0;
@@ -335,7 +341,7 @@ function donutGradient(items) {
     cursor += rate;
     return `${chartColors[index % chartColors.length]} ${start}% ${cursor}%`;
   });
-  if (cursor < 100) segments.push(`#252b39 ${cursor}% 100%`);
+  if (cursor < 100) segments.push(`var(--track) ${cursor}% 100%`);
   return `conic-gradient(${segments.join(", ")})`;
 }
 
@@ -825,6 +831,37 @@ window.addEventListener("popstate", () => {
   const machineId = new URLSearchParams(window.location.search).get("machine");
   if (machineId) openMachine(machineId, false);
   else closeMachine(false);
+});
+
+const THEME_KEY = "pachi-theme";
+const THEME_MODES = ["auto", "light", "dark"];
+const THEME_LABELS = { auto: "자동", light: "라이트", dark: "다크" };
+
+function readThemeMode() {
+  try {
+    const saved = localStorage.getItem(THEME_KEY);
+    return THEME_MODES.includes(saved) ? saved : "auto";
+  } catch (error) {
+    return "auto";
+  }
+}
+
+function applyThemeMode(mode) {
+  const root = document.documentElement;
+  if (mode === "auto") delete root.dataset.theme;
+  else root.dataset.theme = mode;
+  const button = document.querySelector("[data-theme-toggle]");
+  if (!button) return;
+  button.dataset.mode = mode;
+  button.setAttribute("aria-label", `테마: ${THEME_LABELS[mode]} (클릭하여 변경)`);
+  button.title = `테마: ${THEME_LABELS[mode]}`;
+}
+
+applyThemeMode(readThemeMode());
+document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
+  const next = THEME_MODES[(THEME_MODES.indexOf(readThemeMode()) + 1) % THEME_MODES.length];
+  try { localStorage.setItem(THEME_KEY, next); } catch (error) { /* 저장 불가 환경에서는 이번 방문에만 적용 */ }
+  applyThemeMode(next);
 });
 
 preventInAppInputZoom();
