@@ -221,6 +221,73 @@ function slotSettingsTable(machine) {
   `;
 }
 
+const analysisKindLabels = { mode: "모드·구간", condition: "스루·천국", return: "引き戻し" };
+
+function analysisCell(value) {
+  return value === null || value === undefined || value === "" ? "—" : escapeHtml(String(value));
+}
+
+function analysisTable(table) {
+  if (!Array.isArray(table.columns) || !Array.isArray(table.rows) || !table.rows.length) return "";
+  return `
+    <div class="analysis-table-block">
+      ${table.caption ? `<h4>${escapeHtml(table.caption)}</h4>` : ""}
+      <div class="payout-wrap">
+        <table class="payout-table analysis-table">
+          <thead><tr>${table.columns.map((column) => `<th>${escapeHtml(column)}</th>`).join("")}</tr></thead>
+          <tbody>${table.rows.map((row) => `<tr>${row.map((cell, index) => (index === 0 ? `<td><b>${analysisCell(cell)}</b></td>` : `<td>${analysisCell(cell)}</td>`)).join("")}</tr>`).join("")}</tbody>
+        </table>
+      </div>
+      ${table.note ? `<p class="analysis-note">${escapeHtml(table.note)}</p>` : ""}
+    </div>
+  `;
+}
+
+function analysisItems(items) {
+  if (!Array.isArray(items) || !items.length) return "";
+  return `
+    <dl class="analysis-items">
+      ${items.map((item) => `
+        <div>
+          <dt>${escapeHtml(item.label)}</dt>
+          <dd>${analysisCell(item.value)}${item.note ? `<small>${escapeHtml(item.note)}</small>` : ""}</dd>
+        </div>
+      `).join("")}
+    </dl>
+  `;
+}
+
+function analysisSections(machine) {
+  const analysis = machine.analysis;
+  if (!analysis || !Array.isArray(analysis.sections) || !analysis.sections.length) return "";
+  return `
+    <div class="detail-section analysis-block">
+      <div class="analysis-heading">
+        <h3>해석 정보</h3>
+        <span class="analysis-badge">비공식</span>
+      </div>
+      ${analysis.notice ? `<p class="analysis-notice">${escapeHtml(analysis.notice)}</p>` : ""}
+      ${analysis.sections.map((section) => `
+        <details class="analysis-item">
+          <summary>
+            <span class="analysis-title">${escapeHtml(section.title)}</span>
+            ${analysisKindLabels[section.kind] ? `<small>${analysisKindLabels[section.kind]}</small>` : ""}
+          </summary>
+          <div class="analysis-body">
+            ${section.intro ? `<p class="analysis-intro">${escapeHtml(section.intro)}</p>` : ""}
+            ${(section.tables || []).map(analysisTable).join("")}
+            ${analysisItems(section.items)}
+            ${Array.isArray(section.notes) && section.notes.length ? `<ul class="analysis-notes">${section.notes.map((note) => `<li>${escapeHtml(note)}</li>`).join("")}</ul>` : ""}
+            ${Array.isArray(section.sources) && section.sources.length ? `
+              <p class="analysis-sources">출처: ${section.sources.map((source) => `<a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer noopener">${escapeHtml(source.title)} ↗</a>`).join(" · ")}</p>
+            ` : ""}
+          </div>
+        </details>
+      `).join("")}
+    </div>
+  `;
+}
+
 function payoutRows(items) {
   return items.map((item) => `
     <tr>
@@ -424,6 +491,7 @@ function renderDetail(machine) {
         <h3>플레이 흐름</h3>
         <ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
       </div>
+      ${analysisSections(machine)}
       ${isSlot ? "" : payoutTable("초기 당첨 배분", machine.payouts.initial)}
       ${!isSlot && Array.isArray(machine.payouts.climax) ? payoutTable("CLIMAX 배분", machine.payouts.climax) : ""}
       ${isSlot ? "" : payoutTable(Array.isArray(machine.payouts.modeB) ? "RUSH 모드 A 배분" : "RUSH 배분", machine.payouts.rush)}

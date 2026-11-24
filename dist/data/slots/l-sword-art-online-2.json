@@ -218,6 +218,155 @@
       }
     ]
   },
+  "analysis": {
+    "notice": "해석 사이트(なな徹·1geki 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-24.",
+    "sections": [
+      {
+        "title": "통상 모드표 (A~D · 천국)",
+        "kind": "mode",
+        "intro": "통상시에는 모드별로 규정 액정 G수에서 CZ 당첨을 노립니다. 기대도 표기: △<○<◎, '천장'은 천장 도달 구간입니다.",
+        "tables": [
+          {
+            "caption": "액정 G수별 CZ 기대도",
+            "columns": ["액정 G수", "통상A", "통상B", "통상C", "통상D", "천국"],
+            "rows": [
+              ["50G", "△", "△", "△", "△", "○"],
+              ["100G", "○", "○", "◎", "◎", "천장"],
+              ["250G", "○", "△", "○", "○", "—"],
+              ["350G", "△", "◎", "◎", "천장", "—"],
+              ["500G", "○", "△", "○", "—", "—"],
+              ["650G", "△", "○", "천장", "—", "—"],
+              ["800G", "천장", "천장", "—", "—", "—"]
+            ],
+            "note": "천장 액정 G수: 통상A·B 800G, 통상C 650G, 통상D 350G, 천국 100G."
+          }
+        ],
+        "items": [
+          {
+            "label": "모드 결정·이행 계기",
+            "value": "설정 변경 시(초기 모드), CZ 실패 시, AT 종료 시, AT 駆け抜け 시에 승격 추첨"
+          },
+          {
+            "label": "전락",
+            "value": "천국에 이행하기 전까지는 모드가 떨어지지 않음(AT 당첨 시도 마찬가지)"
+          },
+          {
+            "label": "AT 종료 시 천장 단축",
+            "value": "액정 350G로 줄이는 추첨이 있음"
+          },
+          {
+            "label": "모드 이행률",
+            "value": "비공개(조사 중)"
+          }
+        ],
+        "notes": ["パチセブン은 본문에 모드를 A·B·C·천국 4종이라고 적지만 표에는 통상D 열이 있어 서로 맞지 않습니다.", "설정 변경 시 CZ간 천장 단축 등 천장 관련 내용은 아래 '천국 이행과 CZ'를 참고하세요."],
+        "sources": [
+          {
+            "title": "1geki 모드·ゾーン",
+            "url": "https://1geki.jp/slot/l_sao2/45/"
+          },
+          {
+            "title": "なな徹 モードやゾーン",
+            "url": "https://nana-press.com/kaiseki/machine/1158/37254/"
+          },
+          {
+            "title": "パチセブン 通常時解析",
+            "url": "https://pachiseven.jp/machines/7389/cutout/6"
+          }
+        ]
+      },
+      {
+        "title": "천국 이행과 CZ",
+        "kind": "condition",
+        "items": [
+          {
+            "label": "천국 이행 계기",
+            "value": "CZ 실패 시 모드 승격 추첨과 함께 천국 이행 추첨",
+            "note": "확률은 공개되어 있지 않음"
+          },
+          {
+            "label": "CZ 스루 횟수 조건",
+            "value": "기재 없음",
+            "note": "'몇 연속 스루에서 천국'이라는 조건은 확인되지 않음"
+          },
+          {
+            "label": "천국 천장",
+            "value": "액정 100G"
+          },
+          {
+            "label": "CZ간 천장 단축 계기",
+            "value": "설정 변경 시 실게임 256G+α, 초회 상위 CZ 실패 후 256G+α(상위 AT 경유 제외), AT 종료 시 추첨으로 액정 350G+α, GGO 모드 '키리토' 체류 시 최대 500G"
+          },
+          {
+            "label": "리셋 시",
+            "value": "설정 변경으로 모드·천장·유리 구간이 리셋되고 据え置き이면 인계(스테이지는 조사 중)"
+          }
+        ],
+        "notes": ["CZ 실패 때가 아니라 CZ 종료 때 천국 이행 추첨을 한다고 쓰는 곳도 있습니다(1geki 표)."],
+        "sources": [
+          {
+            "title": "なな徹 CZ スコードロンバトル",
+            "url": "https://nana-press.com/kaiseki/machine/1158/37258/"
+          },
+          {
+            "title": "なな徹 機種解析",
+            "url": "https://nana-press.com/kaiseki/machine/1158/"
+          },
+          {
+            "title": "1geki モード・ゾーン",
+            "url": "https://1geki.jp/slot/l_sao2/45/"
+          }
+        ]
+      },
+      {
+        "title": "AT 종료 후 引き戻し",
+        "kind": "return",
+        "items": [
+          {
+            "label": "구간",
+            "value": "AT 종료 후 50G",
+            "note": "라스트 어택 찬스·데스건 배틀 실패 후 포함"
+          },
+          {
+            "label": "추첨",
+            "value": "구간 중 매 G 引き戻し 추첨"
+          },
+          {
+            "label": "50G째 레어역",
+            "value": "引き戻し 농후",
+            "note": "1geki는 '농후!?'로 표기"
+          },
+          {
+            "label": "당첨률",
+            "value": "설정 차 있음, 수치는 조사 중"
+          },
+          {
+            "label": "복귀 시",
+            "value": "초기 150매 AT로 복귀, 스나이퍼 찬스 승리 수 계승"
+          },
+          {
+            "label": "복귀 후 세트 계속률",
+            "value": "설정1 6.0% / 설정6 13.1%"
+          },
+          {
+            "label": "구간 중 시사",
+            "value": "하단 패널이 점멸"
+          }
+        ],
+        "notes": ["引き戻し로 복귀한 AT도 남은 매수 0매에서 세트 계속 추첨을 합니다.", "GGO 모드(시논·데스건)는 引き戻し 때도 유지됩니다."],
+        "sources": [
+          {
+            "title": "なな徹 AT後の引き戻し抽選",
+            "url": "https://nana-press.com/kaiseki/machine/1158/37272/"
+          },
+          {
+            "title": "1geki AT引き戻し抽選",
+            "url": "https://1geki.jp/slot/l_sao2/90/"
+          }
+        ]
+      }
+    ]
+  },
   "sources": [
     {
       "type": "official",
@@ -232,6 +381,20 @@
       "url": "https://www.daitogiken.com/contents/product/slot/sao2/info.html",
       "accessedAt": "2026-11-24",
       "supports": ["설정별 확률·기계할", "게임 플로우", "AT·CZ·상위 AT 구조", "공식 이미지"]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スロット ソードアート・オンラインⅡ 解析",
+      "url": "https://nana-press.com/kaiseki/machine/1158/",
+      "accessedAt": "2026-11-24",
+      "supports": ["해석 정보(모드·스루·引き戻し)"]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki スロット ソードアート・オンラインⅡ 解析",
+      "url": "https://1geki.jp/slot/l_sao2/",
+      "accessedAt": "2026-11-24",
+      "supports": ["해석 정보(모드·스루·引き戻し)"]
     }
   ],
   "notes": [
@@ -243,6 +406,6 @@
   "verification": {
     "status": "needs-review",
     "checkedAt": "2026-11-24",
-    "needsReviewFields": ["modelCode", "releaseDate", "slot.czCeiling", "slot.atCeiling"]
+    "needsReviewFields": ["modelCode", "releaseDate", "slot.czCeiling", "slot.atCeiling", "analysis"]
   }
 }
