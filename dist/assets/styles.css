@@ -82,11 +82,15 @@ body {
   background: var(--bg);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif;
   line-height: 1.55;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 button, input, select, textarea { font: inherit; }
 button { color: inherit; }
 a { color: inherit; }
 h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3, h4 { text-wrap: balance; }
+p, li, dd, figcaption { text-wrap: pretty; }
 .shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 .sr-only {
   position: absolute;
@@ -135,7 +139,7 @@ h1, h2, h3, p { margin-top: 0; }
   text-decoration: none;
 }
 .brand > span:last-child { display: flex; align-items: baseline; gap: 8px; }
-.brand strong { font-size: 19px; letter-spacing: -.06em; }
+.brand strong { font-size: 19px; letter-spacing: -.06em; white-space: nowrap; }
 .brand-mark {
   width: 39px;
   height: 39px;
@@ -380,7 +384,7 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 .flow-merge { position: relative; height: 62px; }
 .flow-merge::before { content: ""; position: absolute; top: 0; left: calc(100% / 6); right: calc(100% / 6); height: 1px; background: var(--flow-line); }
 .flow-merge::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: var(--flow-line); }
-.flow-merge span { position: absolute; z-index: 1; top: 20px; left: 50%; padding: 5px 9px; border: 1px solid rgba(var(--accent-rgb), .25); border-radius: 999px; background: var(--inset); color: var(--accent-text); font-size: 11px; font-weight: 900; transform: translateX(-50%); }
+.flow-merge span { position: absolute; z-index: 1; top: 20px; left: 50%; padding: 5px 9px; border: 1px solid rgba(var(--accent-rgb), .25); border-radius: 999px; background: var(--inset); color: var(--accent-text); font-size: 11px; font-weight: 900; transform: translateX(-50%); white-space: nowrap; }
 .flow-rush-stage { position: relative; display: grid; grid-template-columns: minmax(170px, 240px) 1fr; gap: 20px; align-items: center; max-width: 680px; padding: 12px; text-align: left; }
 .flow-rush-image { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 8px; background: var(--inset); }
 .flow-rush-image img { width: 100%; height: 100%; object-fit: cover; }
@@ -393,7 +397,7 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 .official-flow-gallery { margin-top: 22px; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: rgba(var(--ov), .018); }
 .official-gallery-heading { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 14px; }
 .official-gallery-heading h4 { margin: 4px 0 0; font-size: 17px; }
-.official-gallery-heading a { color: var(--accent-text); font-size: 11px; text-decoration: none; }
+.official-gallery-heading a { color: var(--accent-text); font-size: 11px; text-decoration: none; white-space: nowrap; flex: none; }
 .official-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .official-gallery-grid figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--inset); }
 .official-gallery-grid figure:first-child { grid-column: 1 / -1; }
@@ -433,7 +437,7 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 .source-list { display: grid; gap: 8px; padding: 0; list-style: none; }
 .source-list a { display: flex; justify-content: space-between; gap: 18px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--text-soft); text-decoration: none; font-size: 12px; }
 .source-list a:hover { border-color: rgba(var(--accent-rgb), .35); }
-.source-list span { color: var(--accent-text); }
+.source-list span { flex: none; color: var(--accent-text); white-space: nowrap; }
 .analysis-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 4px; }
 .analysis-heading h3 { margin: 0; }
 .analysis-badge { padding: 3px 9px; border: 1px solid rgba(var(--accent-rgb), .42); border-radius: 999px; color: var(--accent-text); font-size: 11px; font-weight: 700; }
