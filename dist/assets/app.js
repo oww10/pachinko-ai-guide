@@ -245,7 +245,8 @@ function machineCard(machine) {
       ["설정6 기계할", valueOrDash(machine.settings?.[machine.settings.length - 1]?.payoutRate)],
       ["1,000엔당 게임", baseGamesNumber(machine) ? `약 ${baseGamesNumber(machine)}G` : "—"]
     ];
-    moreHtml = specGrid(slotCardSecondSpecs(machine), "card-specs-rush") + specGrid(slotCardCzSpecs(machine), "card-specs-rush");
+    moreHtml = specGrid(slotCardSecondSpecs(machine), "card-specs-rush") + specGrid(slotCardCzSpecs(machine), "card-specs-rush")
+      + specGrid([["아침 리셋 천장", valueOrDash(machine.slot?.resetCeiling)]], "card-specs-rush");
   } else {
     const { main, extra } = pachinkoCardSpecs(machine);
     mainSpecs = main;
@@ -328,7 +329,8 @@ function detailSpecs(machine) {
       ["CZ 돌파율", machine.slot?.czBreakRate],
       ["AT 초기", machine.slot?.initialATCoins],
       [machine.slot?.primaryCeilingLabel || "CZ 천장", machine.slot?.czCeiling],
-      ["AT 천장", machine.slot?.atCeiling]
+      ["AT 천장", machine.slot?.atCeiling],
+      ["아침 리셋 천장 (설정 변경 시)", machine.slot?.resetCeiling]
     ];
     return items.map(([label, value]) => `<div><small>${label}</small><b>${escapeHtml(valueOrDash(value))}</b></div>`).join("");
   }
