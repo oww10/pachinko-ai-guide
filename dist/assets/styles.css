@@ -159,6 +159,8 @@ p, li, dd, figcaption { text-wrap: pretty; }
 nav { display: flex; align-items: center; gap: 22px; }
 nav a { color: var(--text-soft); font-size: 14px; text-decoration: none; }
 .ghost-button {
+  display: inline-flex;
+  align-items: center;
   padding: 9px 13px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
@@ -184,6 +186,7 @@ nav a { color: var(--text-soft); font-size: 14px; text-decoration: none; }
 .theme-toggle[data-mode="dark"] .i-dark { display: block; }
 .ghost-button span {
   margin-left: 5px;
+  line-height: 1;
   color: var(--accent-text);
   font-size: 11px;
   font-weight: 800;
@@ -230,7 +233,7 @@ nav a { color: var(--text-soft); font-size: 14px; text-decoration: none; }
 
 .explore { padding: 56px 0 90px; }
 .section-heading { display: grid; grid-template-columns: 1.15fr .85fr; gap: 50px; align-items: end; }
-.section-heading h2, .ai-panel h2 { margin-bottom: 0; font-size: clamp(39px, 5vw, 62px); line-height: 1; letter-spacing: -.06em; }
+.section-heading h2 { margin-bottom: 0; font-size: clamp(39px, 5vw, 62px); line-height: 1; letter-spacing: -.06em; }
 .section-heading > p { max-width: 480px; margin: 0; color: var(--sub); font-size: 14px; }
 .filter-bar { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-top: 45px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
 #category-filters { padding-right: 18px; border-right: 1px solid var(--line); }
@@ -247,7 +250,7 @@ nav a { color: var(--text-soft); font-size: 14px; text-decoration: none; }
 }
 .filter-pill.is-active { border-color: var(--accent); background: var(--accent-soft); color: var(--text); }
 .select-wrap { display: flex; align-items: center; gap: 10px; color: var(--sub); font-size: 12px; }
-.select-wrap select { height: 38px; padding: 0 34px 0 12px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel); }
+.select-wrap select { height: 38px; padding: 0 34px 0 12px; line-height: 38px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel); }
 .result-line { min-height: 68px; display: flex; align-items: center; justify-content: space-between; }
 .result-line p { margin: 0; color: var(--sub); font-size: 13px; }
 .result-line strong { color: var(--text); font-size: 20px; }
@@ -290,33 +293,6 @@ nav a { color: var(--text-soft); font-size: 14px; text-decoration: none; }
 .empty-state h3 { margin: 10px 0 5px; }
 .empty-state p { color: var(--sub); }
 
-.ai-preview { padding: 45px 0 120px; }
-.ai-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; padding: 64px; overflow: hidden; border: 1px solid rgba(var(--accent-rgb), .2); border-radius: var(--radius-xl); background: var(--panel); }
-.ai-panel > div:first-child > p { max-width: 550px; margin: 24px 0 0; color: var(--muted); }
-.ai-start-button {
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 25px;
-  padding: 0 19px;
-  border: 1px solid rgba(var(--accent-rgb), .35);
-  border-radius: 6px;
-  background: var(--accent-soft);
-  color: var(--accent-text);
-  font-weight: 800;
-  cursor: pointer;
-}
-.ai-start-button span { font-size: 20px; }
-.chat-mock { padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--inset); }
-.chat-head { display: flex; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--line); font-size: 12px; font-weight: 700; }
-.chat-head i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-.bubble { max-width: 83%; margin-top: 18px; padding: 12px 15px; border-radius: 12px; font-size: 12px; }
-.bubble.user { margin-left: auto; border-bottom-right-radius: 4px; background: var(--panel-high); }
-.bubble.bot { display: flex; gap: 5px; width: 64px; border-bottom-left-radius: 4px; background: var(--accent-soft); }
-.bubble.bot span { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
-.provider-row { display: flex; gap: 7px; margin-top: 24px; }
-.provider-row b { flex: 1; padding: 9px 5px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); text-align: center; font-size: 11px; }
 
 footer { border-top: 1px solid var(--line); }
 .footer-inner { min-height: 150px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
@@ -327,7 +303,7 @@ dialog { max-width: none; padding: 0; border: 0; color: var(--text); background:
 dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 .machine-dialog { width: min(980px, calc(100% - 28px)); max-height: calc(100% - 28px); border-radius: 24px; background: var(--bg-soft); box-shadow: var(--shadow); }
 .dialog-shell { position: relative; }
-.dialog-close { position: sticky; top: 16px; left: calc(100% - 56px); z-index: 5; width: 40px; height: 40px; margin-bottom: -40px; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--panel); font-size: 25px; cursor: pointer; backdrop-filter: blur(12px); }
+.dialog-close { display: grid; place-items: center; padding: 0 0 3px; line-height: 1; position: sticky; top: 16px; left: calc(100% - 56px); z-index: 5; width: 40px; height: 40px; margin-bottom: -40px; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--panel); font-size: 25px; cursor: pointer; backdrop-filter: blur(12px); }
 .detail-hero { padding: 50px 56px 42px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--detail-accent) 18%, transparent), transparent 18rem); }
 .detail-kicker { color: var(--detail-accent); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
 .detail-hero h2 { max-width: 760px; margin: 14px 0 7px; font-size: clamp(35px, 6vw, 61px); line-height: 1.05; letter-spacing: -.06em; word-break: keep-all; overflow-wrap: anywhere; }
@@ -506,7 +482,7 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 .ai-chat-header h2 { margin-bottom: 0; font-size: 29px; letter-spacing: -.05em; }
 .ai-model-label { margin-bottom: 4px; color: var(--accent-text); font-size: 11px; font-weight: 800; letter-spacing: .13em; }
 .ai-model-label span { display: inline-block; width: 6px; height: 6px; margin-right: 5px; border-radius: 50%; background: var(--accent); }
-.ai-close { width: 39px; height: 39px; border: 1px solid var(--line); border-radius: 50%; background: rgba(var(--ov), .035); font-size: 23px; cursor: pointer; }
+.ai-close { display: grid; place-items: center; padding: 0 0 3px; line-height: 1; width: 39px; height: 39px; border: 1px solid var(--line); border-radius: 50%; background: rgba(var(--ov), .035); font-size: 23px; cursor: pointer; }
 .ai-context-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 11px; margin-top: 25px; }
 .ai-context-row label { color: var(--muted); font-size: 11px; }
 .ai-context-row select { min-width: 0; height: 41px; padding: 0 34px 0 12px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); background: var(--panel); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -540,7 +516,6 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 
 @media (max-width: 900px) {
   .machine-grid { grid-template-columns: repeat(2, 1fr); }
-  .ai-panel { grid-template-columns: 1fr; padding: 45px; }
 }
 
 @media (max-width: 640px) {
@@ -553,13 +528,11 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
   .hero-search button { display: none; }
   .explore { padding-top: 40px; }
   .section-heading { grid-template-columns: 1fr; gap: 18px; }
-  .section-heading h2, .ai-panel h2 { font-size: 41px; }
+  .section-heading h2 { font-size: 41px; }
   .filter-bar { align-items: stretch; flex-direction: column; gap: 15px; }
   #category-filters { padding: 0 0 14px; border-right: 0; border-bottom: 1px solid var(--line); }
   .select-wrap { justify-content: space-between; }
   .machine-grid { grid-template-columns: 1fr; }
-  .ai-preview { padding-bottom: 75px; }
-  .ai-panel { padding: 30px 22px; gap: 35px; }
   .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 13px; }
   .detail-hero { padding: 45px 24px 30px; }
   .machine-dialog { width: calc(100% - 16px); max-width: calc(100% - 16px); }
