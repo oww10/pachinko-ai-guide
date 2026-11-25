@@ -19,6 +19,7 @@
     "type": "스마트 슬롯 · 보너스 경유 게임 수 추가형 AT",
     "netIncrease": "약 5.2매/G",
     "baseGames": "50매당 약 30G",
+    "czBreakRate": "약 50%",
     "initialATCoins": "50G 이상",
     "settingsPrimaryLabel": "보너스",
     "primaryCeilingLabel": "BONUS 천장",
@@ -466,7 +467,7 @@
   ],
   "verification": {
     "status": "needs-review",
-    "needsReviewFields": ["slot.baseGames", "analysis"],
+    "needsReviewFields": ["slot.baseGames", "slot.czEntry", "slot.czBreakRate", "analysis"],
     "lastReviewedAt": "2026-11-05",
     "reviewedBy": "Codex"
   }

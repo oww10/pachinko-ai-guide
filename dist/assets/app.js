@@ -143,6 +143,26 @@ function atCostYen(machine, setting) {
   return Math.round((Number(odds[1]) * 50 / games) * 20 / 100) * 100;
 }
 
+function slotCardCzSpecs(machine) {
+  return [
+    ["CZ 확률(설정1)", valueOrDash(machine.slot?.czEntry)],
+    ["CZ 돌파율", valueOrDash(machine.slot?.czBreakRate)]
+  ];
+}
+
+function payoutBar(machine) {
+  const items = (machine.payouts?.initial || []).filter((item) => typeof item.ratePercent === "number" && item.ratePercent > 0);
+  if (!items.length) return "";
+  const total = items.reduce((sum, item) => sum + item.ratePercent, 0);
+  const segments = items.map((item, index) => {
+    const alpha = items.length === 1 ? 1 : 1 - (index / items.length) * 0.65;
+    const title = `${item.label} ${item.ratePercent}%`;
+    return `<i style="flex:${item.ratePercent / total};--seg:${alpha.toFixed(2)}" title="${escapeHtml(title)}"></i>`;
+  }).join("");
+  const caption = items.map((item) => item.ratePercent).join(" / ") + "%";
+  return `<div class="payout-bar"><small>당첨 배분</small><div class="payout-bar-track" role="img" aria-label="${escapeHtml(items.map((item) => `${item.label} ${item.ratePercent}%`).join(", "))}">${segments}</div><b>${escapeHtml(caption)}</b></div>`;
+}
+
 function slotCardSecondSpecs(machine) {
   return [
     ["AT까지 투자(단순)", valueOrDash(costText(atCostYen(machine, machine.settings?.[0])))],
@@ -206,6 +226,9 @@ function machineCard(machine) {
       ${`<div class="card-specs card-specs-rush" data-count="2">
         ${(isSlot ? slotCardSecondSpecs(machine) : rushCardSpecs(machine)).map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
       </div>`}
+      ${isSlot ? `<div class="card-specs card-specs-rush" data-count="2">
+        ${slotCardCzSpecs(machine).map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
+      </div>` : payoutBar(machine)}
       <span class="review-chip">${machine.verification.status === "verified" ? "검증 완료" : "일부 수치 재확인 필요"}</span>
       </div>
     </article>
@@ -256,6 +279,8 @@ function detailSpecs(machine) {
       ["베이스", machine.slot?.baseGames],
       ["AT까지 투자 (설정1·단순 계산)", costText(atCostYen(machine, machine.settings?.[0]))],
       ["AT까지 투자 (설정6·단순 계산)", costText(atCostYen(machine, machine.settings?.[machine.settings.length - 1]))],
+      ["CZ 확률 (설정1)", machine.slot?.czEntry],
+      ["CZ 돌파율", machine.slot?.czBreakRate],
       ["AT 초기", machine.slot?.initialATCoins],
       [machine.slot?.primaryCeilingLabel || "CZ 천장", machine.slot?.czCeiling],
       ["AT 천장", machine.slot?.atCeiling]

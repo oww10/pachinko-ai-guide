@@ -19,6 +19,8 @@
     "type": "스마트 슬롯 · 차매수 상승형 AT",
     "netIncrease": "AT 약 3.6매/G · 상위 AT 약 7.2매/G",
     "baseGames": "50매당 약 31G",
+    "czEntry": "1/238.4",
+    "czBreakRate": "약 55%",
     "initialATCoins": "150매+α",
     "settingsPrimaryLabel": "초당첨"
   },
@@ -407,6 +409,6 @@
   "verification": {
     "status": "needs-review",
     "checkedAt": "2026-11-24",
-    "needsReviewFields": ["modelCode", "releaseDate", "slot.baseGames", "slot.czCeiling", "slot.atCeiling", "analysis"]
+    "needsReviewFields": ["modelCode", "releaseDate", "slot.baseGames", "slot.czEntry", "slot.czBreakRate", "slot.czCeiling", "slot.atCeiling", "analysis"]
   }
 }
