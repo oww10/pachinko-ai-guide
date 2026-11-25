@@ -348,7 +348,9 @@
     "RUSH 중 당첨 확률 약 1/97.1은 전동 튤립 롱 개방 확률.",
     "RUSH 진입 시 약 30%로 모드 B에서 시작하며, 모드 A 당첨 후 약 50%로 모드 B에 이동한다.",
     "3000개=750개×4회, 6000개=750개×8회, 9000개=750개×12회의 지급 기준.",
-    "ULTIMATE DRIVE 종료 후 SPECIAL LycoReco RUSH로 복귀."
+    "ULTIMATE DRIVE 종료 후 SPECIAL LycoReco RUSH로 복귀.",
+    "2026-11-25 재조사: 공식 3페이지(스펙·게임플로우 포함)는 스펙이 렌더링되어도 읽을 수 없어 해설(パチマガ)만으로 대조했다. 형식명 M3은 어느 페이지에도 없고, 초기 배분 비율(0.1/44.9/5/30/20%)과 ULTIMATE DRIVE 9000개·9001개 이상 25%씩 분할은 해설에도 직접 표기가 없다(310개 타입 RUSH 돌입 기대도 약 20%, 9000개 이상 기대도 약 50%와는 합계가 맞는다).",
+    "9001개 이상 구간은 6000개+3000개×n 구조상 12000개 이상일 수 있어 라벨 정의를 확인해야 한다."
   ],
   "sources": [
     {
@@ -377,8 +379,8 @@
     }
   ],
   "verification": {
-    "status": "verified",
-    "checkedAt": "2026-11-04",
-    "needsReviewFields": []
+    "status": "needs-review",
+    "checkedAt": "2026-11-25",
+    "needsReviewFields": ["modelCode", "payouts.initial", "payouts.ultimateDrive"]
   }
 }
