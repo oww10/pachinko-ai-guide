@@ -114,7 +114,7 @@
     ]
   },
   "gameFlow": ["초당첨의 약 52%로 FULLBURST RUSH CLIMAX 진입", "CLIMAX 중 4500개 51%는 CLIMAX 유지, 3000개 49%는 일반 RUSH 이동", "일반 RUSH 중 3000개 이상 50%로 CLIMAX 승격"],
-  "notes": ["출옥은 지급 기준. 3000개는 1500개×2회, 4500개는 1500개×3회의 합계이며 특도2에 한한다."],
+  "notes": ["출옥은 지급 기준. 3000개는 1500개×2회, 4500개는 1500개×3회의 합계이며 특도2에 한한다.", "2026-11-25 재조사: modelCode는 해설 사이트마다 다르다(P-WORLD 型式名 …SEED2bF·검정번호 610473, パチマガ 内部形式 …SEED2A). 공식 확인 전까지 현재 값을 유지한다."],
   "sources": [
     { "title": "SANKYO 公式製品ページ", "url": "https://www.sankyo-fever.jp/products/machine_list/poq/", "type": "official", "checkedAt": "2026-11-03" },
     { "title": "P-WORLD 기종 데이터베이스", "url": "https://www.p-world.co.jp/machine/database/10506", "type": "secondary", "checkedAt": "2026-11-03" },
