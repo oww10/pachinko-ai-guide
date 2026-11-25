@@ -143,6 +143,13 @@ function atCostYen(machine, setting) {
   return Math.round((Number(odds[1]) * 50 / games) * 20 / 100) * 100;
 }
 
+function slotCardSecondSpecs(machine) {
+  return [
+    ["AT까지 투자(단순)", valueOrDash(costText(atCostYen(machine, machine.settings?.[0])))],
+    ["AT 천장", valueOrDash(machine.slot?.atCeiling)]
+  ];
+}
+
 function rushCardSpecs(machine) {
   const { rushHit, highState } = machine.probabilities;
   const { spins, remainingHolds, timeShortSpins } = machine.rush;
@@ -196,8 +203,8 @@ function machineCard(machine) {
       <div class="card-specs" data-count="${cardSpecs.length}">
         ${cardSpecs.map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
       </div>
-      ${isSlot ? "" : `<div class="card-specs card-specs-rush" data-count="2">
-        ${rushCardSpecs(machine).map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
+      ${`<div class="card-specs card-specs-rush" data-count="2">
+        ${(isSlot ? slotCardSecondSpecs(machine) : rushCardSpecs(machine)).map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
       </div>`}
       <span class="review-chip">${machine.verification.status === "verified" ? "검증 완료" : "일부 수치 재확인 필요"}</span>
       </div>
