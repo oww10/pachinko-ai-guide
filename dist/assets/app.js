@@ -131,6 +131,18 @@ function rushEntryRate(machine) {
   return machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent;
 }
 
+function rushCardSpecs(machine) {
+  const { rushHit, highState } = machine.probabilities;
+  const { spins, remainingHolds, timeShortSpins } = machine.rush;
+  let spinText = "—";
+  if (spins != null) spinText = remainingHolds != null ? `${spins}회 + ${remainingHolds}회` : `${spins}회`;
+  else if (timeShortSpins != null) spinText = `${timeShortSpins}회(시단)`;
+  return [
+    ["RUSH 중 확률", formatApprox(valueOrDash(rushHit ?? highState))],
+    ["RUSH 회전수", spinText]
+  ];
+}
+
 function pachinkoCardSpecs(machine) {
   const { base, symbolHit, charge } = machine.probabilities;
   const hits = charge
@@ -171,6 +183,9 @@ function machineCard(machine) {
       <div class="card-specs" data-count="${cardSpecs.length}">
         ${cardSpecs.map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
       </div>
+      ${isSlot ? "" : `<div class="card-specs card-specs-rush" data-count="2">
+        ${rushCardSpecs(machine).map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
+      </div>`}
       <span class="review-chip">${machine.verification.status === "verified" ? "검증 완료" : "일부 수치 재확인 필요"}</span>
       </div>
     </article>
