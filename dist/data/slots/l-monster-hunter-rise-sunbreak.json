@@ -25,7 +25,8 @@
     "settingsPrimaryLabel": "BREAK ZONE",
     "primaryCeilingLabel": "CZ 천장",
     "czCeiling": "CZ간 최대 333G+α",
-    "atCeiling": "AT간 최대 999G+α"
+    "atCeiling": "AT간 최대 999G+α",
+    "resetCeiling": "설정 변경 시 천장 게임 수 리셋 (단축 수치 정보 없음)"
   },
   "settings": [
     { "setting": 1, "czProbability": "1/111.4", "atProbability": "1/349.9", "payoutRate": "97.5%" },
@@ -499,6 +500,6 @@
   "verification": {
     "status": "needs-review",
     "checkedAt": "2026-11-24",
-    "needsReviewFields": ["modelCode", "releaseDate", "settings", "slot.baseGames", "slot.czEntry", "slot.czBreakRate", "slot.czCeiling", "slot.atCeiling", "analysis"]
+    "needsReviewFields": ["modelCode", "releaseDate", "settings", "slot.baseGames", "slot.czEntry", "slot.czBreakRate", "slot.czCeiling", "slot.atCeiling", "slot.resetCeiling", "analysis"]
   }
 }

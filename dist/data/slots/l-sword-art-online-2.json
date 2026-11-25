@@ -23,6 +23,7 @@
     "czBreakRate": "약 55%",
     "czCeiling": "CZ간 최대 499G+α (액정 게임 기준 800G+α)",
     "atCeiling": "AT간 최대 1200G+α",
+    "resetCeiling": "CZ간 실게임 256G+α (AT간 천장은 변화 없음)",
     "initialATCoins": "150매+α",
     "settingsPrimaryLabel": "초당첨"
   },
@@ -413,6 +414,6 @@
   "verification": {
     "status": "needs-review",
     "checkedAt": "2026-11-24",
-    "needsReviewFields": ["modelCode", "releaseDate", "slot.baseGames", "slot.czEntry", "slot.czBreakRate", "slot.czCeiling", "slot.atCeiling", "analysis"]
+    "needsReviewFields": ["modelCode", "releaseDate", "slot.baseGames", "slot.czEntry", "slot.czBreakRate", "slot.czCeiling", "slot.atCeiling", "slot.resetCeiling", "analysis"]
   }
 }
