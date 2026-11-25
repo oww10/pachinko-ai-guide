@@ -150,17 +150,23 @@ function slotCardCzSpecs(machine) {
   ];
 }
 
+function payoutLabel(label) {
+  return String(label)
+    .replace(/個/g, "개").replace(/回/g, "회").replace(/[＋]/g, "+")
+    .replace(/（/g, "(").replace(/）/g, ")")
+    .replace(/確変/g, "확변").replace(/通常/g, "통상").replace(/時短/g, "시단");
+}
+
 function payoutBar(machine) {
   const items = (machine.payouts?.initial || []).filter((item) => typeof item.ratePercent === "number" && item.ratePercent > 0);
   if (!items.length) return "";
   const total = items.reduce((sum, item) => sum + item.ratePercent, 0);
-  const segments = items.map((item, index) => {
-    const alpha = items.length === 1 ? 1 : 1 - (index / items.length) * 0.65;
-    const title = `${item.label} ${item.ratePercent}%`;
-    return `<i style="flex:${item.ratePercent / total};--seg:${alpha.toFixed(2)}" title="${escapeHtml(title)}"></i>`;
-  }).join("");
-  const caption = items.map((item) => item.ratePercent).join(" / ") + "%";
-  return `<div class="payout-bar"><small>당첨 배분</small><div class="payout-bar-track" role="img" aria-label="${escapeHtml(items.map((item) => `${item.label} ${item.ratePercent}%`).join(", "))}">${segments}</div><b>${escapeHtml(caption)}</b></div>`;
+  const alphaOf = (index) => (items.length === 1 ? 1 : 1 - (index / items.length) * 0.65).toFixed(2);
+  const segments = items.map((item, index) =>
+    `<i style="flex:${item.ratePercent / total};--seg:${alphaOf(index)}"></i>`).join("");
+  const legend = items.map((item, index) =>
+    `<li><i style="--seg:${alphaOf(index)}"></i><span>${escapeHtml(payoutLabel(item.label))}</span><b>${item.ratePercent}%</b></li>`).join("");
+  return `<div class="payout-bar"><small>당첨 배분 · 1회 당첨 시 지급 구슬</small><div class="payout-bar-track" aria-hidden="true">${segments}</div><ul class="payout-legend">${legend}</ul></div>`;
 }
 
 function slotCardSecondSpecs(machine) {
