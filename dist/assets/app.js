@@ -131,6 +131,18 @@ function rushEntryRate(machine) {
   return machine.rush.totalEntryRatePercent ?? machine.rush.entryRatePercent;
 }
 
+function baseGamesNumber(machine) {
+  const match = /([\d.]+)\s*G/.exec(machine.slot?.baseGames || "");
+  return match ? Number(match[1]) : null;
+}
+
+function atCostYen(machine, setting) {
+  const games = baseGamesNumber(machine);
+  const odds = /1\/([\d.]+)/.exec(setting?.atProbability || "");
+  if (!games || !odds) return null;
+  return Math.round((Number(odds[1]) * 50 / games) * 20 / 100) * 100;
+}
+
 function rushCardSpecs(machine) {
   const { rushHit, highState } = machine.probabilities;
   const { spins, remainingHolds, timeShortSpins } = machine.rush;
@@ -163,7 +175,8 @@ function machineCard(machine) {
   const cardSpecs = isSlot
     ? [
       ["설정1 AT", valueOrDash(machine.settings?.[0]?.atProbability)],
-      ["설정6 기계할", valueOrDash(machine.settings?.[machine.settings.length - 1]?.payoutRate)]
+      ["설정6 기계할", valueOrDash(machine.settings?.[machine.settings.length - 1]?.payoutRate)],
+      ["1,000엔당 게임", baseGamesNumber(machine) ? `약 ${baseGamesNumber(machine)}G` : "—"]
     ]
     : pachinkoCardSpecs(machine);
   return `
@@ -224,12 +237,18 @@ function renderCategoryFilters() {
   `).join("");
 }
 
+function costText(yen) {
+  return yen ? `약 ${yen.toLocaleString("ko-KR")}엔` : null;
+}
+
 function detailSpecs(machine) {
   if (machine.machineType === "slot") {
     const items = [
       ["구분", machine.slot?.type],
       ["순증", machine.slot?.netIncrease],
       ["베이스", machine.slot?.baseGames],
+      ["AT까지 투자 (설정1·단순 계산)", costText(atCostYen(machine, machine.settings?.[0]))],
+      ["AT까지 투자 (설정6·단순 계산)", costText(atCostYen(machine, machine.settings?.[machine.settings.length - 1]))],
       ["AT 초기", machine.slot?.initialATCoins],
       [machine.slot?.primaryCeilingLabel || "CZ 천장", machine.slot?.czCeiling],
       ["AT 천장", machine.slot?.atCeiling]

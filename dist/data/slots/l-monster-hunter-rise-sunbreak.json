@@ -18,6 +18,7 @@
   "slot": {
     "type": "스마트 슬롯 · 게임 수 상승형 AT",
     "netIncrease": "AT 약 2.7매/G · 상위 AT 약 6.6매/G",
+    "baseGames": "50매당 약 31.9G",
     "initialATCoins": "40G+α · 상위 AT 50G 이상",
     "settingsPrimaryLabel": "BREAK ZONE",
     "primaryCeilingLabel": "CZ 천장",
@@ -467,7 +468,7 @@
       "title": "P-WORLD 기종 데이터베이스 · スマスロ モンスターハンターライズ:サンブレイク",
       "url": "https://www.p-world.co.jp/machine/database/10570",
       "accessedAt": "2026-11-24",
-      "supports": ["설정별 확률·기계할", "천장", "형식명", "도입일"]
+      "supports": ["설정별 확률·기계할", "천장", "형식명", "도입일", "베이스"]
     },
     {
       "type": "secondary",
@@ -481,7 +482,7 @@
       "title": "1geki スマスロ モンスターハンターライズ:サンブレイク 解析",
       "url": "https://1geki.jp/slot/l_mh_sun/",
       "accessedAt": "2026-11-24",
-      "supports": ["해석 정보(모드·스루·引き戻し)"]
+      "supports": ["해석 정보(모드·스루·引き戻し)", "베이스"]
     }
   ],
   "notes": [
@@ -494,6 +495,6 @@
   "verification": {
     "status": "needs-review",
     "checkedAt": "2026-11-24",
-    "needsReviewFields": ["modelCode", "releaseDate", "settings", "slot.czCeiling", "slot.atCeiling", "analysis"]
+    "needsReviewFields": ["modelCode", "releaseDate", "settings", "slot.baseGames", "slot.czCeiling", "slot.atCeiling", "analysis"]
   }
 }

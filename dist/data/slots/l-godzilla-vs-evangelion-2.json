@@ -466,7 +466,7 @@
   ],
   "verification": {
     "status": "needs-review",
-    "needsReviewFields": ["analysis"],
+    "needsReviewFields": ["slot.baseGames", "analysis"],
     "lastReviewedAt": "2026-11-05",
     "reviewedBy": "Codex"
   }

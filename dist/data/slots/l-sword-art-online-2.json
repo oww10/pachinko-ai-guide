@@ -18,6 +18,7 @@
   "slot": {
     "type": "스마트 슬롯 · 차매수 상승형 AT",
     "netIncrease": "AT 약 3.6매/G · 상위 AT 약 7.2매/G",
+    "baseGames": "50매당 약 31G",
     "initialATCoins": "150매+α",
     "settingsPrimaryLabel": "초당첨"
   },
@@ -387,14 +388,14 @@
       "title": "なな徹 スロット ソードアート・オンラインⅡ 解析",
       "url": "https://nana-press.com/kaiseki/machine/1158/",
       "accessedAt": "2026-11-24",
-      "supports": ["해석 정보(모드·스루·引き戻し)"]
+      "supports": ["해석 정보(모드·스루·引き戻し)", "베이스"]
     },
     {
       "type": "secondary",
       "title": "1geki スロット ソードアート・オンラインⅡ 解析",
       "url": "https://1geki.jp/slot/l_sao2/",
       "accessedAt": "2026-11-24",
-      "supports": ["해석 정보(모드·스루·引き戻し)"]
+      "supports": ["해석 정보(모드·스루·引き戻し)", "베이스"]
     }
   ],
   "notes": [
@@ -406,6 +407,6 @@
   "verification": {
     "status": "needs-review",
     "checkedAt": "2026-11-24",
-    "needsReviewFields": ["modelCode", "releaseDate", "slot.czCeiling", "slot.atCeiling", "analysis"]
+    "needsReviewFields": ["modelCode", "releaseDate", "slot.baseGames", "slot.czCeiling", "slot.atCeiling", "analysis"]
   }
 }
