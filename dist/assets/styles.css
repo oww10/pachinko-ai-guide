@@ -278,6 +278,11 @@ nav a { color: var(--text-soft); font-size: 14px; text-decoration: none; }
 .card-specs-rush { margin-top: 8px; gap: 8px; }
 .card-specs-rush div { padding: 10px; }
 .card-specs-rush b { font-size: 15px; }
+.payout-bar { display: grid; gap: 6px; margin-top: 10px; padding: 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--inset); }
+.payout-bar small { color: var(--muted); font-size: 12px; }
+.payout-bar-track { display: flex; gap: 2px; height: 10px; overflow: hidden; border-radius: 999px; }
+.payout-bar-track i { min-width: 3px; background: rgba(var(--accent-rgb), var(--seg, 1)); }
+.payout-bar b { font-size: 13px; letter-spacing: -.01em; }
 .review-chip { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 14px; color: var(--accent-text); font-size: 12px; font-weight: 600; }
 .review-chip::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 .loading-card { height: 460px; border-radius: var(--radius-lg); background: linear-gradient(110deg, var(--inset) 20%, var(--panel-high) 38%, var(--inset) 56%); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
