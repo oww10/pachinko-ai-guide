@@ -11,6 +11,7 @@ const state = {
   category: "all",
   year: "all",
   status: "all",
+  expanded: new Set(),
   aiBusy: false,
   lastAIRequestAt: 0
 };
@@ -154,19 +155,38 @@ function payoutLabel(label) {
   return String(label)
     .replace(/個/g, "개").replace(/回/g, "회").replace(/[＋]/g, "+")
     .replace(/（/g, "(").replace(/）/g, ")")
-    .replace(/確変/g, "확변").replace(/通常/g, "통상").replace(/時短/g, "시단");
+    .replace(/確変/g, "확변").replace(/通常/g, "통상").replace(/時短/g, "시단")
+    .replace(/出玉なし/g, "지급 없음").replace(/リセット/g, "리셋");
 }
 
-function payoutBar(machine) {
-  const items = (machine.payouts?.initial || []).filter((item) => typeof item.ratePercent === "number" && item.ratePercent > 0);
-  if (!items.length) return "";
+function payoutStages(machine) {
+  const charts = Array.isArray(machine.visualGuide?.distributionCharts) ? machine.visualGuide.distributionCharts : [
+    { title: "초기 당첨 배분", source: "initial" },
+    { title: "RUSH 중 배분", source: "rush" }
+  ];
+  return charts
+    .map((chart) => ({
+      title: chart.title,
+      items: (machine.payouts?.[chart.source] || []).filter((item) => typeof item.ratePercent === "number" && item.ratePercent > 0)
+    }))
+    .filter((stage) => stage.items.length);
+}
+
+function payoutBar(stage) {
+  const { title, items } = stage;
   const total = items.reduce((sum, item) => sum + item.ratePercent, 0);
   const alphaOf = (index) => (items.length === 1 ? 1 : 1 - (index / items.length) * 0.65).toFixed(2);
   const segments = items.map((item, index) =>
     `<i style="flex:${item.ratePercent / total};--seg:${alphaOf(index)}"></i>`).join("");
   const legend = items.map((item, index) =>
     `<li><i style="--seg:${alphaOf(index)}"></i><span>${escapeHtml(payoutLabel(item.label))}</span><b>${item.ratePercent}%</b></li>`).join("");
-  return `<div class="payout-bar"><small>당첨 배분 · 1회 당첨 시 지급 구슬</small><div class="payout-bar-track" aria-hidden="true">${segments}</div><ul class="payout-legend">${legend}</ul></div>`;
+  return `<div class="payout-bar"><small>${escapeHtml(title)}</small><div class="payout-bar-track" aria-hidden="true">${segments}</div><ul class="payout-legend">${legend}</ul></div>`;
+}
+
+function payoutStagesHtml(machine) {
+  const stages = payoutStages(machine);
+  if (!stages.length) return "";
+  return `<p class="payout-note">당첨 배분 · 1회 당첨 시 지급 구슬 수와 비율</p>${stages.map(payoutBar).join("")}`;
 }
 
 function slotCardSecondSpecs(machine) {
@@ -190,14 +210,23 @@ function rushCardSpecs(machine) {
 
 function pachinkoCardSpecs(machine) {
   const { base, symbolHit, charge } = machine.probabilities;
-  const hits = charge
-    ? [["당첨", formatApprox(valueOrDash(symbolHit))], ["챠지", formatApprox(valueOrDash(charge))]]
-    : [["기본 확률", formatApprox(valueOrDash(base))]];
-  return [
-    ...hits,
+  const split = hasSplitHit(machine);
+  const main = [
+    [split ? "합산 확률" : "기본 확률", formatApprox(valueOrDash(base))],
     ["RUSH 돌입률", valueOrDash(rushEntryRate(machine), "%")],
     ["계속률", valueOrDash(machine.rush.continuationRatePercent, "%")]
   ];
+  const extra = [];
+  if (split && symbolHit) extra.push(["당첨", formatApprox(valueOrDash(symbolHit))]);
+  if (charge) extra.push(["챠지", formatApprox(valueOrDash(charge))]);
+  return { main, extra };
+}
+
+function specGrid(specs, extraClass = "") {
+  if (!specs.length) return "";
+  return `<div class="card-specs ${extraClass}" data-count="${specs.length}">
+    ${specs.map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
+  </div>`;
 }
 
 function machineCard(machine) {
@@ -205,19 +234,26 @@ function machineCard(machine) {
   const fullImageUrl = machine.visualGuide?.mainImage?.url;
   const thumbUrl = fullImageUrl && `./assets/images/thumbs/${machine.id}.webp`;
   const isSlot = machine.machineType === "slot";
-  const cardSpecs = isSlot
-    ? [
+  const id = escapeHtml(machine.id);
+  const open = state.expanded.has(machine.id);
+  let mainSpecs;
+  let moreHtml;
+  if (isSlot) {
+    mainSpecs = [
       ["설정1 AT", valueOrDash(machine.settings?.[0]?.atProbability)],
       ["설정6 기계할", valueOrDash(machine.settings?.[machine.settings.length - 1]?.payoutRate)],
       ["1,000엔당 게임", baseGamesNumber(machine) ? `약 ${baseGamesNumber(machine)}G` : "—"]
-    ]
-    : pachinkoCardSpecs(machine);
+    ];
+    moreHtml = specGrid(slotCardSecondSpecs(machine), "card-specs-rush") + specGrid(slotCardCzSpecs(machine), "card-specs-rush");
+  } else {
+    const { main, extra } = pachinkoCardSpecs(machine);
+    mainSpecs = main;
+    moreHtml = specGrid(extra, "card-specs-rush") + specGrid(rushCardSpecs(machine), "card-specs-rush") + payoutStagesHtml(machine);
+  }
   return `
-    <article class="machine-card" tabindex="0" role="button"
-      aria-label="${escapeHtml(machine.nameKo)} 상세 보기"
-      data-machine-id="${escapeHtml(machine.id)}" style="--card-accent:${accent}">
-      ${thumbUrl ? `<div class="card-thumb"><img src="${escapeHtml(thumbUrl)}" alt="" loading="lazy" decoding="async"
-        onerror="this.onerror=null;this.src='${escapeHtml(fullImageUrl)}'"></div>` : ""}
+    <article class="machine-card" data-machine-id="${id}" style="--card-accent:${accent}">
+      ${thumbUrl ? `<button class="card-thumb" type="button" data-open-machine="${id}" aria-label="${escapeHtml(machine.nameKo)} 상세 보기"><img src="${escapeHtml(thumbUrl)}" alt="" loading="lazy" decoding="async"
+        onerror="this.onerror=null;this.src='${escapeHtml(fullImageUrl)}'"></button>` : ""}
       <div class="card-body">
       <div class="card-top">
         <span class="format-badge">${escapeHtml(machine.format)} · ${isSlot ? "슬롯" : "파칭코"}</span>
@@ -226,15 +262,17 @@ function machineCard(machine) {
       <p class="maker">${escapeHtml(machine.brand || machine.maker)}</p>
       <h3>${escapeHtml(machine.nameKo)}</h3>
       <p class="official-name" lang="ja">${escapeHtml(machine.officialNameJa)}</p>
-      <div class="card-specs" data-count="${cardSpecs.length}">
-        ${cardSpecs.map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
+      ${specGrid(mainSpecs)}
+      <button class="card-more" type="button" data-toggle-more aria-expanded="${open}" aria-controls="more-${id}">
+        <span>${open ? "접기" : "더보기"}</span>
+        <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg>
+      </button>
+      <div class="card-more-panel" id="more-${id}" data-open="${open}">
+        <div class="card-more-inner">
+          ${moreHtml}
+          <button class="card-detail-button" type="button" data-open-machine="${id}">상세페이지 <span aria-hidden="true">→</span></button>
+        </div>
       </div>
-      ${`<div class="card-specs card-specs-rush" data-count="2">
-        ${(isSlot ? slotCardSecondSpecs(machine) : rushCardSpecs(machine)).map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
-      </div>`}
-      ${isSlot ? `<div class="card-specs card-specs-rush" data-count="2">
-        ${slotCardCzSpecs(machine).map(([label, value]) => `<div><small>${escapeHtml(label)}</small><b>${escapeHtml(value)}</b></div>`).join("")}
-      </div>` : payoutBar(machine)}
       <span class="review-chip">${machine.verification.status === "verified" ? "검증 완료" : "일부 수치 재확인 필요"}</span>
       </div>
     </article>
@@ -858,16 +896,20 @@ elements.statusFilter.addEventListener("change", () => {
 });
 
 elements.list.addEventListener("click", (event) => {
-  const card = event.target.closest("[data-machine-id]");
-  if (card) openMachine(card.dataset.machineId);
-});
-
-elements.list.addEventListener("keydown", (event) => {
-  if (event.key !== "Enter" && event.key !== " ") return;
-  const card = event.target.closest("[data-machine-id]");
-  if (!card) return;
-  event.preventDefault();
-  openMachine(card.dataset.machineId);
+  const toggle = event.target.closest("[data-toggle-more]");
+  if (toggle) {
+    const card = toggle.closest("[data-machine-id]");
+    const panel = card.querySelector(".card-more-panel");
+    const willOpen = panel.dataset.open !== "true";
+    panel.dataset.open = String(willOpen);
+    toggle.setAttribute("aria-expanded", String(willOpen));
+    toggle.querySelector("span").textContent = willOpen ? "접기" : "더보기";
+    if (willOpen) state.expanded.add(card.dataset.machineId);
+    else state.expanded.delete(card.dataset.machineId);
+    return;
+  }
+  const opener = event.target.closest("[data-open-machine]");
+  if (opener) openMachine(opener.dataset.openMachine);
 });
 
 document.querySelectorAll("[data-clear], #clear-search").forEach((button) => {
