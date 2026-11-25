@@ -7,7 +7,7 @@
     "エヴァ15",
     "未来への咆哮"
   ],
-  "modelCode": null,
+  "modelCode": "Ｐ新世紀エヴァンゲリオン１５ 未来への咆哮",
   "machineType": "pachinko",
   "format": "P",
   "maker": "ビスティ",
@@ -93,7 +93,8 @@
     "IMPACT MODEは163回転、残保留込み継続率約81%"
   ],
   "notes": [
-    "長期稼働機。導入日や設置状況は店舗ごとに異なる。"
+    "長期稼働機。導入日や設置状況は店舗ごとに異なる。",
+    "2026-11-25 재확인: SANKYO 공식 기종 페이지의 販売名(型式名)에서 型式名 Ｐ新世紀エヴァンゲリオン１５ 未来への咆哮을 확인했다. 도입은 공식 페이지에 2021.12(연월)까지만 표기되어 있어 일자는 미확인이다."
   ],
   "sources": [
     {
@@ -119,8 +120,7 @@
     "status": "needs-review",
     "checkedAt": "2026-11-23",
     "needsReviewFields": [
-      "nameKo",
-      "modelCode"
+      "nameKo"
     ]
   },
   "visualGuide": {

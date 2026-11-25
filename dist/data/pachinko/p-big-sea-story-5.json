@@ -24,7 +24,7 @@
     ]
   },
   "gameFlow": ["通常時は約1/319.6の大当りを目指す", "大当りはすべて1500個", "60%で次回までの確変、40%で時短100回"],
-  "notes": ["BIG3000は保留内連続大当りの告知表現であり、単一当りの3000個振分ではない。"],
+  "notes": ["BIG3000は保留内連続大当りの告知表現であり、単一当りの3000個振分ではない。", "2026-11-25 재확인: 三洋物産 공식 페이지의 스펙 이미지에서 型式名 P大海物語5 MTE2, 大当り確率 約1/319.6(低確率時)·約1/31.9(高確率時), 確変割合 60%, 時短 100回, 10R 出玉 1500個(通常/確変 40%/60%)를 직접 읽어 현재 데이터와 일치함을 확인했다. 도입일은 해당 페이지에 없다."],
   "sources": [
     { "title": "SANYO P大海物語5 公式", "url": "https://www.sanyobussan.co.jp/products/pk_bigsea5/", "type": "official", "checkedAt": "2026-11-23" },
     { "title": "SANYO 公式プレスリリース", "url": "https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20221205_1.pdf", "type": "official", "checkedAt": "2026-11-03" }
