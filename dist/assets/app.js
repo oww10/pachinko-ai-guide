@@ -211,13 +211,14 @@ function rushCardSpecs(machine) {
 function pachinkoCardSpecs(machine) {
   const { base, symbolHit, charge } = machine.probabilities;
   const split = hasSplitHit(machine);
+  const showHit = split && Boolean(symbolHit);
   const main = [
-    [split ? "합산 확률" : "기본 확률", formatApprox(valueOrDash(base))],
+    showHit ? ["당첨", formatApprox(valueOrDash(symbolHit))] : [split ? "합산 확률" : "기본 확률", formatApprox(valueOrDash(base))],
     ["RUSH 돌입률", valueOrDash(rushEntryRate(machine), "%")],
     ["계속률", valueOrDash(machine.rush.continuationRatePercent, "%")]
   ];
   const extra = [];
-  if (split && symbolHit) extra.push(["당첨", formatApprox(valueOrDash(symbolHit))]);
+  if (showHit) extra.push(["합산 확률", formatApprox(valueOrDash(base))]);
   if (charge) extra.push(["챠지", formatApprox(valueOrDash(charge))]);
   return { main, extra };
 }
