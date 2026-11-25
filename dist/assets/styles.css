@@ -282,7 +282,11 @@ nav a { color: var(--text-soft); font-size: 14px; text-decoration: none; }
 .payout-bar small { color: var(--muted); font-size: 12px; }
 .payout-bar-track { display: flex; gap: 2px; height: 10px; overflow: hidden; border-radius: 999px; }
 .payout-bar-track i { min-width: 3px; background: rgba(var(--accent-rgb), var(--seg, 1)); }
-.payout-bar b { font-size: 13px; letter-spacing: -.01em; }
+.payout-legend { display: grid; gap: 4px; margin: 2px 0 0; padding: 0; list-style: none; font-size: 12px; }
+.payout-legend li { display: grid; grid-template-columns: 8px minmax(0, 1fr) auto; align-items: center; gap: 7px; color: var(--text-soft); }
+.payout-legend li i { width: 8px; height: 8px; border-radius: 50%; background: rgba(var(--accent-rgb), var(--seg, 1)); }
+.payout-legend li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.payout-legend li b { color: var(--text); font-size: 12px; }
 .review-chip { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 14px; color: var(--accent-text); font-size: 12px; font-weight: 600; }
 .review-chip::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 .loading-card { height: 460px; border-radius: var(--radius-lg); background: linear-gradient(110deg, var(--inset) 20%, var(--panel-high) 38%, var(--inset) 56%); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
