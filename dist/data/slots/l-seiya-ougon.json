@@ -1,0 +1,464 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-seiya-ougon",
+  "nameKo": "L 성투사 성시 황금십이궁",
+  "officialNameJa": "L聖闘士星矢 黄金十二宮",
+  "modelCode": "L聖闘士星矢黄金十二宮TG",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "サンスリー",
+  "brand": "SUNTHREE",
+  "releaseDate": "2026-11-02",
+  "aliases": [
+    "聖闘士星矢",
+    "Lセイントセイヤ",
+    "스마트 슬롯 성투사 성시",
+    "성시 황금십이궁"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/364.2",
+    "cz": "설정1 1/214.4",
+    "at": "설정1 1/364.2"
+  },
+  "rush": {
+    "nameJa": "バトル オブ ゾディアック／千日戦争",
+    "type": "세트 수 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": 88,
+    "spins": 30,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ WHO ARE YOU?는 10G+α(소역 2연속 성공), 강CZ 影ノ襲来는 7G+α의 ST형",
+      "AT 바틀 오브 조디악은 30G/세트·순증 약 4.0매/G·황금성투사 배틀 승률 평균 약 76%",
+      "상위 CZ 최종결전 사가배틀은 4G·성공 기대 약 59%",
+      "상위 AT 천일전쟁은 30G+α/세트·순증 약 6.6매/G·계속 기대 약 88%"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 세트 수 관리형 AT",
+    "netIncrease": "AT 약 4.0매/G · 상위 AT 약 6.6매/G",
+    "baseGames": "50매당 약 31.3G",
+    "czEntry": "1/214.4 (합산)",
+    "czBreakRate": "상위 CZ 약 59%",
+    "initialATCoins": "30G/세트",
+    "primaryCeilingLabel": "천장 (주기·G수)",
+    "czCeiling": "CZ간 600G+α / 6주기째",
+    "atCeiling": "AT간 1200G",
+    "resetCeiling": "CZ간 300G+α / AT간 900G (설정 변경·상위 AT 종료 후)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/214.4",
+      "atProbability": "1/364.2",
+      "payoutRate": "97.5%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/214.1",
+      "atProbability": "1/356.1",
+      "payoutRate": "98.5%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/211.7",
+      "atProbability": "1/345.6",
+      "payoutRate": "100.5%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/202.5",
+      "atProbability": "1/322.3",
+      "payoutRate": "105.2%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/197.2",
+      "atProbability": "1/313.7",
+      "payoutRate": "110.0%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/200.3",
+      "atProbability": "1/310.5",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 소우주 포인트(12pt로 1주기)의 주기 추첨과 레어 역으로 CZ를 노린다.",
+    "CZ WHO ARE YOU?(10G+α)는 소역 2연속 성공, 강 레어 역은 AT 농후. 강CZ 影ノ襲来(7G+α)는 적 라이프 4를 깎으면 성공한다.",
+    "AT 바틀 오브 조디악은 30G/세트·순증 약 4.0매/G이고 세트 후 황금성투사 배틀(4G)에서 소역으로 승리한다.",
+    "더블 계열로 상위 CZ 최종결전 사가배틀(4G·약 59%)을 거쳐 상위 AT 천일전쟁(순증 약 6.6매/G)에 들어간다.",
+    "상위 AT 중 황금강림 찬스(7G·성공 약 52%)로 황금성투사가 동행한다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 CZ·AT·기계할은 なな徹·ちょんぼりすた·パチセブン·1geki.jp가 일치한다. 단 설정6 CZ는 パチセブン 기본스펙 표만 1/220.3이고(같은 사이트 개요 표는 1/200.3) 나머지는 1/200.3이라 다수 값을 썼다. 설정5(1/197.2)가 설정6보다 가벼운 점도 별도 기재돼 있다.",
+    "제조사 공식 스펙은 확인하지 못했다. 기계할 범위 97.5~114.9%는 p-town과 일치한다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(L聖闘士星矢 黄金十二宮)",
+      "url": "https://p-town.dmm.com/machines/5104",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기계할 범위",
+        "천장",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1193/38664/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·AT·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差",
+      "url": "https://1geki.jp/slot/l_seiya_ougon/0/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·AT"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 基本スペック",
+      "url": "https://pachiseven.jp/machines_v2/7450",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·AT·출옥률",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "ちょんぼりすた 聖闘士星矢 解析",
+      "url": "https://chonborista.com/?p=260304",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 확률",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10536",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장과 주기",
+        "kind": "mode",
+        "intro": "주기·CZ간·AT간 천장이 따로 있고, 설정 변경·상위 AT 종료 후에는 단축됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "단축 시"
+            ],
+            "rows": [
+              [
+                "주기",
+                "6주기째",
+                "—"
+              ],
+              [
+                "CZ간",
+                "600G+α",
+                "300G+α"
+              ],
+              [
+                "AT간",
+                "1200G",
+                "900G"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "CZ 당첨 / AT 당첨",
+            "note": "p-town 기재(1·2번 CZ, 3번 AT)"
+          },
+          {
+            "label": "소우주 포인트",
+            "value": "소우주 목 정지마다 1~3pt, 12pt로 1주기",
+            "note": "설정 변경 시 6주기분을 먼저 결정. 통상·AT 중 포인트 이어짐"
+          }
+        ],
+        "sources": [
+          {
+            "title": "パチセブン 天井",
+            "url": "https://pachiseven.jp/machines_v2/7450"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5104"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 표와 시사 요소입니다.",
+        "tables": [
+          {
+            "caption": "설정별 수치",
+            "columns": [
+              "항목",
+              "설정1",
+              "설정2",
+              "설정3",
+              "설정4",
+              "설정5",
+              "설정6"
+            ],
+            "rows": [
+              [
+                "규정 주기 도달 시 AT 직격 당첨률",
+                "0.78%",
+                "1.56%",
+                "2.34%",
+                "3.91%",
+                "3.91%",
+                "6.25%"
+              ],
+              [
+                "V겟 챌린지 EX 당첨률",
+                "2.73%",
+                "2.73%",
+                "3.52%",
+                "3.52%",
+                "3.52%",
+                "3.91%"
+              ],
+              [
+                "황금강림 성공 시 보상 5pt 비율",
+                "80.47%",
+                "80.08%",
+                "80.08%",
+                "78.91%",
+                "75.40%",
+                "73.44%"
+              ]
+            ],
+            "note": "※ 수호성좌가 잇키인 경우의 AT 직격은 제외"
+          }
+        ],
+        "items": [
+          {
+            "label": "쿠지라키 트로피 색",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 흰동가리 무늬=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "별자리 시사",
+            "value": "고슴도치 별자리=설정2 이상 / 상어자리=설정4 이상 / 새우자리=설정5 이상 / 아귀자리=설정6 농후"
+          },
+          {
+            "label": "AT 종료 화면",
+            "value": "마린 & 샤이나=설정4 이상 농후 / 사오리=설정6 농후"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5104"
+          }
+        ]
+      },
+      {
+        "title": "야메도키·引き戻し",
+        "kind": "return",
+        "intro": "p-town 기재 요약입니다.",
+        "items": [
+          {
+            "label": "CZ 종료 후",
+            "value": "다음 주기를 확인"
+          },
+          {
+            "label": "AT 종료 후",
+            "value": "이어지는 포인트·모드 시사를 확인"
+          },
+          {
+            "label": "상위 AT 종료 후",
+            "value": "20G 엔딩 후 100G+α 引き戻し 상태",
+            "note": "3주기 이내 CZ 농후이므로 속행"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5104"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-seiya-ougon/machine.png",
+      "alt": "L 성투사 성시 황금십이궁 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10536"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/364.2",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "4.0매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "소우주 포인트와 CZ",
+        "description": "소우주 목으로 포인트를 모아 12pt에 1주기. 주기 도달과 레어 역으로 WHO ARE YOU?(10G+α)나 강CZ 影ノ襲来(7G+α)를 노린다. 천장은 6주기·CZ간 600G+α."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "바틀 오브 조디악",
+        "description": "30G/세트·순증 약 4.0매/G. 세트 후 황금성투사 배틀(4G)에서 소역으로 승리하면 계속, 평균 승률 약 76%."
+      },
+      {
+        "phase": "STEP 03 · 상위 구간",
+        "title": "사가배틀과 천일전쟁",
+        "description": "상위 CZ 최종결전 사가배틀(4G·약 59%)에 성공하면 상위 AT 천일전쟁(순증 약 6.6매/G·계속 기대 약 88%)."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "L 성투사 성시 황금십이궁 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "소우주 포인트 12pt로 1주기 · 레어 역으로 CZ를 노림"
+      },
+      "initialConnector": "CZ",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "10G+α",
+          "title": "WHO ARE YOU?",
+          "description": "소역 2연속으로 성공\n강 레어 역은 AT 농후",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "7G+α",
+          "title": "影ノ襲来(강 CZ)",
+          "description": "ST형 · 적 라이프 4를 깎으면 성공",
+          "route": "AT 진입",
+          "tone": "premium"
+        },
+        {
+          "rate": "0.78~6.25%",
+          "title": "AT 직격",
+          "description": "규정 주기 도달 시 직격 추첨\n설정이 높을수록 유리",
+          "route": "직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 4.0매/G",
+        "title": "바틀 오브 조디악",
+        "detail": "30G/세트 · 세트 후 황금성투사 배틀 4G(평균 승률 약 76%)"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "승리",
+          "title": "황금성투사 배틀",
+          "description": "4G 안에 소역으로 승리\nV 스톡 등 획득",
+          "route": "AT 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "패배",
+          "title": "AT 종료",
+          "description": "엑스트라 라운드를 거쳐\n상위 CZ로 이어질 수 있음",
+          "route": "↩ 통상 / 상위",
+          "tone": "return"
+        },
+        {
+          "rate": "V 스톡",
+          "title": "V겟 챌린지",
+          "description": "7G · 성공 기대 약 52%",
+          "route": "상승",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "상위 CZ",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT · 약 6.6매/G",
+        "title": "최종결전 사가배틀 → 천일전쟁",
+        "detail": "사가배틀 4G·약 59% · 천일전쟁 30G+α/세트·계속 기대 약 88%"
+      },
+      "secondaryRushConnector": "사가배틀 결과",
+      "secondaryAriaLabel": "사가배틀 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "성공 약 59%",
+          "title": "천일전쟁",
+          "description": "상위 AT 돌입\n황금강림 찬스(7G·약 52%)",
+          "route": "상위 AT",
+          "tone": "premium"
+        },
+        {
+          "rate": "실패",
+          "title": "통상 복귀",
+          "description": "천장 CZ간 300G+α로 단축",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "상위 AT 종료 후 20G 엔딩을 거쳐 100G+α 引き戻し 상태(3주기 이내 CZ 농후)"
+    }
+  }
+}

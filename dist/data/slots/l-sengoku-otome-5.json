@@ -1,0 +1,442 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-sengoku-otome-5",
+  "nameKo": "L 전국소녀 5 업화를 꿰뚫는 숙염의 쌍인",
+  "officialNameJa": "L戦国乙女5 業火を穿つ宿焔の双刃",
+  "modelCode": "L戦国乙女5L8",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "オリンピア",
+  "brand": "OLYMPIA",
+  "releaseDate": "2026-06-08",
+  "aliases": [
+    "戦国乙女5",
+    "L戦国乙女5",
+    "스마트 슬롯 전국소녀 5",
+    "전국소녀5"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/359.5",
+    "cz": "—",
+    "at": "설정1 AT 1/359.5"
+  },
+  "rush": {
+    "nameJa": "強カワラッシュ／真強カワラッシュ",
+    "type": "게임 수 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": 45,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 乙女アタック는 2G/세트 × 10회(합계 20G)·AT 기대 약 52%, 本能寺の変은 突入 1/114.8·4G+α",
+      "AT 強カワラッシュ는 초기 45G+α·순증 약 2.7매/G, 상위 AT 真強カワラッシュ는 초기 100G+α·순증 약 4.8매/G",
+      "상위 CZ 剣聖チャンス 성공 기대는 AT 초당첨 시 약 51%, AT 종료 시 약 70%",
+      "출진 보너스(1/183.6·20G)로 AT 게임 수를 상승"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 게임 수 관리형 AT",
+    "netIncrease": "AT 약 2.7매/G · 상위 AT 약 4.8매/G",
+    "baseGames": "50매당 약 31.0G",
+    "czEntry": "자료 없음 (설정별 CZ 합산 미공개)",
+    "czBreakRate": "乙女アタック AT 기대 약 52%",
+    "initialATCoins": "초기 45G+α(게임 수 관리)",
+    "primaryCeilingLabel": "천장 (주기·G수)",
+    "czCeiling": "6주기째 · 실 999G",
+    "atCeiling": "천장 도달 시 AT 당첨",
+    "resetCeiling": "4주기 · 실 650G (설정 변경 시)",
+    "settingsPrimaryLabel": "CZ 합산 (미공개)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/359.5",
+      "payoutRate": "97.9%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/350.8",
+      "payoutRate": "98.9%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "—",
+      "atProbability": "1/332.5",
+      "payoutRate": "101.0%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/302.8",
+      "payoutRate": "106.2%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/281.0",
+      "payoutRate": "111.1%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/262.9",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 주기 시스템(1주기 최대 500G)과 무녀 포인트(초기 999pt, 0pt에서 乙女アタック 추첨)로 CZ를 노린다.",
+    "CZ 乙女アタック(2G/세트×10회)는 1승째에 AT 당첨이고 2승째 이후는 출진 보너스를 스톡한다.",
+    "AT 強カワラッシュ는 초기 45G+α·순증 약 2.7매/G이고, 상위 AT 真強カワラッシュ는 초기 100G+α·순증 약 4.8매/G.",
+    "전국소녀 보너스(30G)와 목욕 어택(8G ST형·계속 약 80%)이 AT 초당첨 시 일부 돌입한다.",
+    "몽환(상승 특화)·절경 찬스(20G 이상 상승 농후)로 게임 수를 늘린다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 AT 초당첨·기계할은 なな徹와 パチセブン이 일치한다. 乙女アタック 당첨률·전국소녀 보너스 확률은 パチセブン만 기재했다. 설정별 CZ 합산 확률은 어디에도 없어 '—'로 표시했다.",
+    "p-town에서 본문 뒤쪽 약 40%는 요약으로만 확인해, 그 부분(유리구간 상한·엔딩 상세 등)은 반영하지 않았다.",
+    "제조사 공식 스펙은 확인하지 못했다. 기계할 범위 97.9~114.9%는 p-town과 일치한다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(L戦国乙女5)",
+      "url": "https://p-town.dmm.com/machines/5009",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기계할 범위",
+        "천장",
+        "게임성",
+        "설정 판별"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1160/36410/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 AT·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 設定別スペック",
+      "url": "https://pachiseven.jp/machines_v2/7396",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 AT·출옥률",
+        "乙女アタック 당첨률",
+        "전국소녀 보너스 확률",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10473",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장과 주기",
+        "kind": "mode",
+        "intro": "주기(1주기 최대 500G)와 실 G수 천장이 있고, 설정 변경 시 단축됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시"
+            ],
+            "rows": [
+              [
+                "실 G수",
+                "999G+α",
+                "650G"
+              ],
+              [
+                "주기",
+                "6주기째",
+                "4주기"
+              ]
+            ]
+          },
+          {
+            "caption": "주기 테이블별 최대",
+            "columns": [
+              "테이블",
+              "최대 주기"
+            ],
+            "rows": [
+              [
+                "통상A",
+                "6주기"
+              ],
+              [
+                "통상B",
+                "3주기"
+              ],
+              [
+                "천국",
+                "1주기"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "AT 당첨"
+          },
+          {
+            "label": "무녀 포인트",
+            "value": "초기 999pt · 매 G 최소 1pt 감산 · 0pt에서 乙女アタック 추첨",
+            "note": "설정 변경 시 내부적으로 랜덤 감산된 상태로 시작"
+          }
+        ],
+        "sources": [
+          {
+            "title": "パチセブン 天井",
+            "url": "https://pachiseven.jp/machines_v2/7396"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5009"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 표와 시사 요소입니다.",
+        "tables": [
+          {
+            "caption": "설정별 수치",
+            "columns": [
+              "항목",
+              "설정1",
+              "설정2",
+              "설정3",
+              "설정4",
+              "설정5",
+              "설정6"
+            ],
+            "rows": [
+              [
+                "AT 초당첨",
+                "1/359.5",
+                "1/350.8",
+                "1/332.5",
+                "1/302.8",
+                "1/281.0",
+                "1/262.9"
+              ],
+              [
+                "乙女アタック 당첨률(무녀 포인트 0pt 도달 시)",
+                "20.3%",
+                "21.4%",
+                "23.2%",
+                "24.7%",
+                "25.2%",
+                "25.7%"
+              ],
+              [
+                "전국소녀 보너스",
+                "1/21206.7",
+                "1/15648.9",
+                "1/13143.5",
+                "1/8143.4",
+                "1/6427.6",
+                "1/5502.7"
+              ]
+            ],
+            "note": "※ 乙女アタック 당첨률은 乙女ストラップ 칸스케 비체류 시 값. 체류 중이면 전 설정 공통 40.2%"
+          }
+        ],
+        "items": [
+          {
+            "label": "출진 보너스 종료 스탬프",
+            "value": "可=설정2 이상 / 吉=설정3 이상 / 良=설정4 이상 / 優=설정5 이상 / 極=설정6 농후"
+          },
+          {
+            "label": "스트랩",
+            "value": "노부나가·고에몬·히데요시 스트랩은 고설정일수록 나오기 쉬움"
+          },
+          {
+            "label": "AT 종료 화면",
+            "value": "야스·신겐·칸스케·요시모토 집합=테이블B 이상(테이블A면 설정4 이상) / 소녀 집합A=천국 농후 / 소녀 집합B=천국 농후+설정2 이상"
+          }
+        ],
+        "sources": [
+          {
+            "title": "パチセブン 設定別スペック",
+            "url": "https://pachiseven.jp/machines_v2/7396"
+          },
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5009"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-sengoku-otome-5/machine.png",
+      "alt": "L 전국소녀 5 업화를 꿰뚫는 숙염의 쌍인 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10473"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/359.5",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "2.7매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "주기와 무녀 포인트",
+        "description": "규정 G수 소화로 1주기(최대 500G), 무녀 포인트 0pt에서 乙女アタック를 추첨한다. 천장은 6주기째·실 999G."
+      },
+      {
+        "phase": "STEP 02 · CZ·AT",
+        "title": "乙女アタック에서 강카와러시",
+        "description": "2G/세트×10회 중 1승째에 AT 당첨(기대 약 52%). AT는 초기 45G+α·순증 약 2.7매/G."
+      },
+      {
+        "phase": "STEP 03 · 상위 구간",
+        "title": "검성 찬스와 진 강카와러시",
+        "description": "상위 CZ 검성 찬스(AT 종료 시 약 70%)에 성공하면 상위 AT(초기 100G+α·순증 약 4.8매/G)."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "L 전국소녀 5 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "주기 시스템 · 무녀 포인트로 CZ를 노림"
+      },
+      "initialConnector": "CZ",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "AT 기대 약 52%",
+          "title": "乙女アタック",
+          "description": "2G/세트 × 10회 (합계 20G)\n1승째에 AT 당첨",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "돌입 1/114.8",
+          "title": "本能寺の変",
+          "description": "4G+α · 승리 시 출진 보너스\n일부는 決戦ノ刻로",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "롱 프리즈",
+          "title": "몽환 경유",
+          "description": "릴 락 3단계\n프리즈 후 몽환을 거쳐 AT",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 2.7매/G",
+        "title": "強カワラッシュ",
+        "detail": "게임 수 관리형 · 초기 45G+α · 출진 보너스(1/183.6)로 상승"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "1/36.8",
+          "title": "강카와 찬스",
+          "description": "레어 역으로 당첨\n주기 G수 가산 존",
+          "route": "G수 상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "20G",
+          "title": "출진 보너스",
+          "description": "擬似 보너스 · 소화 중 AT G수 상승",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "20G 이상",
+          "title": "절경 찬스",
+          "description": "강 숙염목B·乙女체리 성립 시\n상승 농후 연출",
+          "route": "상승",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "상위 CZ",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT · 약 4.8매/G",
+        "title": "검성 찬스 → 진 강카와러시",
+        "detail": "검성 찬스 성공 기대 AT 초당첨 시 약 51% · 종료 시 약 70% / 상위 AT 초기 100G+α"
+      },
+      "secondaryRushConnector": "검성 찬스 결과",
+      "secondaryAriaLabel": "검성 찬스 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "성공",
+          "title": "真強カワラッシュ",
+          "description": "초기 100G+α\n순증 약 4.8매/G",
+          "route": "상위 AT",
+          "tone": "premium"
+        },
+        {
+          "rate": "실패",
+          "title": "통상 복귀",
+          "description": "천장 6주기째·실 999G",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "AT 초당첨 시 일부는 전국소녀 보너스(30G)와 목욕 어택(8G·계속 약 80%)에 들어간다"
+    }
+  }
+}
