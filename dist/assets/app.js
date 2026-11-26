@@ -630,10 +630,12 @@ function visualGameFlow(machine) {
 
 function renderDetail(machine) {
   const accent = accentFor(machine);
+  const heroImageUrl = machine.visualGuide?.mainImage?.url && `./assets/images/thumbs/${machine.id}.webp`;
   const isSlot = machine.machineType === "slot";
   const reviewFields = machine.verification.needsReviewFields || [];
   elements.dialogContent.innerHTML = `
-    <section class="detail-hero" style="--detail-accent:${accent}">
+    <section class="detail-hero ${heroImageUrl ? "has-image" : ""}" style="--detail-accent:${accent}">
+      <div class="detail-hero-text">
       <p class="detail-kicker">${escapeHtml(machine.maker)} · ${escapeHtml(formatDate(machine.releaseDate))}</p>
       <h2 id="dialog-title">${escapeHtml(machine.nameKo)}</h2>
       <p class="detail-official" lang="ja">${escapeHtml(machine.officialNameJa)}</p>
@@ -643,6 +645,9 @@ function renderDetail(machine) {
         <span>${isSlot ? "AT 타입" : "출옥 기준"}</span>
         ${machine.modelCode ? `<span>${escapeHtml(machine.modelCode)}</span>` : ""}
       </div>
+      </div>
+      ${heroImageUrl ? `<img class="detail-hero-image" src="${escapeHtml(heroImageUrl)}" alt="${escapeHtml(machine.nameKo)}" decoding="async"
+        onerror="this.onerror=null;this.src='${escapeHtml(machine.visualGuide.mainImage.url)}'">` : ""}
     </section>
     <div class="detail-body">
       <div class="detail-section">
