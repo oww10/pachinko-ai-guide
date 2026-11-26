@@ -221,6 +221,7 @@ function pachinkoCardSpecs(machine) {
   const extra = [];
   if (showHit) extra.push(["합산 확률", formatApprox(valueOrDash(base))]);
   if (charge) extra.push(["챠지", formatApprox(valueOrDash(charge))]);
+  if (machine.border) extra.push(["보더(4엔·1,000엔당)", `${machine.border.spinsPer1000Yen}회전`]);
   return { main, extra };
 }
 
