@@ -4,6 +4,8 @@
   "category": "pachinko",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "e-granbelm-319", "file": "e-granbelm-319.json", "releaseDate": "2026-11-02" },
+    { "id": "e-sao-alicization-yozora", "file": "e-sao-alicization-yozora.json", "releaseDate": "2026-08-03" },
     { "id": "e-yokai-watch", "file": "e-yokai-watch.json", "releaseDate": "2026-11-02" },
     { "id": "e-juoh-shishi-no-ichigeki", "file": "e-juoh-shishi-no-ichigeki.json", "releaseDate": "2026-11-02" },
     { "id": "e-toaru3", "file": "e-toaru3.json", "releaseDate": "2026-11-02" },
