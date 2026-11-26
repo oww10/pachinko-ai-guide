@@ -1,0 +1,535 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-ragnador",
+  "nameKo": "스마스로 라그나도르",
+  "officialNameJa": "スマスロ ラグナドール",
+  "modelCode": "LラグナドールZI",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "ミズホ",
+  "brand": "UNIVERSAL ENTERTAINMENT",
+  "releaseDate": "2026-11-02",
+  "aliases": [
+    "ラグナドール",
+    "Lラグナドール",
+    "스마트 슬롯 라그나도르"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/326.4",
+    "cz": "설정1 1/172.8",
+    "at": "설정1 1/326.4"
+  },
+  "rush": {
+    "nameJa": "ラグナドールRUSH／真ラグナドールRUSH",
+    "type": "게임 수 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": 40,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 라그나도르 배틀은 적 HP를 깎아 승리하면 AT 농후(적 4종, CZ 초기 G 10~16)",
+      "AT 라그나도르 러시는 초기 40G+α·순증 약 2.5매/G",
+      "체인 어택은 5G+α 보장, 6G째 이후 하즈레에서 전락 추첨(계속률 80·90·95%)",
+      "스페셜 저지(16G+α·성공 약 70%)로 진 라그나도르 러시(순증 약 4.5매/G)"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 게임 수 관리형 AT",
+    "netIncrease": "AT 약 2.5매/G · 상위 AT 약 4.5매/G",
+    "baseGames": "50매당 약 31.0G",
+    "czEntry": "1/172.8 (CZ 확률)",
+    "czBreakRate": "AT 기대 약 50%",
+    "initialATCoins": "초기 40G+α(게임 수 관리)",
+    "czCeiling": "CZ간 500G+α",
+    "atCeiling": "AT간 999G+α",
+    "resetCeiling": "AT간 500G+α (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/172.8",
+      "atProbability": "1/326.4",
+      "payoutRate": "97.6%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/167.2",
+      "atProbability": "1/317.2",
+      "payoutRate": "98.8%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/161.8",
+      "atProbability": "1/307.7",
+      "payoutRate": "100.3%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/145.0",
+      "atProbability": "1/271.2",
+      "payoutRate": "105.7%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/143.0",
+      "atProbability": "1/260.8",
+      "payoutRate": "110.5%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/142.4",
+      "atProbability": "1/258.3",
+      "payoutRate": "114.5%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 약 레어 역으로 내부 상태(고확·초고확)를 올리고, 강 레어 역·카케지쿠로 CZ를 노린다.",
+    "CZ 라그나도르 배틀(10~16G)에서 적 HP를 0으로 만들면 AT 라그나도르 러시(초기 40G+α·순증 약 2.5매/G)에 들어간다.",
+    "AT 중에는 환요석을 모아 가챠 챌린지로 상승하거나, 클라이맥스 보너스로 엔딩을 노린다.",
+    "체인 어택·환요난무·요주팔걸이 특화 구간이다(요주팔걸 기대 약 3400매).",
+    "스페셜 저지(성공 약 70%)에 성공하면 진 라그나도르 러시(순증 약 4.5매/G)로 이어진다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "CZ 확률은 p-town·なな徹·1geki.jp가 일치하고, 설정별 AT 초당첨·기계할은 1geki.jp·なな徹·パチセブン이 일치한다. 설정6 AT 초당첨만 パチセブン이 1/256.3으로 다르다(나머지 3곳 1/258.3).",
+    "제조사 공식 스펙은 확인하지 못했다(공식 특설 사이트에 스펙 페이지 없음).",
+    "기계할 범위 97.6~114.5%는 p-town 기재와 일치한다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロ ラグナドール)",
+      "url": "https://p-town.dmm.com/machines/5079",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "CZ 확률",
+        "기계할 범위",
+        "천장",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1250/38572/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·AT·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・設定示唆",
+      "url": "https://1geki.jp/slot/l_ragnador/0/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·AT",
+        "확정 CZ",
+        "설정 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン ラグナドール",
+      "url": "https://pachiseven.jp/machines_v2/7455",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 AT·출옥률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10546",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·ちょんぼりすた 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "CZ간과 AT간 천장이 따로 있고, AT간 G수에는 CZ 중 G수가 포함되지 않습니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시"
+            ],
+            "rows": [
+              [
+                "CZ간",
+                "500G+α",
+                "—"
+              ],
+              [
+                "AT간",
+                "999G+α",
+                "500G+α로 단축"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "CZ 당첨 → AT 돌입",
+            "note": "p-town 기재"
+          },
+          {
+            "label": "리셋 시 CZ 상대 우대",
+            "value": "첫 회 약 50%로 현무 이상 / 3회째 이후 반드시 주작"
+          },
+          {
+            "label": "G수 확인",
+            "value": "서브 액정 유희 정보 터치로 현재 G수·CZ 횟수 확인"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5079"
+          },
+          {
+            "title": "なな徹 解析情報",
+            "url": "https://nana-press.com/kaiseki/machine/1250/"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "CZ·AT 확률과 일부 시사 연출에 설정 차이가 있습니다. 소역 확률에는 설정 차이가 없는 것으로 알려져 있습니다.",
+        "tables": [
+          {
+            "caption": "설정별 CZ·확정 CZ·AT 종료 보이스",
+            "columns": [
+              "설정",
+              "CZ 확률",
+              "확정 CZ 당첨률",
+              "AT 종료 보이스 고설정 시사"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/172.8",
+                "0.4%",
+                "10.0%"
+              ],
+              [
+                "설정2",
+                "1/167.2",
+                "0.4%",
+                "12.0%"
+              ],
+              [
+                "설정3",
+                "1/161.8",
+                "0.4%",
+                "14.0%"
+              ],
+              [
+                "설정4",
+                "1/145.0",
+                "0.8%",
+                "16.0%"
+              ],
+              [
+                "설정5",
+                "1/143.0",
+                "1.2%",
+                "18.0%"
+              ],
+              [
+                "설정6",
+                "1/142.4",
+                "1.2%",
+                "20.0%"
+              ]
+            ]
+          },
+          {
+            "caption": "AT 직격 당첨률(통상 체류)",
+            "columns": [
+              "설정",
+              "스이카",
+              "찬스메",
+              "강 체리",
+              "극 찬스메"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "0.4%",
+                "0.4%",
+                "0.4%",
+                "0.4%"
+              ],
+              [
+                "설정2",
+                "0.4%",
+                "0.4%",
+                "0.4%",
+                "0.4%"
+              ],
+              [
+                "설정3",
+                "0.4%",
+                "0.4%",
+                "0.8%",
+                "0.4%"
+              ],
+              [
+                "설정4",
+                "0.8%",
+                "0.8%",
+                "1.6%",
+                "0.8%"
+              ],
+              [
+                "설정5",
+                "1.2%",
+                "1.2%",
+                "2.0%",
+                "1.2%"
+              ],
+              [
+                "설정6",
+                "1.2%",
+                "1.2%",
+                "2.3%",
+                "1.2%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "유니버 플레이트 색",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 불꽃놀이 무늬=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "AT 종료 후 CZ 상대",
+            "value": "고설정일수록 테이블⑦이 선택되기 쉬움"
+          }
+        ],
+        "sources": [
+          {
+            "title": "1geki 設定差・設定示唆",
+            "url": "https://1geki.jp/slot/l_ragnador/0/"
+          },
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5079"
+          }
+        ]
+      },
+      {
+        "title": "보너스 고확 모드와 야메도키",
+        "kind": "mode",
+        "intro": "AT 중 규정 G수 소화로 보너스 고확에 이행합니다. p-town 기재 요약입니다.",
+        "tables": [
+          {
+            "caption": "보너스 고확 모드",
+            "columns": [
+              "모드",
+              "이행 G수"
+            ],
+            "rows": [
+              [
+                "초당첨",
+                "50G"
+              ],
+              [
+                "통상",
+                "250G"
+              ],
+              [
+                "천국",
+                "100G"
+              ],
+              [
+                "초천국",
+                "25G"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "야메도키",
+            "value": "AT 후 기본적으로 즉야메 가능",
+            "note": "AT 종료 시 환요석 잔여 수에 따라 카케지쿠 고확 이행"
+          },
+          {
+            "label": "초회 CZ",
+            "value": "30% 이상으로 현무 이상"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5079"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-ragnador/machine.png",
+      "alt": "스마스로 라그나도르 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10546"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/326.4",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "2.5매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.5%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "내부 상태와 CZ",
+        "description": "약 레어 역으로 고확·초고확을 올리고, 강 레어 역·카케지쿠로 CZ 라그나도르 배틀(10~16G)을 노린다."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "라그나도르 러시",
+        "description": "초기 40G+α·순증 약 2.5매/G. 환요석을 모아 가챠 챌린지로 상승하거나 클라이맥스 보너스로 엔딩을 노린다."
+      },
+      {
+        "phase": "STEP 03 · 특화·상위 구간",
+        "title": "체인 어택과 스페셜 저지",
+        "description": "체인 어택은 5G+α 보장, 계속률 80·90·95%. 스페셜 저지(성공 약 70%)에 성공하면 진 라그나도르 러시(약 4.5매/G)."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 라그나도르 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "약 레어 역으로 고확·초고확을 올리고 CZ를 노림"
+      },
+      "initialConnector": "CZ 당첨",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "CZ 확률 1/172.8~1/142.4",
+          "title": "라그나도르 배틀",
+          "description": "적 HP를 0으로\n성공 시 AT",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "0.4~1.2%",
+          "title": "확정 CZ",
+          "description": "CZ 당첨 시 승리 확정\n설정 4 이상 우대",
+          "route": "AT 진입",
+          "tone": "premium"
+        },
+        {
+          "rate": "0.4~2.3%",
+          "title": "AT 직격",
+          "description": "레어 역에서 직접 AT\n설정이 높을수록 유리",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 2.5매/G",
+        "title": "라그나도르 러시",
+        "detail": "초기 40G+α · 환요석 300개로 가챠 챌린지 · 클라이맥스 보너스로 엔딩 노림"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "5G+α 보장",
+          "title": "체인 어택",
+          "description": "6G째 이후 하즈레에서 전락 추첨\n계속률 80·90·95%",
+          "route": "G수 상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "기대 약 3400매",
+          "title": "요주팔걸",
+          "description": "8G 계속\n1계기 최대 300G 상승",
+          "route": "최강 특화",
+          "tone": "premium"
+        },
+        {
+          "rate": "20G / 30G",
+          "title": "스토리·클라이맥스 보너스",
+          "description": "순증 약 4.5매/G\n클라이맥스는 랭크 0~5",
+          "route": "엔딩 노림",
+          "tone": "rush"
+        }
+      ],
+      "secondaryConnector": "스페셜 저지",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT",
+        "title": "진 라그나도르 러시",
+        "detail": "스페셜 저지 16G+α · 성공 약 70% · 순증 약 4.5매/G"
+      },
+      "secondaryRushConnector": "저지 결과",
+      "secondaryAriaLabel": "스페셜 저지 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "성공 약 70%",
+          "title": "천계 / 명계",
+          "description": "흰 7=천계(기대 약 2700매)\nBAR=명계(기대 약 1500매)",
+          "route": "진 러시",
+          "tone": "premium"
+        },
+        {
+          "rate": "실패",
+          "title": "통상 AT",
+          "description": "라그나도르 러시 계속",
+          "route": "↩ AT",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "AT 종료 시 남은 환요석 수에 따라 카케지쿠 고확으로 이행. AT 천장 999G+α, CZ 천장 500G+α"
+    }
+  }
+}

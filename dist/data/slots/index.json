@@ -1,9 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "updatedAt": "2026-11-24",
+  "updatedAt": "2026-11-26",
   "category": "slot",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "l-ragnador", "file": "l-ragnador.json", "releaseDate": "2026-11-02" },
+    { "id": "l-lycoris-recoil", "file": "l-lycoris-recoil.json", "releaseDate": "2026-09-07" },
+    { "id": "l-kabaneri-umito", "file": "l-kabaneri-umito.json", "releaseDate": "2026-03-02" },
     { "id": "l-godzilla-vs-evangelion-2", "file": "l-godzilla-vs-evangelion-2.json", "releaseDate": "2026-11-02" },
     { "id": "l-sword-art-online-2", "file": "l-sword-art-online-2.json", "releaseDate": "2026-06-08" },
     { "id": "l-monster-hunter-rise-sunbreak", "file": "l-monster-hunter-rise-sunbreak.json", "releaseDate": "2026-10-05" },

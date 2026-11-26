@@ -1,0 +1,485 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-lycoris-recoil",
+  "nameKo": "스마스로 리코리스 리코일",
+  "officialNameJa": "スマスロ リコリス・リコイル",
+  "modelCode": "L スマスロ リコリス・リコイル KX",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "サミー",
+  "brand": "SAMMY",
+  "releaseDate": "2026-09-07",
+  "aliases": [
+    "リコリコ",
+    "Lリコリコ",
+    "スマスロリコリコ",
+    "스마트 슬롯 리코리스 리코일",
+    "리코리코 슬롯"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/328.8",
+    "cz": "설정1 1/198.7",
+    "at": "설정1 1/328.8"
+  },
+  "rush": {
+    "nameJa": "リコリスラッシュ／リコリスラッシュW",
+    "type": "ST형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 오포짓 배틀은 8G·성공 기대 약 53%, 퍼스트 리코리스는 8G·약 83%",
+      "리코리스 러시는 프롤로그(약 100매) 후 20G+α·보너스 약 1/18, 보너스 당첨으로 러시 50(전반 50G+α·후반 ST 10G 약 1/12)",
+      "러시 중 보너스로 1000pt가 쌓이면 상위 CZ 리코일 오브 리코리스(10G·약 70%) → 상위 러시",
+      "레전더리 리코리스는 7G+α·평균 상승 약 1000매"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · ST형 AT(리코리스 러시)",
+    "netIncrease": "보너스 중 약 8.4매/G",
+    "baseGames": "50매당 약 31.8G",
+    "czEntry": "1/198.7 (합산)",
+    "czBreakRate": "약 53% (오포짓 배틀)",
+    "initialATCoins": "프롤로그 약 100매",
+    "czCeiling": "CZ간 600G+α",
+    "atCeiling": "러시간 850G+α",
+    "resetCeiling": "CZ 최대 250G+α / 러시 최대 600G+α"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/198.7",
+      "atProbability": "1/328.8",
+      "payoutRate": "97.9%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/196.9",
+      "atProbability": "1/323.4",
+      "payoutRate": "98.9%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/191.3",
+      "atProbability": "1/312.1",
+      "payoutRate": "101.3%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/183.3",
+      "atProbability": "1/288.3",
+      "payoutRate": "106.1%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/175.9",
+      "atProbability": "1/271.6",
+      "payoutRate": "110.4%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/169.4",
+      "atProbability": "1/256.7",
+      "payoutRate": "114.6%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 레어 역·규정 게임 수·스탬프로 CZ(오포짓 배틀·퍼스트 리코리스)를 노린다.",
+    "CZ에 성공하면 리코리스 러시로 진입하고, 프롤로그 약 100매 후 20G+α 본편이 시작된다.",
+    "러시 중 보너스(리코리스 보너스 약 38%·W 약 53%)를 소화하며 포인트를 모아 1000pt에서 상위 CZ를 얻는다.",
+    "상위 CZ 성공 시 상위 러시(W)로 이어지고, 엔딩·무지개 MAX로 러시를 이어간다.",
+    "레전더리 리코리스는 7G+α·평균 상승 약 1000매인 특화 구간이다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 CZ·AT 초당첨·기계할 표는 なな徹·ちょんぼりすた(두 곳 모두 일치)와 p-town(CZ 합산·기계할 범위 97.9~114.6%)을 대조했다. 제조사 공식 스펙은 확인하지 못했다.",
+    "AT 초당첨 열은 분석 사이트의 'AT/ST 初当り' 표기다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロ リコリス・リコイル)",
+      "url": "https://p-town.dmm.com/machines/5033",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "CZ 합산 확률",
+        "기계할 범위",
+        "천장·ゾーン",
+        "설정 판별"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報(機械割や各種確率まとめ)",
+      "url": "https://nana-press.com/kaiseki/machine/1166/37201/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·AT·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "ちょんぼりすた 天井・設定判別・やめどき解析",
+      "url": "https://chonborista.com/?p=261631",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·ST·출옥률",
+        "천장",
+        "게임 플로우"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10503",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·ちょんぼりすた 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "천장 G수는 구간마다 다르고, 설정 변경·러시 駆け抜け 후에는 단축됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경·駆け抜け 후"
+            ],
+            "rows": [
+              [
+                "CZ간",
+                "600G+α",
+                "최대 250G"
+              ],
+              [
+                "러시(ST)간",
+                "850G+α (250·400·600·750·850G 분배)",
+                "최대 600G"
+              ],
+              [
+                "상위 CZ 실패 후",
+                "최대 250G+α",
+                "—"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "CZ 당첨 / 러시 당첨",
+            "note": "러시 천장 850G 도달 시 V 스톡 추첨"
+          },
+          {
+            "label": "리셋",
+            "value": "설정 변경 시 CZ 최대 250G·러시 최대 600G로 단축",
+            "note": "설정 변경 시 기계할 100% 이상"
+          }
+        ],
+        "sources": [
+          {
+            "title": "ちょんぼりすた 天井解析",
+            "url": "https://chonborista.com/?p=261631"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5033"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 확률·이행률입니다. 설정이 높을수록 유리한 방향입니다.",
+        "tables": [
+          {
+            "caption": "설정별 수치",
+            "columns": [
+              "항목",
+              "설정1",
+              "설정2",
+              "설정3",
+              "설정4",
+              "설정5",
+              "설정6"
+            ],
+            "rows": [
+              [
+                "공통 15매 벨",
+                "1/95.8",
+                "1/95.8",
+                "1/95.8",
+                "1/87.6",
+                "1/83.2",
+                "1/79.1"
+              ],
+              [
+                "CZ 합산",
+                "1/198.7",
+                "1/196.9",
+                "1/191.3",
+                "1/183.3",
+                "1/175.9",
+                "1/169.4"
+              ],
+              [
+                "퍼스트 리코리스",
+                "1/3965.0",
+                "1/3706.6",
+                "1/3107.3",
+                "1/2925.9",
+                "1/2425.8",
+                "1/2084.8"
+              ],
+              [
+                "400G 소화 시 CZ 당첨률",
+                "10.9%",
+                "11.7%",
+                "14.5%",
+                "16.8%",
+                "19.5%",
+                "25.4%"
+              ],
+              [
+                "150G 소화 시 변환 고확 이행률",
+                "50.0%",
+                "50.0%",
+                "50.0%",
+                "54.7%",
+                "58.6%",
+                "62.5%"
+              ],
+              [
+                "러시 직격 확률",
+                "1/22429.5",
+                "1/19006.5",
+                "1/15454.1",
+                "1/10809.3",
+                "1/7809.6",
+                "1/6263.7"
+              ],
+              [
+                "서미 트로피 계기 확률",
+                "약 1/543",
+                "약 1/539",
+                "약 1/531",
+                "약 1/510",
+                "약 1/497",
+                "약 1/493"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "서미 트로피 색",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 기린 무늬=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "筐体 상단 램프 색",
+            "value": "청·황=기본 / 녹=고설정 시사(약) / 적=고설정 시사(강)"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5033"
+          },
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/1166/37201/"
+          }
+        ]
+      },
+      {
+        "title": "러시 종료 후 야메도키·引き戻し",
+        "kind": "return",
+        "intro": "p-town 기재 요약입니다. 상황에 따라 달라질 수 있습니다.",
+        "items": [
+          {
+            "label": "러시 종료 후",
+            "value": "50G가 최초 야메도키",
+            "note": "100G+α까지 CZ 引き戻し·변환 고확 이행 기회. 250G+α까지 CZ 당첨 기대도 약 90%"
+          },
+          {
+            "label": "상위 러시 종료 후",
+            "value": "100G+α 권장",
+            "note": "100G 이내(하단 패널 점멸 중) 引き戻し로 상위 러시에 복귀. 600G에서 성공 농후 CZ 가능"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報(やめどき)",
+            "url": "https://p-town.dmm.com/machines/5033"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-lycoris-recoil/machine.png",
+      "alt": "스마스로 리코리스 리코일 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10503"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/328.8",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "8.4매/G",
+        "label": "보너스 순증(약)"
+      },
+      {
+        "value": "114.6%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "CZ 노리기",
+        "description": "레어 역·규정 게임 수·스탬프로 오포짓 배틀(8G·성공 약 53%)이나 퍼스트 리코리스(8G·약 83%)를 노린다."
+      },
+      {
+        "phase": "STEP 02 · 리코리스 러시",
+        "title": "20G+α 본편과 러시 50",
+        "description": "프롤로그 약 100매 후 20G+α·보너스 약 1/18. 보너스 당첨으로 러시 50(전반 50G+α·후반 ST 10G 약 1/12)로 이어진다."
+      },
+      {
+        "phase": "STEP 03 · 상위 구간",
+        "title": "상위 CZ와 상위 러시",
+        "description": "보너스로 1000pt를 모으면 리코일 오브 리코리스(10G·약 70%). 성공하면 상위 러시 W, 레전더리 리코리스는 평균 약 1000매 상승."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 리코리스 리코일 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "레어 역 · 규정 게임 수 · 스탬프로 CZ를 노림"
+      },
+      "initialConnector": "CZ 당첨",
+      "initialAriaLabel": "리코리스 러시 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "성공 약 53%",
+          "title": "오포짓 배틀",
+          "description": "8G 자력 CZ\n성공 시 리코리스 러시",
+          "route": "러시 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 83%",
+          "title": "퍼스트 리코리스",
+          "description": "8G 상위 CZ\n성공 시 리코리스 러시",
+          "route": "러시 진입",
+          "tone": "premium"
+        },
+        {
+          "rate": "직격",
+          "title": "러시 직격",
+          "description": "설정1 1/22429.5\n설정6 1/6263.7",
+          "route": "러시 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "리코리스 러시",
+      "rush": {
+        "eyebrow": "ST · 보너스 약 1/18",
+        "title": "리코리스 러시 20 → 50",
+        "detail": "프롤로그 약 100매 후 20G+α · 보너스 당첨 시 러시 50(전반 50G+α·후반 ST 10G 약 1/12)"
+      },
+      "rushConnector": "러시 중 보너스",
+      "rushAriaLabel": "러시 중 보너스 종류 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "38.2%",
+          "title": "리코리스 보너스",
+          "description": "빨강 7 싱글 · 100매",
+          "route": "포인트 적립",
+          "tone": "rush"
+        },
+        {
+          "rate": "53.2%",
+          "title": "리코리스 보너스 W",
+          "description": "빨강 7 더블 · 200매 이상",
+          "route": "포인트 적립",
+          "tone": "rush"
+        },
+        {
+          "rate": "8.5%",
+          "title": "특수 보너스",
+          "description": "리코리스프래시 6.3%(평균 385매)\n에피소드 2.2%(300매)",
+          "route": "포인트 적립",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "1000pt 도달",
+      "secondaryRush": {
+        "eyebrow": "UPPER CZ",
+        "title": "리코일 오브 리코리스",
+        "detail": "10G · 성공 기대 약 70%"
+      },
+      "secondaryRushConnector": "상위 CZ 결과",
+      "secondaryAriaLabel": "상위 CZ 결과 3가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "성공 약 70%",
+          "title": "상위 러시 W",
+          "description": "보너스는 항상 더블 이상\n엔딩·무지개 MAX로 계속",
+          "route": "상위 러시",
+          "tone": "premium"
+        },
+        {
+          "rate": "7G+α",
+          "title": "레전더리 리코리스",
+          "description": "평균 상승 약 1000매\n상위 러시 突入時·롱 프리즈 후",
+          "route": "특화 구간",
+          "tone": "premium"
+        },
+        {
+          "rate": "실패",
+          "title": "통상 복귀",
+          "description": "상위 CZ 실패 후 천장 최대 250G",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "상위 러시 종료 후 100G+α 이내에 引き戻し하면 상위 러시로 복귀. 러시 간 천장 850G+α, CZ 간 600G+α"
+    }
+  }
+}
