@@ -70,11 +70,11 @@
 | 제조사 | 경로와 방법 | 확인된 기종 |
 |---|---|---|
 | 三洋物産 (SANYO) | 제품 목록 `https://www.sanyobussan.co.jp/products/pachinko.html`에서 제품 폴더를 찾는다(예: `pk_supersea_okinawa6/`). 폴더 안에 가이드북 PDF(`<폴더>_guidebook_PC.pdf`)가 있고 3쪽 基本情報, 4쪽 ゲームフロー가 스펙·플로우다. 型式名·導入日은 `information/pdf/sanyo_press_release_*.pdf` 첫 쪽. 추측한 `spec/` 하위 주소는 404 | 沖縄6, 沖縄6 Withえなこ, 大海5 |
-| サンスリー | 같은 사이트 `products/pk_granbelm/`. 가이드북이 이미지 PDF라 `scripts/render-pdf-pages.swift`로 렌더링해서 읽는다 | e 그랑벨룸 (이전엔 "읽을 수 없음"으로 기록됨) |
-| SANKYO | `sankyo-fever.jp`는 본문이 동적 로딩: `chrome --headless --dump-dom --virtual-time-budget=12000`으로 렌더링하면 販売名(型式名)·導入年月이 나온다. SEED 페이지는 Incapsula 봇 차단이라 우회하지 않는다 | 요괴워치 외 |
-| Sammy | "基本情報" 탭을 눌러야 스펙 이미지가 열린다. Claude in Chrome(find + 클릭 + zoom)이 필요하다 | e 수왕 외 |
-| 藤商事 | `fujimarukun.co.jp/products/<id>/` 본문에 확률·突入率·継続率이 있다. 배분은 공식에 없는 경우가 있다 | e 금서목록 3 |
-| 京楽 | 아직 확립된 경로 없음(조사 필요) | |
+| サンスリー | 같은 사이트 `products/pk_granbelm/`. 제품 페이지에 가이드북 PDF 3종(`pk_granbelm_guidebook_319_PC.pdf` 등, 버전별)이 있고 이미지 PDF라 `scripts/render-pdf-pages.swift`로 렌더링해 읽는다. 3쪽 基本情報, 4쪽 ゲームフロー | e 그랑벨룸 319 (번역 완료) |
+| SANKYO | `sankyo-fever.jp`는 **Incapsula 봇 차단**(2026-11-26 확인)으로 헤드리스 Chrome도 빈 페이지만 받는다. 우회하지 않는다. 공식 이미지는 구하지 못하므로 자체 도식만 만들고 `notes`에 이유를 적는다. p-town 페이지의 "메이커 공식 사이트" 링크는 포털(`sankyo-fever.co.jp`)만 가리킨다 | 요괴워치 (자체 도식만) |
+| Sammy | 제품 페이지에 스펙 이미지가 직접 올라와 있다: `https://www.sammy.co.jp/japanese/product/pachinko/<폴더>/img/spec_1.jpg`(2000px, 基本情報). 페이지 HTML에서 `img/*.jpg` 경로를 찾는다. `tokusetu.png` 등 일부는 같은 경로에서 404 | e 수왕 (번역 완료) |
+| 藤商事 | `fujimarukun.co.jp/products/<id>/` 본문에 확률·突入率·継続率이 있다. 페이지의 `spec_image`는 **기기 사진(500×750)뿐**이고 스펙·플로우 이미지는 없다. 배분은 공식에 없는 경우가 있다 | e 금서목록 3 (자체 도식만) |
+| 京楽 | `kyoraku.co.jp`가 2026-11-26에 접속되지 않았다(타임아웃, IPv4 포함 3회). 접속이 되면 제품 페이지에서 스펙 이미지를 찾는다. 공식 스펙을 못 읽으면 p-town 판독값을 `secondary`로 쓰고 자체 도식만 만든다 | SAO 밤하늘 (자체 도식만) |
 | 대도기연 | 공식 제품 자료 이미지(리제로) | e 리제로 2 |
 | p-town | 스펙·보더·하마리 표는 본문, 배분은 `hit_rate.jpg` | 전 기종 |
 | P-WORLD | 기기 사진. ID는 검색 결과의 `machine/database/<ID>`로 찾는다. 신작은 인접 ID를 스캔 | 전 기종 |

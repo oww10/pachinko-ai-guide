@@ -43,7 +43,7 @@
         "payoutBalls": 300,
         "ratePercent": 50,
         "destination": "獣王RUSH",
-        "confidence": "secondary",
+        "confidence": "official",
         "notes": []
       },
       {
@@ -51,7 +51,7 @@
         "payoutBalls": 300,
         "ratePercent": 50,
         "destination": null,
-        "confidence": "secondary",
+        "confidence": "official",
         "notes": []
       }
     ],
@@ -61,7 +61,7 @@
         "payoutBalls": 9800,
         "ratePercent": 50,
         "destination": "이동 정보 미확인",
-        "confidence": "secondary",
+        "confidence": "official",
         "notes": [
           "最低保証4500個＋上乗せ平均約5306個の平均値"
         ]
@@ -71,7 +71,7 @@
         "payoutBalls": 3000,
         "ratePercent": 17,
         "destination": "이동 정보 미확인",
-        "confidence": "secondary",
+        "confidence": "official",
         "notes": []
       },
       {
@@ -79,7 +79,7 @@
         "payoutBalls": 1500,
         "ratePercent": 33,
         "destination": "이동 정보 미확인",
-        "confidence": "secondary",
+        "confidence": "official",
         "notes": []
       }
     ]
@@ -99,8 +99,8 @@
     "サバンナチャンスは最低保証4500個に上乗せがつき、出玉の平均は約9800個"
   ],
   "notes": [
-    "確率・突入率・継続率・ST回転数はp-townとP-WORLDで一致するが、サミー公式ページはスペック本文が取得できず未対照。",
-    "出玉の割合はP-WORLDの表。サバンナチャンスの9800個は平均値で確定出玉ではない。",
+    "Sammy公式製品ページの基本情報画像(spec_1.jpg)を直接読んで確認: 約1/319.7・RUSH中約1/144.7・獣王RUSH突入率50%・継続率約50%・賞球1&6&15/10C・大当り出玉3000/1500/300個・通常時(通常50%/RUSH50%)・RUSH中(サバチャン約50%平均9800個/1500個約33%/3000個約17%)。",
+    "サバンナチャンスの9800個は平均値で確定出玉ではない(最低保証4500個+上乗せ平均約5306個、公式の注記)。",
     "移行先の記載がない項目は「이동 정보 미확인」とした。"
   ],
   "sources": [
@@ -117,8 +117,14 @@
       "checkedAt": "2026-11-26"
     },
     {
-      "title": "Sammy 公式製品ページ(スペック本文は未取得)",
+      "title": "Sammy 公式製品ページ",
       "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_jyu_oh_sh/",
+      "type": "official",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "Sammy 公式 基本情報画像(번역 이미지 원본)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_jyu_oh_sh/img/spec_1.jpg",
       "type": "official",
       "checkedAt": "2026-11-26"
     }
@@ -127,10 +133,7 @@
     "status": "needs-review",
     "checkedAt": "2026-11-26",
     "needsReviewFields": [
-      "nameKo",
-      "probabilities",
-      "payouts",
-      "rush"
+      "nameKo"
     ]
   },
   "visualGuide": {
@@ -141,6 +144,14 @@
       "credit": "P-WORLD 기종 데이터베이스",
       "sourceUrl": "https://www.p-world.co.jp/machine/database/10551"
     },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·돌입률·대당첨 배분",
+        "url": "./assets/images/official/juoh-shishi/spec-ko.png",
+        "alt": "Sammy 공식 제품 페이지 기본 정보 이미지의 한국어 번역본"
+      }
+    ],
     "keyStats": [
       {
         "value": "1/319.7",
