@@ -1,0 +1,441 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-aobuta",
+  "nameKo": "L 청춘 돼지는 바니걸 선배의 꿈을 꾸지 않는다",
+  "officialNameJa": "L青春ブタ野郎はバニーガール先輩の夢を見ない",
+  "modelCode": "L青春ブタ野郎L1",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "オリンピア",
+  "brand": "OLYMPIA",
+  "releaseDate": "2026-09-07",
+  "aliases": [
+    "青ブタ",
+    "L青ブタ",
+    "스마트 슬롯 청춘 돼지",
+    "아오부타"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정2 초당첨 1/350.8",
+    "cz": "—",
+    "at": "설정2 초당첨 1/350.8"
+  },
+  "rush": {
+    "nameJa": "青ブタJUDGE／青春ブタ野郎は∞の夢を見る",
+    "type": "보너스 경유 ST형",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": 60,
+    "spins": 8,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 에피소드 챈스는 전반 10G + 후반 6G+α, 성공 기대 약 62.5%(설정2)",
+      "청춘 보너스(순증 약 8.0매/G) 후 青ブタ JUDGE(ST·4세트+α·1세트 2G)로 이어짐",
+      "상위 CZ 夢現ジャッジメント(10G+6G+α·약 53%) → 상위 ST(4세트+α·약 80%)",
+      "상위 ST 돌입 시 기대 약 3100매·보너스 평균 약 640매"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 보너스 경유 ST형",
+    "netIncrease": "보너스·ST 약 8.0매/G",
+    "baseGames": "50매당 약 31.5G",
+    "czEntry": "1/222.9 (설정2 에피소드 챈스)",
+    "czBreakRate": "약 62.5% (설정2)",
+    "initialATCoins": "청춘 보너스 벨 나비 5회 또는 25회",
+    "primaryCeilingLabel": "천장 (CZ간·포인트·보너스간)",
+    "czCeiling": "CZ간 560G+α / 사춘기 포인트 1000pt / CZ 스루 6회",
+    "atCeiling": "보너스간 899G+α",
+    "resetCeiling": "보너스간 699G+α (설정 변경·ST 駆け抜け 후)",
+    "settingsPrimaryLabel": "CZ 합산 (미공개)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "—",
+      "payoutRate": "—"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/350.8",
+      "payoutRate": "98.1%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "—",
+      "atProbability": "1/336.5",
+      "payoutRate": "99.3%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/295.1",
+      "payoutRate": "105.3%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/274.6",
+      "payoutRate": "108.4%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/207.8",
+      "payoutRate": "110.3%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 사춘기 포인트(매 G 1pt 이상)와 100pt마다의 CZ 추첨으로 CZ(에피소드 챈스)를 노린다.",
+    "에피소드 챈스는 전반 10G·후반 6G+α로, 히로인 6종(코가 토모에·토요하마 노도카·후타바 리오·사쿠라지마 마이·아즈사가와 카에데·마키노하라 쇼코)이 등장한다.",
+    "성공하면 청춘 보너스(순증 약 8.0매/G)를 거쳐 青ブタ JUDGE(ST·4세트+α)에 들어간다.",
+    "ST 중 청춘 드림 버스트(보너스)로 출옥을 늘리고, 상위 CZ 夢現ジャッジメント(약 53%)로 상위 ST를 노린다.",
+    "상위 ST(약 80%)는 보너스 평균 약 640매·돌입 시 기대 약 3100매다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "제조사 공식 스펙은 확인하지 못했다.",
+    "설정1의 초당첨 확률·기계할은 4개 사이트(なな徹·1geki·パチセブン·P-WORLD) 모두 '조사 중' 또는 공란이라 '—'로 표시했다. 설정1은 하단 패널 소등으로 판별 가능하다고 한다.",
+    "설정2~6 청춘 보너스 초당첨·기계할은 4곳이 일치한다(기계할 범위 98.1~110.3%는 p-town과 일치). 설정별 CZ 확률은 설정2(1/222.9)만 있어 설정 표에는 넣지 않았다.",
+    "'AT 초당첨' 열에는 분석 사이트의 '청춘 보너스 초당첨' 값을 넣었다. 상위 ST 명칭은 사이트에 따라 '∞의 꿈'과 '∞인피니티의 꿈'으로 표기가 다르다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(L青春ブタ野郎)",
+      "url": "https://p-town.dmm.com/machines/5064",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기계할 범위",
+        "천장",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1214/37867/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 초당첨·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差",
+      "url": "https://1geki.jp/slot/l_ao_buta/0/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 초당첨"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 基本スペック",
+      "url": "https://pachiseven.jp/machines_v2/7440",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 초당첨·출옥률",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース",
+      "url": "https://www.p-world.co.jp/machine/database/10527",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진",
+        "설정별 초당첨·기계할"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン·ちょんぼりすた 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장",
+        "kind": "mode",
+        "intro": "CZ간·포인트·보너스간·CZ 스루 천장이 따로 있습니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "단축 시"
+            ],
+            "rows": [
+              [
+                "CZ간(실 G수)",
+                "560G+α",
+                "—"
+              ],
+              [
+                "사춘기 포인트",
+                "1000pt",
+                "—"
+              ],
+              [
+                "보너스간",
+                "899G+α",
+                "699G+α (설정 변경·ST 駆け抜け 후)"
+              ],
+              [
+                "CZ 스루",
+                "최대 6회(7회째 CZ 대상)",
+                "—"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "100pt 시 CZ 당첨률",
+            "value": "약 1/3",
+            "note": "ST 후에는 사춘기 포인트가 거의 없으면 즉야메"
+          },
+          {
+            "label": "사춘기 포인트 존",
+            "value": "백의 자리가 홀수인 존과 200pt는 반드시 전조",
+            "note": "짝수 존은 CZ 찬스(200pt 제외 본전조 농후)"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5064"
+          },
+          {
+            "title": "パチセブン 基本スペック",
+            "url": "https://pachiseven.jp/machines_v2/7440"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 수치입니다. 설정1은 공개 값이 없어 비워 두었습니다.",
+        "tables": [
+          {
+            "caption": "설정별 수치(설정2~6)",
+            "columns": [
+              "항목",
+              "설정2",
+              "설정3",
+              "설정4",
+              "설정5",
+              "설정6"
+            ],
+            "rows": [
+              [
+                "청춘 보너스 초당첨",
+                "1/350.8",
+                "1/336.5",
+                "1/295.1",
+                "1/274.6",
+                "1/207.8"
+              ],
+              [
+                "아오하루 찬스 출현율",
+                "1/63.7",
+                "1/62.4",
+                "1/59.4",
+                "1/58.6",
+                "1/57.2"
+              ],
+              [
+                "청춘 보너스(BAR 정렬)",
+                "1/6222.0",
+                "1/6167.6",
+                "1/5526.0",
+                "1/5482.0",
+                "1/5392.2"
+              ],
+              [
+                "청춘 드림 버스트(BAR 정렬)",
+                "1/671.6",
+                "1/667.9",
+                "1/648.7",
+                "1/647.2",
+                "1/645.8"
+              ],
+              [
+                "咲太 포인트 해방 확률",
+                "1/12387.9",
+                "1/12163.0",
+                "1/12210.3",
+                "1/11518.1",
+                "1/8348.9"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "ST 종료 화면 스탬프",
+            "value": "咲太=기본 / 朋絵=짝수 / のどか=홀수 / 理央=고설정(약) / 麻衣=고설정(강) / かえで=설정3 이상 / 翔子=설정4 이상 / 바니 麻衣=설정5 이상 / 전원 집합=설정6 농후"
+          },
+          {
+            "label": "설정1 판별",
+            "value": "하단 패널 소등"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5064"
+          },
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/1214/37867/"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-aobuta/machine.png",
+      "alt": "L 청춘 돼지는 바니걸 선배의 꿈을 꾸지 않는다 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10527"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/350.8",
+        "label": "설정2 초당첨"
+      },
+      {
+        "value": "8.0매/G",
+        "label": "순증(약)"
+      },
+      {
+        "value": "110.3%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "사춘기 포인트와 CZ",
+        "description": "포인트를 모아 100pt마다 CZ를 추첨한다. 에피소드 챈스(전반 10G + 후반 6G+α)는 성공 기대 약 62.5%(설정2). 천장은 CZ간 560G+α·1000pt."
+      },
+      {
+        "phase": "STEP 02 · 보너스·ST",
+        "title": "청춘 보너스와 青ブタ JUDGE",
+        "description": "성공하면 청춘 보너스(순증 약 8.0매/G) 후 青ブタ JUDGE(4세트+α·1세트 2G). 청춘 드림 버스트(보너스)로 출옥을 늘린다."
+      },
+      {
+        "phase": "STEP 03 · 상위 구간",
+        "title": "夢現ジャッジメント와 상위 ST",
+        "description": "상위 CZ(약 53%)에 성공하면 상위 ST(4세트+α·약 80%). 돌입 시 기대 약 3100매·보너스 평균 약 640매."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "L 청춘 돼지는 바니걸 선배의 꿈을 꾸지 않는다 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "사춘기 포인트 100pt마다 CZ 추첨 · 아오하루 찬스로 포인트 가산"
+      },
+      "initialConnector": "CZ",
+      "initialAriaLabel": "보너스 진입 경로 2가지",
+      "initialOutcomes": [
+        {
+          "rate": "성공 약 62.5%(설정2)",
+          "title": "에피소드 챈스",
+          "description": "전반 10G + 후반 6G+α\n히로인 6종",
+          "route": "청춘 보너스",
+          "tone": "rush"
+        },
+        {
+          "rate": "직격",
+          "title": "롱 프리즈",
+          "description": "관측 목의 약 25%\n상위 ST 농후",
+          "route": "상위 ST",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "청춘 보너스",
+      "rush": {
+        "eyebrow": "ST · 약 8.0매/G",
+        "title": "青ブタ JUDGE",
+        "detail": "4세트+α(1세트 2G) · 평균 기대 약 60%(상위 ST 중 약 80%)"
+      },
+      "rushConnector": "JUDGE 결과",
+      "rushAriaLabel": "JUDGE 결과 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "약 10%",
+          "title": "히로인 챌린지",
+          "description": "성립 역으로 판정",
+          "route": "판정",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 22%",
+          "title": "PUSH 챌린지",
+          "description": "성립 역으로 판정",
+          "route": "판정",
+          "tone": "rush"
+        },
+        {
+          "rate": "청 약 33% / 적 약 99%",
+          "title": "7 챌린지",
+          "description": "무지개=보너스 농후\n합계 약 40%",
+          "route": "판정",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "상위 CZ",
+      "secondaryRush": {
+        "eyebrow": "UPPER ST",
+        "title": "夢現ジャッジメント → 상위 ST",
+        "detail": "상위 CZ 약 53%(설정2) · 상위 ST 4세트+α 약 80%(설정2) · 기대 약 3100매"
+      },
+      "secondaryRushConnector": "상위 구간",
+      "secondaryAriaLabel": "상위 구간 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "성공",
+          "title": "상위 ST",
+          "description": "보너스 평균 약 640매\n엔딩 후에도 상위 ST",
+          "route": "상위 ST",
+          "tone": "premium"
+        },
+        {
+          "rate": "실패",
+          "title": "통상 복귀",
+          "description": "천장 보너스간 899G+α",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "ST 駆け抜け 후 보너스간 천장 699G+α로 단축. 설정1은 공개 값이 없어 설정 표에서 '—'"
+    }
+  }
+}

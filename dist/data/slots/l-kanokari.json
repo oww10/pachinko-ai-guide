@@ -1,0 +1,480 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-kanokari",
+  "nameKo": "L 파치슬롯 그녀, 빌리겠습니다",
+  "officialNameJa": "Lパチスロ 彼女、お借りします",
+  "modelCode": "Lレンタル彼女bK",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "SANKYO",
+  "brand": "SANKYO",
+  "releaseDate": "2026-09-07",
+  "aliases": [
+    "かのかり",
+    "スマスロかのかり",
+    "Lかのかり",
+    "스마트 슬롯 그녀 빌리겠습니다",
+    "카노카리"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 보너스 1/269",
+    "cz": "설정1 1/172",
+    "at": "설정1 보너스 1/269"
+  },
+  "rush": {
+    "nameJa": "かのかりBONUS／1GレンCHANCE",
+    "type": "보너스 반복형",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 렌카노 챌린지는 15G+α·보너스 기대 약 56%, 망상 DT 챌린지는 10G·약 75%",
+      "카노카리 보너스(30G·약 150매·순증 약 5.0매/G)와 REG(약 70매)로 보너스·1G 렌찬스 루프",
+      "나나카리 드림(특화·평균 상승 약 80G·기대 약 550매)과 S급 나나카리 드림(약 2910매)",
+      "엔딩(약 2200매) 후 드림 타임(15G·기대 약 1390매)·S급 드림 타임(약 2590매)"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 보너스 반복형 AT",
+    "netIncrease": "보너스 약 5.0매/G",
+    "baseGames": "50매당 약 31.0G",
+    "czEntry": "약 1/172 (합산)",
+    "czBreakRate": "렌카노 약 56% · 망상 DT 약 75%",
+    "initialATCoins": "카노카리 보너스 약 150매",
+    "primaryCeilingLabel": "천장 (보너스간)",
+    "czCeiling": "REG 후 800G / 카노카리 보너스 후 1000G",
+    "atCeiling": "REG 스루 최대 6연속(3~6회 분배)",
+    "resetCeiling": "600G (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/172",
+      "atProbability": "1/269",
+      "payoutRate": "97.7%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/169",
+      "atProbability": "1/263",
+      "payoutRate": "98.7%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/164",
+      "atProbability": "1/254",
+      "payoutRate": "101.0%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/154",
+      "atProbability": "1/235",
+      "payoutRate": "105.5%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/151",
+      "atProbability": "1/231",
+      "payoutRate": "110.4%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/149",
+      "atProbability": "1/226",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 성립 역과 규정 G수(100·300·500·700·900G)로 CZ를 노리고, 레어 역에서 변환 고확을 노린다.",
+    "CZ 렌카노 챌린지(15G+α·약 56%)와 망상 DT 챌린지(10G·약 75%)에 성공하면 보너스에 들어간다.",
+    "초당첨 보너스는 카노카리 보너스 61.3%·REG 37.7%·나나카리 드림 1.0%다.",
+    "보너스 중 렌찬스·1G 恋을 스톡하고, 1G 렌찬스(2G/세트·보너스 기대 약 40%)로 보너스가 반복된다.",
+    "엔딩(약 2200매) 후 유리구간 리셋을 거쳐 드림 타임으로 이어진다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "제조사 공식 스펙은 확인하지 못했다.",
+    "설정별 CZ·보너스 초당첨·기계할은 なな徹·パチセブン·ちょんぼりすた 3곳이 일치한다. 'AT 초당첨' 열에는 분석 사이트의 '보너스 초당첨' 값을 넣었다(AT 명칭이 본문에 없음).",
+    "천장 G수는 ちょんぼりすた와 p-town이 약간 다르게 적는다(REG 후 800G·카노카리 보너스 후 1000G·설정 변경 600G를 채택). パチセブン은 조사 중이다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(Lパチスロ 彼女、お借りします)",
+      "url": "https://p-town.dmm.com/machines/5065",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "CZ 확률",
+        "천장",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1221/37988/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 設定別スペック",
+      "url": "https://pachiseven.jp/machines_v2/7438",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "ちょんぼりすた かのかり 解析",
+      "url": "https://chonborista.com/?p=263079",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 확률",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10543",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン·ちょんぼりすた 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "보너스 종류에 따라 천장이 다르고 REG 스루 횟수 천장도 있습니다.",
+        "tables": [
+          {
+            "caption": "천장",
+            "columns": [
+              "구분",
+              "G수"
+            ],
+            "rows": [
+              [
+                "REG 후",
+                "800G"
+              ],
+              [
+                "카노카리 보너스 후",
+                "1000G+α"
+              ],
+              [
+                "설정 변경 후",
+                "600G+α"
+              ]
+            ]
+          },
+          {
+            "caption": "REG 스루 횟수 천장 분배",
+            "columns": [
+              "설정",
+              "3회",
+              "4회",
+              "5회",
+              "6회"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1.6%",
+                "12.5%",
+                "35.9%",
+                "50.0%"
+              ],
+              [
+                "설정2",
+                "2.0%",
+                "13.3%",
+                "37.1%",
+                "47.7%"
+              ],
+              [
+                "설정3",
+                "2.3%",
+                "14.1%",
+                "38.3%",
+                "45.3%"
+              ],
+              [
+                "설정4",
+                "2.7%",
+                "15.6%",
+                "40.2%",
+                "41.4%"
+              ],
+              [
+                "설정5",
+                "3.1%",
+                "16.0%",
+                "41.0%",
+                "39.8%"
+              ],
+              [
+                "설정6",
+                "3.5%",
+                "16.4%",
+                "41.8%",
+                "38.3%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "카노카리 보너스 당첨 / 스루 천장 도달 시 다음 보너스가 뒷 카노카리 보너스로 승격"
+          },
+          {
+            "label": "리셋",
+            "value": "보너스간 천장 600G로 단축, 반드시 모드2 또는 모드3"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5065"
+          },
+          {
+            "title": "ちょんぼりすた 解析",
+            "url": "https://chonborista.com/?p=263079"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 수치와 시사 요소입니다.",
+        "tables": [
+          {
+            "caption": "보너스 후 모드 이행률(모드1/모드2/모드3)",
+            "columns": [
+              "설정",
+              "모드1",
+              "모드2",
+              "모드3"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "74.6%",
+                "21.5%",
+                "3.9%"
+              ],
+              [
+                "설정2",
+                "72.3%",
+                "23.0%",
+                "4.7%"
+              ],
+              [
+                "설정3",
+                "68.4%",
+                "26.2%",
+                "5.5%"
+              ],
+              [
+                "설정4",
+                "55.1%",
+                "35.5%",
+                "9.4%"
+              ],
+              [
+                "설정5",
+                "53.5%",
+                "36.3%",
+                "10.2%"
+              ],
+              [
+                "설정6",
+                "51.6%",
+                "37.5%",
+                "10.9%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "종료 화면 틀",
+            "value": "적=설정2 이상 / 보라=설정4 이상 / 은=설정5 이상 / 금=설정6 농후 / 흰 틀①=고설정(약) / 흰 틀②=고설정(강)"
+          },
+          {
+            "label": "센티미터 표기",
+            "value": "44cm=설정4 이상 / 55cm=설정5 이상 / 66cm=설정6 농후 (본전조 농후와 함께)"
+          },
+          {
+            "label": "획득 매수 표시",
+            "value": "246 OVER=짝수 / 456 OVER=설정4 이상 / 666·394 OVER=설정6 농후"
+          },
+          {
+            "label": "引き戻し",
+            "value": "통상 약 25%(전 설정 공통) / 유메카노 모드 설정1 약 58%, 고설정일수록 상승"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5065"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-kanokari/machine.png",
+      "alt": "L 파치슬롯 그녀, 빌리겠습니다 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10543"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/269",
+        "label": "설정1 보너스"
+      },
+      {
+        "value": "5.0매/G",
+        "label": "순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "CZ와 변환 고확",
+        "description": "성립 역과 규정 G수(100·300·500·700·900G)로 CZ를 노린다. 레어 역에서 변환 고확을 노리고, 천장은 보너스 종류에 따라 800G·1000G."
+      },
+      {
+        "phase": "STEP 02 · 보너스",
+        "title": "카노카리 보너스와 1G 렌찬스",
+        "description": "카노카리 보너스(30G·약 150매)나 REG(약 70매)에서 렌찬스·1G 恋을 스톡하고, 1G 렌찬스(보너스 기대 약 40%)로 보너스가 반복된다."
+      },
+      {
+        "phase": "STEP 03 · 특화 구간",
+        "title": "나나카리 드림과 드림 타임",
+        "description": "나나카리 드림은 평균 상승 약 80G·기대 약 550매, S급은 약 2910매. 엔딩(약 2200매) 후 드림 타임(기대 약 1390매)으로 이어진다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "L 파치슬롯 그녀, 빌리겠습니다 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "성립 역 · 규정 G수로 CZ를 노림 · 레어 역으로 변환 고확"
+      },
+      "initialConnector": "CZ",
+      "initialAriaLabel": "보너스 진입 경로 2가지",
+      "initialOutcomes": [
+        {
+          "rate": "성공 약 56%",
+          "title": "렌카노 챌린지",
+          "description": "15G+α · 색이 올라갈수록 기대도 상승\n(백 12.8% ~ 무지개 100%)",
+          "route": "보너스 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 75%",
+          "title": "망상 DT 챌린지",
+          "description": "10G · 성공 시 카노카리 보너스 이상\n(REG 부정)",
+          "route": "보너스 진입",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "초당첨 보너스",
+      "rush": {
+        "eyebrow": "BONUS · 약 5.0매/G",
+        "title": "카노카리 보너스 / REG",
+        "detail": "카노카리 61.3%(30G·약 150매) · REG 37.7%(약 70매) · 나나카리 드림 1.0%"
+      },
+      "rushConnector": "보너스 중",
+      "rushAriaLabel": "보너스 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "2G/세트",
+          "title": "1G 렌찬스",
+          "description": "보너스 기대 약 40%\n소역 정렬 1/3.7",
+          "route": "보너스 반복",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 150매",
+          "title": "에피소드 보너스",
+          "description": "1G 렌찬스 4번째 성공 등",
+          "route": "보너스 반복",
+          "tone": "rush"
+        },
+        {
+          "rate": "평균 상승 약 80G",
+          "title": "나나카리 드림",
+          "description": "기대 약 550매\nS급은 약 2910매",
+          "route": "특화",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "엔딩 후",
+      "secondaryRush": {
+        "eyebrow": "DREAM TIME",
+        "title": "드림 타임",
+        "detail": "15G · 평균 스톡 약 2.5개 · 기대 약 1390매 (S급 약 2590매)"
+      },
+      "secondaryRushConnector": "드림 타임 중",
+      "secondaryAriaLabel": "드림 타임 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "엔딩 약 2200매",
+          "title": "유리구간 리셋",
+          "description": "드림 타임 + 유메카노 모드 권리",
+          "route": "복귀",
+          "tone": "premium"
+        },
+        {
+          "rate": "종료",
+          "title": "引き戻し 66G",
+          "description": "보너스 후 66G는 引き戻し 상태",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 REG 후 800G·카노카리 보너스 후 1000G(설정 변경 후 600G). REG 스루 6연속이 천장"
+    }
+  }
+}

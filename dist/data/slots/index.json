@@ -4,6 +4,10 @@
   "category": "slot",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "l-mahoako", "file": "l-mahoako.json", "releaseDate": "2026-10-19" },
+    { "id": "l-paripi-koumei", "file": "l-paripi-koumei.json", "releaseDate": "2026-10-05" },
+    { "id": "l-kanokari", "file": "l-kanokari.json", "releaseDate": "2026-09-07" },
+    { "id": "l-aobuta", "file": "l-aobuta.json", "releaseDate": "2026-09-07" },
     { "id": "l-garo-yami", "file": "l-garo-yami.json", "releaseDate": "2026-11-02" },
     { "id": "l-seiya-ougon", "file": "l-seiya-ougon.json", "releaseDate": "2026-11-02" },
     { "id": "l-sao-ggo", "file": "l-sao-ggo.json", "releaseDate": "2026-11-02" },
