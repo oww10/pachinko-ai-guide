@@ -137,11 +137,12 @@ function baseGamesNumber(machine) {
   return match ? Number(match[1]) : null;
 }
 
-function atCostYen(machine, setting) {
+function czCostYen(machine, setting, confidence = 0.8) {
   const games = baseGamesNumber(machine);
-  const odds = /1\/([\d.]+)/.exec(setting?.atProbability || "");
+  const odds = /1\/([\d.]+)/.exec(setting?.czProbability || "");
   if (!games || !odds) return null;
-  return Math.round((Number(odds[1]) * 50 / games) * 20 / 100) * 100;
+  const spins = Math.log(1 - confidence) / Math.log(1 - 1 / Number(odds[1]));
+  return Math.round((spins * 50 / games) * 20 / 100) * 100;
 }
 
 function slotCardCzSpecs(machine) {
@@ -191,7 +192,7 @@ function payoutStagesHtml(machine) {
 
 function slotCardSecondSpecs(machine) {
   return [
-    ["AT까지 투자(단순)", valueOrDash(costText(atCostYen(machine, machine.settings?.[0])))],
+    ["CZ까지 투자(80%·천장 미반영)", valueOrDash(costText(czCostYen(machine, machine.settings?.[0])))],
     ["AT 천장", valueOrDash(machine.slot?.atCeiling)]
   ];
 }
@@ -323,8 +324,8 @@ function detailSpecs(machine) {
       ["구분", machine.slot?.type],
       ["순증", machine.slot?.netIncrease],
       ["베이스", machine.slot?.baseGames],
-      ["AT까지 투자 (설정1·단순 계산)", costText(atCostYen(machine, machine.settings?.[0]))],
-      ["AT까지 투자 (설정6·단순 계산)", costText(atCostYen(machine, machine.settings?.[machine.settings.length - 1]))],
+      ["CZ까지 투자 (설정1·80%·천장 미반영)", costText(czCostYen(machine, machine.settings?.[0]))],
+      ["CZ까지 투자 (설정6·80%·천장 미반영)", costText(czCostYen(machine, machine.settings?.[machine.settings.length - 1]))],
       ["CZ 확률 (설정1)", machine.slot?.czEntry],
       ["CZ 돌파율", machine.slot?.czBreakRate],
       ["AT 초기", machine.slot?.initialATCoins],
