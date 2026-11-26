@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "pa-super-sea-okinawa-6-enako",
+  "officialNameJa": "PAスーパー海物語IN沖縄6 Withえなこ",
+  "nameKo": "PA 슈퍼 해이야기 IN 오키나와 6 With 에나코",
+  "aliases": ["沖海6えなこ", "沖縄6 Withえなこ", "沖甘6", "오키나와6 에나코"],
+  "modelCode": "PAスーパー海物語IN沖縄6 RBD",
+  "machineType": "pachinko",
+  "format": "PA",
+  "maker": "三洋物産",
+  "brand": "SANYO",
+  "releaseDate": "2026-06-08",
+  "probabilities": { "base": "約1/99.9", "symbolHit": null, "charge": null, "highState": "約1/9.9", "rushHit": null },
+  "rush": {
+    "nameJa": "ST5回転+時短(ジンベェタイム)",
+    "type": "ST5回転+時短(電サポ25/50/120回)",
+    "entryRatePercent": 100,
+    "totalEntryRatePercent": 100,
+    "continuationRatePercent": 41.3,
+    "spins": 5,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "大当り後は必ずST5回転に突入し、その後に時短へ(電サポ25回=ST5+時短20、50回=ST5+時短45、120回=ST5+時短115)",
+      "電サポ50回に一度なれば、電サポ終了まで偶数図柄大当りでも50回を維持(沖甘だけの新時短)",
+      "10R大当り(えなこが可愛くてごめんBONUS)でジンベェタイム突入。以降の大当り後は必ず電サポ120回で、継続期待値は約82%(ST5回+時短115回)",
+      "大当り継続中に電サポ回数が降格することはない"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "4R 대당첨 400개", "payoutBalls": 400, "ratePercent": 45, "destination": "서포트 25회(ST5 + 시단 20)", "confidence": "official", "notes": ["헤소 대당첨"] },
+      { "label": "6R 대당첨 600개", "payoutBalls": 600, "ratePercent": 50, "destination": "서포트 50회(ST5 + 시단 45)", "confidence": "official", "notes": ["헤소 대당첨"] },
+      { "label": "4R 대당첨 400개", "payoutBalls": 400, "ratePercent": 4, "destination": "서포트 50회(ST5 + 시단 45)", "confidence": "official", "notes": ["헤소 대당첨"] },
+      { "label": "10R 대당첨 1000개", "payoutBalls": 1000, "ratePercent": 1, "destination": "서포트 120회(진베에타임 돌입)", "confidence": "official", "notes": ["헤소 대당첨"] }
+    ],
+    "rush": [
+      { "label": "10R 대당첨 1000개", "payoutBalls": 1000, "ratePercent": 10, "destination": "서포트 120회(진베에타임 돌입)", "confidence": "official", "notes": ["전동 튤립 대당첨(서포트 중)"] },
+      { "label": "6R 대당첨 600개", "payoutBalls": 600, "ratePercent": 54, "destination": "서포트 50회(120회 중이면 120회 유지)", "confidence": "official", "notes": ["전동 튤립 대당첨(서포트 중)"] },
+      { "label": "4R 대당첨 400개", "payoutBalls": 400, "ratePercent": 36, "destination": "현재 서포트 회수 유지(25회 중 6%는 50회로)", "confidence": "official", "notes": ["전동 튤립 대당첨(서포트 중)", "서포트 회수별 이동은 아래 표 참조"] }
+    ],
+    "extraTables": [
+      {
+        "title": "전동 튤립 대당첨 이동 (서포트 25회 중)",
+        "items": [
+          { "label": "10R 대당첨 1000개", "payoutBalls": 1000, "ratePercent": 10, "destination": "서포트 120회", "confidence": "secondary", "notes": [] },
+          { "label": "6R 대당첨 600개", "payoutBalls": 600, "ratePercent": 54, "destination": "서포트 50회", "confidence": "secondary", "notes": [] },
+          { "label": "4R 대당첨 400개", "payoutBalls": 400, "ratePercent": 6, "destination": "서포트 50회", "confidence": "secondary", "notes": [] },
+          { "label": "4R 대당첨 400개", "payoutBalls": 400, "ratePercent": 30, "destination": "서포트 25회", "confidence": "secondary", "notes": [] }
+        ]
+      },
+      {
+        "title": "전동 튤립 대당첨 이동 (서포트 50회 중)",
+        "items": [
+          { "label": "10R 대당첨 1000개", "payoutBalls": 1000, "ratePercent": 10, "destination": "서포트 120회", "confidence": "secondary", "notes": [] },
+          { "label": "6R 대당첨 600개", "payoutBalls": 600, "ratePercent": 54, "destination": "서포트 50회", "confidence": "secondary", "notes": [] },
+          { "label": "4R 대당첨 400개", "payoutBalls": 400, "ratePercent": 36, "destination": "서포트 50회", "confidence": "secondary", "notes": [] }
+        ]
+      },
+      {
+        "title": "전동 튤립 대당첨 이동 (서포트 120회 중)",
+        "items": [
+          { "label": "10R 대당첨 1000개", "payoutBalls": 1000, "ratePercent": 10, "destination": "서포트 120회", "confidence": "secondary", "notes": [] },
+          { "label": "6R 대당첨 600개", "payoutBalls": 600, "ratePercent": 54, "destination": "서포트 120회", "confidence": "secondary", "notes": [] },
+          { "label": "4R 대당첨 400개", "payoutBalls": 400, "ratePercent": 36, "destination": "서포트 120회", "confidence": "secondary", "notes": [] }
+        ]
+      }
+    ]
+  },
+  "border": { "spinsPer1000Yen": 17.3, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/5001", "checkedAt": "2026-11-26" },
+  "gameFlow": [
+    "通常時は約1/99.9の大当りを目指す",
+    "ヘソ大当りは4R 400個(電サポ25回)45%・6R 600個(電サポ50回)50%・4R 400個(電サポ50回)4%・10R 1000個(電サポ120回)1%",
+    "大当り後は必ずST5回転(約1/9.9)に突入し、その後は時短(約1/99.9)へ",
+    "電サポ中の大当りは10R 1000個10%・6R 600個54%・4R 400個36%で、電サポ回数は降格しない",
+    "10R大当りでジンベェタイムに突入すると、以降の大当り後は必ず電サポ120回(継続期待値約82%)"
+  ],
+  "notes": [
+    "三洋物産 公式プレスリリース(2026-03-13)で名称・型式名(RBD)・トップ導入日(2026-06-08)を確認。公式製品ページのガイドブック『基本情報』『ゲームフロー』で約1/99・ST突入率100%・電サポ25/50/120回・ジンベェタイム継続期待値約82%・ヘソ(45/50/4/1)・電チュー(10/54/30/6)を直接読んで確認した。",
+    "電サポ回数別の大当り移行表(25回・50回・120回滞在)は p-town 掲載の大当り割合画像(独自調査値)のみで、公式ページには回数別の表がない。",
+    "確率の小数(1/99.9, 1/9.9)・ST継続率41.3%・ジンベェタイム継続率81.5%は p-town 記載で、公式表記は約1/99・約82%。",
+    "p-town スペック表の『確変突入率』は『-』。確変ではなくST機(ST突入率100%)で、確変の概念はない。",
+    "ボーダーはメーカー公式値ではなく p-town 算出値。"
+  ],
+  "sources": [
+    { "title": "SANYO 公式プレスリリース(PAスーパー海物語IN沖縄6 Withえなこ)", "url": "https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20260313_01.pdf", "type": "official", "checkedAt": "2026-11-26" },
+    { "title": "SANYO 公式製品ページ(ガイドブックPDF 基本情報・ゲームフロー)", "url": "https://www.sanyobussan.co.jp/products/pk_supersea_okinawa6_enako/", "type": "official", "checkedAt": "2026-11-26" },
+    { "title": "SANYO 公式ガイドブックPDF(번역 이미지 원본: 基本情報 3쪽·ゲームフロー 4쪽)", "url": "https://www.sanyobussan.co.jp/products/pk_supersea_okinawa6_enako/pk_supersea_okinawa6_enako_guidebook_PC.pdf", "type": "official", "checkedAt": "2026-11-26" },
+    { "title": "p-town 機種情報(スペック・大当り割合)", "url": "https://p-town.dmm.com/machines/5001", "type": "secondary", "checkedAt": "2026-11-26" },
+    { "title": "P-WORLD 機種データベース(機器写真)", "url": "https://www.p-world.co.jp/machine/database/10462", "type": "secondary", "checkedAt": "2026-11-26" }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-26",
+    "needsReviewFields": ["nameKo"]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/super-sea-okinawa-6-enako/machine.png",
+      "alt": "SANYO PA 슈퍼 해이야기 IN 오키나와 6 With 에나코 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10462"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·서포트 회수·대당첨 내역",
+        "url": "./assets/images/official/super-sea-okinawa-6-enako/spec-ko.png",
+        "alt": "SANYO 공식 가이드북 기본 정보 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "ST·시단·진베에타임 흐름",
+        "url": "./assets/images/official/super-sea-okinawa-6-enako/flow-ko.png",
+        "alt": "SANYO 공식 가이드북 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      { "value": "1/99.9", "label": "통상시 대당첨" },
+      { "value": "1/9.9", "label": "ST 중 대당첨" },
+      { "value": "82%", "label": "진베에타임 계속 기대(약)" }
+    ],
+    "distributionCharts": [
+      { "title": "헤소 대당첨 배분", "source": "initial", "centerValue": "100%", "centerLabel": "ST 돌입" },
+      { "title": "전동 튤립 대당첨 배분 (서포트 중)", "source": "rush", "centerValue": "10%", "centerLabel": "1000개" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "PA 슈퍼 해이야기 IN 오키나와 6 With 에나코 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "대당첨 약 1/99.9 · 대당첨 후 반드시 ST 5회전" },
+      "initialConnector": "헤소 대당첨",
+      "initialAriaLabel": "헤소 대당첨 결과 4가지",
+      "initialOutcomes": [
+        { "rate": "45%", "title": "4R 대당첨", "description": "400개\n서포트 25회(ST5 + 시단 20)", "route": "서포트 25회", "tone": "return" },
+        { "rate": "50%", "title": "6R 대당첨", "description": "600개\n서포트 50회(ST5 + 시단 45)", "route": "서포트 50회", "tone": "rush" },
+        { "rate": "4%", "title": "4R 대당첨", "description": "400개\n서포트 50회(ST5 + 시단 45)", "route": "서포트 50회", "tone": "rush" },
+        { "rate": "1%", "title": "10R 대당첨", "description": "1000개\n서포트 120회", "route": "진베에타임", "tone": "premium" }
+      ],
+      "mergeLabel": "ST 5회전 후 시단",
+      "rush": { "eyebrow": "ST + TIME SHORT", "title": "서포트 25 / 50 / 120회", "detail": "ST 5회전 약 1/9.9 → 시단 약 1/99.9 · 서포트 중 대당첨은 회수가 내려가지 않음" },
+      "rushConnector": "서포트 중 전동 튤립 대당첨",
+      "rushAriaLabel": "서포트 중 전동 튤립 대당첨 결과 3가지",
+      "rushOutcomes": [
+        { "rate": "10%", "title": "10R 대당첨", "description": "1000개\n서포트 120회", "route": "진베에타임", "tone": "premium" },
+        { "rate": "54%", "title": "6R 대당첨", "description": "600개\n서포트 50회(120회 중이면 유지)", "route": "↻ 50회 이상", "tone": "rush" },
+        { "rate": "36%", "title": "4R 대당첨", "description": "400개\n현재 서포트 회수 유지", "route": "↻ 회수 유지", "tone": "reset" }
+      ],
+      "loopNote": "진베에타임(10R 대당첨 후)에 돌입하면 이후 모든 대당첨 후 서포트 120회가 이어지고, 계속 기대값은 약 82%(ST5회 + 시단 115회)"
+    },
+    "steps": [
+      { "phase": "STEP 01 · 통상시", "title": "대당첨 노리기", "description": "약 1/99.9 확률의 대당첨을 노립니다. 헤소 대당첨은 4R 45%·6R 50%·4R 4%·10R 1%입니다." },
+      { "phase": "STEP 02 · ST + 시단", "title": "서포트 25 / 50 / 120회", "description": "대당첨 후에는 반드시 ST 5회전(약 1/9.9)에 들어가고, 이어서 시단(약 1/99.9)이 붙습니다. 서포트 25회는 시단 20회, 50회는 시단 45회, 120회는 시단 115회입니다." },
+      { "phase": "STEP 03 · 서포트 중 대당첨", "title": "회수 유지와 진베에타임", "description": "서포트 중 대당첨은 10R 10%·6R 54%·4R 36%이고 서포트 회수는 내려가지 않습니다. 한 번 50회가 되면 이후 짝수 도안 대당첨도 50회를 유지하고, 10R 대당첨으로 진베에타임에 돌입하면 이후 모든 대당첨 후 120회입니다." }
+    ]
+  }
+}
