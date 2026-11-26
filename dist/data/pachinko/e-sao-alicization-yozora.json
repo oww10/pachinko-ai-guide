@@ -1,0 +1,238 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-sao-alicization-yozora",
+  "officialNameJa": "e ソードアート・オンライン アリシゼーション 夜空",
+  "nameKo": "e 소드 아트 온라인 앨리시제이션 밤하늘",
+  "aliases": [
+    "SAO夜空",
+    "スマパチSAO夜空",
+    "SAO 야조라"
+  ],
+  "modelCode": "eソードアート・オンライン アリシゼーションYKJ11",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "京楽",
+  "brand": "Kyoraku",
+  "releaseDate": "2026-08-03",
+  "probabilities": {
+    "base": "1/199.9",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": "1/51.6"
+  },
+  "rush": {
+    "nameJa": "SWORD RUSH／War of Underworld",
+    "type": "ST53回転・ST70回転",
+    "entryRatePercent": 50,
+    "totalEntryRatePercent": 50,
+    "continuationRatePercent": 65,
+    "spins": 53,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "通常時の大当り後、50%でSTに突入",
+      "ST53回転(SWORD RUSH)の継続率は約65%、ST70回転(War of Underworld)は約75%",
+      "右打ち中の実質大当り確率は1/51.6"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      {
+        "label": "約300個(時短なし)",
+        "payoutBalls": 300,
+        "ratePercent": 50.0,
+        "destination": null,
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約300個(ST53回転)",
+        "payoutBalls": 300,
+        "ratePercent": 48.5,
+        "destination": "SWORD RUSH(ST53回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約3000〜9000個＋α(ST70回転)",
+        "payoutBalls": null,
+        "ratePercent": 1.5,
+        "destination": "War of Underworld(ST70回転)",
+        "confidence": "secondary",
+        "notes": []
+      }
+    ],
+    "rush": [
+      {
+        "label": "約1500個(ST53回転)",
+        "payoutBalls": 1500,
+        "ratePercent": 45,
+        "destination": "SWORD RUSH(ST53回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約3000〜9000個＋α(ST70回転)",
+        "payoutBalls": null,
+        "ratePercent": 11,
+        "destination": "War of Underworld(ST70回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約1500個・決意の刃成功(ST70回転)",
+        "payoutBalls": 1500,
+        "ratePercent": 11,
+        "destination": "War of Underworld(ST70回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約1500個・決意の刃失敗(ST53回転)",
+        "payoutBalls": 1500,
+        "ratePercent": 33,
+        "destination": "SWORD RUSH(ST53回転)",
+        "confidence": "secondary",
+        "notes": []
+      }
+    ],
+    "extraTables": [
+      {
+        "title": "War of Underworld(ST70回転) 配分",
+        "items": [
+          {
+            "label": "約1500〜7500個＋α(SWORD DRIVE)",
+            "payoutBalls": null,
+            "ratePercent": 40,
+            "destination": "SWORD DRIVE",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "約1500個(ST70回転)",
+            "payoutBalls": 1500,
+            "ratePercent": 60,
+            "destination": "War of Underworld(ST70回転)",
+            "confidence": "secondary",
+            "notes": []
+          }
+        ]
+      },
+      {
+        "title": "SWORD DRIVE 獲得出玉割合",
+        "items": [
+          {
+            "label": "出玉1500個",
+            "payoutBalls": 1500,
+            "ratePercent": 8.2,
+            "destination": "SWORD DRIVE",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "出玉3000個",
+            "payoutBalls": 3000,
+            "ratePercent": 28.1,
+            "destination": "SWORD DRIVE",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "出玉4500個",
+            "payoutBalls": 4500,
+            "ratePercent": 36.1,
+            "destination": "SWORD DRIVE",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "出玉6000個",
+            "payoutBalls": 6000,
+            "ratePercent": 20.7,
+            "destination": "SWORD DRIVE",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "出玉7500個",
+            "payoutBalls": 7500,
+            "ratePercent": 4.4,
+            "destination": "SWORD DRIVE",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "DRIVE to BONUS",
+            "payoutBalls": null,
+            "ratePercent": 1.5,
+            "destination": "BONUS(出玉1500個)",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "DRIVE in DRIVE",
+            "payoutBalls": null,
+            "ratePercent": 1.0,
+            "destination": "SWORD DRIVE再突入",
+            "confidence": "secondary",
+            "notes": []
+          }
+        ]
+      }
+    ]
+  },
+  "border": {
+    "spinsPer1000Yen": 20.0,
+    "exchange": "4엔(등가)",
+    "source": "p-town",
+    "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준",
+    "sourceUrl": "https://p-town.dmm.com/machines/5034",
+    "checkedAt": "2026-11-26"
+  },
+  "gameFlow": [
+    "通常時の大当り確率は1/199.9",
+    "大当り後の約50%でST53回転(SWORD RUSH)へ、約1.5%はST70回転(War of Underworld)へ直行",
+    "SWORD RUSHの継続率は約65%、War of Underworldは約75%",
+    "右打ち中の実質大当り確率は1/51.6",
+    "SWORD DRIVEの獲得出玉は1500個〜7500個で、4500個(約36.1%)が最多"
+  ],
+  "notes": [
+    "p-town 掲載の大当り割合画像(払い出し出玉・独自調査値)を直接読んで確認。メーカー公式ページとは未対照。",
+    "BONUSの出玉は1500個。"
+  ],
+  "sources": [
+    {
+      "title": "p-town 機種情報(スペック・大当り割合)",
+      "url": "https://p-town.dmm.com/machines/5034",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "P-WORLD 機種データベース(機器写真)",
+      "url": "https://www.p-world.co.jp/machine/database/10492",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-26",
+    "needsReviewFields": [
+      "nameKo",
+      "probabilities",
+      "payouts",
+      "rush"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/sao-yozora/machine.png",
+      "alt": "京楽 e 소드 아트 온라인 앨리시제이션 밤하늘 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10492"
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-granbelm-319",
+  "officialNameJa": "eグランベルム 319ver.",
+  "nameKo": "e 그랑벨룸 319ver.",
+  "aliases": [
+    "グランベルム",
+    "eグランベルム",
+    "그랑벨룸"
+  ],
+  "modelCode": "eグランベルムHTB2",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "サンスリー",
+  "brand": "Sunthree",
+  "releaseDate": "2026-11-02",
+  "probabilities": {
+    "base": "1/319.6",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": null
+  },
+  "rush": {
+    "nameJa": "RUSH(ST130回転)",
+    "type": "LT・ST130回転",
+    "entryRatePercent": 50.5,
+    "totalEntryRatePercent": 50.5,
+    "continuationRatePercent": 77,
+    "spins": 130,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "通常時の大当り後、50.5%でST130回転のRUSHに突入",
+      "RUSH中のジャッジ発生は1/62、連チャン率は約77%",
+      "裏RUSHは大当り時の87.5%が3000個以上・12.5%が4500個以上"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      {
+        "label": "7R 約1050個(時短なし)",
+        "payoutBalls": 1050,
+        "ratePercent": 49.5,
+        "destination": null,
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "7R 約1050個(ST130回転)",
+        "payoutBalls": 1050,
+        "ratePercent": 50.5,
+        "destination": "RUSH(ST130回転)",
+        "confidence": "secondary",
+        "notes": []
+      }
+    ],
+    "rush": [
+      {
+        "label": "約4500個＋α(ST130回転)",
+        "payoutBalls": 4500,
+        "ratePercent": 2.5,
+        "destination": "RUSH(ST130回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約4500個(ST130回転)",
+        "payoutBalls": 4500,
+        "ratePercent": 7.5,
+        "destination": "RUSH(ST130回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約3000個＋α(ST130回転)",
+        "payoutBalls": 3000,
+        "ratePercent": 7.5,
+        "destination": "RUSH(ST130回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約3000個(ST130回転)",
+        "payoutBalls": 3000,
+        "ratePercent": 22.5,
+        "destination": "RUSH(ST130回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "約1500個(ST130回転)",
+        "payoutBalls": 1500,
+        "ratePercent": 40,
+        "destination": "RUSH(ST130回転)",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "STリセット(ST130回転)",
+        "payoutBalls": null,
+        "ratePercent": 20,
+        "destination": "ST130回転リセット",
+        "confidence": "secondary",
+        "notes": []
+      }
+    ],
+    "extraTables": [
+      {
+        "title": "上乗せ時(超アドレナリンBOOST) 配分",
+        "items": [
+          {
+            "label": "約4500個＋α",
+            "payoutBalls": 4500,
+            "ratePercent": 6.25,
+            "destination": "上乗せ(超アドレナリンBOOST)",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "約4500個",
+            "payoutBalls": 4500,
+            "ratePercent": 18.75,
+            "destination": "上乗せ(超アドレナリンBOOST)",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "約3000個＋α",
+            "payoutBalls": 3000,
+            "ratePercent": 6.25,
+            "destination": "上乗せ(超アドレナリンBOOST)",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "約3000個",
+            "payoutBalls": 3000,
+            "ratePercent": 18.75,
+            "destination": "上乗せ(超アドレナリンBOOST)",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "約1500個",
+            "payoutBalls": 1500,
+            "ratePercent": 37.5,
+            "destination": "上乗せ(超アドレナリンBOOST)",
+            "confidence": "secondary",
+            "notes": []
+          },
+          {
+            "label": "約1500個＋α",
+            "payoutBalls": 1500,
+            "ratePercent": 12.5,
+            "destination": "上乗せ(超アドレナリンBOOST)",
+            "confidence": "secondary",
+            "notes": []
+          }
+        ]
+      }
+    ]
+  },
+  "border": {
+    "spinsPer1000Yen": 16.8,
+    "exchange": "4엔(등가)",
+    "source": "p-town",
+    "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준",
+    "sourceUrl": "https://p-town.dmm.com/machines/5082",
+    "checkedAt": "2026-11-26"
+  },
+  "gameFlow": [
+    "通常時の大当り確率は1/319.6",
+    "大当り後の50.5%でST130回転のRUSHへ",
+    "RUSH中の連チャン率は約77%",
+    "RUSH中の大当りは約1500個(40%)が最多、STリセットが20%",
+    "上乗せ時(超アドレナリンBOOST)は約1500個が37.5%で最多"
+  ],
+  "notes": [
+    "p-town 掲載の大当り割合画像(払い出し出玉・独自調査値)を直接読んで確認。メーカー公式ページとは未対照。",
+    "サンスリー公式の製品ガイドブックPDFは画像のみで本文を読めず未対照。",
+    "RUSH中のジャッジ発生1/62.0はp-town記載(右打ち中リーチ確率)で、大当り確率としては使っていない。"
+  ],
+  "sources": [
+    {
+      "title": "p-town 機種情報(スペック・大当り割合)",
+      "url": "https://p-town.dmm.com/machines/5082",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "P-WORLD 機種データベース(機器写真)",
+      "url": "https://www.p-world.co.jp/machine/database/10537",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "サンスリー 公式製品ページ(ガイドブックPDF・本文未取得)",
+      "url": "https://www.sanyobussan.co.jp/products/pk_granbelm/",
+      "type": "official",
+      "checkedAt": "2026-11-26"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-26",
+    "needsReviewFields": [
+      "nameKo",
+      "probabilities",
+      "payouts",
+      "rush"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/granbelm-319/machine.png",
+      "alt": "サンスリー e 그랑벨룸 319ver. 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10537"
+    }
+  }
+}

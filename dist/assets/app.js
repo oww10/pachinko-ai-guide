@@ -695,6 +695,7 @@ function renderDetail(machine) {
       ${isSlot ? "" : payoutTable(Array.isArray(machine.payouts.modeB) ? "RUSH 모드 A 배분" : "RUSH 배분", machine.payouts.rush)}
       ${!isSlot && Array.isArray(machine.payouts.modeB) ? payoutTable("RUSH 모드 B 배분", machine.payouts.modeB) : ""}
       ${!isSlot && Array.isArray(machine.payouts.ultimateDrive) ? payoutTable("ULTIMATE DRIVE 배분", machine.payouts.ultimateDrive) : ""}
+      ${!isSlot && Array.isArray(machine.payouts.extraTables) ? machine.payouts.extraTables.map((table) => payoutTable(table.title, table.items)).join("") : ""}
       ${foldSection("확인 출처", `
         <ul class="source-list">
           ${machine.sources.map((source) => `
