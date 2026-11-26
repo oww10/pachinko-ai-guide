@@ -4,6 +4,8 @@
   "category": "pachinko",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "e-yokai-watch", "file": "e-yokai-watch.json", "releaseDate": "2026-11-02" },
+    { "id": "e-juoh-shishi-no-ichigeki", "file": "e-juoh-shishi-no-ichigeki.json", "releaseDate": "2026-11-02" },
     { "id": "e-toaru3", "file": "e-toaru3.json", "releaseDate": "2026-11-02" },
     { "id": "e-rezero-onigakari-2", "file": "e-rezero-onigakari-2.json", "releaseDate": "2026-10-05" },
     { "id": "e-garo-12-ogon-kishi-kyokugen", "file": "e-garo-12-ogon-kishi-kyokugen.json", "releaseDate": "2025-08-04" },

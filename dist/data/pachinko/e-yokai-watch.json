@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-yokai-watch",
+  "officialNameJa": "eフィーバー妖怪ウォッチ",
+  "nameKo": "e 피버 요괴워치",
+  "aliases": [
+    "妖怪ウォッチ",
+    "eF妖怪ウォッチ",
+    "요괴워치"
+  ],
+  "modelCode": "eフィーバー妖怪ウォッチR",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "SANKYO",
+  "brand": "SANKYO",
+  "releaseDate": "2026-11-02",
+  "probabilities": {
+    "base": "約1/319.7",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": "約1/41.9"
+  },
+  "rush": {
+    "nameJa": "ヨーデルSONIC怪闘／最終決戦",
+    "type": "LT・時短100回転",
+    "entryRatePercent": 61,
+    "totalEntryRatePercent": 61,
+    "continuationRatePercent": 80,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": 100,
+    "gates": [
+      "突入率・継続率は時短(コマチャレンジ)引き戻しを含む",
+      "初当りの約50%でヨーデルSONIC怪闘へ、残りはコマチャレンジ(時短100回転)"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      {
+        "label": "3000個",
+        "payoutBalls": 3000,
+        "ratePercent": 0.5,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "300個-A",
+        "payoutBalls": 300,
+        "ratePercent": 49.5,
+        "destination": "ヨーデルSONIC怪闘",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "300個-B",
+        "payoutBalls": 300,
+        "ratePercent": 50.0,
+        "destination": "コマチャレンジ(時短100回転)",
+        "confidence": "secondary",
+        "notes": []
+      }
+    ],
+    "rush": [
+      {
+        "label": "3000個＋α",
+        "payoutBalls": 3000,
+        "ratePercent": 5.7,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "3000個(エンマインパクト)",
+        "payoutBalls": 3000,
+        "ratePercent": 3.5,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "3000個(ピン刺しチャンス成功)",
+        "payoutBalls": 3000,
+        "ratePercent": 19.2,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "1500個(ピン刺し失敗)",
+        "payoutBalls": 1500,
+        "ratePercent": 22.3,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "1500個",
+        "payoutBalls": 1500,
+        "ratePercent": 49.3,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      }
+    ]
+  },
+  "border": {
+    "spinsPer1000Yen": 17.4,
+    "exchange": "4엔(등가)",
+    "source": "p-town",
+    "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준",
+    "sourceUrl": "https://p-town.dmm.com/machines/5081",
+    "checkedAt": "2026-11-26"
+  },
+  "gameFlow": [
+    "通常時の大当り確率は約1/319.7",
+    "初当りの約50%でヨーデルSONIC怪闘へ、残りはコマチャレンジ(時短100回転)",
+    "ヨーデルSONIC怪闘中の実質大当り確率は約1/41.9",
+    "ウバウネ決戦では出玉3000個(約50%)〜9000個以上(約6.25%)、平均約4500個",
+    "トータル突入率約61%・継続率約80%は時短引き戻しを含む"
+  ],
+  "notes": [
+    "確率・突入率・継続率・時短回数はp-townとP-WORLDで一致するが、SANKYO公式ページは本文が取得できず未対照。",
+    "出玉の割合はP-WORLDの表。移行先の記載がない項目は「이동 정보 미확인」とした。",
+    "ウバウネ決戦の出玉割合: 3000個50%・4500個25%・6000個12.5%・7500個6.25%・9000個以上6.25%。"
+  ],
+  "sources": [
+    {
+      "title": "P-WORLD 機種データベース",
+      "url": "https://www.p-world.co.jp/machine/database/10549",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "p-town 機種情報(ボーダー)",
+      "url": "https://p-town.dmm.com/machines/5081",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-26",
+    "needsReviewFields": [
+      "nameKo",
+      "probabilities",
+      "payouts",
+      "rush"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/yokai-watch/machine.png",
+      "alt": "SANKYO e 피버 요괴워치 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10549"
+    }
+  }
+}

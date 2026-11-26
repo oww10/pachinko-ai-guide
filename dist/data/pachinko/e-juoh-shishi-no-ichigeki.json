@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-juoh-shishi-no-ichigeki",
+  "officialNameJa": "e 獣王 獅子の一撃",
+  "nameKo": "e 수왕 사자의 일격",
+  "aliases": [
+    "獣王獅子の一撃",
+    "e獣王",
+    "수왕"
+  ],
+  "modelCode": "e獣王SFEA",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "サミー",
+  "brand": "Sammy",
+  "releaseDate": "2026-11-02",
+  "probabilities": {
+    "base": "約1/319.7",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": "約1/144.7"
+  },
+  "rush": {
+    "nameJa": "獣王RUSH",
+    "type": "LT・ST100回転",
+    "entryRatePercent": 50,
+    "totalEntryRatePercent": 50,
+    "continuationRatePercent": 50,
+    "spins": 100,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "初当りの50%で獣王RUSHへ",
+      "獣王RUSH中の実質大当り確率は約1/144.7"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      {
+        "label": "300個-A",
+        "payoutBalls": 300,
+        "ratePercent": 50,
+        "destination": "獣王RUSH",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "300個-B",
+        "payoutBalls": 300,
+        "ratePercent": 50,
+        "destination": null,
+        "confidence": "secondary",
+        "notes": []
+      }
+    ],
+    "rush": [
+      {
+        "label": "平均9800個(サバンナチャンス)",
+        "payoutBalls": 9800,
+        "ratePercent": 50,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": [
+          "最低保証4500個＋上乗せ平均約5306個の平均値"
+        ]
+      },
+      {
+        "label": "3000個(1500個×2)",
+        "payoutBalls": 3000,
+        "ratePercent": 17,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      },
+      {
+        "label": "1500個",
+        "payoutBalls": 1500,
+        "ratePercent": 33,
+        "destination": "이동 정보 미확인",
+        "confidence": "secondary",
+        "notes": []
+      }
+    ]
+  },
+  "border": {
+    "spinsPer1000Yen": 26.7,
+    "exchange": "4엔(등가)",
+    "source": "p-town",
+    "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시間) 기준",
+    "sourceUrl": "https://p-town.dmm.com/machines/5087",
+    "checkedAt": "2026-11-26"
+  },
+  "gameFlow": [
+    "通常時の大当り確率は約1/319.7",
+    "初当りの50%で獣王RUSH(ST100回転)へ",
+    "獣王RUSH中の実質大当り確率は約1/144.7、継続率約50%",
+    "サバンナチャンスは最低保証4500個に上乗せがつき、出玉の平均は約9800個"
+  ],
+  "notes": [
+    "確率・突入率・継続率・ST回転数はp-townとP-WORLDで一致するが、サミー公式ページはスペック本文が取得できず未対照。",
+    "出玉の割合はP-WORLDの表。サバンナチャンスの9800個は平均値で確定出玉ではない。",
+    "移行先の記載がない項目は「이동 정보 미확인」とした。"
+  ],
+  "sources": [
+    {
+      "title": "P-WORLD 機種データベース",
+      "url": "https://www.p-world.co.jp/machine/database/10551",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "p-town 機種情報(ボーダー)",
+      "url": "https://p-town.dmm.com/machines/5087",
+      "type": "secondary",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "Sammy 公式製品ページ(スペック本文は未取得)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_jyu_oh_sh/",
+      "type": "official",
+      "checkedAt": "2026-11-26"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-26",
+    "needsReviewFields": [
+      "nameKo",
+      "probabilities",
+      "payouts",
+      "rush"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/juoh-shishi/machine.png",
+      "alt": "サミー e 수왕 사자의 일격 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10551"
+    }
+  }
+}
