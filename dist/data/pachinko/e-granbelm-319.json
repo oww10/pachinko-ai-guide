@@ -219,6 +219,116 @@
       "caption": "기기 외관",
       "credit": "P-WORLD 기종 데이터베이스",
       "sourceUrl": "https://www.p-world.co.jp/machine/database/10537"
-    }
+    },
+    "keyStats": [
+      {
+        "value": "1/319.6",
+        "label": "통상시 대당첨"
+      },
+      {
+        "value": "50.5%",
+        "label": "RUSH 돌입"
+      },
+      {
+        "value": "77%",
+        "label": "RUSH 연속률"
+      }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초기 당첨 배분",
+        "source": "initial",
+        "centerValue": "50.5%",
+        "centerLabel": "RUSH 돌입"
+      },
+      {
+        "title": "RUSH 중 배분",
+        "source": "rush",
+        "centerValue": "77%",
+        "centerLabel": "RUSH 연속"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 그랑벨룸 319ver. 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 약 1/319.6 · 초기 대당첨은 모두 7R 약 1050개"
+      },
+      "initialConnector": "대당첨",
+      "initialAriaLabel": "초기 대당첨 결과 2가지",
+      "initialOutcomes": [
+        {
+          "rate": "49.5%",
+          "title": "통상 대당첨",
+          "description": "약 1050개\nST 없이 통상 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "50.5%",
+          "title": "RUSH 당첨",
+          "description": "약 1050개\nST 130회전 RUSH 돌입",
+          "route": "RUSH",
+          "tone": "rush"
+        }
+      ],
+      "mergeLabel": "50.5%로 RUSH",
+      "rush": {
+        "eyebrow": "RUSH",
+        "title": "RUSH (ST 130회전)",
+        "detail": "ST 130회전 · 우타 중 실질 대당첨 약 1/62 · 연속률 약 77%"
+      },
+      "rushConnector": "RUSH 중 대당첨",
+      "rushAriaLabel": "RUSH 중 대당첨 결과 4가지",
+      "rushOutcomes": [
+        {
+          "rate": "10%",
+          "title": "4500개급",
+          "description": "약 4500개(+α 2.5% 포함)\nST 130회전 재시작",
+          "route": "↻ RUSH 계속",
+          "tone": "premium"
+        },
+        {
+          "rate": "30%",
+          "title": "3000개급",
+          "description": "약 3000개(+α 7.5% 포함)\nST 130회전 재시작",
+          "route": "↻ RUSH 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "40%",
+          "title": "1500개",
+          "description": "약 1500개\nST 130회전 재시작",
+          "route": "↻ RUSH 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "20%",
+          "title": "ST 리셋",
+          "description": "ST 130회전이\n처음부터 다시 시작",
+          "route": "↻ ST 리셋",
+          "tone": "reset"
+        }
+      ],
+      "loopNote": "RUSH 중 대당첨이 이어지면 ST 130회전이 다시 시작되고 총 연속률은 약 77%(p-town 기준). 상승 구간(초아드레날린 BOOST)의 배분은 아래 표 참조"
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "대당첨 노리기",
+        "description": "약 1/319.6 확률의 대당첨을 노립니다. 초기 대당첨은 모두 7R 약 1050개입니다."
+      },
+      {
+        "phase": "STEP 02 · 대당첨 판정",
+        "title": "RUSH 50.5% / 통상 49.5%",
+        "description": "대당첨 후 50.5%는 ST 130회전 RUSH로, 49.5%는 ST 없이 통상으로 돌아갑니다."
+      },
+      {
+        "phase": "STEP 03 · RUSH",
+        "title": "ST 130회전, 연속률 약 77%",
+        "description": "RUSH 중 대당첨은 1500개 40%·3000개급 30%·4500개급 10%이고 20%는 ST 리셋입니다. 우타 중 실질 대당첨 확률은 약 1/62입니다."
+      }
+    ]
   }
 }

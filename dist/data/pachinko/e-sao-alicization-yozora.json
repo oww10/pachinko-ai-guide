@@ -233,6 +233,147 @@
       "caption": "기기 외관",
       "credit": "P-WORLD 기종 데이터베이스",
       "sourceUrl": "https://www.p-world.co.jp/machine/database/10492"
-    }
+    },
+    "keyStats": [
+      {
+        "value": "1/199.9",
+        "label": "통상시 대당첨"
+      },
+      {
+        "value": "1/51.6",
+        "label": "우타 중 대당첨"
+      },
+      {
+        "value": "65%",
+        "label": "RUSH 연속률"
+      }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초기 당첨 배분",
+        "source": "initial",
+        "centerValue": "50%",
+        "centerLabel": "ST 돌입"
+      },
+      {
+        "title": "RUSH 중 배분",
+        "source": "rush",
+        "centerValue": "22%",
+        "centerLabel": "ST70 승격"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 소드 아트 온라인 앨리시제이션 밤하늘 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 약 1/199.9 · 초기 대당첨은 약 300개가 대부분"
+      },
+      "initialConnector": "대당첨",
+      "initialAriaLabel": "초기 대당첨 결과 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "50%",
+          "title": "약 300개(시단 없음)",
+          "description": "ST 돌입 없이\n통상 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "48.5%",
+          "title": "약 300개 + ST 53회전",
+          "description": "SWORD RUSH 돌입",
+          "route": "SWORD RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "1.5%",
+          "title": "3000~9000개+α",
+          "description": "War of Underworld\n(ST 70회전) 직행",
+          "route": "ST70 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "약 50%로 ST",
+      "rush": {
+        "eyebrow": "ST 53",
+        "title": "SWORD RUSH (ST 53회전)",
+        "detail": "우타 중 실질 대당첨 약 1/51.6 · 연속률 약 65%"
+      },
+      "rushConnector": "RUSH 중 대당첨",
+      "rushAriaLabel": "RUSH 중 대당첨 결과 4가지",
+      "rushOutcomes": [
+        {
+          "rate": "45%",
+          "title": "약 1500개",
+          "description": "ST 53회전 계속",
+          "route": "↻ SWORD RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "33%",
+          "title": "약 1500개 · 결의의 칼날 실패",
+          "description": "ST 53회전 계속",
+          "route": "↻ SWORD RUSH",
+          "tone": "reset"
+        },
+        {
+          "rate": "11%",
+          "title": "약 1500개 · 결의의 칼날 성공",
+          "description": "ST 70회전으로 승격",
+          "route": "ST70 승격",
+          "tone": "premium"
+        },
+        {
+          "rate": "11%",
+          "title": "3000~9000개+α",
+          "description": "ST 70회전으로 승격",
+          "route": "ST70 승격",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "ST70 승격",
+      "secondaryRush": {
+        "eyebrow": "ST 70",
+        "title": "War of Underworld (ST 70회전)",
+        "detail": "연속률 약 75%"
+      },
+      "secondaryRushConnector": "ST70 중 대당첨",
+      "secondaryAriaLabel": "War of Underworld 중 대당첨 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "40%",
+          "title": "SWORD DRIVE",
+          "description": "1500~7500개+α",
+          "route": "SWORD DRIVE",
+          "tone": "premium"
+        },
+        {
+          "rate": "60%",
+          "title": "약 1500개",
+          "description": "ST 70회전 계속",
+          "route": "↻ War of Underworld",
+          "tone": "rush"
+        }
+      ],
+      "loopNote": "SWORD DRIVE 출옥은 1500~7500개로 4500개(약 36.1%)가 가장 많고 DRIVE to BONUS 약 1.5%·DRIVE in DRIVE 약 1.0%도 있습니다(아래 표 참조)"
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "대당첨 노리기",
+        "description": "약 1/199.9 확률의 대당첨을 노립니다. 대당첨 후 약 50%는 ST에 돌입합니다."
+      },
+      {
+        "phase": "STEP 02 · 대당첨 판정",
+        "title": "ST 53회전 48.5% / ST 70회전 직행 1.5%",
+        "description": "초기 대당첨은 통상 복귀 50%, SWORD RUSH(ST 53회전) 48.5%, War of Underworld(ST 70회전) 직행 1.5%입니다."
+      },
+      {
+        "phase": "STEP 03 · RUSH",
+        "title": "SWORD RUSH에서 ST70 승격",
+        "description": "SWORD RUSH 연속률은 약 65%입니다. RUSH 중 대당첨의 11%+11%가 ST 70회전으로 승격하고, ST70은 연속률 약 75%에 SWORD DRIVE(40%)가 붙습니다."
+      }
+    ]
   }
 }

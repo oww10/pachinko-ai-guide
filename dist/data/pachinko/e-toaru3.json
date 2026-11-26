@@ -28,6 +28,96 @@
   ],
   "verification": { "status": "needs-review", "checkedAt": "2026-11-26", "needsReviewFields": ["nameKo", "probabilities.base", "probabilities.rushHit", "payouts"] },
   "visualGuide": {
-    "mainImage": { "url": "./assets/images/official/e-toaru3/machine.png", "alt": "藤商事 e 어떤 마술의 금서목록 3 파칭코 기기 외관", "caption": "기기 외관", "credit": "藤商事 공식 製品ページ", "sourceUrl": "https://www.fujimarukun.co.jp/products/e_toaru3/" }
+    "mainImage": { "url": "./assets/images/official/e-toaru3/machine.png", "alt": "藤商事 e 어떤 마술의 금서목록 3 파칭코 기기 외관", "caption": "기기 외관", "credit": "藤商事 공식 製品ページ", "sourceUrl": "https://www.fujimarukun.co.jp/products/e_toaru3/" },
+    "keyStats": [
+      {
+        "value": "1/348",
+        "label": "통상시 대당첨"
+      },
+      {
+        "value": "50%",
+        "label": "ST(LT) 돌입"
+      },
+      {
+        "value": "75%",
+        "label": "토털 연속률"
+      }
+    ],
+    "distributionCharts": [],
+    "flowDiagram": {
+      "ariaLabel": "e 어떤 마술의 금서목록 3 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 1/348 · 대당첨 후 50%로 ST(LT) 돌입"
+      },
+      "initialConnector": "대당첨",
+      "initialAriaLabel": "대당첨 후 판정 2가지",
+      "initialOutcomes": [
+        {
+          "rate": "50%",
+          "title": "ST 돌입 없음",
+          "description": "통상으로 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "50%",
+          "title": "ST(LT) 돌입",
+          "description": "ST 131회전 시작",
+          "route": "LT",
+          "tone": "rush"
+        }
+      ],
+      "mergeLabel": "50%로 LT",
+      "rush": {
+        "eyebrow": "LT",
+        "title": "ST 131회전",
+        "detail": "전반 30회전 → 후반 100회전 → 마지막 1회전 · 토털 연속률 약 75%"
+      },
+      "rushConnector": "구간별 당첨 확률",
+      "rushAriaLabel": "ST 구간별 당첨 확률 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "약 26%",
+          "title": "전반 30회전",
+          "description": "LIMIT BREAK CHANCE\n회전당 약 1/99",
+          "route": "구간 연속률",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 54%",
+          "title": "후반 100회전",
+          "description": "히어로즈 러시\n회전당 약 1/128",
+          "route": "구간 연속률",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 25%",
+          "title": "마지막 1회전",
+          "description": "LAST CHANCE\n약 1/4",
+          "route": "구간 연속률",
+          "tone": "premium"
+        }
+      ],
+      "loopNote": "토털 연속률 약 75%는 전반 약 26%·후반 약 54%·마지막 약 25%의 합산값(공식 표기). 대당첨 출옥은 1500개가 기본이고 특전 작동구 경유 연속 당첨은 3000개(2회분)~7500개 이상(5회분 이상, V 입상 조건)"
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "대당첨 노리기",
+        "description": "1/348 확률로 숫자 도안이 맞으면 대당첨입니다. 대당첨 출옥은 1500개가 기본입니다."
+      },
+      {
+        "phase": "STEP 02 · 대당첨 판정",
+        "title": "ST(LT) 50%",
+        "description": "대당첨 후 50%는 ST(LT)에 돌입하고, 나머지는 통상으로 돌아갑니다."
+      },
+      {
+        "phase": "STEP 03 · ST 131회전",
+        "title": "3단계로 이어지는 연속률 약 75%",
+        "description": "전반 30회전(1/99) → 후반 100회전(1/128) → 마지막 1회전(1/4)으로 이어지며, 구간별 연속률은 약 26%·54%·25%입니다. 출옥 배분 비율은 공식 자료에 없어 원그래프를 만들지 않았습니다."
+      }
+    ]
   }
 }
