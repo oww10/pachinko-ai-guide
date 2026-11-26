@@ -326,6 +326,9 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
 .dialog-shell { position: relative; }
 .dialog-close { display: grid; place-items: center; padding: 0 0 3px; line-height: 1; position: sticky; top: 16px; left: calc(100% - 56px); z-index: 5; width: 40px; height: 40px; margin-bottom: -40px; border: 1px solid var(--line-strong); border-radius: 50%; background: var(--panel); font-size: 25px; cursor: pointer; backdrop-filter: blur(12px); }
 .detail-hero { padding: 50px 56px 42px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--detail-accent) 18%, transparent), transparent 18rem); }
+.detail-hero.has-image { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; }
+.detail-hero-text { min-width: 0; }
+.detail-hero-image { width: 280px; height: 220px; object-fit: contain; }
 .detail-kicker { color: var(--detail-accent); font-size: 11px; font-weight: 800; letter-spacing: .14em; }
 .detail-hero h2 { max-width: 760px; margin: 14px 0 7px; font-size: clamp(35px, 6vw, 61px); line-height: 1.05; letter-spacing: -.06em; word-break: keep-all; overflow-wrap: anywhere; }
 .detail-official { color: var(--muted); font-size: 13px; }
@@ -556,6 +559,8 @@ dialog::backdrop { background: rgba(0, 0, 0, .6); backdrop-filter: blur(11px); }
   .machine-grid { grid-template-columns: 1fr; }
   .footer-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 13px; }
   .detail-hero { padding: 45px 24px 30px; }
+  .detail-hero.has-image { grid-template-columns: 1fr; gap: 20px; }
+  .detail-hero-image { order: -1; width: 100%; height: 180px; }
   .machine-dialog { width: calc(100% - 16px); max-width: calc(100% - 16px); }
   .detail-badges span { max-width: 100%; overflow-wrap: anywhere; }
   .detail-body { padding: 28px 24px 40px; }
