@@ -28,6 +28,7 @@
       { "label": "1500개 통상", "payoutBalls": 1500, "ratePercent": 24, "destination": "통상", "confidence": "official", "notes": [] }
     ]
   },
+  "border": { "spinsPer1000Yen": 17.2, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 증감 없음, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/4846", "checkedAt": "2026-11-26" },
   "gameFlow": ["通常時の図柄揃いを目指す", "約50%で極限7500バトルへ", "バトル成功で魔戒CHANCE LTへ", "LTは継続率約76%、7500個比率25%"],
   "notes": ["LT突入率25%は50%×50%の編集上の算出値。"],
   "sources": [

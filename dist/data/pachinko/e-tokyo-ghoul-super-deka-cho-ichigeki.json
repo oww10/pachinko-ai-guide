@@ -17,6 +17,7 @@
     "highState": null,
     "rushHit": "約1/7.7"
   },
+  "border": { "spinsPer1000Yen": 30.1, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 증감 없음, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/5024", "checkedAt": "2026-11-26" },
   "rush": {
     "nameJa": "HYPER喰種RUSH",
     "type": "LT・ST 5回",
