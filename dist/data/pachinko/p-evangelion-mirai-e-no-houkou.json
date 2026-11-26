@@ -20,6 +20,7 @@
     "highState": "約1/99.4",
     "rushHit": "約1/99.4"
   },
+  "border": { "spinsPer1000Yen": 17.8, "exchange": "4엔(등가)", "source": "p-town", "checkedAt": "2026-11-26" },
   "rush": {
     "nameJa": "IMPACT MODE",
     "type": "ST",

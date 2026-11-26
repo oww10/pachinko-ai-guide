@@ -24,6 +24,7 @@
       { "label": "3000個", "payoutBalls": 3000, "ratePercent": 97, "destination": "超RUSHまたは終了", "confidence": "official", "notes": ["約97%"] }
     ]
   },
+  "border": { "spinsPer1000Yen": 16.7, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/4782", "checkedAt": "2026-11-26" },
   "gameFlow": ["図柄揃いまたは喰種チャージを契機にする", "合算約51%で超RUSHへ", "超RUSHは130回転、継続率約75%", "RUSH中の大当りは3000個または6000個＋α"],
   "notes": ["既存の東京喰種399ファクトシートを優先ソースとして構造化した。", "2026-11-25 재확인: SANKYO 공식 기종 페이지의 販売名(型式名) ｅ東京喰種Ｗ와 導入年月 2025.04를 확인했다(일자 21일은 공식 페이지에 없어 미확인)."],
   "sources": [

@@ -27,6 +27,7 @@
       { "label": "出玉なし・RUSHリセット", "payoutBalls": 0, "ratePercent": 20, "destination": "暴凶星RUSH", "confidence": "official", "notes": [] }
     ]
   },
+  "border": { "spinsPer1000Yen": 16.8, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/4897", "checkedAt": "2026-11-26" },
   "gameFlow": ["初当りの61%で暴凶星RUSHへ", "RUSHは10回転＋残保留4個", "C時短を含む継続率は約75%", "極闘(EXTREME BATTLE)では6000個〜最大12000個の可能性あり"],
   "notes": ["振分値はSammy公式のスペック(基本情報)とデジタル小冊子で確認済み。"],
   "sources": [

@@ -17,6 +17,7 @@
     "highState": null,
     "rushHit": "約1/97.1"
   },
+  "border": { "spinsPer1000Yen": 17.2, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/4982", "checkedAt": "2026-11-26" },
   "rush": {
     "nameJa": "SPECIAL LycoReco RUSH HYPER DELUXE",
     "type": "LT・ST 132回・モードA/B",

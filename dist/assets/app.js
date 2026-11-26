@@ -354,7 +354,36 @@ function detailSpecs(machine) {
     ["잔여 보류", valueOrDash(machine.rush.remainingHolds, "개")]
   ].map(([label, value]) => `<div><small>${label}</small><b>${escapeHtml(value)}</b></div>`);
 
-  return [...probabilityItems, ...rushItems].join("");
+  const borderItem = machine.border
+    ? [`<div><small>보더 (4엔·1,000엔당)</small><b>${escapeHtml(machine.border.spinsPer1000Yen)}회전</b></div>`]
+    : [];
+
+  return [...probabilityItems, ...borderItem, ...rushItems].join("");
+}
+
+const HAMARI_SPINS = [100, 250, 500, 750, 1000, 1500];
+
+function hamariSection(machine) {
+  if (machine.machineType === "slot") return "";
+  const odds = /1\/([\d.]+)/.exec(machine.probabilities?.base || "");
+  if (!odds) return "";
+  const n = Number(odds[1]);
+  const rows = HAMARI_SPINS.map((spins) => {
+    const miss = Math.pow(1 - 1 / n, spins) * 100;
+    return `<tr><td><b>${spins.toLocaleString("ko-KR")}회전</b></td><td>${(100 - miss).toFixed(1)}%</td><td>${miss.toFixed(1)}%</td></tr>`;
+  }).join("");
+  const border = machine.border
+    ? `<p class="payout-note">보더 ${escapeHtml(machine.border.spinsPer1000Yen)}회전(1,000엔·${escapeHtml(machine.border.exchange)}) · ${escapeHtml(machine.border.source)} 산출${machine.border.condition ? ` · ${escapeHtml(machine.border.condition)}` : ""}. 손익분기 기준일 뿐 홀의 실제 회전율은 아닙니다.</p>`
+    : "";
+  return foldSection("하마리 확률 (회전수별)", `
+    <div class="payout-wrap">
+      <table class="payout-table">
+        <thead><tr><th>회전수</th><th>당첨 확률</th><th>하마리 확률</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+    <p class="payout-note">${escapeHtml(formatApprox(machine.probabilities.base))} 기준 · 매 회전 독립 확률 근사 · 하마리 = 그 회전수 동안 당첨이 없을 확률</p>
+    ${border}`);
 }
 
 function slotSettingsTable(machine) {
@@ -658,6 +687,7 @@ function renderDetail(machine) {
       ${slotSettingsTable(machine)}
       ${foldSection("게임 플로우 한눈에 보기", visualGameFlow(machine), { className: "fold-visual" })}
       ${foldSection("플레이 흐름", `<ol class="flow-list">${machine.gameFlow.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>`)}
+      ${hamariSection(machine)}
       ${analysisSections(machine)}
       ${isSlot ? "" : payoutTable("초기 당첨 배분", machine.payouts.initial)}
       ${!isSlot && Array.isArray(machine.payouts.climax) ? payoutTable("CLIMAX 배분", machine.payouts.climax) : ""}
