@@ -1,0 +1,486 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-mahoako",
+  "nameKo": "L 마법소녀를 동경해서",
+  "officialNameJa": "L魔法少女にあこがれて",
+  "modelCode": "L魔法少女にあこがれてNP",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "ニューギン",
+  "brand": "NEWGIN",
+  "releaseDate": "2026-10-19",
+  "aliases": [
+    "まほあこ",
+    "Lまほあこ",
+    "스마트 슬롯 마법소녀를 동경해서",
+    "마호아코"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/436.3",
+    "cz": "설정1 1/357.0",
+    "at": "설정1 AT 1/436.3"
+  },
+  "rush": {
+    "nameJa": "まほあこラッシュ／超あこがれver.",
+    "type": "의사 보너스 + AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "보너스(1/249.6·전 설정 공통)는 REG 39.8%·보너스 49.7%·보너스 あこがれver. 8.3%·스페셜 무비 2.3%",
+      "CZ는 트란스마지아(12G+α·약 42%), 패널 어택(7G+α·약 59%), 베나리타(12G+α·약 42%)",
+      "AT 마호아코 러시는 순증 약 2.5매/G·초기 G수는 아코가레 어택으로 결정(평균 약 90G)",
+      "상위 AT 超あこがれver.는 순증 약 5.0매/G·기대 약 3500매"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 의사 보너스 + AT",
+    "netIncrease": "AT 약 2.5매/G · 상위 AT 약 5.0매/G",
+    "baseGames": "50매당 약 31.4G",
+    "czEntry": "1/357.0 (합산)",
+    "czBreakRate": "트란스마지아 약 42% · 패널 어택 약 59%",
+    "initialATCoins": "초기 G수 평균 약 90G(아코가레 어택 결정)",
+    "primaryCeilingLabel": "천장 (AT간)",
+    "czCeiling": "999G+α",
+    "atCeiling": "천장 도달 시 AT 돌입",
+    "resetCeiling": "799G+α (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/357.0",
+      "atProbability": "1/436.3",
+      "payoutRate": "97.6%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/333.8",
+      "atProbability": "1/422.7",
+      "payoutRate": "98.8%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/310.7",
+      "atProbability": "1/401.4",
+      "payoutRate": "100.5%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/273.3",
+      "atProbability": "1/352.4",
+      "payoutRate": "105.0%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/243.0",
+      "atProbability": "1/316.1",
+      "payoutRate": "110.2%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/235.4",
+      "atProbability": "1/305.7",
+      "payoutRate": "112.0%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 레어 역·유리 포인트·게임 수 소화로 CZ를 노린다. 보너스(1/249.6)는 모든 상태에서 공통이다.",
+    "CZ는 트란스마지아(약 42%)·패널 어택(약 59%)·베나리타(상위 CZ)이고, 성공하면 AT 마호아코 러시에 들어간다.",
+    "AT는 순증 약 2.5매/G이며 초기 G수는 아코가레 어택(3G)으로 결정한다.",
+    "아코가레 어택 중 사디스틱 타임·부들부들 마사지 타임·마지아베제 무쌍으로 G수를 상승시킨다.",
+    "상위 AT 超あこがれver.(순증 약 5.0매/G·기대 약 3500매)는 VS 로드 에노르메 성공 등으로 들어간다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "제조사 공식 스펙은 확인하지 못했다.",
+    "설정별 CZ·AT(전 계기 합산)·기계할은 p-town과 ちょんぼりすた(CZ·AT)·パチセブン(AT·기계할)이 일치한다. AT 열에는 전 계기 합산 값을 넣었고 보너스 계기를 뺀 AT 확률은 해석 정보 표에 따로 적었다.",
+    "보너스 확률 1/249.6은 모든 설정에서 같다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(L魔法少女にあこがれて)",
+      "url": "https://p-town.dmm.com/machines/5113",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "CZ·AT 확률",
+        "천장",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 基本スペック",
+      "url": "https://pachiseven.jp/machines_v2/7441",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 AT·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "ちょんぼりすた まほあこ 解析",
+      "url": "https://chonborista.com/?p=264698",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·AT·기계할",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10563",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン·ちょんぼりすた 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장과 보너스",
+        "kind": "mode",
+        "intro": "AT간 천장이 하나이며 보너스 당첨으로는 G수가 리셋되지 않습니다.",
+        "tables": [
+          {
+            "caption": "천장",
+            "columns": [
+              "구분",
+              "G수"
+            ],
+            "rows": [
+              [
+                "AT간",
+                "999G+α"
+              ],
+              [
+                "설정 변경 시",
+                "799G+α"
+              ]
+            ]
+          },
+          {
+            "caption": "보너스 종류(전 설정 공통)",
+            "columns": [
+              "종류",
+              "비율",
+              "AT 기대"
+            ],
+            "rows": [
+              [
+                "REG",
+                "39.8%",
+                "5.2%"
+              ],
+              [
+                "마호아코 보너스",
+                "49.7%",
+                "약 24.7%"
+              ],
+              [
+                "마호아코 보너스 あこがれver.",
+                "8.3%",
+                "약 49.8%"
+              ],
+              [
+                "스페셜 무비 보너스",
+                "2.3%",
+                "100%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "AT 돌입"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5113"
+          },
+          {
+            "title": "ちょんぼりすた 解析",
+            "url": "https://chonborista.com/?p=264698"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 수치와 시사 요소입니다. 소역·보너스 확률에는 설정 차이가 없습니다.",
+        "tables": [
+          {
+            "caption": "설정별 확률",
+            "columns": [
+              "항목",
+              "설정1",
+              "설정2",
+              "설정3",
+              "설정4",
+              "설정5",
+              "설정6"
+            ],
+            "rows": [
+              [
+                "CZ 합산",
+                "1/357.0",
+                "1/333.8",
+                "1/310.7",
+                "1/273.3",
+                "1/243.0",
+                "1/235.4"
+              ],
+              [
+                "AT(전 계기 합산)",
+                "1/436.3",
+                "1/422.7",
+                "1/401.4",
+                "1/352.4",
+                "1/316.1",
+                "1/305.7"
+              ],
+              [
+                "AT(보너스 계기 제외)",
+                "1/680.7",
+                "1/649.9",
+                "1/603.5",
+                "1/501.7",
+                "1/434.0",
+                "1/414.9"
+              ]
+            ]
+          },
+          {
+            "caption": "CZ 종류 비율",
+            "columns": [
+              "설정",
+              "트란스마지아",
+              "패널 어택",
+              "베나리타"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "75.8%",
+                "23.8%",
+                "0.4%"
+              ],
+              [
+                "설정2",
+                "75.4%",
+                "24.2%",
+                "0.4%"
+              ],
+              [
+                "설정3",
+                "73.4%",
+                "26.2%",
+                "0.4%"
+              ],
+              [
+                "설정4",
+                "67.6%",
+                "31.6%",
+                "0.8%"
+              ],
+              [
+                "설정5",
+                "65.6%",
+                "33.6%",
+                "0.8%"
+              ],
+              [
+                "설정6",
+                "64.8%",
+                "34.4%",
+                "0.8%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "긴짱 트로피 색",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 호랑이 무늬=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "보너스 종료 화면 틀",
+            "value": "청 에노르미타=홀수 / 청 트레스마지아=짝수 / 적 트레스마지아=고설정(약) / 적 에노르미타=고설정(강) / 동=설정2 이상 / 금 트레스마지아=설정4 이상 / 마지아베제(금)=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "획득 매수 표시",
+            "value": "246 OVER=짝수 / 456 OVER=설정4 이상 / 555 OVER=설정5 이상 / 666 OVER=설정6 농후"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5113"
+          },
+          {
+            "title": "ちょんぼりすた 解析",
+            "url": "https://chonborista.com/?p=264698"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-mahoako/machine.png",
+      "alt": "L 마법소녀를 동경해서 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10563"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/436.3",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "2.5매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "112.0%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "CZ와 보너스",
+        "description": "레어 역·유리 포인트·게임 수 소화로 CZ를 노린다. 보너스(1/249.6)는 모든 상태·설정에서 같다. 천장은 AT간 999G+α."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "마호아코 러시",
+        "description": "순증 약 2.5매/G. 초기 G수는 아코가레 어택(3G)으로 정해지고 평균 약 90G. 사디스틱 타임·부들부들 마사지 타임·마지아베제 무쌍으로 상승한다."
+      },
+      {
+        "phase": "STEP 03 · 상위 AT",
+        "title": "超あこがれver.",
+        "description": "순증 약 5.0매/G·기대 약 3500매. 상위 CZ(VS 로드 에노르메) 성공이나 롱 프리즈로 돌입하고 종료 후 引き戻し 존(10~30G)이 이어진다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "L 마법소녀를 동경해서 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "레어 역 · 유리 포인트 · 게임 수 소화로 CZ를 노림"
+      },
+      "initialConnector": "CZ",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "성공 약 42%",
+          "title": "트란스마지아",
+          "description": "12G+α\n성공 시 AT 농후",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 59%",
+          "title": "패널 어택",
+          "description": "7G+α · 패널 3장 모으면 AT",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 42%",
+          "title": "베나리타",
+          "description": "상위 CZ 취급 12G+α\n실패해도 AT 농후",
+          "route": "상위 AT 노림",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 2.5매/G",
+        "title": "마호아코 러시",
+        "detail": "초기 G수는 아코가레 어택(3G)으로 결정 · 평균 약 90G"
+      },
+      "rushConnector": "아코가레 어택 중",
+      "rushAriaLabel": "특화 구간 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "11G · 평균 약 70G",
+          "title": "사디스틱 타임",
+          "description": "G수 상승 특화",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "11G · 평균 약 100G",
+          "title": "부들부들 마사지 타임",
+          "description": "G수 상승 특화",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "11G · 평균 약 200G",
+          "title": "마지아베제 무쌍",
+          "description": "G수 상승 특화",
+          "route": "상승",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "상위 CZ · 롱 프리즈",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT · 약 5.0매/G",
+        "title": "마호아코 러시 超あこがれver.",
+        "detail": "기대 약 3500매 · 종료 후 引き戻し 존 10~30G"
+      },
+      "secondaryRushConnector": "상위 AT 중",
+      "secondaryAriaLabel": "상위 AT 중 분기 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "계속",
+          "title": "상위 AT 계속",
+          "description": "순증 약 5.0매/G",
+          "route": "↻ 상위 AT",
+          "tone": "premium"
+        },
+        {
+          "rate": "종료",
+          "title": "引き戻し 존",
+          "description": "10~30G · 상위 CZ 포함 기대 60% 이상",
+          "route": "↩ 引き戻し",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "AT간 천장 999G+α(설정 변경 시 799G+α). 보너스 당첨으로는 천장 G수가 리셋되지 않음"
+    }
+  }
+}

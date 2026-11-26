@@ -1,0 +1,546 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-paripi-koumei",
+  "nameKo": "스마스로 파리피 공명",
+  "officialNameJa": "スマスロ パリピ孔明",
+  "modelCode": "Lパチスロパリピ孔明YE05H",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "山佐ネクスト",
+  "brand": "YAMASA NEXT",
+  "releaseDate": "2026-10-05",
+  "aliases": [
+    "パリピ孔明",
+    "Lパリピ孔明",
+    "스마트 슬롯 파리피 공명",
+    "파리피공명"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 보너스 1/309.9",
+    "cz": "설정1 1/213.6",
+    "at": "설정1 보너스 1/309.9"
+  },
+  "rush": {
+    "nameJa": "パーティータイム／超パーティータイム／究極孔明",
+    "type": "보너스 경유 ST형",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": 73,
+    "spins": 15,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ 3종: 삼가의 예(7G/세트·보너스 약 33%), 에이코의 시련(16G·약 50%), 석병팔진(15G·약 85%)",
+      "보너스 후 반드시 ST 파티 타임(15G+α·계속 약 73%)",
+      "시부야 결전(4G·성공 약 84%) 성공 시 상위 ST 超パーティータイム(계속 약 81%)",
+      "최상위 究極孔明(10G·계속 약 91%·기대 약 3300매)"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 보너스 경유 ST형",
+    "netIncrease": "보너스 약 4.2매/G",
+    "baseGames": "50매당 약 31G",
+    "czEntry": "1/213.6 (합산)",
+    "czBreakRate": "삼가의 예 약 33% · 에이코의 시련 약 50% · 석병팔진 약 85%",
+    "initialATCoins": "치키치키 밤밤 보너스 100매",
+    "primaryCeilingLabel": "천장 (G수·주기)",
+    "czCeiling": "보너스간 1009G (설정 변경·ST 駆け抜け 후 428G)",
+    "atCeiling": "최대 20주기째(스테이지 체인지 20회)",
+    "resetCeiling": "428G · 주기 재추첨 (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/213.6",
+      "atProbability": "1/309.9",
+      "payoutRate": "97.6%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/207.3",
+      "atProbability": "1/299.6",
+      "payoutRate": "98.9%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/199.2",
+      "atProbability": "1/280.0",
+      "payoutRate": "101.4%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/188.8",
+      "atProbability": "1/262.0",
+      "payoutRate": "104.5%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/179.4",
+      "atProbability": "1/243.9",
+      "payoutRate": "109.0%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/171.7",
+      "atProbability": "1/228.8",
+      "payoutRate": "113.6%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 주기(1주기 약 32G, 5의 배수 회는 CZ 찬스, 최대 20회)와 CZ 3종으로 보너스를 노린다.",
+    "CZ 성공이나 사기 고양 존 직격으로 치키치키 밤밤 보너스(100매)에 당첨되고, 보너스 후에는 반드시 ST 파티 타임(15G+α·계속 약 73%)에 들어간다.",
+    "일부 보너스 당첨 시 시부야 결전 보너스(4G·성공 약 84%)에 들어가고 성공하면 상위 ST 超パーティータイム(계속 약 81%)로 이어진다.",
+    "최상위 究極孔明(10G·계속 약 91%)은 당첨 보너스가 모두 백 7이며 기대 약 3300매다.",
+    "천하태평으로의 길(15G)은 엔딩 후 상위 ST 또는 究極孔明으로 이어진다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "제조사 공식 스펙은 확인하지 못했다.",
+    "설정별 CZ 합산·보너스 초당첨·기계할은 なな徹·1geki·パチセブン이 일치한다. 설정별 ST 확률은 공개된 값이 없다. 'AT 초당첨' 열에는 보너스 초당첨 값을 넣었다.",
+    "p-town 본문의 일부 표는 열 대응이 확정되지 않아(보너스 당첨률 등) 설정 판별 표에는 열이 명확한 값만 넣었다.",
+    "상위 ST 계속률 약 81%·究極孔明 약 91%·시부야 결전 성공 약 84%는 p-town과 パチセブン이 일치하는 범위의 기재다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロパリピ孔明)",
+      "url": "https://p-town.dmm.com/machines/5057",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기계할 범위",
+        "천장·주기",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1222/37791/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差",
+      "url": "https://1geki.jp/slot/l_paripikoumei/0/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스",
+        "CZ 종류별 확률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 基本スペック",
+      "url": "https://pachiseven.jp/machines_v2/7429",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스·기계할",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10518",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン·ちょんぼりすた 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "천장과 주기",
+        "kind": "mode",
+        "intro": "G수 천장과 주기(스테이지 체인지) 천장이 있고, 설정 변경·ST 駆け抜け 후에는 G수 천장이 단축됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "단축 시"
+            ],
+            "rows": [
+              [
+                "보너스간",
+                "1009G",
+                "428G (설정 변경·ST 駆け抜け 후)"
+              ],
+              [
+                "주기",
+                "최대 20회째(1주기 약 32G)",
+                "설정 변경 시 재추첨"
+              ]
+            ]
+          },
+          {
+            "caption": "주기 천장 도달까지 평균 주기 수",
+            "columns": [
+              "설정",
+              "평균"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "17.2회"
+              ],
+              [
+                "설정2",
+                "16.6회"
+              ],
+              [
+                "설정3",
+                "15.9회"
+              ],
+              [
+                "설정4",
+                "15.1회"
+              ],
+              [
+                "설정5",
+                "14.2회"
+              ],
+              [
+                "설정6",
+                "13.3회"
+              ]
+            ]
+          },
+          {
+            "caption": "주기 천장 도달 시 CZ 분배",
+            "columns": [
+              "CZ",
+              "비율"
+            ],
+            "rows": [
+              [
+                "삼가의 예",
+                "50.0%"
+              ],
+              [
+                "에이코의 시련",
+                "43.8%"
+              ],
+              [
+                "석병팔진",
+                "6.2%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "보너스 당첨 / CZ 당첨"
+          },
+          {
+            "label": "리셋",
+            "value": "설정 변경 시 약 50%로 무중생유 포인트 50pt 이상으로 시작",
+            "note": "설정 변경 시 기계할 100% 이상"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5057"
+          },
+          {
+            "title": "パチセブン 基本スペック",
+            "url": "https://pachiseven.jp/machines_v2/7429"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 CZ 종류별 확률과 시사 요소입니다. 설정이 높을수록 유리합니다.",
+        "tables": [
+          {
+            "caption": "CZ 종류별 확률",
+            "columns": [
+              "설정",
+              "삼가의 예",
+              "에이코의 시련",
+              "석병팔진",
+              "합산"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/369.9",
+                "1/701.9",
+                "1/1809.0",
+                "1/213.6"
+              ],
+              [
+                "설정2",
+                "1/359.9",
+                "1/676.9",
+                "1/1761.7",
+                "1/207.3"
+              ],
+              [
+                "설정3",
+                "1/345.6",
+                "1/648.8",
+                "1/1710.5",
+                "1/199.2"
+              ],
+              [
+                "설정4",
+                "1/332.1",
+                "1/607.1",
+                "1/1564.5",
+                "1/188.8"
+              ],
+              [
+                "설정5",
+                "1/323.0",
+                "1/560.9",
+                "1/1440.7",
+                "1/179.4"
+              ],
+              [
+                "설정6",
+                "1/314.8",
+                "1/528.4",
+                "1/1324.4",
+                "1/171.7"
+              ]
+            ]
+          },
+          {
+            "caption": "통상 중 CZ 당첨률(약 체리 / 스이카 / 찬스메 합계)",
+            "columns": [
+              "설정",
+              "약 체리",
+              "스이카",
+              "찬스메"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "0.4%",
+                "2.0%",
+                "25.0%"
+              ],
+              [
+                "설정2",
+                "0.8%",
+                "2.4%",
+                "26.2%"
+              ],
+              [
+                "설정3",
+                "0.8%",
+                "2.8%",
+                "29.3%"
+              ],
+              [
+                "설정4",
+                "1.2%",
+                "3.9%",
+                "32.1%"
+              ],
+              [
+                "설정5",
+                "1.2%",
+                "5.1%",
+                "35.5%"
+              ],
+              [
+                "설정6",
+                "1.6%",
+                "6.3%",
+                "38.3%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "케로트 트로피 색",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 케로트 무늬=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "ST 종료 화면",
+            "value": "英子 夕=고설정(약) / 英子 夜=고설정(강) / 英子와 赤兎馬 쿵후=설정2 이상 / 英子와 七海=설정4 이상 / 孔明=설정5 이상 / 개구리=설정6 농후"
+          },
+          {
+            "label": "레어 역 시 화면",
+            "value": "미니 캐릭터 2~5명=설정2~5 이상 / 금 孔明=설정6 농후"
+          },
+          {
+            "label": "획득 매수 표시",
+            "value": "222 OVER=설정2 이상 / 456 OVER=설정4 이상 / 555·803 OVER=설정5 이상 / 666 OVER=설정6 농후"
+          }
+        ],
+        "sources": [
+          {
+            "title": "1geki 設定差",
+            "url": "https://1geki.jp/slot/l_paripikoumei/0/"
+          },
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5057"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-paripi-koumei/machine.png",
+      "alt": "스마스로 파리피 공명 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10518"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/309.9",
+        "label": "설정1 보너스"
+      },
+      {
+        "value": "4.2매/G",
+        "label": "순증(약)"
+      },
+      {
+        "value": "113.6%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "주기와 CZ",
+        "description": "1주기 약 32G(5의 배수 회가 CZ 찬스, 최대 20회)와 CZ 3종(삼가의 예·에이코의 시련·석병팔진)으로 보너스를 노린다. 천장은 1009G."
+      },
+      {
+        "phase": "STEP 02 · 보너스·ST",
+        "title": "치키치키 밤밤 보너스와 파티 타임",
+        "description": "보너스 100매 후 반드시 ST 파티 타임(15G+α·계속 약 73%). 보너스는 사기 고양 존 직격으로도 당첨된다."
+      },
+      {
+        "phase": "STEP 03 · 상위 구간",
+        "title": "시부야 결전과 究極孔明",
+        "description": "시부야 결전(4G·성공 약 84%)에 성공하면 상위 ST(계속 약 81%). 최상위 究極孔明(10G·약 91%)은 기대 약 3300매."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 파리피 공명 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "주기(약 32G/회) · 5의 배수 회가 CZ 찬스 · 최대 20회 천장"
+      },
+      "initialConnector": "CZ",
+      "initialAriaLabel": "보너스 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "보너스 약 33%",
+          "title": "삼가의 예",
+          "description": "7G/세트 · 3세트 돌파 시 농후",
+          "route": "보너스 노림",
+          "tone": "rush"
+        },
+        {
+          "rate": "보너스 약 50%",
+          "title": "에이코의 시련",
+          "description": "16G · 최종 G 저지 성공 시 농후",
+          "route": "보너스 노림",
+          "tone": "rush"
+        },
+        {
+          "rate": "보너스 약 85%",
+          "title": "석병팔진",
+          "description": "15G · 램프 4개 점등 시 보너스",
+          "route": "보너스 노림",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "보너스",
+      "rush": {
+        "eyebrow": "ST · 계속 약 73%",
+        "title": "파티 타임",
+        "detail": "치키치키 밤밤 보너스(100매) 후 반드시 돌입 · 15G+α"
+      },
+      "rushConnector": "ST 중 보너스",
+      "rushAriaLabel": "ST 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "2G",
+          "title": "바움바움 찬스(적 7)",
+          "description": "100~1000매 · 평균 200매",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "8G+α",
+          "title": "바움바움 러시(백 7)",
+          "description": "240매~ · 평균 400매",
+          "route": "상승",
+          "tone": "premium"
+        },
+        {
+          "rate": "계속 약 73%",
+          "title": "ST 계속",
+          "description": "보너스가 이어지면 연속",
+          "route": "↻ ST",
+          "tone": "rush"
+        }
+      ],
+      "secondaryConnector": "시부야 결전",
+      "secondaryRush": {
+        "eyebrow": "UPPER ST",
+        "title": "시부야 결전 → 超パーティータイム",
+        "detail": "시부야 결전 4G·성공 약 84% · 상위 ST 15G+α·계속 약 81%"
+      },
+      "secondaryRushConnector": "상위 구간",
+      "secondaryAriaLabel": "상위 구간 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "계속 약 91%",
+          "title": "究極孔明",
+          "description": "10G · 모든 보너스가 백 7\n기대 약 3300매",
+          "route": "최상위",
+          "tone": "premium"
+        },
+        {
+          "rate": "실패",
+          "title": "통상 복귀",
+          "description": "ST 駆け抜け 후 천장 428G",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 보너스간 1009G(설정 변경·駆け抜け 후 428G)와 20주기째. 엔딩 후 천하태평으로의 길을 거쳐 상위 ST 또는 究極孔明"
+    }
+  }
+}
