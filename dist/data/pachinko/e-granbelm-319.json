@@ -44,7 +44,7 @@
         "payoutBalls": 1050,
         "ratePercent": 49.5,
         "destination": null,
-        "confidence": "secondary",
+        "confidence": "official",
         "notes": []
       },
       {
@@ -52,7 +52,7 @@
         "payoutBalls": 1050,
         "ratePercent": 50.5,
         "destination": "RUSH(ST130回転)",
-        "confidence": "secondary",
+        "confidence": "official",
         "notes": []
       }
     ],
@@ -178,8 +178,8 @@
     "上乗せ時(超アドレナリンBOOST)は約1500個が37.5%で最多"
   ],
   "notes": [
-    "p-town 掲載の大当り割合画像(払い出し出玉・独自調査値)を直接読んで確認。メーカー公式ページとは未対照。",
-    "サンスリー公式の製品ガイドブックPDFは画像のみで本文を読めず未対照。",
+    "サンスリー(三洋物産サイト内)公式ガイドブックPDF(319ver.)の基本情報・ゲームフローを直接読んで確認: 約1/319・RUSH突入率約51%・継続率約77%・初回大当り1050個・初回大当り振分(通常49.5%/RUSH50.5%)・ジャッジ成功時(1500個50%/3000個以上37.5%/4500個以上12.5%)・BOOST上乗せ内訳(1500個以上50%/3000個以上25%/4500個以上25%)・裏RUSH(3000個以上87.5%/4500個以上12.5%)。",
+    "RUSH中の出玉割合(40/30/10/20%)はp-town掲載の大当り割合画像(独自調査値)で、公式のジャッジ成功時の比率(50/37.5/12.5%)と整合する。ST130回継続率(RESTART含む)約77%は公式。",
     "RUSH中のジャッジ発生1/62.0はp-town記載(右打ち中リーチ確率)で、大当り確率としては使っていない。"
   ],
   "sources": [
@@ -196,8 +196,14 @@
       "checkedAt": "2026-11-26"
     },
     {
-      "title": "サンスリー 公式製品ページ(ガイドブックPDF・本文未取得)",
+      "title": "サンスリー 公式製品ページ(ガイドブックPDF 基本情報・ゲームフロー)",
       "url": "https://www.sanyobussan.co.jp/products/pk_granbelm/",
+      "type": "official",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "title": "サンスリー 公式ガイドブックPDF 319ver.(번역 이미지 원본: 基本情報 3쪽·ゲームフロー 4쪽)",
+      "url": "https://www.sanyobussan.co.jp/products/pk_granbelm/pk_granbelm_guidebook_319_PC.pdf",
       "type": "official",
       "checkedAt": "2026-11-26"
     }
@@ -206,10 +212,7 @@
     "status": "needs-review",
     "checkedAt": "2026-11-26",
     "needsReviewFields": [
-      "nameKo",
-      "probabilities",
-      "payouts",
-      "rush"
+      "nameKo"
     ]
   },
   "visualGuide": {
@@ -220,6 +223,20 @@
       "credit": "P-WORLD 기종 데이터베이스",
       "sourceUrl": "https://www.p-world.co.jp/machine/database/10537"
     },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·돌입률·연속률",
+        "url": "./assets/images/official/granbelm-319/spec-ko.png",
+        "alt": "サンスリー 공식 가이드북 기본 정보 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "RUSH·상승·뒷 RUSH 흐름",
+        "url": "./assets/images/official/granbelm-319/flow-ko.png",
+        "alt": "サンスリー 공식 가이드북 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
     "keyStats": [
       {
         "value": "1/319.6",
