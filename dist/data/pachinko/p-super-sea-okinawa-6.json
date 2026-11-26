@@ -1,0 +1,137 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "p-super-sea-okinawa-6",
+  "officialNameJa": "Pスーパー海物語IN沖縄6",
+  "nameKo": "P 슈퍼 해이야기 IN 오키나와 6",
+  "aliases": ["沖海6", "沖縄6", "海物語沖縄6", "오키나와6"],
+  "modelCode": "Pスーパー海物語IN沖縄6 LTP",
+  "machineType": "pachinko",
+  "format": "P",
+  "maker": "三洋物産",
+  "brand": "SANYO",
+  "releaseDate": "2025-10-06",
+  "probabilities": { "base": "約1/319.6", "symbolHit": null, "charge": null, "highState": "約1/31.9", "rushHit": null },
+  "rush": {
+    "nameJa": "確変／ジンベェタイム",
+    "type": "確変ループ",
+    "entryRatePercent": 60,
+    "totalEntryRatePercent": 60,
+    "continuationRatePercent": 60,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": 100,
+    "gates": [
+      "確変大当りは次回大当りまで継続、通常大当り後は時短100回",
+      "確変中の2Rまたは沖海BONUS(10R確変)でジンベェタイムに突入すると、通常大当り後の時短が200回になる",
+      "ジンベェタイム中の時短は必ず200回転、トータル継続期待値は約79%(時短引き戻し含む)"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      { "label": "10R 통상 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 40, "destination": "시단 100회", "confidence": "official", "notes": ["헤소 대당첨"] },
+      { "label": "10R 확변 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 40, "destination": "확변(다음 대당첨까지)", "confidence": "official", "notes": ["헤소 대당첨"] },
+      { "label": "2R 확변 대당첨 60개", "payoutBalls": 60, "ratePercent": 20, "destination": "확변(다음 대당첨까지)", "confidence": "official", "notes": ["헤소 대당첨"] }
+    ],
+    "rush": [
+      { "label": "10R 통상 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 40, "destination": "시단 100회", "confidence": "official", "notes": ["전동 튤립 대당첨(진베에타임 돌입 전)"] },
+      { "label": "10R 확변 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 52, "destination": "확변(다음 대당첨까지)", "confidence": "official", "notes": ["전동 튤립 대당첨(진베에타임 돌입 전)", "10R 확변 중 1%는 진베에타임 돌입(오키나와 BONUS 포함)"] },
+      { "label": "2R 확변 대당첨 60개", "payoutBalls": 60, "ratePercent": 8, "destination": "확변 + 진베에타임 돌입", "confidence": "official", "notes": ["전동 튤립 대당첨(진베에타임 돌입 전)"] }
+    ],
+    "extraTables": [
+      {
+        "title": "전동 튤립 대당첨 배분 (진베에타임 돌입 후)",
+        "items": [
+          { "label": "10R 통상 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 40, "destination": "시단 200회", "confidence": "secondary", "notes": [] },
+          { "label": "10R 확변 대당첨 1500개", "payoutBalls": 1500, "ratePercent": 52, "destination": "확변(진베에타임 계속)", "confidence": "secondary", "notes": [] },
+          { "label": "2R 확변 대당첨 60개", "payoutBalls": 60, "ratePercent": 8, "destination": "확변(진베에타임 계속)", "confidence": "secondary", "notes": [] }
+        ]
+      }
+    ]
+  },
+  "border": { "spinsPer1000Yen": 17.6, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/4857", "checkedAt": "2026-11-26" },
+  "gameFlow": [
+    "通常時は約1/319.6の大当りを目指す",
+    "ヘソ大当りは通常40%・10R確変40%・2R確変20%、電チュー大当りは通常40%・10R確変52%・2R確変8%",
+    "確変は次回大当りまで継続、通常大当り後は時短100回",
+    "電サポ中の2R確変または沖海BONUSでジンベェタイムに突入すると、通常大当り後も時短200回が続く"
+  ],
+  "notes": [
+    "三洋物産 公式プレスリリース(2025-07-11)で名称・型式名・トップ導入日(2025-10-06)を確認。公式製品ページ『基本情報』『ゲームフロー』で約1/319・確変割合60%・10R 1500個・時短100or200回・ヘソ(40/40/20)・電チュー(40/52/8)・ジンベェタイム時短200回・トータル継続期待値約79%を直接読んで確認した。",
+    "ジンベェタイム突入後の電チュー配分(40/52/8)は公式ページに数値がなく、p-town 掲載の大当り割合画像(独自調査値)のみ。",
+    "p-town スペック表の『確変突入率』が『-』と『60%』の2行になっているのは、公式の確変割合60%に対応する。ヘソ・電チューとも確変合計は60%。",
+    "ミドルタイプ(甘デジではない)。確率の小数(1/319.6, 1/31.9)は p-town 記載で、公式の確率表記は約1/319。",
+    "ボーダーはメーカー公式値ではなく p-town 算出値。",
+    "한국어 번역 이미지는 공식 가이드북 PDF의 基本情報(3쪽)·ゲームフロー(4쪽)를 PhotoCraft로 덧입힌 것이며, 원본은 spec-source.jpg·flow-source.jpg로 보존. 기기 사진만 P-WORLD 기종 DB."
+  ],
+  "sources": [
+    { "title": "SANYO 公式プレスリリース(Pスーパー海物語IN沖縄6)", "url": "https://www.sanyobussan.co.jp/information/pdf/sanyo_press_release_20250711_2.pdf", "type": "official", "checkedAt": "2026-11-26" },
+    { "title": "SANYO 公式製品ページ(ガイドブックPDF 基本情報・ゲームフロー)", "url": "https://www.sanyobussan.co.jp/products/pk_supersea_okinawa6/", "type": "official", "checkedAt": "2026-11-26" },
+    { "title": "SANYO 公式ガイドブックPDF(번역 이미지 원본: 基本情報 3쪽·ゲームフロー 4쪽)", "url": "https://www.sanyobussan.co.jp/products/pk_supersea_okinawa6/pk_supersea_okinawa6_guidebook_PC.pdf", "type": "official", "checkedAt": "2026-11-26" },
+    { "title": "p-town 機種情報(スペック・大当り割合)", "url": "https://p-town.dmm.com/machines/4857", "type": "secondary", "checkedAt": "2026-11-26" },
+    { "title": "P-WORLD 機種データベース(機器写真)", "url": "https://www.p-world.co.jp/machine/database/10321", "type": "secondary", "checkedAt": "2026-11-26" }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-26",
+    "needsReviewFields": ["nameKo"]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/super-sea-okinawa-6/machine.png",
+      "alt": "SANYO P 슈퍼 해이야기 IN 오키나와 6 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10321"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·확변 비율·대당첨 내역",
+        "url": "./assets/images/official/super-sea-okinawa-6/spec-ko.png",
+        "alt": "SANYO 공식 가이드북 기본 정보 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "확변·진베에타임 흐름",
+        "url": "./assets/images/official/super-sea-okinawa-6/flow-ko.png",
+        "alt": "SANYO 공식 가이드북 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      { "value": "1/319.6", "label": "통상시 대당첨" },
+      { "value": "1/31.9", "label": "확변 중 대당첨" },
+      { "value": "60%", "label": "확변 비율" }
+    ],
+    "distributionCharts": [
+      { "title": "헤소 대당첨 배분", "source": "initial", "centerValue": "60%", "centerLabel": "확변" },
+      { "title": "전동 튤립 대당첨 배분 (진베에타임 돌입 전)", "source": "rush", "centerValue": "60%", "centerLabel": "확변" }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "P 슈퍼 해이야기 IN 오키나와 6 게임 진행 흐름",
+      "normal": { "eyebrow": "NORMAL", "title": "통상시", "detail": "대당첨 약 1/319.6 · 확변 비율은 헤소·전동 튤립 모두 60%" },
+      "initialConnector": "헤소 대당첨",
+      "initialAriaLabel": "헤소 대당첨 결과 3가지",
+      "initialOutcomes": [
+        { "rate": "40%", "title": "통상 대당첨", "description": "10R 1500개\n시단 100회 후 통상 복귀", "route": "↩ 시단 100회", "tone": "return" },
+        { "rate": "40%", "title": "10R 확변 대당첨", "description": "10R 1500개\n다음 대당첨까지 확변", "route": "확변", "tone": "rush" },
+        { "rate": "20%", "title": "2R 확변 대당첨", "description": "2R 60개\n다음 대당첨까지 확변", "route": "확변", "tone": "rush" }
+      ],
+      "mergeLabel": "60%로 확변",
+      "rush": { "eyebrow": "KAKUHEN", "title": "확변", "detail": "다음 대당첨까지 계속 · 당첨 약 1/31.9" },
+      "rushConnector": "확변 중 전동 튤립 대당첨",
+      "rushAriaLabel": "확변 중 전동 튤립 대당첨 결과 3가지",
+      "rushOutcomes": [
+        { "rate": "40%", "title": "통상 대당첨", "description": "10R 1500개\n시단 100회 후 통상 복귀", "route": "↩ 시단 100회", "tone": "return" },
+        { "rate": "52%", "title": "10R 확변 대당첨", "description": "10R 1500개\n확변 계속", "route": "↻ 확변 계속", "tone": "rush" },
+        { "rate": "8%", "title": "2R 확변 대당첨", "description": "2R 60개\n확변 계속 + 진베에타임 돌입", "route": "진베에타임", "tone": "premium" }
+      ],
+      "loopNote": "진베에타임에 돌입하면 종료될 때까지 통상 대당첨 후에도 시단 200회가 이어지고, 토털 계속 기대값은 약 79%(시단 중 재당첨 포함)"
+    },
+    "steps": [
+      { "phase": "STEP 01 · 통상시", "title": "대당첨 노리기", "description": "약 1/319.6 확률의 대당첨을 노립니다. 10R은 1500개, 2R은 60개를 얻습니다." },
+      { "phase": "STEP 02 · 대당첨 판정", "title": "확변 60% / 통상 40%", "description": "헤소 대당첨은 통상 40%·10R 확변 40%·2R 확변 20%입니다. 확변이면 다음 대당첨까지 이어지고, 통상이면 시단 100회 후 통상으로 돌아갑니다." },
+      { "phase": "STEP 03 · 확변과 진베에타임", "title": "확변 중 전동 튤립 약 1/31.9", "description": "확변 중 전동 튤립 대당첨은 통상 40%·10R 확변 52%·2R 확변 8%입니다. 2R 확변 또는 오키해 BONUS로 진베에타임에 돌입하면 종료될 때까지 통상 대당첨 후에도 시단 200회가 이어집니다." }
+    ]
+  }
+}

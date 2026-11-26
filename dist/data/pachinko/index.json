@@ -4,6 +4,7 @@
   "category": "pachinko",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "p-super-sea-okinawa-6", "file": "p-super-sea-okinawa-6.json", "releaseDate": "2025-10-06" },
     { "id": "e-granbelm-319", "file": "e-granbelm-319.json", "releaseDate": "2026-11-02" },
     { "id": "e-sao-alicization-yozora", "file": "e-sao-alicization-yozora.json", "releaseDate": "2026-08-03" },
     { "id": "e-yokai-watch", "file": "e-yokai-watch.json", "releaseDate": "2026-11-02" },
