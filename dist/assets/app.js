@@ -629,6 +629,7 @@ function visualGameFlow(machine) {
         ` : ""}
         <p class="flow-loop-note"><span aria-hidden="true">↖</span> ${escapeHtml(flow.loopNote)}</p>
       </section>
+      ${officialImages.some((item) => item.url) ? `
       <section class="official-flow-gallery" aria-label="${escapeHtml(machine.maker)} 공식 게임 안내 이미지">
         <div class="official-gallery-heading">
           <div><h4>${escapeHtml(machine.maker)} 공식 이미지 · 한국어 번역본</h4></div>
@@ -645,7 +646,19 @@ function visualGameFlow(machine) {
           `).join("")}
         </div>
         <p class="official-translation-note">원본 이미지의 수치와 구성은 유지하고 일본어 핵심 안내를 PhotoCraft로 한국어 덧입힘 처리한 번역본입니다.</p>
-      </section>
+      </section>` : `
+      <section class="official-flow-gallery" aria-label="게임 진행 단계">
+        <div class="official-gallery-heading">
+          <div><h4>게임 진행 단계</h4></div>
+        </div>
+        <div class="official-gallery-grid is-text-only">
+          ${guide.steps.map((step) => `
+            <figure>
+              <figcaption><small>${escapeHtml(step.phase)}</small><strong>${escapeHtml(step.title)}</strong><p>${escapeHtml(step.description || "")}</p></figcaption>
+            </figure>
+          `).join("")}
+        </div>
+      </section>`}
       <div class="distribution-charts">
         ${distributionCharts.map((chart) => donutChart(
           chart.title,
