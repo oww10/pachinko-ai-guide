@@ -181,3 +181,15 @@ python3 scripts/make-card-thumbs.py   # 기존 썸네일 변동 없는지 git st
 데스크톱은 분기 카드를 가로로 비교하고 **640px 이하에서는 세로 한 열**로 읽는다. 긴 일본어 명칭, 비율, 이미지 캡션이 잘리지 않는지 두 폭에서 확인한다. 기기 이미지는 세로형, RUSH 이미지는 4:3 또는 16:9를 권장하며 CSS로 원본 비율을 깨지 않는다. 새 기종마다 별도 HTML·CSS를 만들지 않는다.
 
 현재 공통 UI의 갤러리 제목과 출처 문구는 **공식 이미지**를 전제로 한다. 전문 매체 이미지를 내부 검토에 쓰더라도 공식 이미지라고 표기하지 않는다.
+
+## 부록 B. 슬롯 기종 추가 요령
+
+슬롯은 `machineType: "slot"`이고 `settings`(설정 1~6의 CZ 합산·AT 초당첨·기계할), `slot`(순증·베이스·천장), `analysis`(비공식 해석)를 쓴다. 기준 구현은 `l-tokyo-ghoul`, 최근 예시는 `l-lycoris-recoil`·`l-ragnador`·`l-kabaneri-umito`. 규격은 [디자인 시스템](machine-detail-design-system.md) 참조.
+
+1. **p-town 기종 페이지를 끝까지 읽는다.** 슬롯은 설정별 CZ·AT·기계할 표가 없는 경우가 많다(기계할은 범위만, 설정별 값은 개별 항목 표). 요약이 "記載なし"라고 해도 본문에 천장·설정 판별이 있다.
+2. **설정별 표는 분석 사이트 2곳 이상을 직접 읽어 교차 확인한다.** 후보: なな徹(`nana-press.com/kaiseki/machine/<번호>/`의 스펙 정보 페이지), 1geki.jp, パチセブン, ちょんぼりすた. 검색 요약의 숫자는 근거로 쓰지 않는다. 사이트 간 값이 다르면 다수결로 정하되 `notes`에 차이를 적는다(예: 라그나도르 설정6 AT 1/258.3 vs 1/256.3). p-town의 기계할 범위(최소·최대)와 양끝이 일치하는지 확인한다.
+3. **공개 값이 없는 열은 추측하지 않고 `"—"`로 둔다.** 이 경우 `slot.settingsPrimaryLabel`로 열 제목에 "(미공개)"를 표시하고(`CZ 합산 (미공개)`), `slot.czEntry`에 "자료 없음"을 적는다. `czProbability`가 `"—"`이면 `CZ까지 투자` 계산은 자동으로 `—`가 된다. 정의가 불명확한 값(예: 카바네리의 '初当り')은 설정 표에 넣지 말고 `analysis` 표에 따로 둔다.
+4. **P-WORLD 사진 ID 찾기**: 기종 페이지 제목은 UTF-8이므로 `iconv` 없이 읽는다. 범위 스캔 예: `seq 10381 2 10545 | xargs -P 12 -I{} sh -c 't=$(curl -sL -m 12 -A "$UA" "https://www.p-world.co.jp/machine/database/{}" | grep -oE "<title>[^<]*" | head -1 | cut -c8-60); echo "{} $t"'` 후 기종명으로 grep. 사진은 슬롯도 `scripts/fetch-pworld-machine-photo.py`로 받는다(폴더를 먼저 만든다). `zsh`에서는 `set -- $var`가 단어 분리를 하지 않으므로 배열을 쓴다.
+5. `keyStats` 값은 짧게 쓴다(`6.0매/G` + 라벨 `순증(약)`). 값이 길면 핵심 숫자 카드에서 줄바꿈된다.
+6. 공식 스펙 이미지를 구하지 못하면 `translatedImages: []`로 두고 `steps`를 채운다(텍스트 "게임 진행 단계" 카드로 표시). 원그래프(`distributionCharts`)는 배분 데이터가 없으므로 `[]`.
+7. `slots/index.json`의 `machines` 맨 위에 등록하고 `updatedAt`을 갱신한다. 썸네일은 `scripts/make-card-thumbs.py`.

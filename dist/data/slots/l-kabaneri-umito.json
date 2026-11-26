@@ -1,0 +1,508 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-kabaneri-umito",
+  "nameKo": "스마스로 갑철성의 카바네리 해문결전",
+  "officialNameJa": "スマスロ 甲鉄城のカバネリ 海門(うなと)決戦",
+  "modelCode": "L 甲鉄城のカバネリ 海門決戦 XX",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "サミー",
+  "brand": "SAMMY",
+  "releaseDate": "2026-03-02",
+  "aliases": [
+    "カバネリ海門決戦",
+    "Lカバネリ",
+    "スマスロカバネリ",
+    "스마트 슬롯 카바네리",
+    "카바네리 우나토"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 ST 1/422.5",
+    "cz": "—",
+    "at": "설정1 ST 1/422.5"
+  },
+  "rush": {
+    "nameJa": "KABANERI OF THE IRON FORTRESS／景之ST",
+    "type": "ST형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": 76,
+    "spins": 25,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "ST는 25G(공투 22G + 각성 3G)·계속 기대 약 76%",
+      "상위 ST 景之ST는 25G·계속 약 83%, 真景之ST 계속 약 89%",
+      "裏景之ST는 기대 약 3600매(통상 복귀까지의 일련 흐름)",
+      "海門回想(70G) 후 복수의 불꽃에서 프리즈 발생 시 真/裏景之ST, 미발생 시 景之ST"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · ST형 AT(카바네리)",
+    "netIncrease": "보너스·ST 중 약 6.0매/G",
+    "baseGames": "50매당 약 31.4G",
+    "czEntry": "자료 없음 (설정별 CZ 확률 미공개)",
+    "czBreakRate": "무명 약 36% · 이코마 약 46% · 동람 약 78%",
+    "initialATCoins": "에피소드 보너스 150매",
+    "primaryCeilingLabel": "천장 (G수·주기)",
+    "settingsPrimaryLabel": "CZ 합산 (미공개)",
+    "czCeiling": "996G+α 또는 6주기째",
+    "atCeiling": "천장 도달 시 에피소드 보너스(ST 농후)",
+    "resetCeiling": "596G / 4주기 (설정 변경·ST 駆け抜け 후)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/422.5",
+      "payoutRate": "97.5%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/405.9",
+      "payoutRate": "98.5%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "—",
+      "atProbability": "1/398.7",
+      "payoutRate": "100.8%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/357.2",
+      "payoutRate": "106.0%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/332.6",
+      "payoutRate": "111.0%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/318.5",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 카바네 포인트의 주기 추첨과 찬스메(무명·이코마·카바네 등)로 CZ·보너스를 노린다.",
+    "CZ는 무명 CZ(10G)·이코마 CZ(최대 20G)이고, 두 포인트가 동시에 MAX면 동람 CZ(10G)에 들어간다.",
+    "초당첨은 약 50%가 에피소드 보너스(ST 농후), 나머지가 슌조 보너스(20G·ST 기대 약 20%)다.",
+    "ST(25G·계속 약 76%) 중 보너스로 카바네리 어택(상승 특화 4G·초는 6G)과 카바네리 보너스를 소화한다.",
+    "海門回想(70G)을 거쳐 복수의 불꽃에서 景之ST·真景之ST·裏景之ST로 갈린다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 ST 확률·기계할은 パチセブン과 ちょんぼりすた가 일치한다. CZ 합산 확률의 설정별 값은 어느 곳에도 공개돼 있지 않아 '—'로 표시했다(p-town에도 설정별 CZ·AT 표가 없음).",
+    "초당첨('初当り') 확률은 분석 사이트 표기이며 정의(CZ·보너스 포함 여부)가 불명확해 설정 표에는 넣지 않고 해석 정보에 따로 적었다.",
+    "제조사 공식 스펙은 확인하지 못했다. 기계할 범위 97.5~114.9%는 p-town 기재와 일치한다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロ 甲鉄城のカバネリ 海門決戦)",
+      "url": "https://p-town.dmm.com/machines/4930",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기계할 범위",
+        "천장·주기",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 設定別スペック",
+      "url": "https://pachiseven.jp/machines/7326",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 초당첨·ST·출옥률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "ちょんぼりすた カバネリ 解析",
+      "url": "https://chonborista.com/slot/sammy-slot/248689/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 ST·출옥률",
+        "천장",
+        "게임 플로우"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10399",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·ちょんぼりすた 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "설정별 초당첨·ST 확률",
+        "kind": "mode",
+        "intro": "분석 사이트의 '初当り'·'ST' 표기 값입니다. '初当り'의 정의(CZ·보너스 포함 여부)는 확인하지 못했습니다.",
+        "tables": [
+          {
+            "caption": "설정별 확률",
+            "columns": [
+              "설정",
+              "초당첨(初当り)",
+              "ST 확률",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/254.2",
+                "1/422.5",
+                "97.5%"
+              ],
+              [
+                "설정2",
+                "1/242.3",
+                "1/405.9",
+                "98.5%"
+              ],
+              [
+                "설정3",
+                "1/239.6",
+                "1/398.7",
+                "100.8%"
+              ],
+              [
+                "설정4",
+                "1/214.0",
+                "1/357.2",
+                "106.0%"
+              ],
+              [
+                "설정5",
+                "1/203.2",
+                "1/332.6",
+                "111.0%"
+              ],
+              [
+                "설정6",
+                "1/195.1",
+                "1/318.5",
+                "114.9%"
+              ]
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "パチセブン 設定別スペック",
+            "url": "https://pachiseven.jp/machines/7326"
+          },
+          {
+            "title": "ちょんぼりすた 解析",
+            "url": "https://chonborista.com/slot/sammy-slot/248689/"
+          }
+        ]
+      },
+      {
+        "title": "천장과 주기",
+        "kind": "mode",
+        "intro": "G수 천장과 주기 천장이 있고, 설정 변경·ST 駆け抜け·景之ST 후에는 단축됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "단축 시"
+            ],
+            "rows": [
+              [
+                "통상 G수",
+                "996G+α",
+                "596G"
+              ],
+              [
+                "주기",
+                "6주기째",
+                "4주기"
+              ],
+              [
+                "상위 CZ 실패 후",
+                "최대 250G+α",
+                "—"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "에피소드 보너스 당첨(ST 농후)"
+          },
+          {
+            "label": "리셋",
+            "value": "설정 변경 시 596G·4주기로 단축",
+            "note": "설정 변경 시 기계할 100% 이상"
+          },
+          {
+            "label": "ST 종료 후",
+            "value": "20G간 카바네리 고확",
+            "note": "주기 도달 기대. 1·2주기 도달 시 보너스 기대도도 높음"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4930"
+          },
+          {
+            "title": "パチセブン 設定別スペック",
+            "url": "https://pachiseven.jp/machines/7326"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "p-town에 기재된 설정별 수치와 시사 요소입니다.",
+        "tables": [
+          {
+            "caption": "설정별 수치",
+            "columns": [
+              "항목",
+              "설정1",
+              "설정2",
+              "설정3",
+              "설정4",
+              "설정5",
+              "설정6"
+            ],
+            "rows": [
+              [
+                "하단 벨",
+                "1/121.1",
+                "1/114.4",
+                "1/112.8",
+                "1/106.2",
+                "1/104.2",
+                "1/99.1"
+              ],
+              [
+                "주기 전조 실패 시 검은 연기 포인트 당첨률",
+                "약 50%",
+                "약 50%",
+                "약 56%",
+                "약 63%",
+                "약 69%",
+                "약 76%"
+              ],
+              [
+                "주기 보너스 당첨률(3주기째)",
+                "18.4%",
+                "23.8%",
+                "21.1%",
+                "28.5%",
+                "32.4%",
+                "37.1%"
+              ],
+              [
+                "주기 보너스 당첨률(4주기째)",
+                "33.6%",
+                "35.2%",
+                "36.3%",
+                "40.2%",
+                "43.4%",
+                "46.9%"
+              ],
+              [
+                "복수의 불꽃 성공 시 眞景之/裏景之",
+                "93.8/6.2",
+                "93.8/6.2",
+                "93.4/6.6",
+                "89.1/10.9",
+                "75.0/25.0",
+                "66.8/33.2"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "서미 트로피 색",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 기린 무늬=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "ST 종료 화면",
+            "value": "수영복=설정6 농후"
+          },
+          {
+            "label": "카바네리 보너스 중 캐릭터",
+            "value": "여성=짝수 설정 / 남성=설정3·5 / 미마=설정4 이상 농후"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報(설정 시사)",
+            "url": "https://p-town.dmm.com/machines/4930"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-kabaneri-umito/machine.png",
+      "alt": "스마스로 갑철성의 카바네리 해문결전 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10399"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/422.5",
+        "label": "설정1 ST 초당첨"
+      },
+      {
+        "value": "6.0매/G",
+        "label": "보너스·ST 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "주기와 CZ",
+        "description": "카바네 포인트의 주기 추첨과 찬스메로 CZ(무명·이코마·동람)와 보너스를 노린다. 천장은 996G+α 또는 6주기째."
+      },
+      {
+        "phase": "STEP 02 · ST",
+        "title": "카바네리 ST 25G",
+        "description": "초당첨의 약 50%는 에피소드 보너스(ST 농후), 나머지는 슌조 보너스(ST 기대 약 20%). ST는 25G·계속 약 76%."
+      },
+      {
+        "phase": "STEP 03 · 상위 ST",
+        "title": "景之ST·真景之ST·裏景之ST",
+        "description": "ST 중 보너스는 카바네리 어택으로 이어진다. 海門回想 후 복수의 불꽃에서 景之ST(약 83%)·真景之ST(약 89%)·裏景之ST(기대 약 3600매)로 갈린다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 갑철성의 카바네리 해문결전 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "카바네 포인트 주기 · 찬스메 · 규정 G수로 CZ와 보너스를 노림"
+      },
+      "initialConnector": "CZ · 보너스 당첨",
+      "initialAriaLabel": "ST 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "성공 약 36%",
+          "title": "무명 CZ",
+          "description": "10G · 소역으로 카바네 격파\n최종 저지",
+          "route": "ST 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 46%",
+          "title": "이코마 CZ",
+          "description": "최대 20G · 라이프제",
+          "route": "ST 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 78%",
+          "title": "동람 CZ",
+          "description": "무명·이코마 포인트\n동시 MAX로 돌입 · 10G",
+          "route": "ST 진입",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "ST 진입",
+      "rush": {
+        "eyebrow": "ST · 약 6.0매/G",
+        "title": "KABANERI OF THE IRON FORTRESS",
+        "detail": "25G(공투 22G + 각성 3G) · 계속 기대 약 76% · 찬스메 확률 1/9.9"
+      },
+      "rushConnector": "ST 중 보너스",
+      "rushAriaLabel": "ST 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "20G",
+          "title": "슌조 보너스",
+          "description": "초당첨 전용\nST 기대 약 20%",
+          "route": "ST 노림",
+          "tone": "rush"
+        },
+        {
+          "rate": "150매",
+          "title": "에피소드 보너스",
+          "description": "천장·초당첨 일부\nST 농후",
+          "route": "ST 돌입",
+          "tone": "premium"
+        },
+        {
+          "rate": "4G~6G",
+          "title": "카바네리 어택",
+          "description": "상승 특화\n300매 상승 시 약 50%로 츠라누키 상승(최대 3000매)",
+          "route": "상승",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "海門回想 · 상위 ST",
+      "secondaryRush": {
+        "eyebrow": "UPPER ST",
+        "title": "景之ST · 真景之ST · 裏景之ST",
+        "detail": "景之 25G·약 83% / 真景之 약 89% / 裏景之 기대 약 3600매"
+      },
+      "secondaryRushConnector": "복수의 불꽃 결과",
+      "secondaryAriaLabel": "복수의 불꽃 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "프리즈 발생",
+          "title": "真景之ST / 裏景之ST",
+          "description": "설정4 이상일수록 裏 비율 상승\n(설정6 33.2%)",
+          "route": "상위 ST",
+          "tone": "premium"
+        },
+        {
+          "rate": "프리즈 없음",
+          "title": "景之ST",
+          "description": "매 세트 카바네리 고확",
+          "route": "ST 계속",
+          "tone": "rush"
+        }
+      ],
+      "loopNote": "ST 駆け抜け·景之ST 후에는 천장 596G·4주기로 단축. 설정별 CZ 합산 확률은 공개 자료가 없어 표시하지 않음"
+    }
+  }
+}
