@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-toaru3",
+  "officialNameJa": "eとある魔術の禁書目録3",
+  "nameKo": "e 어떤 마술의 금서목록 3",
+  "aliases": ["とある3", "禁書目録3", "금서목록3", "토아루3"],
+  "modelCode": "eとある魔術の禁書目録3RHZ",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "藤商事",
+  "brand": "Fuji Shoji",
+  "releaseDate": "2026-11-02",
+  "probabilities": { "base": "1/348", "symbolHit": null, "charge": null, "highState": null, "rushHit": "1/99(前半)・1/128(後半)" },
+  "rush": { "nameJa": "LT（LIMIT BREAK CHANCE／ヒーローズラッシュ／LAST CHANCE）", "type": "LT・ST 131回転", "entryRatePercent": 50, "totalEntryRatePercent": 50, "continuationRatePercent": 75, "spins": 131, "remainingHolds": null, "timeShortSpins": null, "gates": ["大当り後50%でST突入", "ST前半30回→ST後半100回→最終回転1回の合計131回転", "TOTAL継続率約75%は前半約26%・後半約54%・最終回転約25%の合算値"] },
+  "payouts": { "basis": "払い出し", "initial": [], "rush": [] },
+  "border": { "spinsPer1000Yen": 17.3, "exchange": "4엔(등가)", "source": "p-town", "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준", "sourceUrl": "https://p-town.dmm.com/machines/5102", "checkedAt": "2026-11-26" },
+  "gameFlow": [
+    "液晶に数字図柄が揃う当選確率は1/348",
+    "大当り後の50%でST（LT）に突入",
+    "ST前半30回(LIMIT BREAK CHANCE)→ST後半100回(ヒーローズラッシュ)→最終回転1回(LAST CHANCE)、合計131回転",
+    "TOTAL継続率は約75%",
+    "大当り出玉は1,500個を基本に、特電作動口経由の大当り2回分3,000個・3回分4,500個・4回分6,000個・5回分以上7,500個以上（いずれもV入賞が条件）"
+  ],
+  "notes": ["確率・ST突入率・継続率・賞球・出玉区分は藤商事公式製品ページで確認済み。", "ST前半1/99・後半1/128・最終回転1/4の確率とボーダーはp-town掲載値で、公式ページには記載がない。", "出玉の振分け比率は公式に記載がないため分配グラフは作成しない。"],
+  "sources": [
+    { "title": "藤商事 公式製品ページ(スペック)", "url": "https://www.fujimarukun.co.jp/products/e_toaru3/", "type": "official", "checkedAt": "2026-11-26" },
+    { "title": "p-town 機種情報(LT確率・ボーダー)", "url": "https://p-town.dmm.com/machines/5102", "type": "secondary", "checkedAt": "2026-11-26" }
+  ],
+  "verification": { "status": "needs-review", "checkedAt": "2026-11-26", "needsReviewFields": ["nameKo", "probabilities.base", "probabilities.rushHit", "payouts"] },
+  "visualGuide": {
+    "mainImage": { "url": "./assets/images/official/e-toaru3/machine.png", "alt": "藤商事 e 어떤 마술의 금서목록 3 파칭코 기기 외관", "caption": "기기 외관", "credit": "藤商事 공식 製品ページ", "sourceUrl": "https://www.fujimarukun.co.jp/products/e_toaru3/" }
+  }
+}

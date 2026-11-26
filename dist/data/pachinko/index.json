@@ -1,9 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-26",
   "category": "pachinko",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "e-toaru3", "file": "e-toaru3.json", "releaseDate": "2026-11-02" },
     { "id": "e-rezero-onigakari-2", "file": "e-rezero-onigakari-2.json", "releaseDate": "2026-10-05" },
     { "id": "e-garo-12-ogon-kishi-kyokugen", "file": "e-garo-12-ogon-kishi-kyokugen.json", "releaseDate": "2025-08-04" },
     { "id": "e-tokyo-ghoul-super-deka-cho-ichigeki", "file": "e-tokyo-ghoul-super-deka-cho-ichigeki.json", "releaseDate": "2026-06-08" },
