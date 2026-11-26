@@ -1,0 +1,485 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-sao-ggo",
+  "nameKo": "L 소드 아트 온라인 얼터너티브 건게일 온라인",
+  "officialNameJa": "L ソードアート・オンライン オルタナティブ ガンゲイル・オンライン",
+  "modelCode": "Lガンゲイル・オンラインMD",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "京楽",
+  "brand": "KYORAKU",
+  "releaseDate": "2026-11-02",
+  "aliases": [
+    "SAO GGO",
+    "スマスロGGO",
+    "L GGO",
+    "건게일 온라인",
+    "스마트 슬롯 SAO GGO"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 ST 1/521.7",
+    "cz": "—",
+    "at": "설정1 ST 1/521.7"
+  },
+  "rush": {
+    "nameJa": "スクワッドジャム／イカれたレン",
+    "type": "보너스 경유 ST형",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": 77,
+    "spins": 25,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "보너스(BIG 40G·REG 20G) 후 CZ 예스 맘 성공 시 ST로, ST 기대 약 50%",
+      "SJ1(25G·계속 약 70%) → SAO 실격자(50G) → SJ2(30G·약 77%)",
+      "상위 ST 이카레타 렌은 8G·계속 약 85%·순증 약 7.1매/G·기대 약 3600매"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 보너스 경유 ST형",
+    "netIncrease": "보너스 약 3.4매/G · 상위 ST 약 7.1매/G",
+    "baseGames": "50매당 약 31G",
+    "czEntry": "자료 없음 (설정별 CZ 확률 미공개)",
+    "czBreakRate": "예스 맘 ST 기대 약 50%",
+    "initialATCoins": "BIG 약 130매 / REG 약 70매",
+    "primaryCeilingLabel": "천장 (보너스간)",
+    "czCeiling": "보너스간 975G+α / 스루 6회 후 7회째",
+    "atCeiling": "천장 도달 시 보너스·ST 당첨",
+    "resetCeiling": "보너스간 300G+α / 스루 2회 (설정 변경 시)",
+    "settingsPrimaryLabel": "CZ 합산 (미공개)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/521.7",
+      "payoutRate": "97.9%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/510.4",
+      "payoutRate": "98.8%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "—",
+      "atProbability": "1/486.6",
+      "payoutRate": "100.9%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/445.3",
+      "payoutRate": "104.2%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/405.0",
+      "payoutRate": "109.7%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/392.6",
+      "payoutRate": "114.5%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 보너스(BIG 40G·REG 20G)와 CZ 예스 맘(10G+α)으로 ST를 노린다.",
+    "보너스 후 CZ 추첨에 성공하면 ST 스쿼드 잼 SJ1(25G·계속 약 70%)에 들어간다.",
+    "SJ1 → SAO 실격자(50G) → SJ2(30G·약 77%)로 이어지고, 상위 ST 이카레타 렌(8G·계속 약 85%·기대 약 3600매)을 노린다.",
+    "건게일 스톰(적 7 정렬 1/8.0)과 건게일 보너스(순증 약 7.1매/G)로 매수를 늘린다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 보너스·ST 확률은 なな徹·1geki.jp가 일치하고 기계할은 なな徹만 기재(p-town 범위 97.9~114.5%와 양끝 일치). 설정별 CZ 합산 확률은 어디에도 공개돼 있지 않아 '—'로 표시했다.",
+    "ST 확률 열에는 'SJ(스쿼드 잼)' 확률을 넣었고, 보너스 초당첨(引き戻し 포함)은 해석 정보 표에 따로 적었다.",
+    "제조사 공식 스펙은 확인하지 못했다. なな徹 기준 판명된 설정 차이는 보너스·SJ 확률 정도이며 설정 시사 연출은 조사 중이다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(L SAO GGO)",
+      "url": "https://p-town.dmm.com/machines/5073",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기계할 범위",
+        "천장",
+        "게임성",
+        "설정 차이 표"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1244/40110/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 보너스·ST·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定判別まとめ",
+      "url": "https://nana-press.com/kaiseki/machine/1244/40121/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 확률",
+        "천국 선택률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・設定判別",
+      "url": "https://1geki.jp/slot/l_sao_ggo/0/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 보너스·ST",
+        "보상 획득 시 보너스·CZ 당첨률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10535",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "설정별 보너스·ST 확률",
+        "kind": "mode",
+        "intro": "보너스 초당첨은 引き戻し를 포함한 합산값이며, ST는 스쿼드 잼(SJ) 확률입니다.",
+        "tables": [
+          {
+            "caption": "설정별 확률",
+            "columns": [
+              "설정",
+              "보너스 초당첨",
+              "ST(SJ) 확률",
+              "천국 선택률",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/192.0",
+                "1/521.7",
+                "21.9%",
+                "97.9%"
+              ],
+              [
+                "설정2",
+                "1/189.2",
+                "1/510.4",
+                "23.0%",
+                "98.8%"
+              ],
+              [
+                "설정3",
+                "1/180.9",
+                "1/486.6",
+                "24.6%",
+                "100.9%"
+              ],
+              [
+                "설정4",
+                "1/168.6",
+                "1/445.3",
+                "28.1%",
+                "104.2%"
+              ],
+              [
+                "설정5",
+                "1/155.4",
+                "1/405.0",
+                "31.3%",
+                "109.7%"
+              ],
+              [
+                "설정6",
+                "1/153.9",
+                "1/392.6",
+                "31.6%",
+                "114.5%"
+              ]
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/1244/40110/"
+          },
+          {
+            "title": "1geki 設定差",
+            "url": "https://1geki.jp/slot/l_sao_ggo/0/"
+          }
+        ]
+      },
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "보너스간 G수 천장과 보너스 스루 횟수 천장이 있고, 설정 변경·ST 駆け抜け 후에는 단축됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시"
+            ],
+            "rows": [
+              [
+                "보너스간",
+                "975G+α",
+                "300G+α"
+              ],
+              [
+                "보너스 스루",
+                "6회(7회째가 천장)",
+                "2회(3회째가 천장)"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "보너스 당첨 · ST 당첨"
+          },
+          {
+            "label": "ST 駆け抜け 시",
+            "value": "스루 2회로 단축"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5073"
+          }
+        ]
+      },
+      {
+        "title": "설정 차이 표",
+        "kind": "condition",
+        "intro": "1geki.jp와 p-town에 공통으로 기재된 설정별 수치입니다.",
+        "tables": [
+          {
+            "caption": "보상 획득 시 보너스·CZ 당첨률",
+            "columns": [
+              "설정",
+              "보너스",
+              "CZ(예스 맘)"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "14.8%",
+                "5.1%"
+              ],
+              [
+                "설정2",
+                "15.2%",
+                "5.5%"
+              ],
+              [
+                "설정3",
+                "15.6%",
+                "5.9%"
+              ],
+              [
+                "설정4",
+                "19.9%",
+                "7.8%"
+              ],
+              [
+                "설정5",
+                "23.4%",
+                "9.4%"
+              ],
+              [
+                "설정6",
+                "25.0%",
+                "9.8%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "캐릭터 카드",
+            "value": "금=설정6 농후 / 적·은도 고설정 찬스",
+            "note": "サテライトスキャン 단말의 설정 시사 패턴은 조사 중"
+          }
+        ],
+        "sources": [
+          {
+            "title": "1geki 設定差",
+            "url": "https://1geki.jp/slot/l_sao_ggo/0/"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5073"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-sao-ggo/machine.png",
+      "alt": "L 소드 아트 온라인 얼터너티브 건게일 온라인 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10535"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/521.7",
+        "label": "설정1 ST 초당첨"
+      },
+      {
+        "value": "7.1매/G",
+        "label": "상위 ST 순증(약)"
+      },
+      {
+        "value": "114.5%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "보너스와 CZ",
+        "description": "BIG(40G·약 130매)·REG(20G·약 70매) 보너스와 CZ 예스 맘(10G+α)으로 ST를 노린다. 천장은 보너스간 975G+α."
+      },
+      {
+        "phase": "STEP 02 · ST",
+        "title": "스쿼드 잼 SJ1 → SJ2",
+        "description": "SJ1(25G·계속 약 70%) → SAO 실격자(50G) → SJ2(30G·약 77%)로 이어진다."
+      },
+      {
+        "phase": "STEP 03 · 상위 ST",
+        "title": "이카레타 렌",
+        "description": "8G·계속 약 85%·순증 약 7.1매/G·기대 약 3600매. 건게일 스톰(1/8.0)과 건게일 보너스로 매수를 늘린다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "L 소드 아트 온라인 얼터너티브 건게일 온라인 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "보너스와 CZ로 ST를 노림 · 천장 보너스간 975G+α"
+      },
+      "initialConnector": "보너스 · CZ",
+      "initialAriaLabel": "ST 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "40G · 약 130매",
+          "title": "BIG",
+          "description": "순증 약 3.4매/G\n이후 CZ 추첨",
+          "route": "ST 노림",
+          "tone": "rush"
+        },
+        {
+          "rate": "20G · 약 70매",
+          "title": "REG",
+          "description": "순증 약 3.4매/G\n이후 CZ 추첨",
+          "route": "ST 노림",
+          "tone": "rush"
+        },
+        {
+          "rate": "ST 기대 약 50%",
+          "title": "CZ 예스 맘",
+          "description": "10G+α · 훈련 대기 → 훈련",
+          "route": "ST 진입",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "ST 진입",
+      "rush": {
+        "eyebrow": "ST",
+        "title": "스쿼드 잼 SJ1",
+        "detail": "25G · 계속 약 70% · 실패해도 SAO 실격자(50G) 거쳐 SJ2(30G·약 77%)"
+      },
+      "rushConnector": "SJ 결과",
+      "rushAriaLabel": "SJ 결과 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "계속 약 70%",
+          "title": "SJ1 성공",
+          "description": "ST 계속",
+          "route": "↻ ST",
+          "tone": "rush"
+        },
+        {
+          "rate": "50G",
+          "title": "SAO 실격자",
+          "description": "SJ1 실패 후 이행\nSJ2 부활 기회",
+          "route": "SJ2",
+          "tone": "reset"
+        },
+        {
+          "rate": "계속 약 77%",
+          "title": "SJ2",
+          "description": "30G",
+          "route": "↻ ST",
+          "tone": "rush"
+        }
+      ],
+      "secondaryConnector": "상위 ST",
+      "secondaryRush": {
+        "eyebrow": "UPPER ST · 약 7.1매/G",
+        "title": "이카레타 렌",
+        "detail": "8G · 계속 약 85% · 기대 약 3600매"
+      },
+      "secondaryRushConnector": "상위 ST 중",
+      "secondaryAriaLabel": "상위 ST 중 주요 분기 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "적 7 정렬 1/8.0",
+          "title": "건게일 스톰",
+          "description": "100~3000매 출옥",
+          "route": "특화",
+          "tone": "premium"
+        },
+        {
+          "rate": "순증 약 7.1매/G",
+          "title": "건게일 보너스",
+          "description": "포인트 MAX로 상승",
+          "route": "상승",
+          "tone": "rush"
+        }
+      ],
+      "loopNote": "천국 선택률은 설정 1 21.9% ~ 설정 6 31.6%. ST 駆け抜け 후 천장은 스루 2회로 단축"
+    }
+  }
+}

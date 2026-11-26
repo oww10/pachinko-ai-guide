@@ -1,0 +1,488 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-garo-yami",
+  "nameKo": "L 가로 어둠을 비추는 자",
+  "officialNameJa": "L牙狼 闇を照らす者",
+  "modelCode": "L牙狼闇を照らす者CJ",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "サンセイR&D",
+  "brand": "SANSEI R&D",
+  "releaseDate": "2026-11-02",
+  "aliases": [
+    "牙狼",
+    "Lガロ",
+    "スマスロ牙狼",
+    "스마트 슬롯 가로",
+    "가로 어둠을 비추는 자"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-26",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 보너스 1/291.1",
+    "cz": "설정1 1/156.6",
+    "at": "설정1 보너스 1/291.1"
+  },
+  "rush": {
+    "nameJa": "究極魔戒RUSH",
+    "type": "보너스 경유 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": 82.6,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "CZ는 牙狼MODE(전조+CZ)와 마계(특수 CZ), 성공 시 초당첨 보너스",
+      "초당첨 보너스 중 추첨에 성공하면 SGB(약 1000매), 이후 '금색이 되어라!'(5G×3전·승률 약 50%)를 돌파하면 AT",
+      "AT 究極魔戒RUSH는 도입 약 300매·승률 평균 약 82.6%·1세트 평균 약 740매·순증 약 9.1매/G",
+      "AT 중 陰我消滅ノ刻 상승: 패널 색에 따라 평균 청 약 461매 ~ 금·암 약 2060매"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 보너스 경유 AT",
+    "netIncrease": "AT 약 9.1매/G",
+    "baseGames": "50매당 약 32.9G",
+    "czEntry": "1/156.6 (합산)",
+    "czBreakRate": "牙狼MODE 약 51% · 마계 약 82% (설정1)",
+    "initialATCoins": "AT 도입 약 300매",
+    "czCeiling": "최대 999G+α (모드별 단축)",
+    "atCeiling": "SGB 후 최대 555G+α / AT 후 최대 111G+α",
+    "resetCeiling": "설정 변경 시 최대 777G+α"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/156.6",
+      "atProbability": "1/291.1",
+      "payoutRate": "97.5%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/154.6",
+      "atProbability": "1/283.7",
+      "payoutRate": "98.8%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/151.4",
+      "atProbability": "1/276.1",
+      "payoutRate": "101.2%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/148.7",
+      "atProbability": "1/265.8",
+      "payoutRate": "104.6%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/144.2",
+      "atProbability": "1/259.4",
+      "payoutRate": "110.5%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/141.1",
+      "atProbability": "1/256.5",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 레어 역과 게임 수 소화로 CZ(牙狼MODE·마계)를 노린다.",
+    "CZ에 성공하면 초당첨 보너스(BIG·보너스, 획득 매수는 동일)에 들어간다.",
+    "초당첨 보너스 중 추첨에 성공하면 SGB(약 1000매)를 얻고, 이어서 '금색이 되어라!' 3전을 돌파하면 AT에 들어간다.",
+    "AT 究極魔戒RUSH는 승률 약 82.6%의 배틀 승리마다 평균 약 740매 보너스가 반복된다.",
+    "陰我消滅ノ刻와 翔撃JUDGEMENT로 상승하고, 상승이 적으면 고라도 배틀(6G·승리 시 3000매)이 있다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 CZ 합산·보너스 초당첨·기계할은 なな徹·1geki.jp·パチセブン·ちょんぼりすた 4곳이 일치한다. 이 기종에는 'AT 초당첨' 표기가 없어 설정 표의 해당 열에는 분석 사이트의 '보너스 초당첨' 값을 넣었다.",
+    "순증은 ちょんぼりすた 약 9.1매/G, パチセブン 9.0매/G로 소수점이 다르다(보너스 기준).",
+    "제조사 공식 스펙은 확인하지 못했다. p-town의 제조사 표기는 'SANSEI LAB'이고 분석 사이트는 'サンセイR&D'다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(L牙狼 闇を照らす者)",
+      "url": "https://p-town.dmm.com/machines/5121",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기계할 범위",
+        "천장",
+        "설정 판별",
+        "게임성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1251/39253/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・終了画面",
+      "url": "https://1geki.jp/slot/l_garo/0/",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스",
+        "직격 당첨률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン 基本スペック・天井",
+      "url": "https://pachiseven.jp/machines_v2/7490",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 CZ·보너스·출옥률",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "ちょんぼりすた 牙狼 解析",
+      "url": "https://chonborista.com/?p=270768",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "설정별 확률",
+        "천장",
+        "순증"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10582",
+      "accessedAt": "2026-11-26",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-26.",
+    "sections": [
+      {
+        "title": "모드별 천장",
+        "kind": "mode",
+        "intro": "천장 G수는 내부 모드마다 다르고 설정 변경·SGB 후·AT 후에는 단축됩니다.",
+        "tables": [
+          {
+            "caption": "모드별 천장",
+            "columns": [
+              "모드",
+              "천장"
+            ],
+            "rows": [
+              [
+                "통상A",
+                "999G+α"
+              ],
+              [
+                "통상B",
+                "777G+α"
+              ],
+              [
+                "통상C",
+                "555G+α"
+              ],
+              [
+                "통상D",
+                "444G+α"
+              ],
+              [
+                "통상E",
+                "333G+α"
+              ],
+              [
+                "引き戻し",
+                "222G+α"
+              ],
+              [
+                "천국",
+                "111G+α"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 恩恵",
+            "value": "대당첨(성공 농후) CZ 당첨"
+          },
+          {
+            "label": "설정 변경 후",
+            "value": "최대 777G+α (통상A 부정)",
+            "note": "설정 변경 전용 모드를 선택, 유리구간 리셋"
+          },
+          {
+            "label": "SGB 후 / AT 후",
+            "value": "최대 555G+α / 최대 111G+α"
+          }
+        ],
+        "sources": [
+          {
+            "title": "パチセブン 天井",
+            "url": "https://pachiseven.jp/machines_v2/7490"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5121"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "설정 차이가 확인된 확률과 시사 요소입니다.",
+        "tables": [
+          {
+            "caption": "보너스 직격 당첨률",
+            "columns": [
+              "설정",
+              "약 레어 역",
+              "강 레어 역"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "0.4%",
+                "0.8%"
+              ],
+              [
+                "설정2",
+                "0.4%",
+                "0.8%"
+              ],
+              [
+                "설정3",
+                "0.4%",
+                "1.2%"
+              ],
+              [
+                "설정4",
+                "0.4%",
+                "2.3%"
+              ],
+              [
+                "설정5",
+                "0.8%",
+                "3.1%"
+              ],
+              [
+                "설정6",
+                "1.2%",
+                "3.9%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "톤톤톤 트로피 색",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 산세이 무늬=설정5 이상 / 무지개=설정6 농후"
+          },
+          {
+            "label": "초당첨 보너스 종료 화면",
+            "value": "마도 호러 집합=설정2 이상 / 마계기사 집합=설정4 이상 / 금색 가로=설정6 농후"
+          },
+          {
+            "label": "스텝업 UI",
+            "value": "'友 Lost'·'義 Justice'·'乱 Sonshi'로 다음 BIG 부정 시 설정2·3·4 이상 농후, 'switch on!!'=설정6 농후"
+          },
+          {
+            "label": "획득 매수 표시",
+            "value": "246 OVER=짝수 / 456 OVER=설정4 이상 / 555 OVER=설정5 이상 / 666·999 OVER=설정6 농후"
+          }
+        ],
+        "sources": [
+          {
+            "title": "1geki 設定差・終了画面",
+            "url": "https://1geki.jp/slot/l_garo/0/"
+          },
+          {
+            "title": "p-town 機種情報(설정 판별)",
+            "url": "https://p-town.dmm.com/machines/5121"
+          }
+        ]
+      },
+      {
+        "title": "SGB 후 引き戻し·야메도키",
+        "kind": "return",
+        "intro": "p-town 기재 요약입니다.",
+        "items": [
+          {
+            "label": "금색이 되어라! 패배 시",
+            "value": "50G 引き戻し"
+          },
+          {
+            "label": "AT 패배 시",
+            "value": "32G 引き戻し"
+          },
+          {
+            "label": "야메도키",
+            "value": "AT 후 111G+α까지 속행",
+            "note": "SGB 후는 引き戻し 상태 확인"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5121"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-garo-yami/machine.png",
+      "alt": "L 가로 어둠을 비추는 자 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10582"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/291.1",
+        "label": "설정1 보너스"
+      },
+      {
+        "value": "9.1매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "CZ 노리기",
+        "description": "레어 역과 게임 수 소화로 牙狼MODE(전조+CZ)나 마계(특수 CZ)를 노린다. 천장은 최대 999G+α."
+      },
+      {
+        "phase": "STEP 02 · 보너스·SGB",
+        "title": "초당첨 보너스에서 SGB로",
+        "description": "CZ 성공 후 초당첨 보너스(BIG은 SGB 기대 약 40%) 중 추첨에 성공하면 약 1000매 SGB. 이어서 '금색이 되어라!' 3전(승률 약 50%)을 돌파하면 AT."
+      },
+      {
+        "phase": "STEP 03 · AT",
+        "title": "究極魔戒RUSH",
+        "description": "도입 약 300매, 승률 약 82.6%의 배틀 승리마다 평균 약 740매 보너스가 반복(순증 약 9.1매/G). 陰我消滅ノ刻로 상승한다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "L 가로 어둠을 비추는 자 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "레어 역 · 게임 수 소화로 CZ를 노림"
+      },
+      "initialConnector": "CZ",
+      "initialAriaLabel": "초당첨 보너스 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "약 51%",
+          "title": "牙狼MODE",
+          "description": "전조+CZ\n성공 시 초당첨 보너스",
+          "route": "보너스 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 82%",
+          "title": "마계",
+          "description": "특수 CZ\n성공 시 초당첨 보너스",
+          "route": "보너스 진입",
+          "tone": "premium"
+        },
+        {
+          "rate": "0.4~3.9%",
+          "title": "보너스 직격",
+          "description": "레어 역에서 직접 당첨\n설정이 높을수록 유리",
+          "route": "직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "초당첨 보너스",
+      "rush": {
+        "eyebrow": "BONUS · 약 9.1매/G",
+        "title": "BIG · 보너스 → SGB",
+        "detail": "20G 계속 · 중 추첨 성공 시 SGB(약 1000매) · BIG은 SGB 기대 약 40%"
+      },
+      "rushConnector": "SGB 후",
+      "rushAriaLabel": "SGB 후 결과 2가지",
+      "rushOutcomes": [
+        {
+          "rate": "승률 약 50%",
+          "title": "금색이 되어라!",
+          "description": "5G × 3전 돌파 시 AT",
+          "route": "AT 진입",
+          "tone": "premium"
+        },
+        {
+          "rate": "패배",
+          "title": "引き戻し 50G",
+          "description": "天国 가능성\n천장 최대 555G+α",
+          "route": "↩ 引き戻し",
+          "tone": "return"
+        }
+      ],
+      "secondaryConnector": "AT 진입",
+      "secondaryRush": {
+        "eyebrow": "AT · 약 9.1매/G",
+        "title": "究極魔戒RUSH",
+        "detail": "도입 약 300매 · 승률 약 82.6% · 1세트 평균 약 740매"
+      },
+      "secondaryRushConnector": "AT 중 주요 분기",
+      "secondaryAriaLabel": "AT 중 주요 분기 3가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "평균 460~2060매",
+          "title": "陰我消滅ノ刻",
+          "description": "패널 색에 따라 상승\n청·녹·적·금·암",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "3000매 / 300매",
+          "title": "翔撃JUDGEMENT",
+          "description": "7이 맞지 않으면 발생",
+          "route": "특화",
+          "tone": "premium"
+        },
+        {
+          "rate": "패배",
+          "title": "32G 引き戻し",
+          "description": "AT 종료 후 천장 111G+α",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "AT 중 승리를 이어가면 보너스가 반복되고 상승으로 매수를 늘린다. AT 종료 후 111G+α까지 속행 권장"
+    }
+  }
+}
