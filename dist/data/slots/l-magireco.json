@@ -1,0 +1,679 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-magireco",
+  "nameKo": "스마스로 마기아 레코드 마법소녀 마도카☆마기카 외전",
+  "officialNameJa": "スマスロ マギアレコード 魔法少女まどか☆マギカ外伝",
+  "modelCode": "L/スマスロマギアレコード/RN",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "ミズホ",
+  "brand": "UNIVERSAL ENTERTAINMENT",
+  "releaseDate": "2025-04-07",
+  "aliases": [
+    "マギアレコード",
+    "マギレコ",
+    "마기아 레코드",
+    "마기레코",
+    "마도마기 외전"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/654.6",
+    "cz": "—",
+    "at": "설정1 AT 1/654.6"
+  },
+  "rush": {
+    "nameJa": "マギアラッシュ／エンブリオ・イブ覚醒",
+    "type": "게임 수 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 규정 포인트 도달이나 CZ(마기아 챌린지·쿠로에 챌린지)로 보너스에 당첨되고, AT는 주로 보너스 중 추첨으로 얻는다",
+      "보너스는 빅 보너스(30G+α)·미타마 보너스(벨 내비 8회)·에피소드 보너스(50G·AT 농후)·아리나 뮤지엄(30G 매 G 상승·AT 농후)",
+      "AT 마기아 러시는 순증 약 2.6매/G의 게임 수 관리형이며, 초기 G수는 마기아 어택(전반 5G+후반 5G)으로 결정된다",
+      "AT 중 스토리 8종을 컴플리트하거나 규정 매수를 얻으면 상승 특화 존에서 시작하는 엔브리오 이브 각성에 들어간다"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 포인트 관리형 보너스 + 게임 수 관리형 AT(마기아 러시)",
+    "netIncrease": "AT 약 2.6매/G",
+    "baseGames": "50매당 약 32.6G",
+    "czEntry": "규정 포인트 도달 · 마기아 챌린지(스이카 계기)",
+    "czBreakRate": "마기아 챌린지 기대 약 40%",
+    "initialATCoins": "마기아 어택으로 초기 G수 결정",
+    "primaryCeilingLabel": "천장 (포인트)",
+    "settingsPrimaryLabel": "보너스",
+    "czCeiling": "950pt+α (약 600G)",
+    "atCeiling": "천장 보너스는 AT 확정이 아님",
+    "resetCeiling": "600~699pt+α (약 400G) (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/240.6",
+      "atProbability": "1/654.6",
+      "payoutRate": "97.6%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/236.1",
+      "atProbability": "1/633.4",
+      "payoutRate": "98.9%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/222.8",
+      "atProbability": "1/571.8",
+      "payoutRate": "102.0%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/208.5",
+      "atProbability": "1/516.6",
+      "payoutRate": "106.0%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/195.1",
+      "atProbability": "1/456.5",
+      "payoutRate": "110.4%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/184.3",
+      "atProbability": "1/416.7",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 액정 오른쪽에 표시되는 포인트(1G당 최소 1pt, 레어 역은 대량 가산)가 규정에 닿으면 보너스에 당첨된다. 스이카에서는 CZ 마기아 챌린지로, 그 본전조 중에는 쿠로에 챌린지로 승격하기도 한다.",
+    "보너스는 빅 보너스(30G+α)·미타마 보너스(벨 내비 8회)·에피소드 보너스(50G)·아리나 뮤지엄(30G)이 있고, 에피소드 보너스와 아리나 뮤지엄은 AT 농후다.",
+    "AT 마기아 러시는 순증 약 2.6매/G. 마기아 어택으로 초기 G수를 정하고, 레어 역 직상승·마기우스 배틀·스토리 등으로 G수를 늘린다.",
+    "스토리를 컴플리트하거나 규정 매수를 얻으면 엔브리오 이브 각성(10G+α 상승 특화 존에서 시작)에 들어간다.",
+    "천장은 보너스간 950pt+α(약 600G)이며 설정 변경 후에는 600~699pt+α(약 400G)로 단축된다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정표의 첫 값 열 제목은 '보너스'(빅 보너스·미타마 보너스 합산 초당첨)이고 'AT 초당첨' 열은 AT 초당첨이다. 이 기종은 설정별 CZ 확률이 공개되지 않았다.",
+    "설정별 보너스·AT 초당첨·기계할은 なな徹와 パチセブン이 일치하고, 기계할 범위 97.6~114.9%는 p-town 기재와도 일치한다. 베이스 50매당 32.6G는 パチセブン·なな徹 기재다.",
+    "ユニバーサル 공식 제품 페이지에는 스펙 표가 없고 기기 이미지와 디지털 가이드(7장)만 있다. 그중 '게임 플로우' 1장을 번역했고 원본은 flow-source.jpg로 보존한다. 용어(마기아 어택·마기우스 배틀·엔브리오 이브 등)는 임시 번역이며 검수가 필요하다.",
+    "같은 시리즈의 파칭코(e マギアレコード)와는 별개 기종이다.",
+    "1geki.jp는 확인하지 않았다(두 분석 사이트와 p-town으로 교차). 천장 포인트·G수 환산(1G=1.5pt)은 なな徹의 기대값 산출 조건이다."
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "title": "ユニバーサルエンターテインメント スマスロ マギアレコード 製品ページ",
+      "url": "https://www.universal-777.com/product/slot/magireco/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "제조사",
+        "기종 개요",
+        "기기 이미지"
+      ]
+    },
+    {
+      "type": "official",
+      "title": "ユニバーサル デジタルガイド(ゲームフロー·ボーナス·マギアラッシュ)",
+      "url": "https://www.universal-777.com/product/digitalguide/ps/magireco/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "게임 플로우",
+        "보너스 종류",
+        "마기아 러시 구조",
+        "스토리·엔브리오 이브 각성"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロ マギアレコード)",
+      "url": "https://p-town.dmm.com/machines/4745",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "규정 포인트",
+        "CZ",
+        "보너스·AT 구조",
+        "기계할 범위"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 ボーナス・AT初当たり確率/機械割/小役確率",
+      "url": "https://nana-press.com/kaiseki/machine/914/28422/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 보너스·AT·기계할",
+        "약 체리 확률",
+        "50매당 G수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定判別(設定差・示唆演出)まとめ",
+      "url": "https://nana-press.com/kaiseki/machine/914/28425/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정 판별 요소",
+        "종료 화면·엔딩 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 天井の恩恵や発動条件",
+      "url": "https://nana-press.com/kaiseki/machine/914/28426/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "야메도키",
+        "穢れ"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン スマスロ マギアレコード",
+      "url": "https://pachiseven.jp/machines_v2/7114",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 보너스·AT·기계할",
+        "베이스"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10211",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "천장은 G수가 아니라 포인트로 관리됩니다. 포인트는 액정 오른쪽에 표시되고 1G당 최소 1pt, 레어 역은 대량 가산이며 수 G 동안 2~10배가 되는 포인트 배율 존도 있습니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "보너스간 포인트",
+                "950pt+α (약 600G)",
+                "600~699pt+α (약 400G)",
+                "보너스 농후"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 보너스",
+            "value": "AT 확정이 아님",
+            "note": "G수 환산은 1G=1.5pt 기준. 보너스간 천장과 AT 간 해마리가 모두 '穢れ' 획득 계기"
+          },
+          {
+            "label": "야메도키",
+            "value": "AT 후 수 G · 미타마 보너스 후 약 30G",
+            "note": "미타마 보너스 후는 반드시 고확으로 이행해 10~30G를 얻는다. AT 종료 후에는 AT 끌어당김 추첨이 있다"
+          },
+          {
+            "label": "설정 변경 후",
+            "value": "천장이 600~699pt+α로 단축",
+            "note": "등가 기준 천장 노림은 설정 변경 후 약 200G(300pt)부터"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 天井",
+            "url": "https://nana-press.com/kaiseki/machine/914/28426/"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4745"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "AT 초당첨의 설정차가 가장 큽니다. 보너스 초당첨과 약 체리 확률에도 설정차가 있고, 종료 화면·엔딩 시사가 판별을 돕습니다.",
+        "tables": [
+          {
+            "caption": "설정별 보너스·AT 초당첨·기계할",
+            "columns": [
+              "설정",
+              "보너스",
+              "AT",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/240.6",
+                "1/654.6",
+                "97.6%"
+              ],
+              [
+                "설정2",
+                "1/236.1",
+                "1/633.4",
+                "98.9%"
+              ],
+              [
+                "설정3",
+                "1/222.8",
+                "1/571.8",
+                "102.0%"
+              ],
+              [
+                "설정4",
+                "1/208.5",
+                "1/516.6",
+                "106.0%"
+              ],
+              [
+                "설정5",
+                "1/195.1",
+                "1/456.5",
+                "110.4%"
+              ],
+              [
+                "설정6",
+                "1/184.3",
+                "1/416.7",
+                "114.9%"
+              ]
+            ]
+          },
+          {
+            "caption": "설정별 약 체리 확률",
+            "columns": [
+              "설정",
+              "약 체리"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/60.0"
+              ],
+              [
+                "설정2",
+                "1/57.7"
+              ],
+              [
+                "설정3",
+                "1/55.5"
+              ],
+              [
+                "설정4",
+                "1/53.5"
+              ],
+              [
+                "설정5",
+                "1/51.7"
+              ],
+              [
+                "설정6",
+                "1/50.0"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "스이카 계기 CZ 당첨률",
+            "value": "마기아 챌린지 19.9~32.8% · 쿠로에 챌린지 0.4~0.8%",
+            "note": "사나 모드 이외"
+          },
+          {
+            "label": "BIG 종료 후 고확 이행",
+            "value": "설정 6은 2회에 1회",
+            "note": "BIG 종료 후 고확 이행률에 주목"
+          },
+          {
+            "label": "BIG 종료 화면",
+            "value": "1st Season 키 비주얼 = 설정 5 이상 / 작은 큐베 = 설정 6",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "AT 종료 화면·스토리 중 캐릭터 소개",
+            "value": "마도카&이로하 = 설정 6 / 시나리오⑨(작은 큐베 출현) = 설정 5 이상",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "엔딩 중 카드",
+            "value": "무대장치의 마녀 = 설정 4 이상",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "스토리 화수 순서",
+            "value": "스토리 2회째 이후 4→3→2→1 = 설정 5 또는 6 농후",
+            "note": "なな徹 기재"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 設定判別",
+            "url": "https://nana-press.com/kaiseki/machine/914/28425/"
+          },
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/914/28422/"
+          },
+          {
+            "title": "パチセブン",
+            "url": "https://pachiseven.jp/machines_v2/7114"
+          }
+        ]
+      },
+      {
+        "title": "보너스와 CZ",
+        "kind": "mode",
+        "intro": "규정 포인트에 닿으면 보너스에 당첨되고, 스이카에서는 CZ 마기아 챌린지가 열립니다.",
+        "tables": [
+          {
+            "caption": "보너스 비교",
+            "columns": [
+              "보너스",
+              "계속",
+              "특징"
+            ],
+            "rows": [
+              [
+                "빅 보너스",
+                "30G+α",
+                "레어 역 등으로 고확 이행 추첨"
+              ],
+              [
+                "미타마 보너스",
+                "벨 내비 8회",
+                "보수 랭크 업 보너스"
+              ],
+              [
+                "에피소드 보너스",
+                "50G 고정",
+                "AT 농후 · 레어 역으로 상승"
+              ],
+              [
+                "아리나 뮤지엄",
+                "30G",
+                "매 G 전 역으로 상승 · AT 농후"
+              ]
+            ]
+          },
+          {
+            "caption": "CZ",
+            "columns": [
+              "CZ",
+              "계기",
+              "계속",
+              "기대"
+            ],
+            "rows": [
+              [
+                "마기아 챌린지",
+                "스이카 성립 시 추첨",
+                "'노려라' 3회+α 실패까지",
+                "약 40%"
+              ],
+              [
+                "쿠로에 챌린지",
+                "마기아 챌린지 본전조 중 스이카 일부",
+                "'노려라' 컷인 3회 실패까지",
+                "보너스 농후"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "규정 포인트",
+            "value": "200·400·600pt가 찬스",
+            "note": "유리 구간 이행 시나 보너스·AT 종료 시 추첨"
+          },
+          {
+            "label": "에피소드 보너스 계기",
+            "value": "穢れ 해방·쿠로에 챌린지 성공 등",
+            "note": "사나·펠리시아·쿠로에는 고설정일수록 선택되기 쉬움"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4745"
+          },
+          {
+            "title": "ユニバーサル デジタルガイド",
+            "url": "https://www.universal-777.com/product/digitalguide/ps/magireco/"
+          }
+        ]
+      },
+      {
+        "title": "AT 구조와 상위 구간",
+        "kind": "mode",
+        "intro": "AT 마기아 러시는 게임 수 관리형이며, 스토리 8종을 컴플리트하면 엔브리오 이브 각성에 들어갑니다.",
+        "tables": [
+          {
+            "caption": "AT 주요 구간",
+            "columns": [
+              "구간",
+              "내용",
+              "특징"
+            ],
+            "rows": [
+              [
+                "마기아 어택",
+                "전반 5G 가챠 + 후반 5G 공격",
+                "카드 5장으로 초기 G수를 결정"
+              ],
+              [
+                "마기아 러시",
+                "순증 약 2.6매/G",
+                "직상승·스토리·결전 신하마 성녀·마기아 보너스로 상승"
+              ],
+              [
+                "엔브리오 이브 각성",
+                "10G+α 상승 특화 존에서 시작",
+                "통상 AT보다 스토리 성능이 강화"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "마기우스 배틀",
+            "value": "배틀 4종 · 승리 시 우이 찬스",
+            "note": "보수는 3종류"
+          },
+          {
+            "label": "스토리",
+            "value": "20G 또는 30G 계속 · 전 8종",
+            "note": "컴플리트하면 엔브리오 이브 각성"
+          },
+          {
+            "label": "AT 종료 후",
+            "value": "AT 끌어당김 추첨",
+            "note": "당첨 시 마기아 어택으로 돌입하고 스토리 카운트를 이어받는다"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4745"
+          },
+          {
+            "title": "ユニバーサル デジタルガイド",
+            "url": "https://www.universal-777.com/product/digitalguide/ps/magireco/"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-magireco/machine.png",
+      "alt": "스마스로 마기아 레코드 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10211"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시·보너스·마기아 러시·엔브리오 이브 각성",
+        "url": "./assets/images/official/l-magireco/flow-ko.png",
+        "alt": "ユニバーサル 공식 디지털 가이드 게임 플로우의 한국어 번역본"
+      }
+    ],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/654.6",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "2.6매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "규정 포인트와 CZ",
+        "description": "포인트가 규정에 닿으면 보너스에 당첨된다. 스이카에서 마기아 챌린지(CZ·기대 약 40%), 그 본전조 중에는 쿠로에 챌린지로 승격하기도 한다. 천장은 950pt+α(약 600G)."
+      },
+      {
+        "phase": "STEP 02 · 보너스",
+        "title": "빅 보너스·미타마 보너스·에피소드",
+        "description": "빅 보너스(30G+α)와 미타마 보너스(벨 내비 8회)에서 AT를 추첨한다. 에피소드 보너스(50G)와 아리나 뮤지엄(30G)은 AT 농후다."
+      },
+      {
+        "phase": "STEP 03 · AT",
+        "title": "마기아 러시와 엔브리오 이브 각성",
+        "description": "순증 약 2.6매/G의 게임 수 관리형. 마기아 어택으로 초기 G수를 정하고 스토리 8종을 컴플리트하면 상승 특화 존에서 시작하는 엔브리오 이브 각성에 들어간다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 마기아 레코드 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "규정 포인트 도달·레어 역·CZ로 보너스를 노림"
+      },
+      "initialConnector": "AT 진입",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "보너스 1/240.6~1/184.3",
+          "title": "규정 포인트 도달",
+          "description": "액정 오른쪽 포인트가 규정에 닿으면 보너스\n천장 950pt+α",
+          "route": "보너스",
+          "tone": "rush"
+        },
+        {
+          "rate": "기대 약 40%",
+          "title": "마기아 챌린지",
+          "description": "스이카 계기 CZ\n쿠로에 챌린지 승격 시 보너스 농후",
+          "route": "보너스",
+          "tone": "rush"
+        },
+        {
+          "rate": "AT 직격",
+          "title": "AT 직격",
+          "description": "통상 스테이지에서 AT로 직행\n보너스 중에도 AT 추첨",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 2.6매/G",
+        "title": "마기아 러시",
+        "detail": "게임 수 관리형 · 마기아 어택으로 초기 G수 결정"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "전반 5G + 후반 5G",
+          "title": "마기아 어택",
+          "description": "카드 5장으로 초기 G수 결정\n+50G 등",
+          "route": "초기 G수",
+          "tone": "rush"
+        },
+        {
+          "rate": "배틀 4종",
+          "title": "마기우스 배틀",
+          "description": "승리하면 우이 찬스\n보수는 3종류",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "20G·30G 계속",
+          "title": "스토리",
+          "description": "전 8종 컴플리트가 목표\n결전 신하마 성녀·마기아 보너스로도 상승",
+          "route": "스토리",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "스토리 컴플리트·규정 매수 획득",
+      "secondaryRush": {
+        "eyebrow": "UPPER",
+        "title": "엔브리오 이브 각성",
+        "detail": "10G+α 상승 특화 존에서 시작 · 통상 AT보다 스토리 성능 강화"
+      },
+      "secondaryRushConnector": "AT 종료 후",
+      "secondaryAriaLabel": "엔브리오 이브 각성 이후 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "10G+α",
+          "title": "상승 특화 존",
+          "description": "엔브리오 이브 각성의 시작\n스토리 성능이 강화",
+          "route": "최강 특화",
+          "tone": "premium"
+        },
+        {
+          "rate": "AT 종료 후",
+          "title": "AT 끌어당김 추첨",
+          "description": "당첨 시 마기아 어택으로\n스토리 카운트를 이어받음",
+          "route": "↩ AT",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 보너스간 950pt+α(약 600G). 설정 변경 후에는 600~699pt+α(약 400G)로 단축. 천장 보너스는 AT 확정이 아님"
+    }
+  }
+}
