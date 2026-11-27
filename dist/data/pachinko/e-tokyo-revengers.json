@@ -1,0 +1,303 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-tokyo-revengers",
+  "officialNameJa": "e 東京リベンジャーズ",
+  "nameKo": "e 도쿄 리벤저스",
+  "aliases": [
+    "東京リベンジャーズ",
+    "e東京リベンジャーズ",
+    "東リベ",
+    "도쿄 리벤저스",
+    "동리베"
+  ],
+  "modelCode": "e東京リベンジャーズGFEC",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "サミー",
+  "brand": "Sammy",
+  "releaseDate": "2025-07-07",
+  "probabilities": {
+    "base": "約1/319.7",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": "約1/99.9"
+  },
+  "rush": {
+    "nameJa": "芭流覇羅決戦",
+    "type": "LT・ST144回転",
+    "entryRatePercent": 50,
+    "totalEntryRatePercent": 61,
+    "continuationRatePercent": 77,
+    "spins": 144,
+    "remainingHolds": null,
+    "timeShortSpins": 100,
+    "gates": [
+      "初当りの50%でST144回転の芭流覇羅決戦に直行",
+      "ST非突入でも時短100回転(決戦前夜)があり、引き戻し率は約22.2%",
+      "直行と時短引き戻しを合わせたRUSH突入率は約61%",
+      "芭流覇羅決戦の継続率は約77%で、大当りの約50%が出玉3,000個以上"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      {
+        "label": "300個＋時短100回転",
+        "payoutBalls": 300,
+        "ratePercent": 50,
+        "destination": "決戦前夜(時短100回転)",
+        "confidence": "official",
+        "notes": [
+          "引き戻し率約22.2%",
+          "時短中の大当り確率約1/399"
+        ]
+      },
+      {
+        "label": "300個＋ST144回転",
+        "payoutBalls": 300,
+        "ratePercent": 46,
+        "destination": "芭流覇羅決戦(ST144回転)",
+        "confidence": "official",
+        "notes": [
+          "RUSH直行"
+        ]
+      },
+      {
+        "label": "3,000個＋α＋ST144回転",
+        "payoutBalls": 3000,
+        "ratePercent": 4,
+        "destination": "芭流覇羅決戦(ST144回転)",
+        "confidence": "official",
+        "notes": [
+          "RUSH直行",
+          "1,500個×2回+α"
+        ]
+      }
+    ],
+    "rush": [
+      {
+        "label": "1,500個",
+        "payoutBalls": 1500,
+        "ratePercent": 50,
+        "destination": "芭流覇羅決戦継続または終了",
+        "confidence": "official",
+        "notes": []
+      },
+      {
+        "label": "3,000個",
+        "payoutBalls": 3000,
+        "ratePercent": 47.5,
+        "destination": "芭流覇羅決戦継続または終了",
+        "confidence": "official",
+        "notes": [
+          "1,500個×2回"
+        ]
+      },
+      {
+        "label": "4,500個＋α",
+        "payoutBalls": 4500,
+        "ratePercent": 2.5,
+        "destination": "芭流覇羅決戦継続または終了",
+        "confidence": "official",
+        "notes": [
+          "1,500個×3回+α"
+        ]
+      }
+    ]
+  },
+  "border": {
+    "spinsPer1000Yen": 16.5,
+    "exchange": "4엔(등가)",
+    "source": "p-town",
+    "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준",
+    "sourceUrl": "https://p-town.dmm.com/machines/4796",
+    "checkedAt": "2026-11-27"
+  },
+  "gameFlow": [
+    "通常時の大当り確率は約1/319.7",
+    "初当りの50%はST144回転の芭流覇羅決戦へ直行、46%はST直行、4%は3,000個＋α＋ST",
+    "ST非突入の300個＋時短100回転(決戦前夜)でも約22.2%でRUSHへ引き戻し",
+    "芭流覇羅決戦(ST144回転・約1/99.9・継続率約77%)で大当りの約50%が3,000個以上"
+  ],
+  "notes": [
+    "Sammy 공식 제품 페이지의 가이드북 스펙(gu_08.jpg)과 게임 플로우(gu_09.jpg)를 직접 읽어 확인했다: 통상시 약 1/319.7, 芭流覇羅決戦(RUSH 중) 약 1/99.9, ST 144회전, RUSH 계속률 약 77%, RUSH 돌입률 약 61%(RUSH 직행 50% + 시단 중 끌어당김 약 22.2%의 합산), 결전 전야(시단 100회전) 대당첨 약 1/399, 상품구 수 1&2&4&15/10C.",
+    "통상시 대당첨 배분(300개+시단 100회전 50% / 300개+ST 144회전 46% / 3,000개+α+ST 144회전 4%, 합계 100%)과 RUSH 중 배분(1,500개 50% / 3,000개 47.5% / 4,500개+α 2.5%, 합계 100%)은 공식 스펙 이미지의 원그래프 값이다. 3,000개는 1,500개×2회, 4,500개는 1,500개×3회다.",
+    "공식 이미지에는 각 원그래프 구획과 보너스 명칭(검은 충동 BONUS·TOKYO 卍 BONUS·리벤저스 BONUS)의 대응이 명시되어 있지 않아, 본 페이지는 구획을 출옥·이동처로만 표기했다.",
+    "RUSH 직행(ST 144회전 직행)은 초당첨의 50%(46%+4%)이고, 시단 100회전 중 끌어당김까지 합치면 RUSH 돌입은 약 61%다.",
+    "보더 16.5회전/1,000엔(등가)은 p-town 산출값(전지원 중 출옥 -5%, 통상 2,000회전 기준)이며 제조사 공식 값이 아니다. 초당첨 1회당 기대 출옥은 4,852개(p-town 산출, 컴플리트 기능 미고려).",
+    "번역 이미지의 용어(결전 전야·바루하라 결전 등)와 한국어명은 임시 번역이며 검수가 필요하다."
+  ],
+  "sources": [
+    {
+      "title": "P-WORLD 機種データベース",
+      "url": "https://www.p-world.co.jp/machine/database/10262",
+      "type": "secondary",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "p-town 機種情報(ボーダー)",
+      "url": "https://p-town.dmm.com/machines/4796",
+      "type": "secondary",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式製品ページ",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/tok_re/",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式 ガイドブック スペック画像(번역 이미지 원본)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/tok_re/img/guide/gu_08.jpg",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式 ガイドブック ゲームフロー画像(번역 이미지 원본)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/tok_re/img/guide/gu_09.jpg",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-27",
+    "needsReviewFields": [
+      "nameKo"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/tokyo-revengers/machine.png",
+      "alt": "サミー e 도쿄 리벤저스 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10262"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 스펙",
+        "title": "확률·돌입률·대당첨 배분",
+        "url": "./assets/images/official/tokyo-revengers/spec-ko.png",
+        "alt": "Sammy 공식 가이드북 스펙 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "대당첨·결전 전야·바루하라 결전 흐름",
+        "url": "./assets/images/official/tokyo-revengers/flow-ko.png",
+        "alt": "Sammy 공식 가이드북 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      {
+        "value": "1/319.7",
+        "label": "통상시 대당첨"
+      },
+      {
+        "value": "61%",
+        "label": "RUSH 돌입"
+      },
+      {
+        "value": "77%",
+        "label": "RUSH 계속"
+      }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초당첨 배분",
+        "source": "initial",
+        "centerValue": "50%",
+        "centerLabel": "RUSH 직행"
+      },
+      {
+        "title": "RUSH 중 배분",
+        "source": "rush",
+        "centerValue": "77%",
+        "centerLabel": "RUSH 계속"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 도쿄 리벤저스 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 약 1/319.7 · 충전 당첨 없음"
+      },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "50%",
+          "title": "300개 + 시단 100회전",
+          "description": "결전 전야(대당첨 약 1/399)\n끌어당김 약 22.2%로 RUSH",
+          "route": "시단 → 끌어당김",
+          "tone": "return"
+        },
+        {
+          "rate": "46%",
+          "title": "300개 + ST 144회전",
+          "description": "RUSH 직행",
+          "route": "RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "4%",
+          "title": "3,000개+α + ST 144회전",
+          "description": "RUSH 직행\n1,500개 × 2회 + α",
+          "route": "RUSH",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "RUSH 돌입 합계 약 61%",
+      "rush": {
+        "eyebrow": "LT · LUCKY TRIGGER",
+        "title": "芭流覇羅決戦",
+        "detail": "ST 144회전 · 실질 대당첨 약 1/99.9 · 계속률 약 77%"
+      },
+      "rushConnector": "RUSH 중 대당첨",
+      "rushAriaLabel": "RUSH 중 대당첨 결과 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "50%",
+          "title": "1,500개",
+          "description": "약 1,500개",
+          "route": "↻ 계속 / 종료",
+          "tone": "rush"
+        },
+        {
+          "rate": "47.5%",
+          "title": "3,000개",
+          "description": "1,500개 × 2회",
+          "route": "↻ 계속 / 종료",
+          "tone": "rush"
+        },
+        {
+          "rate": "2.5%",
+          "title": "4,500개+α",
+          "description": "1,500개 × 3회 + α",
+          "route": "↻ 계속 / 종료",
+          "tone": "premium"
+        }
+      ],
+      "loopNote": "RUSH 돌입률 약 61% = 직행 50% + 시단 중 끌어당김 약 22.2%의 합산. 대당첨의 약 50%가 3,000개 이상. 돌입률·계속률 모두 V 통과가 조건"
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "대당첨 노리기",
+        "description": "약 1/319.7 확률의 대당첨을 노립니다. 통상시에는 충전 당첨이 없습니다."
+      },
+      {
+        "phase": "STEP 02 · 초당첨 판정",
+        "title": "RUSH 직행 50% / 시단 50%",
+        "description": "초당첨의 50%(300개 46%·3,000개+α 4%)는 ST 144회전 RUSH로 직행합니다. 나머지 50%는 300개 + 시단 100회전(결전 전야)이며 약 22.2%로 끌어당겨 RUSH에 들어갑니다. 합계 RUSH 돌입은 약 61%입니다."
+      },
+      {
+        "phase": "STEP 03 · RUSH",
+        "title": "芭流覇羅決戦 · 계속률 약 77%",
+        "description": "ST 144회전에서 실질 대당첨 약 1/99.9. 1,500개 50%·3,000개 47.5%·4,500개+α 2.5%이며 대당첨의 약 50%가 3,000개 이상입니다."
+      }
+    ]
+  }
+}
