@@ -4,6 +4,7 @@
   "category": "pachinko",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "p-hokuto-no-ken-bokyosei", "file": "p-hokuto-no-ken-bokyosei.json", "releaseDate": "2023-05-08" },
     { "id": "e-tokyo-revengers", "file": "e-tokyo-revengers.json", "releaseDate": "2025-07-07" },
     { "id": "e-nanatsu-no-taizai-3", "file": "e-nanatsu-no-taizai-3.json", "releaseDate": "2026-08-03" },
     { "id": "pa-super-sea-okinawa-6-enako", "file": "pa-super-sea-okinawa-6-enako.json", "releaseDate": "2026-06-08" },
