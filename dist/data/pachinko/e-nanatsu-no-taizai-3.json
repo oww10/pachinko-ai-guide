@@ -1,0 +1,332 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "e-nanatsu-no-taizai-3",
+  "officialNameJa": "e 七つの大罪3",
+  "nameKo": "e 일곱 개의 대죄 3",
+  "aliases": [
+    "七つの大罪3",
+    "e七つの大罪3",
+    "일곱 개의 대죄3",
+    "칠대죄3"
+  ],
+  "modelCode": "e七つの大罪3GFEA",
+  "machineType": "pachinko",
+  "format": "e",
+  "maker": "サミー",
+  "brand": "Sammy",
+  "releaseDate": "2026-08-03",
+  "probabilities": {
+    "base": "約1/319.6",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": "約1/1"
+  },
+  "rush": {
+    "nameJa": "SEVEN RUSH",
+    "type": "LT・1회전 결착",
+    "entryRatePercent": 40,
+    "totalEntryRatePercent": 40,
+    "continuationRatePercent": 75,
+    "spins": 1,
+    "remainingHolds": null,
+    "timeShortSpins": 100,
+    "gates": [
+      "初当りは必ず450個＋SEVEN RUSHチャレンジ(時短100回転)へ",
+      "チャレンジの突破率約40%でSEVEN RUSHへ",
+      "SEVEN RUSH中は約1/1で大当りし継続率は約75%",
+      "チャレンジ中の実質大当り確率は約1/196.2"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      {
+        "label": "450個＋時短100回転",
+        "payoutBalls": 450,
+        "ratePercent": 100,
+        "destination": "SEVEN RUSHチャレンジ",
+        "confidence": "official",
+        "notes": [
+          "3R:450個",
+          "突破率約40%でSEVEN RUSH",
+          "大当り出玉・時短突入はV通過が条件"
+        ]
+      }
+    ],
+    "rush": [
+      {
+        "label": "PERFECT BONUS(2,700〜7,500個)",
+        "payoutBalls": null,
+        "ratePercent": 72.8,
+        "destination": "SEVEN RUSH継続",
+        "confidence": "official",
+        "notes": [
+          "約72.8%",
+          "出玉内訳は別表"
+        ]
+      },
+      {
+        "label": "チャレンジBONUS 1,500個(RUSH終了)",
+        "payoutBalls": 1500,
+        "ratePercent": 25,
+        "destination": "通常時",
+        "confidence": "official",
+        "notes": [
+          "約25%"
+        ]
+      },
+      {
+        "label": "チャレンジBONUS 1,500個(RUSH継続)",
+        "payoutBalls": 1500,
+        "ratePercent": 2.2,
+        "destination": "SEVEN RUSH継続",
+        "confidence": "official",
+        "notes": [
+          "約2.2%",
+          "昇格演出成功時"
+        ]
+      }
+    ],
+    "extraTables": [
+      {
+        "title": "PERFECT BONUS 출옥 배분 (72.8% 안의 비율)",
+        "items": [
+          {
+            "label": "7,500個",
+            "payoutBalls": 7500,
+            "ratePercent": 0.1,
+            "destination": "SEVEN RUSH継続",
+            "confidence": "official",
+            "notes": [
+              "約0.1%"
+            ]
+          },
+          {
+            "label": "6,300個",
+            "payoutBalls": 6300,
+            "ratePercent": 1.5,
+            "destination": "SEVEN RUSH継続",
+            "confidence": "official",
+            "notes": [
+              "約1.5%"
+            ]
+          },
+          {
+            "label": "5,100個",
+            "payoutBalls": 5100,
+            "ratePercent": 9.8,
+            "destination": "SEVEN RUSH継続",
+            "confidence": "official",
+            "notes": [
+              "約9.8%"
+            ]
+          },
+          {
+            "label": "3,900個",
+            "payoutBalls": 3900,
+            "ratePercent": 33.1,
+            "destination": "SEVEN RUSH継続",
+            "confidence": "official",
+            "notes": [
+              "約33.1%"
+            ]
+          },
+          {
+            "label": "2,700個",
+            "payoutBalls": 2700,
+            "ratePercent": 55.5,
+            "destination": "SEVEN RUSH継続",
+            "confidence": "official",
+            "notes": [
+              "約55.5%"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "border": {
+    "spinsPer1000Yen": 16.8,
+    "exchange": "4엔(등가)",
+    "source": "p-town",
+    "condition": "전지원 중 출옥 -5%, 통상 2,000회전(10시간) 기준",
+    "sourceUrl": "https://p-town.dmm.com/machines/5056",
+    "checkedAt": "2026-11-27"
+  },
+  "gameFlow": [
+    "通常時の大当り確率は約1/319.6",
+    "初当りは必ず3R:450個＋SEVEN RUSHチャレンジ(時短100回転)へ",
+    "チャレンジ中の実質大当り確率は約1/196.2で、突破率は約40%",
+    "突破するとSEVEN RUSH(約1/1・継続率約75%)へ",
+    "RUSH中の大当りは演出成功でPERFECT BONUS(2,700〜7,500個)、失敗でチャレンジBONUS(1,500個)"
+  ],
+  "notes": [
+    "Sammy 공식 제품 페이지의 기본 정보 이미지(spec_1.jpg)와 가이드북 게임 플로우(gu_06.jpg)를 직접 읽어 확인했다: 대당첨 확률, SEVEN RUSH 돌입률 약 40%·계속률 약 75%, 상품구 수, 대당첨 출옥, RUSH 중 배분(PERFECT BONUS 약 72.8% / 챌린지 BONUS 1,500개 RUSH 종료 약 25% · RUSH 계속 약 2.2%), PERFECT BONUS 내역(7,500개 0.1%·6,300개 1.5%·5,100개 9.8%·3,900개 33.1%·2,700개 55.5%, 합계 100%).",
+    "통상시 대당첨 확률은 공식 기본 정보 이미지가 약 1/319.7, 게임 플로우 이미지와 p-town이 1/319.6으로 표기가 갈린다. JSON은 1/319.6을 채택했다.",
+    "공식 기본 정보 이미지의 '대당첨 출옥' 행은 3,100개로 적혀 있지만, 같은 이미지의 PERFECT BONUS 표와 각주의 계산식(1,500×2회+300×3회)은 3,900개이고 p-town은 3100개로 기재했다. 본 페이지는 계산식과 일치하는 3,900개를 채택했고 번역 이미지에도 3,900개로 표기했다.",
+    "PERFECT BONUS의 출옥별 비율은 PERFECT BONUS 안의 비율(72.8%의 내역)이며, 챌린지 BONUS를 포함한 전체 비율이 아니다.",
+    "RUSH 평균 획득 출옥 약 3,400개는 챌린지 BONUS 실패 시 획득 출옥을 제외한 값(공식 주석)이다. 초당첨 1회당 기대 출옥은 4,772개(p-town 산출, 전지원 중 출옥 -5%·통상 2,000회전·컴플리트 기능 미고려).",
+    "보더 16.8회전/1,000엔(등가)은 p-town 산출값이며 제조사 공식 값이 아니다.",
+    "번역 이미지의 용어(SEVEN RUSH 챌린지·오만 BATTLE 등)와 한국어명은 임시 번역이며 검수가 필요하다."
+  ],
+  "sources": [
+    {
+      "title": "P-WORLD 機種データベース",
+      "url": "https://www.p-world.co.jp/machine/database/10519",
+      "type": "secondary",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "p-town 機種情報(ボーダー)",
+      "url": "https://p-town.dmm.com/machines/5056",
+      "type": "secondary",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式製品ページ",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_nan_ta_3/",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式 基本情報画像(번역 이미지 원본)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_nan_ta_3/img/spec_1.jpg",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式 ガイドブック ゲームフロー画像(번역 이미지 원본)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/e_nan_ta_3/img/guide/gu_06.jpg",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-27",
+    "needsReviewFields": [
+      "nameKo"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/nanatsu-3/machine.png",
+      "alt": "サミー e 일곱 개의 대죄 3 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10519"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·돌입률·대당첨 배분",
+        "url": "./assets/images/official/nanatsu-3/spec-ko.png",
+        "alt": "Sammy 공식 제품 페이지 기본 정보 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "Sins BONUS·SEVEN RUSH 챌린지·SEVEN RUSH 흐름",
+        "url": "./assets/images/official/nanatsu-3/flow-ko.png",
+        "alt": "Sammy 공식 가이드북 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      {
+        "value": "1/319.6",
+        "label": "통상시 대당첨"
+      },
+      {
+        "value": "40%",
+        "label": "SEVEN RUSH 돌입"
+      },
+      {
+        "value": "75%",
+        "label": "RUSH 계속"
+      }
+    ],
+    "distributionCharts": [
+      {
+        "title": "RUSH 중 대당첨 배분",
+        "source": "rush",
+        "centerValue": "75%",
+        "centerLabel": "RUSH 계속"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "e 일곱 개의 대죄 3 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 약 1/319.6 · 초당첨은 반드시 450개 + 시단 100회전"
+      },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 2가지",
+      "initialOutcomes": [
+        {
+          "rate": "나머지 약 60%",
+          "title": "챌린지 실패",
+          "description": "450개 + 시단 100회전 소화\n통상 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "약 40%",
+          "title": "챌린지 돌파",
+          "description": "시단 100회전 중 대당첨(실질 약 1/196.2)\n연출 성공 시 SEVEN RUSH",
+          "route": "RUSH",
+          "tone": "rush"
+        }
+      ],
+      "mergeLabel": "약 40%로 SEVEN RUSH",
+      "rush": {
+        "eyebrow": "LT · LUCKY TRIGGER",
+        "title": "SEVEN RUSH",
+        "detail": "1회전 결착의 연장 존 · 대당첨 약 1/1 · 계속률 약 75%"
+      },
+      "rushConnector": "RUSH 중 대당첨",
+      "rushAriaLabel": "RUSH 중 대당첨 결과 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "약 72.8%",
+          "title": "PERFECT BONUS",
+          "description": "2,700~7,500개\n연출 성공 시",
+          "route": "↻ RUSH 계속",
+          "tone": "premium"
+        },
+        {
+          "rate": "약 2.2%",
+          "title": "챌린지 BONUS 1,500개",
+          "description": "1,500개\n승격 연출에 성공하면 계속",
+          "route": "↻ RUSH 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 25%",
+          "title": "챌린지 BONUS 1,500개",
+          "description": "1,500개\n연출 실패 시 RUSH 종료",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "PERFECT BONUS는 2,700개 55.5% · 3,900개 33.1% · 5,100개 9.8% · 6,300개 1.5% · 7,500개 0.1%(72.8% 안의 비율). 1회 최대 7,500개"
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "대당첨 노리기",
+        "description": "약 1/319.6 확률의 대당첨을 노립니다. 초당첨은 반드시 3R:450개이며 이어서 SEVEN RUSH 챌린지(시단 100회전)로 들어갑니다."
+      },
+      {
+        "phase": "STEP 02 · 초당첨 판정",
+        "title": "챌린지 돌파율 약 40%",
+        "description": "시단 100회전 중 실질 대당첨 약 1/196.2에서 연출에 성공하면 SEVEN RUSH로 돌파합니다. 돌파하지 못하면 통상으로 돌아가며, 돌파 시 출옥은 없습니다."
+      },
+      {
+        "phase": "STEP 03 · RUSH",
+        "title": "대당첨 약 1/1 · 계속률 약 75%",
+        "description": "RUSH 중에는 PERFECT BONUS 약 72.8%(2,700~7,500개)·챌린지 BONUS 1,500개 약 27.2%이며, 이 중 약 2.2%는 승격으로 계속합니다. 계속률은 약 75%입니다."
+      }
+    ]
+  }
+}
