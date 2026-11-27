@@ -1,0 +1,585 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-kaguya",
+  "nameKo": "스마스로 카구야 님은 고백받고 싶어",
+  "officialNameJa": "パチスロ かぐや様は告らせたい",
+  "modelCode": "Lかぐや様は告らせたいjA",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "SANKYO",
+  "brand": "SANKYO",
+  "releaseDate": "2024-09-02",
+  "aliases": [
+    "かぐや様は告らせたい",
+    "かぐや様",
+    "카구야",
+    "카구야 님",
+    "슬롯 카구야"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 보너스 1/362",
+    "cz": "—",
+    "at": "설정1 보너스 1/362"
+  },
+  "rush": {
+    "nameJa": "BIG／スーパーBIG／REG",
+    "type": "의사 보너스 연속형(1G 연)",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 챈스메 규정 회수나 G수 소화로 CZ 고백받고 싶어 챌린지(15G+α)에 당첨되고, 성공하면 보너스에 들어간다",
+      "보너스는 BIG(30G·평균 약 270매)·슈퍼 BIG(54G·평균 약 490매)·REG(벨 내비 7회까지)로, 순증은 약 9.0매/G",
+      "보너스 중 1G 연(BIG 이상 농후)에 당첨되면 이어지고, 실패하면 약 100G의 끌어당김 찬스(기대 약 25%)에 들어간다",
+      "BIG·슈퍼 BIG 일부에서 엑스트라 보너스(초기 G수 결정 존에서 50G·100G 상승이 약 80%로 루프)에 들어간다"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 의사 보너스 연속형(BIG·슈퍼 BIG·REG)",
+    "netIncrease": "보너스 약 9.0매/G",
+    "baseGames": "50매당 약 31.0G (설정1)",
+    "czEntry": "챈스메 규정 회수·G수 소화 (CZ 확률 미공개)",
+    "czBreakRate": "보너스 기대 약 58%",
+    "initialATCoins": "BIG 평균 약 270매 · 슈퍼 BIG 평균 약 490매",
+    "primaryCeilingLabel": "천장 (G수·스루 회수)",
+    "settingsPrimaryLabel": "CZ 합산 (미공개)",
+    "czCeiling": "최대 약 1100G+α (REG 후 900G+α) 또는 CZ 스루 7회",
+    "atCeiling": "천장 도달 시 BIG 이상 당첨 · 스루 천장 시 CZ가 보너스로 변경",
+    "resetCeiling": "800G+α (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/362",
+      "payoutRate": "97.7%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/360",
+      "payoutRate": "98.8%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "—",
+      "atProbability": "1/357",
+      "payoutRate": "101.2%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/349",
+      "payoutRate": "105.8%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/343",
+      "payoutRate": "110.8%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/335",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 내부 상태(통상·고확·초고확)와 모드 A~D로 챈스메 규정 회수를 관리한다. 규정 회수에 닿으면 연애 두뇌전(전조)을 거쳐 CZ에 들어간다.",
+    "CZ 고백받고 싶어 챌린지는 15G+α 안에 지시된 릴에 샌드 목을 멈추면 성공이며 보너스 기대는 약 58%.",
+    "보너스는 BIG(30G)·슈퍼 BIG(54G)·REG(벨 내비 7회까지)이고 순증 약 9.0매/G. 보너스 중 1G 연이 핵심이다.",
+    "1G 연에 실패하면 약 100G의 끌어당김 찬스(기대 약 25%, 5연 이후 약 50%)에 들어간다.",
+    "천장은 최대 약 1100G+α(REG 후 900G+α, 설정 변경 후 800G+α)와 CZ 스루 회수 천장(최대 7회, 8회째 당첨)이다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정표의 'AT 초당첨' 열은 BIG·슈퍼 BIG·REG를 합친 보너스 초당첨이다. 이 기종은 설정별 CZ 확률이 공개되지 않아 CZ 열은 '—'로 두었다.",
+    "설정별 보너스 초당첨은 なな徹와 1geki.jp가 일치하고, 기계할은 なな徹 값이며 p-town 기재 범위 97.7~114.9%와 일치한다. 베이스 50매당 약 31.0G는 설정1 값이다.",
+    "SANKYO 공식 사이트(sankyo-fever.jp)는 봇 차단(Incapsula)으로 열리지 않아 공식 스펙과 스펙 이미지를 직접 확인하지 못했고, 우회하지 않았다. 번역 이미지는 만들지 않았고 '게임 진행 단계' 텍스트 카드를 쓴다.",
+    "상세한 수치가 판명된 설정차 요소는 보너스 초당첨뿐이며, 보너스 비율·특화 존 당첨률 등 다른 설정차는 존재하나 수치는 비공개다(なな徹 기재).",
+    "한국어명은 임시이며 공식 한국어 표기를 확인하지 못했다. 고유 명칭 번역(고백받고 싶어 챌린지·끌어당김 찬스 등)도 검수가 필요하다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(パチスロ かぐや様は告らせたい)",
+      "url": "https://p-town.dmm.com/machines/4618",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "모드·CZ·보너스 구조",
+        "기계할 범위",
+        "롱 프리즈",
+        "끌어당김 찬스"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 ボーナス初当たり確率/機械割/小役確率",
+      "url": "https://nana-press.com/kaiseki/machine/804/22705/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 보너스·기계할",
+        "50매당 G수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定差・設定示唆演出まとめ",
+      "url": "https://nana-press.com/kaiseki/machine/804/23719/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정 판별 요소",
+        "종료 화면·미니 후지와라·획득 매수 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 天井・狙い目",
+      "url": "https://nana-press.com/kaiseki/machine/804/23721/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장 G수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・設定判別要素",
+      "url": "https://1geki.jp/slot/l_kaguya/0/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 보너스 초당첨"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10091",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "기기 사진",
+        "型式·導入일"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki.jp 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "보너스 사이 G수 천장과 CZ 스루 회수 천장이 있습니다. 전조(+α)는 최대 32G입니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "보너스간 G수(BIG 후)",
+                "최대 약 1100G+α",
+                "800G+α",
+                "BIG 이상 당첨"
+              ],
+              [
+                "보너스간 G수(REG 후)",
+                "900G+α",
+                "—",
+                "BIG 이상 당첨"
+              ],
+              [
+                "CZ 스루 회수",
+                "최대 7회(8회째 당첨·고설정 우대)",
+                "—",
+                "CZ가 보너스로 변경"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장까지 100G 이내 당첨",
+            "value": "BIG 이상 농후",
+            "note": "직접 당첨한 보너스도 천장 혜택을 받는다"
+          },
+          {
+            "label": "설정 변경 시 시작",
+            "value": "G수 색이 바뀌지 않음",
+            "note": "전원 차단 후에는 첫 보너스 당첨 전까지 전조가 나오지 않는다"
+          },
+          {
+            "label": "야메도키",
+            "value": "보너스 종료 후 130G+α 전조를 소화해 CZ가 안 나오면 종료",
+            "note": "끌어당김 찬스 기대는 약 25%(5연 이후 약 50%)라 즉야메도 가능"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4618"
+          },
+          {
+            "title": "なな徹 天井",
+            "url": "https://nana-press.com/kaiseki/machine/804/23721/"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "수치가 판명된 설정차는 보너스 초당첨뿐이며 설정차는 크지 않습니다. 종료 화면·미니 후지와라·획득 매수 표시 같은 시사 연출이 판별의 중심입니다.",
+        "tables": [
+          {
+            "caption": "설정별 보너스 초당첨·기계할",
+            "columns": [
+              "설정",
+              "보너스 초당첨",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/362",
+                "97.7%"
+              ],
+              [
+                "설정2",
+                "1/360",
+                "98.8%"
+              ],
+              [
+                "설정3",
+                "1/357",
+                "101.2%"
+              ],
+              [
+                "설정4",
+                "1/349",
+                "105.8%"
+              ],
+              [
+                "설정5",
+                "1/343",
+                "110.8%"
+              ],
+              [
+                "설정6",
+                "1/335",
+                "114.9%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "보너스 종료 화면",
+            "value": "보라 틀=설정 2 이상 / 은 틀=설정 4 이상 / 금 틀=설정 6",
+            "note": "붉은 틀은 고설정 시사, 은 틀(학생회)은 설정 4 이상 + 끌어당김 기대 약 70%"
+          },
+          {
+            "label": "미니 후지와라",
+            "value": "체조복→LOVE 탐정=설정 4 이상 / 체조복→교복=설정 6",
+            "note": "의상 변경 '교복→체조복'은 모드 C 이상 농후"
+          },
+          {
+            "label": "획득 매수 표시",
+            "value": "246매 OVER=짝수 / 456매 OVER=설정 4 이상 / 666매 OVER=설정 6",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "REG 중 캐릭터 소개",
+            "value": "시로가네 파파 또는 전부 무지개 배경=설정 4 이상",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "엔딩 에피소드",
+            "value": "카구야=짝수 / 시로가네=홀수",
+            "note": "홀수·짝수에 고설정 시사가 붙는 패턴도 있음"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 設定判別",
+            "url": "https://nana-press.com/kaiseki/machine/804/23719/"
+          },
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/804/22705/"
+          },
+          {
+            "title": "1geki 設定差",
+            "url": "https://1geki.jp/slot/l_kaguya/0/"
+          }
+        ]
+      },
+      {
+        "title": "CZ·모드·끌어당김 찬스",
+        "kind": "mode",
+        "intro": "모드 A~D로 CZ까지의 챈스메 규정 회수를 관리하고, 보너스 종료 후에는 끌어당김 찬스(약 100G)가 이어집니다.",
+        "tables": [
+          {
+            "caption": "통상 시 구간",
+            "columns": [
+              "구간",
+              "계기",
+              "계속",
+              "기대"
+            ],
+            "rows": [
+              [
+                "CZ 고백받고 싶어 챌린지",
+                "챈스메 규정 회수·규정 G수",
+                "15G+α",
+                "보너스 약 58%"
+              ],
+              [
+                "끌어당김 찬스",
+                "1G 연 비당첨 후",
+                "약 100G",
+                "약 25%(5연 이후 약 50%)"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "챈스메 확률(통상·아침/낮)",
+            "value": "약 1/22 (챈스메·강 챈스메 합산)",
+            "note": "1의 자리가 0·4·5·9회째가 CZ 찬스(특히 5의 배수). 강 챈스메는 회수 불문 보너스 추첨"
+          },
+          {
+            "label": "내부 상태",
+            "value": "통상(아침·낮) · 고확(저녁) · 초고확(밤)",
+            "note": "시계 정지·규정 G수로 이행"
+          },
+          {
+            "label": "끌어당김 중 CZ",
+            "value": "종료 후 130G 구간의 전조를 거쳐 한꺼번에 방출",
+            "note": "당첨률은 통상 시와 동일하므로 즉야메는 피하는 편이 좋다"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4618"
+          }
+        ]
+      },
+      {
+        "title": "보너스 구조",
+        "kind": "mode",
+        "intro": "BIG·슈퍼 BIG·REG 모두 순증 약 9.0매/G이며, 보너스 중 1G 연으로 이어 갑니다.",
+        "tables": [
+          {
+            "caption": "보너스 비교",
+            "columns": [
+              "구분",
+              "계속",
+              "평균 매수",
+              "특징"
+            ],
+            "rows": [
+              [
+                "BIG",
+                "30G",
+                "약 270매",
+                "보너스 중 1G 연 추첨"
+              ],
+              [
+                "슈퍼 BIG",
+                "54G(전반 24G·후반 30G)",
+                "약 490매",
+                "전반 전용 영상, 후반은 BIG와 같은 3가지 연출 모드"
+              ],
+              [
+                "REG",
+                "벨 내비 7회까지",
+                "—",
+                "1G 연 기대가 큰 이면 REG도 있음"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "1G 연 특화 존",
+            "value": "5G+α · 순증 약 9.0매/G",
+            "note": "BIG·슈퍼 BIG 중 1G 연 일부에서 돌입, 상승 특화 존 자체가 루프하는 패턴도 있음"
+          },
+          {
+            "label": "엑스트라 보너스",
+            "value": "초기 G수 결정 존에서 50G·100G 상승이 약 80%로 루프",
+            "note": "당첨 시 BIG 이상 1개를 스톡하고 G수 소화 후 방출"
+          },
+          {
+            "label": "롱 프리즈",
+            "value": "슈퍼 BIG 3개 스톡",
+            "note": "시계의 일부에서 발생하며 고설정일수록 발생하기 쉬움"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4618"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-kaguya/machine.png",
+      "alt": "스마스로 카구야 님은 고백받고 싶어 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10091"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/362",
+        "label": "설정1 보너스 초당첨"
+      },
+      {
+        "value": "9.0매/G",
+        "label": "보너스 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "챈스메와 CZ",
+        "description": "모드 A~D로 챈스메 규정 회수를 관리한다. 규정 회수에 닿으면 연애 두뇌전을 거쳐 CZ 고백받고 싶어 챌린지(15G+α·보너스 기대 약 58%)에 들어간다. 천장은 최대 약 1100G+α."
+      },
+      {
+        "phase": "STEP 02 · 보너스",
+        "title": "BIG·슈퍼 BIG·REG",
+        "description": "순증 약 9.0매/G. BIG 30G(평균 약 270매)·슈퍼 BIG 54G(평균 약 490매)이며 보너스 중 1G 연(BIG 이상 농후)으로 이어 간다. 1G 연 특화 존(5G+α)도 있다."
+      },
+      {
+        "phase": "STEP 03 · 끌어당김",
+        "title": "끌어당김 찬스와 엑스트라 보너스",
+        "description": "1G 연이 끊기면 약 100G의 끌어당김 찬스(기대 약 25%, 5연 이후 약 50%). 보너스 일부에서는 엑스트라 보너스가 시작돼 50G·100G 상승이 약 80%로 루프한다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 카구야 님은 고백받고 싶어 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "챈스메 규정 회수·G수 소화로 CZ를 노림"
+      },
+      "initialConnector": "보너스 진입",
+      "initialAriaLabel": "보너스 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "보너스 기대 약 58%",
+          "title": "고백받고 싶어 챌린지",
+          "description": "CZ · 15G+α\n지시된 릴에 샌드 목 성공",
+          "route": "보너스",
+          "tone": "rush"
+        },
+        {
+          "rate": "최대 약 1100G+α",
+          "title": "G수 천장",
+          "description": "도달 시 BIG 이상 당첨\n설정 변경 후 800G+α",
+          "route": "보너스",
+          "tone": "rush"
+        },
+        {
+          "rate": "스루 최대 7회",
+          "title": "CZ 스루 천장",
+          "description": "8회째 CZ가 보너스로 변경\n고설정일수록 우대",
+          "route": "보너스",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "보너스 진입",
+      "rush": {
+        "eyebrow": "BONUS · 약 9.0매/G",
+        "title": "BIG·슈퍼 BIG",
+        "detail": "BIG 30G · 슈퍼 BIG 54G · 1G 연으로 연속"
+      },
+      "rushConnector": "보너스 중 주요 분기",
+      "rushAriaLabel": "보너스 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "BIG 이상 농후",
+          "title": "1G 연",
+          "description": "보너스 중 1G 연 당첨\n보너스가 이어진다",
+          "route": "연속",
+          "tone": "rush"
+        },
+        {
+          "rate": "5G+α · 약 9.0매/G",
+          "title": "1G 연 특화 존",
+          "description": "1G 연 일부에서 돌입\n상승 특화 존이 루프하기도 함",
+          "route": "특화",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 100G · 기대 약 25%",
+          "title": "끌어당김 찬스",
+          "description": "1G 연 실패 후 돌입\n5연 이후 기대 약 50%",
+          "route": "재도전",
+          "tone": "rush"
+        }
+      ],
+      "secondaryConnector": "BIG·슈퍼 BIG 일부",
+      "secondaryRush": {
+        "eyebrow": "PREMIUM",
+        "title": "엑스트라 보너스",
+        "detail": "초기 G수 결정 존에서 50G·100G 상승이 약 80%로 루프"
+      },
+      "secondaryRushConnector": "엑스트라 보너스 중",
+      "secondaryAriaLabel": "엑스트라 보너스 흐름 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "시계 일부",
+          "title": "롱 프리즈",
+          "description": "슈퍼 BIG 3개 스톡\n고설정일수록 발생하기 쉬움",
+          "route": "최강",
+          "tone": "premium"
+        },
+        {
+          "rate": "상승 루프 약 80%",
+          "title": "초기 G수 결정",
+          "description": "50G·100G 상승이 반복\n당첨 시 BIG 이상 1개 스톡",
+          "route": "대량 G수",
+          "tone": "premium"
+        }
+      ],
+      "loopNote": "천장은 최대 약 1100G+α(REG 후 900G+α). 설정 변경 후에는 800G+α로 단축되고, CZ 스루는 최대 7회"
+    }
+  }
+}
