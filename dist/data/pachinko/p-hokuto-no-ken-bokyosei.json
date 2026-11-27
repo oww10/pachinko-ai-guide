@@ -1,0 +1,294 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "p-hokuto-no-ken-bokyosei",
+  "officialNameJa": "P北斗の拳 暴凶星",
+  "nameKo": "P 북두의 권 폭흉성",
+  "aliases": [
+    "北斗の拳 暴凶星",
+    "P北斗の拳暴凶星",
+    "북두 폭흉성",
+    "북두 P 폭흉성"
+  ],
+  "modelCode": "P北斗の拳暴凶星SFPA",
+  "machineType": "pachinko",
+  "format": "P",
+  "maker": "サミー",
+  "brand": "Sammy",
+  "releaseDate": "2023-05-08",
+  "probabilities": {
+    "base": "約1/319.7",
+    "symbolHit": null,
+    "charge": null,
+    "highState": null,
+    "rushHit": "約1/10.7"
+  },
+  "rush": {
+    "nameJa": "拳王RUSH",
+    "type": "ST・10回転＋残り保留4個",
+    "entryRatePercent": 60,
+    "totalEntryRatePercent": 60,
+    "continuationRatePercent": 75,
+    "spins": 10,
+    "remainingHolds": 4,
+    "timeShortSpins": 1000,
+    "gates": [
+      "初当りはすべて出玉1,500個(払い出し)以上",
+      "初当りの60%で拳王RUSHに突入",
+      "拳王RUSHはSTタイプの連チャンゾーンで、10回転＋残り保留4個の継続率は約75%",
+      "RUSH中の大当りの約50%が出玉3,000個(10R×2回)"
+    ]
+  },
+  "payouts": {
+    "basis": "払い出し",
+    "initial": [
+      {
+        "label": "1,500個",
+        "payoutBalls": 1500,
+        "ratePercent": 40,
+        "destination": "통상",
+        "confidence": "official",
+        "notes": [
+          "RUSH 없음"
+        ]
+      },
+      {
+        "label": "1,500個＋RUSH",
+        "payoutBalls": 1500,
+        "ratePercent": 55,
+        "destination": "拳王RUSH",
+        "confidence": "official",
+        "notes": [
+          "特図1(ヘソ)"
+        ]
+      },
+      {
+        "label": "3,000個以上＋RUSH",
+        "payoutBalls": 3000,
+        "ratePercent": 5,
+        "destination": "拳王RUSH",
+        "confidence": "official",
+        "notes": [
+          "特図1(ヘソ)",
+          "1,500個×2回以上"
+        ]
+      }
+    ],
+    "rush": [
+      {
+        "label": "3,000個以上＋RUSH",
+        "payoutBalls": 3000,
+        "ratePercent": 50.1,
+        "destination": "拳王RUSH継続",
+        "confidence": "official",
+        "notes": [
+          "特図2(電チュー)",
+          "1,500個×2回"
+        ]
+      },
+      {
+        "label": "1,500個＋RUSH",
+        "payoutBalls": 1500,
+        "ratePercent": 30.6,
+        "destination": "拳王RUSH継続",
+        "confidence": "official",
+        "notes": [
+          "特図2(電チュー)"
+        ]
+      },
+      {
+        "label": "約200個＋RUSH",
+        "payoutBalls": 200,
+        "ratePercent": 19.3,
+        "destination": "拳王RUSH継続",
+        "confidence": "official",
+        "notes": [
+          "特図2(電チュー)",
+          "2R(ショート開放)"
+        ]
+      }
+    ]
+  },
+  "border": {
+    "spinsPer1000Yen": 17.7,
+    "exchange": "4엔(등가)",
+    "source": "p-town",
+    "condition": "전지원 중 출옥 증감 없음, 통상 2,000회전(10시간) 기준",
+    "sourceUrl": "https://p-town.dmm.com/machines/4332",
+    "checkedAt": "2026-11-27"
+  },
+  "gameFlow": [
+    "通常時の大当り確率は約1/319.7",
+    "初当りはすべて1,500個以上で、60%で拳王RUSHに突入",
+    "拳王RUSH(ST 10回転＋残り保留4個・継続率約75%)の右打ち中は大当り＋小当りの実質確率が約1/10.7",
+    "RUSH中の大当りは約50%が3,000個以上、無想転生で7,500個オーバーも"
+  ],
+  "notes": [
+    "Sammy 공식 제품 페이지의 기본 정보 이미지(spec-pc.png)를 직접 읽어 확인했다: 대당첨 확률 약 1/319.7(좌타 시), 대당첨+소당첨 확률 약 1/10.7(우타 시), 상품구 수 1&4&5&15/10C, 시단 횟수 10회 or 1,000회, 대당첨 출옥(10R 1,500개 / 2R 약 200개), 특도 1(헤소) 배분 1,500개 40% · 1,500개+RUSH 55% · 3,000개 이상+RUSH 5%, 특도 2(전동 튤립) 배분 3,000개 이상+RUSH 약 50.1% · 1,500개+RUSH 약 30.6% · 약 200개+RUSH 약 19.3%(각 합계 100%).",
+    "RUSH 돌입률 60%는 특도 1 배분의 55%+5%와 일치한다. RUSH 계속률 약 75%(시단 10회전+잔여 보류 4개의 합산)와 RUSH 중 대당첨의 약 50%가 3,000개(10R×2회)라는 점은 공식 특징 이미지와 p-town 개요에 기재돼 있다.",
+    "공식 이미지에는 특도 1 배분 중 'RUSH 없음 1,500개 40%'의 시단 횟수(10회)와 RUSH 시 시단 횟수(1,000회)의 대응이 명시되어 있지 않다. 본 페이지는 시단 횟수를 스펙표 값(10회 or 1,000회)으로만 표기했다.",
+    "전동 튤립 서포트 중 대당첨의 배분은 전동 튤립 입상 시의 값이며, 잔여 보류로 당첨된 경우는 출옥이 1,500개가 된다(공식 각주).",
+    "보더 17.7회전/1,000엔(등가)은 p-town 산출값이며 이 기종은 전지원 중 출옥 증감 없음, 통상 2,000회전 기준이다. 초당첨 1회당 기대 출옥은 4,523개(p-town 산출, 컴플리트 기능 미고려). 제조사 공식 값이 아니다.",
+    "공식 특징 이미지(feature-pc.png)와 상세 이미지(shosai-pc.jpg)는 세로로 매우 길고 대형 그래픽 문자가 많아 번역하지 않았다. 게임 플로우 이미지는 공식 페이지에 없다. 같은 시리즈의 e 북두의 권 11 폭흉성은 별개 기종이다.",
+    "한국어명 `P 북두의 권 폭흉성`과 용어(권왕 RUSH·특도 등)는 임시 번역이며 검수가 필요하다."
+  ],
+  "sources": [
+    {
+      "title": "P-WORLD 機種データベース",
+      "url": "https://www.p-world.co.jp/machine/database/9808",
+      "type": "secondary",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "p-town 機種情報(ボーダー)",
+      "url": "https://p-town.dmm.com/machines/4332",
+      "type": "secondary",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式製品ページ",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/hok_ke9_m/",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    },
+    {
+      "title": "Sammy 公式 基本情報画像(번역 이미지 원본)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachinko/hok_ke9_m/img/spec/spec-pc.png",
+      "type": "official",
+      "checkedAt": "2026-11-27"
+    }
+  ],
+  "verification": {
+    "status": "needs-review",
+    "checkedAt": "2026-11-27",
+    "needsReviewFields": [
+      "nameKo"
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/hokuto-bokyosei/machine.png",
+      "alt": "サミー P 북두의 권 폭흉성 파칭코 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/9808"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "확률·상품구·특도 1·2 배분",
+        "url": "./assets/images/official/hokuto-bokyosei/spec-ko.png",
+        "alt": "Sammy 공식 제품 페이지 기본 정보 이미지의 한국어 번역본"
+      }
+    ],
+    "keyStats": [
+      {
+        "value": "1/319.7",
+        "label": "통상시 대당첨"
+      },
+      {
+        "value": "60%",
+        "label": "RUSH 돌입"
+      },
+      {
+        "value": "75%",
+        "label": "RUSH 계속"
+      }
+    ],
+    "distributionCharts": [
+      {
+        "title": "초당첨 배분 (특도 1·헤소)",
+        "source": "initial",
+        "centerValue": "60%",
+        "centerLabel": "RUSH 돌입"
+      },
+      {
+        "title": "RUSH 중 배분 (특도 2·전동 튤립)",
+        "source": "rush",
+        "centerValue": "50.1%",
+        "centerLabel": "3000개 이상"
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "P 북두의 권 폭흉성 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "대당첨 약 1/319.7 · 초당첨은 모두 1,500개 이상"
+      },
+      "initialConnector": "초당첨",
+      "initialAriaLabel": "초당첨 결과 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "40%",
+          "title": "1,500개",
+          "description": "RUSH 없음\n통상 복귀",
+          "route": "↩ 통상 복귀",
+          "tone": "return"
+        },
+        {
+          "rate": "55%",
+          "title": "1,500개 + RUSH",
+          "description": "拳王RUSH 돌입",
+          "route": "RUSH",
+          "tone": "rush"
+        },
+        {
+          "rate": "5%",
+          "title": "3,000개 이상 + RUSH",
+          "description": "1,500개 × 2회 이상\n拳王RUSH 돌입",
+          "route": "RUSH",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "RUSH 돌입 60%",
+      "rush": {
+        "eyebrow": "ST",
+        "title": "拳王RUSH",
+        "detail": "ST 10회전 + 잔여 보류 4개 · 계속률 약 75% · 우타 시 대당첨+소당첨 약 1/10.7"
+      },
+      "rushConnector": "RUSH 중 대당첨",
+      "rushAriaLabel": "RUSH 중 대당첨 결과 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "약 50.1%",
+          "title": "3,000개 이상 + RUSH",
+          "description": "1,500개 × 2회\n무상전생 시 7,500개 오버",
+          "route": "↻ 계속 / 종료",
+          "tone": "premium"
+        },
+        {
+          "rate": "약 30.6%",
+          "title": "1,500개 + RUSH",
+          "description": "약 1,500개",
+          "route": "↻ 계속 / 종료",
+          "tone": "rush"
+        },
+        {
+          "rate": "약 19.3%",
+          "title": "약 200개 + RUSH",
+          "description": "2R(숏 개방)\n약 200개",
+          "route": "↻ 계속 / 종료",
+          "tone": "rush"
+        }
+      ],
+      "loopNote": "전동 튤립 서포트 중의 배분이며 잔여 보류로 당첨 시에는 1,500개. RUSH 중 대당첨의 약 50%가 3,000개 이상"
+    },
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "대당첨 노리기",
+        "description": "약 1/319.7 확률의 대당첨을 노립니다. 초당첨은 모두 출옥 1,500개 이상입니다."
+      },
+      {
+        "phase": "STEP 02 · 초당첨 판정",
+        "title": "RUSH 돌입 60% / 통상 40%",
+        "description": "헤소 당첨(특도 1)에서 1,500개 40%는 통상으로 돌아가고, 1,500개+RUSH 55%와 3,000개 이상+RUSH 5%는 拳王RUSH로 이어집니다."
+      },
+      {
+        "phase": "STEP 03 · RUSH",
+        "title": "계속률 약 75%",
+        "description": "ST 10회전+잔여 보류 4개의 계속률이 약 75%입니다. 전동 튤립 당첨(특도 2)은 3,000개 이상 약 50.1%·1,500개 약 30.6%·약 200개 약 19.3%입니다."
+      }
+    ]
+  }
+}
