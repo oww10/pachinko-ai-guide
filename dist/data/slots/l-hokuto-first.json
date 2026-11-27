@@ -1,0 +1,708 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-hokuto-first",
+  "nameKo": "스마스로 북두의 권",
+  "officialNameJa": "スマスロ北斗の拳",
+  "modelCode": "L パチスロ北斗の拳AD XR",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "サミー",
+  "brand": "Sammy",
+  "releaseDate": "2023-04-03",
+  "aliases": [
+    "スマスロ北斗",
+    "北斗の拳 スマスロ",
+    "초대 북두",
+    "북두 초대",
+    "스마스로 북두 1탄"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 BB 1/383.4",
+    "cz": "—",
+    "at": "설정1 BB 1/383.4"
+  },
+  "rush": {
+    "nameJa": "バトルボーナス／無想転生バトル",
+    "type": "배틀 보너스 연속형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 CZ 없이 레어 역으로 모드를 올려 본 전조(32G 이내)를 거쳐 배틀 보너스(BB)에 당첨된다",
+      "BB는 소역 파트 30G+α와 배틀 파트 8G를 한 세트로 하고, 켄시로가 지지 않으면 계속된다. 계속률은 66·79·84·89%(V스톡 제외), 1세트 약 110매",
+      "공동 투쟁(레이·토키)이나 숙명 배틀로 V스톡·계속률 상승을 얻고, 무상전생 찬스에 성공하면 무상전생 배틀로 올라간다",
+      "무상전생 배틀은 계속률 94%·기대 2500매 이상의 최강 BB"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 배틀 보너스 연속형 AT(BB)",
+    "netIncrease": "소역 파트 약 4.1매/G · 1세트 약 110매",
+    "baseGames": "50매당 약 34.7G",
+    "czEntry": "CZ 없음 (BB가 초당첨)",
+    "czBreakRate": "BB 계속률 66·79·84·89% · 무상전생 배틀 94%",
+    "initialATCoins": "1세트 약 110매",
+    "primaryCeilingLabel": "천장 (G수)",
+    "settingsPrimaryLabel": "CZ 없음",
+    "czCeiling": "최대 1268G+α",
+    "atCeiling": "천장 도달 시 BB 당첨",
+    "resetCeiling": "800G+α (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/383.4",
+      "payoutRate": "98.0%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/370.5",
+      "payoutRate": "98.9%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/297.8",
+      "payoutRate": "105.7%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/258.7",
+      "payoutRate": "110.0%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/235.1",
+      "payoutRate": "113.0%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 CZ가 없고, 레어 역으로 모드를 올려 본 전조(32G 이내)에 들어가면 배틀 보너스(BB)가 고지된다. 300·777·800G 도달 시 천장 단축 추첨도 있다.",
+    "BB는 소역 파트 30G+α와 배틀 파트 8G를 한 세트로 하며, 세트 종료 직전에 계속 여부를 판정한다. 계속률은 66·79·84·89%(V스톡 제외)이고 1세트 약 110매.",
+    "소역 파트에서는 레어 역으로 숙명 배틀(승리 시 V스톡)이나 레이·토키 공동 투쟁을, 배틀 파트에서는 계속률 상승을 추첨한다.",
+    "BB 계속 시나 공동 투쟁의 일부에서 무상전생 찬스(15G)에 들어가고, 성공하면 계속률 94%의 무상전생 배틀로 올라간다.",
+    "천장은 최대 1268G+α이며 설정 변경 후에는 800G+α로 단축된다. 도달 시 BB 당첨과 계속률 우대 혜택이 있다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "이 기종에는 설정 3이 없다(설정 1·2·4·5·6과 설정 L). 설정 L은 하단 패널이 상시 명멸하며 확률은 공개되지 않는다.",
+    "サミー 공식이 BB를 'AT'로 분류해 설정별 'AT 확률(합산)'로 표기한다. 설정표의 'AT 초당첨' 열은 이 BB 합산 확률이다. 이 기종에는 CZ가 없어 CZ 열은 '—'이다.",
+    "설정별 BB 합산 확률·북두 확률 1/7274.0(전 설정 공통)·베이스 34.7G는 サミー 공식 기본 정보 이미지에서 확인했고, なな徹·パチセブン과 일치한다. 기계할은 공식 이미지에 없어 なな徹·パチセブン 두 곳이 일치한 값이며 p-town 기재 범위 98.0~113.0%와도 맞는다.",
+    "1geki.jp는 이 기종 페이지 주소를 찾지 못해 확인하지 않았다.",
+    "번역 이미지 2장(기본 정보·BATTLE BONUS 특징)은 サミー 공식 사이트 이미지를 번역한 것이며 원본은 spec-source.png·feature-source.png로 보존한다. 공식에 게임 플로우 이미지는 없다. 번역 용어(공투·숙명·무상전생 등)는 임시이며 검수가 필요하다.",
+    "천장 1268G+α·800G+α와 천장 단축 추첨은 なな徹·p-town 기재이며 공식 확인은 하지 못했다."
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "title": "サミー スマスロ北斗の拳 公式サイト(基本情報·特徴)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachislot/sp_hok_ke/spec.html",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 BB(AT) 합산 확률",
+        "북두 확률",
+        "베이스",
+        "BB 계속률·1세트 매수",
+        "설정 L"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロ北斗の拳)",
+      "url": "https://p-town.dmm.com/machines/4301",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "BB·공동 투쟁·무상전생 구조",
+        "기계할 범위",
+        "롱 프리즈",
+        "BB 계속률 분포"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 AT確率/機械割/小役確率",
+      "url": "https://nana-press.com/kaiseki/machine/514/13282/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 BB·기계할",
+        "설정별 소역 확률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定判別の詳細",
+      "url": "https://nana-press.com/kaiseki/machine/514/13774/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정 판별 요소",
+        "숙명 배틀 발생률",
+        "트로피·표시 매수 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 ゲーム数天井の発動条件や恩恵",
+      "url": "https://nana-press.com/kaiseki/machine/514/13775/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "천장 단축 추첨"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン スマスロ北斗の拳",
+      "url": "https://pachiseven.jp/machines_v2/6692",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 BB·기계할",
+        "베이스",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/9786",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "CZ가 없고 G수 천장에서 BB가 당첨됩니다. 설정 변경 후에는 천장이 짧아지고, 300·777·800G 도달 시 천장 단축 추첨이 있습니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "통상 G수",
+                "최대 1268G+α",
+                "800G+α",
+                "BB 당첨 + 북두 정렬 기대 상승 + 붉은 7 정렬 시 고계속률 선택률 상승"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 단축 당첨 시",
+            "value": "고계속률 우대 혜택 없음",
+            "note": "천장 도달 때만 계속률 우대가 있다"
+          },
+          {
+            "label": "777G 천장",
+            "value": "북두 정렬 농후",
+            "note": "パチセブン 기재"
+          },
+          {
+            "label": "리셋 시 내부 상태",
+            "value": "천국 이행률 약 17.57~27.92% · 본 전조 이행률 약 0.63~1.32%",
+            "note": "고설정일수록 천국 이상으로 이행하기 쉬움"
+          },
+          {
+            "label": "야메도키",
+            "value": "BB 후 기본적으로 즉야메",
+            "note": "천국(이행률 약 25.82~35.94%)·본 전조(약 0.71~0.74%) 가능성이 있어 수 G 지켜보는 것도 방법. 본 전조는 10G 전후로 판별 가능"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4301"
+          },
+          {
+            "title": "なな徹 천장",
+            "url": "https://nana-press.com/kaiseki/machine/514/13775/"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "BB 합산 확률에 설정차가 크고, 설정별 소역 확률 4종(약 스이카·강 스이카 A·중단 체리 A·리치메)과 천장 단축 추첨에도 설정차가 있습니다. 설정 3은 없습니다.",
+        "tables": [
+          {
+            "caption": "설정별 BB(AT) 합산·기계할",
+            "columns": [
+              "설정",
+              "BB 합산",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/383.4",
+                "98.0%"
+              ],
+              [
+                "설정2",
+                "1/370.5",
+                "98.9%"
+              ],
+              [
+                "설정4",
+                "1/297.8",
+                "105.7%"
+              ],
+              [
+                "설정5",
+                "1/258.7",
+                "110.0%"
+              ],
+              [
+                "설정6",
+                "1/235.1",
+                "113.0%"
+              ]
+            ]
+          },
+          {
+            "caption": "설정차가 있는 소역 확률",
+            "columns": [
+              "설정",
+              "약 스이카",
+              "강 스이카 A",
+              "중단 체리 A",
+              "리치메"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/109.0",
+                "1/546.1",
+                "1/260.1",
+                "1/16384.0"
+              ],
+              [
+                "설정2",
+                "1/108.7",
+                "1/537.2",
+                "1/252.1",
+                "1/13107.2"
+              ],
+              [
+                "설정4",
+                "1/105.9",
+                "1/489.1",
+                "1/244.5",
+                "1/10922.7"
+              ],
+              [
+                "설정5",
+                "1/100.7",
+                "1/448.9",
+                "1/237.4",
+                "1/9362.3"
+              ],
+              [
+                "설정6",
+                "1/98.3",
+                "1/425.6",
+                "1/230.8",
+                "1/8192.0"
+              ]
+            ]
+          },
+          {
+            "caption": "BB 계속률 분포(전체 BB 평균·북두 정렬·천장 도달 포함)",
+            "columns": [
+              "설정",
+              "66%",
+              "79%",
+              "84%",
+              "89%"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "61.34%",
+                "28.91%",
+                "5.33%",
+                "4.42%"
+              ],
+              [
+                "설정2",
+                "61.69%",
+                "28.84%",
+                "5.21%",
+                "4.26%"
+              ],
+              [
+                "설정4",
+                "63.10%",
+                "28.77%",
+                "4.68%",
+                "3.45%"
+              ],
+              [
+                "설정5",
+                "63.73%",
+                "28.65%",
+                "4.46%",
+                "3.16%"
+              ],
+              [
+                "설정6",
+                "63.96%",
+                "28.62%",
+                "4.31%",
+                "3.11%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "북두 확률",
+            "value": "1/7274.0 (전 설정 공통)",
+            "note": "공식 기재"
+          },
+          {
+            "label": "숙명 배틀 발생률",
+            "value": "설정1 1/162.5 → 설정6 1/145.0",
+            "note": "설정2 1/159.5 · 설정4 1/154.3 · 설정5 1/148.9"
+          },
+          {
+            "label": "초대 연출",
+            "value": "신·사우저·쟈기 배틀 연속 연출에서 초대 영상이 나오면 설정 5 이상 확정",
+            "note": "출현률은 극히 낮음"
+          },
+          {
+            "label": "획득 매수 표시",
+            "value": "456매 돌파 = 설정 4 이상 / 666매 돌파 = 설정 6 농후",
+            "note": "출현률은 극히 낮음"
+          },
+          {
+            "label": "서미 트로피",
+            "value": "금 = 설정 4 이상 / 기린 = 설정 5 이상 / 무지개 = 설정 6",
+            "note": "3종뿐이며 금이 나와도 설정 4 확정은 아님"
+          },
+          {
+            "label": "설정 L",
+            "value": "하단 패널이 상시 명멸",
+            "note": "확인되면 가동을 피한다"
+          }
+        ],
+        "sources": [
+          {
+            "title": "サミー 공식 기본 정보",
+            "url": "https://www.sammy.co.jp/japanese/product/pachislot/sp_hok_ke/spec.html"
+          },
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/514/13282/"
+          },
+          {
+            "title": "なな徹 設定判別",
+            "url": "https://nana-press.com/kaiseki/machine/514/13774/"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4301"
+          }
+        ]
+      },
+      {
+        "title": "소역 확률",
+        "kind": "mode",
+        "intro": "아래는 설정차가 없는 소역입니다. 설정차가 있는 소역은 설정 판별 요소에 있습니다.",
+        "tables": [
+          {
+            "caption": "설정차 없는 소역 확률",
+            "columns": [
+              "역",
+              "확률"
+            ],
+            "rows": [
+              [
+                "각 체리",
+                "1/109.2"
+              ],
+              [
+                "중단 체리 B",
+                "1/1092.3"
+              ],
+              [
+                "강 스이카 B",
+                "1/1638.4"
+              ],
+              [
+                "찬스메",
+                "1/179.6"
+              ],
+              [
+                "북두 정렬(프리미엄)",
+                "1/7274.0"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "베이스",
+            "value": "50매당 약 34.7G",
+            "note": "공식 기재"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 스펙 정보",
+            "url": "https://nana-press.com/kaiseki/machine/514/13282/"
+          },
+          {
+            "title": "サミー 공식",
+            "url": "https://www.sammy.co.jp/japanese/product/pachislot/sp_hok_ke/spec.html"
+          }
+        ]
+      },
+      {
+        "title": "BB와 무상전생 구조",
+        "kind": "mode",
+        "intro": "BB는 소역 파트(30G+α)와 배틀 파트(8G)를 한 세트로 반복하며, 세트마다 계속 여부를 판정합니다.",
+        "tables": [
+          {
+            "caption": "BB·무상전생 배틀 비교",
+            "columns": [
+              "구분",
+              "1세트",
+              "순증",
+              "계속률"
+            ],
+            "rows": [
+              [
+                "배틀 보너스(BB)",
+                "소역 30G+α + 배틀 8G(약 110매)",
+                "소역 파트 약 4.1매/G",
+                "66·79·84·89%(V스톡 제외)"
+              ],
+              [
+                "무상전생 배틀",
+                "소역 30G+α + 배틀 8G",
+                "약 4.1매/G",
+                "94% · 기대 2500매 이상"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "숙명 배틀·공동 투쟁",
+            "value": "소역 파트 중 레어 역으로 추첨",
+            "note": "숙명 배틀 승리 시 V스톡. 레이·토키 공동 투쟁은 배틀 계속 농후 + 무상전생 찬스 기대. 숙명 배틀 승리 시 당첨된 공투는 12.5·50·66%로 루프할 수 있음"
+          },
+          {
+            "label": "배틀 파트",
+            "value": "계속률 상승·승리로의 변경 추첨",
+            "note": "소역 파트 종료 후 배틀 파트로 이행하며 계속 판정은 3번째 정지 버튼을 뗀 순간에 계속률을 참조"
+          },
+          {
+            "label": "무상전생 찬스",
+            "value": "15G",
+            "note": "BB 계속 시·공투 일부에서 돌입, 백 BAR 정렬로 성공"
+          },
+          {
+            "label": "무상전생 보너스",
+            "value": "15G",
+            "note": "무상전생 배틀 계속 시 일부에서 돌입"
+          },
+          {
+            "label": "롱 프리즈",
+            "value": "무상전생 배틀",
+            "note": "설정1 기준 1/85592.7"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4301"
+          },
+          {
+            "title": "サミー 공식 특징",
+            "url": "https://www.sammy.co.jp/japanese/product/pachislot/sp_hok_ke/"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-hokuto-first/machine.png",
+      "alt": "스마스로 북두의 권 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/9786"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "설정별 BB 확률·베이스·역 구성",
+        "url": "./assets/images/official/l-hokuto-first/spec-ko.png",
+        "alt": "サミー 공식 사이트 기본 정보 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 특징",
+        "title": "BATTLE BONUS 계속률과 공동 투쟁",
+        "url": "./assets/images/official/l-hokuto-first/feature-ko.png",
+        "alt": "サミー 공식 사이트 BATTLE BONUS 특징 이미지의 한국어 번역본"
+      }
+    ],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/383.4",
+        "label": "설정1 BB 초당첨"
+      },
+      {
+        "value": "4.1매/G",
+        "label": "소역 파트 순증(약)"
+      },
+      {
+        "value": "113.0%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "모드와 본 전조",
+        "description": "CZ 없이 레어 역으로 모드를 올려 본 전조(32G 이내)에 들어가면 BB가 고지된다. 천장은 최대 1268G+α(설정 변경 후 800G+α)."
+      },
+      {
+        "phase": "STEP 02 · BB",
+        "title": "배틀 보너스",
+        "description": "소역 30G+α + 배틀 8G를 한 세트로 반복하며 켄시로가 지지 않으면 계속. 계속률은 66·79·84·89%(V스톡 제외), 1세트 약 110매. 레어 역으로 숙명 배틀·공동 투쟁·계속률 상승을 노린다."
+      },
+      {
+        "phase": "STEP 03 · 상위 BB",
+        "title": "무상전생 배틀",
+        "description": "무상전생 찬스(15G)에 성공하거나 롱 프리즈로 돌입. 계속률 94%·기대 2500매 이상의 최강 BB이며 계속 시 일부에서 무상전생 보너스(15G)에 들어간다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 북두의 권 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "레어 역으로 모드를 올려 본 전조에서 BB를 노림"
+      },
+      "initialConnector": "BB 진입",
+      "initialAriaLabel": "BB 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "BB 합산 1/383.4~1/235.1",
+          "title": "본 전조",
+          "description": "레어 역으로 모드 상승\n32G 이내에 BB 고지",
+          "route": "BB 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "최대 1268G+α",
+          "title": "천장",
+          "description": "도달 시 BB 당첨\n계속률 우대·설정 변경 후 800G",
+          "route": "BB 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "1/7274.0 (공통)",
+          "title": "북두 정렬",
+          "description": "전 설정 공통 프리미엄 정렬\n777G 천장 시에도 농후",
+          "route": "프리미엄",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "BB 진입",
+      "rush": {
+        "eyebrow": "BB · 소역 파트 약 4.1매/G",
+        "title": "배틀 보너스",
+        "detail": "소역 30G+α + 배틀 8G · 계속률 66·79·84·89%"
+      },
+      "rushConnector": "BB 중 주요 분기",
+      "rushAriaLabel": "BB 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "계속률 66~89%",
+          "title": "배틀 파트",
+          "description": "켄시로가 지지 않으면 계속\n레어 역으로 계속률 상승",
+          "route": "세트 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "V스톡·공투",
+          "title": "숙명 배틀·공동 투쟁",
+          "description": "소역 파트 중 레어 역으로 추첨\n레이·토키는 무상전생 찬스 기대",
+          "route": "계속 보강",
+          "tone": "rush"
+        },
+        {
+          "rate": "15G",
+          "title": "무상전생 찬스",
+          "description": "BB 계속 시·공투 일부에서 돌입\n백 BAR 정렬로 성공",
+          "route": "상위 도전",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "무상전생 찬스 성공",
+      "secondaryRush": {
+        "eyebrow": "UPPER BB",
+        "title": "무상전생 배틀",
+        "detail": "소역 30G+α + 배틀 8G · 계속률 94% · 기대 2500매 이상"
+      },
+      "secondaryRushConnector": "무상전생 배틀 중",
+      "secondaryAriaLabel": "무상전생 배틀 흐름 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "설정1 1/85592.7",
+          "title": "롱 프리즈",
+          "description": "무상전생 배틀로 직행\n최강 혜택",
+          "route": "최강",
+          "tone": "premium"
+        },
+        {
+          "rate": "계속 시 일부",
+          "title": "무상전생 보너스",
+          "description": "15G 보너스\n무상전생 배틀 계속 중 돌입",
+          "route": "특화",
+          "tone": "rush"
+        }
+      ],
+      "loopNote": "천장은 최대 1268G+α. 설정 변경 후에는 800G+α로 단축, 300·777·800G 도달 시 천장 단축 추첨"
+    }
+  }
+}
