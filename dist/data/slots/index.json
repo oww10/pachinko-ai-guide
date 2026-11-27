@@ -4,6 +4,7 @@
   "category": "slot",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "l-vivy", "file": "l-vivy.json", "releaseDate": "2026-11-02" },
     { "id": "l-magireco", "file": "l-magireco.json", "releaseDate": "2025-04-07" },
     { "id": "l-enen-2", "file": "l-enen-2.json", "releaseDate": "2026-02-02" },
     { "id": "l-kaguya", "file": "l-kaguya.json", "releaseDate": "2024-09-02" },
