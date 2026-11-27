@@ -1,0 +1,708 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-toaru-index-2",
+  "nameKo": "스마스로 어떤 마술의 금서목록 2",
+  "officialNameJa": "スマスロ とある魔術の禁書目録2",
+  "modelCode": "Lとある魔術の禁書目録2FA",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "藤商事",
+  "brand": "Fuji Shoji",
+  "releaseDate": "2026-08-03",
+  "aliases": [
+    "とある魔術の禁書目録2",
+    "禁書目録2",
+    "インデックス2",
+    "금서목록2",
+    "토아루2"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/398.8",
+    "cz": "설정1 1/235.6",
+    "at": "설정1 AT 1/398.8"
+  },
+  "rush": {
+    "nameJa": "幻想殺しRUSH(イマジンブレイカーラッシュ)",
+    "type": "게임 수 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": 40,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 규정 G수 소화로 CZ(초전자포 찬스·액셀러레이터 찬스)에 당첨되고, 레어 역으로는 가산 존을 노린다",
+      "CZ 초전자포 찬스는 10G·AT 기대 약 52%, 액셀러레이터 찬스는 CZ 일부에서 돌입하며 AT 기대 약 80%",
+      "AT 환상살해 러시는 초기 40G+α·순증 약 4.0매/G(엔딩 중 약 7.0매/G)",
+      "AT 중 신의 힘(가브리엘) 배틀(4G·돌입 약 1/50)에서 승리하면 상승이나 특화 존을 얻는다"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 게임 수 관리형 AT(환상살해 러시)",
+    "netIncrease": "AT 약 4.0매/G · 엔딩 중 약 7.0매/G",
+    "baseGames": "50매당 약 30.8G",
+    "czEntry": "규정 G수 도달 (초전자포·액셀러레이터 합산)",
+    "czBreakRate": "초전자포 찬스 약 52% · 액셀러레이터 찬스 약 80%",
+    "initialATCoins": "초기 40G+α(게임 수 관리)",
+    "primaryCeilingLabel": "천장 (G수)",
+    "czCeiling": "표시 G수 800G+α (CZ·AT 당첨)",
+    "atCeiling": "실제 G수 1200G (AT 당첨)",
+    "resetCeiling": "표시 200G+α / 실제 777G (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/235.6",
+      "atProbability": "1/398.8",
+      "payoutRate": "97.9%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/233.4",
+      "atProbability": "1/394.5",
+      "payoutRate": "98.7%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/230.8",
+      "atProbability": "1/389.6",
+      "payoutRate": "100.0%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/222.3",
+      "atProbability": "1/369.5",
+      "payoutRate": "104.5%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/215.8",
+      "atProbability": "1/358.0",
+      "payoutRate": "108.2%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/207.2",
+      "atProbability": "1/338.4",
+      "payoutRate": "113.3%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 규정 G수를 소화하면 CZ에 당첨된다. CZ는 초전자포 찬스(10G·AT 기대 약 52%)이고, 일부는 액셀러레이터 찬스(AT 기대 약 80%)로 이어진다.",
+    "레어 역은 가산 존(후방지원·히로인즈·환상살해)과 높은 내부 상태(고확·미코토 고확)를 노리는 계기다. 약 1/99로 나오는 환상 리플레이는 이후 3G의 소역을 한 단계 강한 역으로 바꾼다.",
+    "AT 환상살해 러시는 초기 40G+α·순증 약 4.0매/G. 신의 힘 배틀과 신의 우석 배틀로 상승과 특화 존을 얻는다.",
+    "천장은 표시 G수 800G+α(CZ·AT 당첨)와 실제 G수 1200G(AT 당첨)이며, 설정 변경 시 표시 200G+α·실제 777G로 단축된다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 CZ 확률·AT 확률·출옥률은 제조사 공식 제품 페이지·なな徹·1geki.jp가 일치하고, 기계할 범위 97.9~113.3%는 p-town 기재와도 일치한다. 공식 CZ 확률은 초전자포 찬스와 액셀러레이터 찬스의 합산이다.",
+    "초전자포·액셀러레이터 CZ 개별 확률은 なな徹·1geki.jp 값이다(공식은 합산만 게재).",
+    "공식 제품 페이지에는 스펙·플로우 이미지가 없고(기기 사진과 메인 비주얼뿐), 번역 이미지는 만들지 않았다. 대신 '게임 진행 단계' 텍스트 카드를 쓴다.",
+    "기기 사진은 藤商事 공식 제품 페이지의 이미지이며 P-WORLD 사진이 아니다.",
+    "AT 직격 확률은 실제 G수 천장 도달과 초레어 역(환상 변환 중 강 체리·찬스메)에서의 당첨을 제외한 값이다."
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "title": "藤商事 スマスロ とある魔術の禁書目録2 製品情報",
+      "url": "https://www.fujimarukun.co.jp/products/l_toaru2/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 CZ·AT·출옥률",
+        "기기 사진"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロ とある魔術の禁書目録2)",
+      "url": "https://p-town.dmm.com/machines/5053",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "모드",
+        "소역 확률",
+        "CZ·AT 구조",
+        "환상 리플레이",
+        "배틀"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1154/37579/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 CZ·AT·기계할",
+        "CZ 종류별 확률",
+        "50매당 G수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定判別(設定差・示唆演出)まとめ",
+      "url": "https://nana-press.com/kaiseki/machine/1154/38014/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정 판별 요소"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・設定判別",
+      "url": "https://1geki.jp/slot/l_toaru_index2/0/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT·CZ",
+        "AT 직격",
+        "고확 이행률"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki.jp 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "표시 G수(릴 오른쪽 아래)와 실제 G수(액정 왼쪽 위) 천장이 따로 있고, 표시 G수는 내부적으로 0~31G가 무작위로 더해져 200G보다 빨리 천장에 닿을 수 있습니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "표시 G수",
+                "800G+α",
+                "200G+α",
+                "CZ 또는 AT 당첨"
+              ],
+              [
+                "실제 G수",
+                "1200G",
+                "777G",
+                "AT 당첨"
+              ]
+            ]
+          },
+          {
+            "caption": "모드별 CZ 천장(표시 G수)",
+            "columns": [
+              "모드",
+              "천장",
+              "평균 실제 G수(설정1)"
+            ],
+            "rows": [
+              [
+                "아침",
+                "200G",
+                "약 150G"
+              ],
+              [
+                "통상A",
+                "800G",
+                "약 270G"
+              ],
+              [
+                "통상B",
+                "700G",
+                "약 270G"
+              ],
+              [
+                "천국 준비",
+                "800G",
+                "약 240G"
+              ],
+              [
+                "천국",
+                "100G",
+                "약 70G"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "리셋 후",
+            "value": "아침 모드",
+            "note": "설정 변경 후 첫 모드는 아침 모드이며, 약 30%로 다음 모드가 천국 준비 또는 천국"
+          },
+          {
+            "label": "야메도키",
+            "value": "AT 후 즉야메도 가능",
+            "note": "AT 후 고확으로 이행하므로 조금 지켜봐도 좋다. 엔딩 경유 AT 종료 후는 천국 모드 농후라 100G까지 속행"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5053"
+          },
+          {
+            "title": "1geki 設定差",
+            "url": "https://1geki.jp/slot/l_toaru_index2/0/"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "CZ·AT 확률과 AT 직격, 고확 이행률에 설정차가 있습니다. 설정 4 이상은 AT 1/370 이하·CZ 1/210 전후가 하나의 기준입니다.",
+        "tables": [
+          {
+            "caption": "설정별 CZ·AT·기계할",
+            "columns": [
+              "설정",
+              "CZ 합산",
+              "초전자포",
+              "액셀러레이터",
+              "AT",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/235.6",
+                "1/258.5",
+                "1/2668.5",
+                "1/398.8",
+                "97.9%"
+              ],
+              [
+                "설정2",
+                "1/233.4",
+                "1/256.0",
+                "1/2639.0",
+                "1/394.5",
+                "98.7%"
+              ],
+              [
+                "설정3",
+                "1/230.8",
+                "1/253.3",
+                "1/2600.3",
+                "1/389.6",
+                "100.0%"
+              ],
+              [
+                "설정4",
+                "1/222.3",
+                "1/244.1",
+                "1/2493.0",
+                "1/369.5",
+                "104.5%"
+              ],
+              [
+                "설정5",
+                "1/215.8",
+                "1/237.4",
+                "1/2378.3",
+                "1/358.0",
+                "108.2%"
+              ],
+              [
+                "설정6",
+                "1/207.2",
+                "1/227.9",
+                "1/2273.0",
+                "1/338.4",
+                "113.3%"
+              ]
+            ]
+          },
+          {
+            "caption": "AT 직격·스이카 고확 이행률",
+            "columns": [
+              "설정",
+              "AT 직격",
+              "스이카 고확(통상 상태)",
+              "스이카 미코토 고확(통상 상태)"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/7926.8",
+                "47.7%",
+                "14.3%"
+              ],
+              [
+                "설정2",
+                "1/7074.9",
+                "48.0%",
+                "14.5%"
+              ],
+              [
+                "설정3",
+                "1/6354.9",
+                "49.2%",
+                "14.8%"
+              ],
+              [
+                "설정4",
+                "1/4453.0",
+                "50.4%",
+                "15.2%"
+              ],
+              [
+                "설정5",
+                "1/4012.8",
+                "54.7%",
+                "16.4%"
+              ],
+              [
+                "설정6",
+                "1/3736.2",
+                "55.5%",
+                "16.7%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "AT 직격",
+            "value": "설정 4~6이 크게 우대",
+            "note": "실제 G수 천장 도달과 초레어 역 당첨은 제외한 값"
+          },
+          {
+            "label": "AT 종료 화면·표시 매수",
+            "value": "당마·히로인 5인 화면, 무지개 후지마루 코인, 666매·777매 표시는 설정 6 농후",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "엔딩 중 레어 역",
+            "value": "대사로 설정 시사",
+            "note": "p-town 기재"
+          }
+        ],
+        "sources": [
+          {
+            "title": "1geki 設定差・設定判別",
+            "url": "https://1geki.jp/slot/l_toaru_index2/0/"
+          },
+          {
+            "title": "なな徹 設定判別",
+            "url": "https://nana-press.com/kaiseki/machine/1154/38014/"
+          },
+          {
+            "title": "藤商事 公式",
+            "url": "https://www.fujimarukun.co.jp/products/l_toaru2/"
+          }
+        ]
+      },
+      {
+        "title": "소역·CZ·가산 존",
+        "kind": "mode",
+        "intro": "소역 확률은 환상 변환을 포함하지 않은 값이며 설정 차이는 알려져 있지 않습니다.",
+        "tables": [
+          {
+            "caption": "소역 확률",
+            "columns": [
+              "역",
+              "확률"
+            ],
+            "rows": [
+              [
+                "1매 벨",
+                "1/3.6"
+              ],
+              [
+                "3매 벨",
+                "1/23.8"
+              ],
+              [
+                "리플레이",
+                "1/8.9"
+              ],
+              [
+                "환상 리플레이",
+                "1/99.3"
+              ],
+              [
+                "스이카",
+                "1/98.6"
+              ],
+              [
+                "약 체리",
+                "1/69.4"
+              ],
+              [
+                "강 체리·찬스메(2역 합산)",
+                "1/399.6"
+              ],
+              [
+                "약 레어 합산",
+                "1/40.7"
+              ],
+              [
+                "레어 역 합산",
+                "1/36.9"
+              ]
+            ]
+          },
+          {
+            "caption": "CZ 비교",
+            "columns": [
+              "CZ",
+              "계속",
+              "순증",
+              "AT 기대"
+            ],
+            "rows": [
+              [
+                "초전자포 찬스",
+                "10G",
+                "약 2.2매/G",
+                "약 52%"
+              ],
+              [
+                "액셀러레이터 찬스",
+                "10G",
+                "약 2.2매/G",
+                "약 80%"
+              ]
+            ]
+          },
+          {
+            "caption": "가산 존(평균 가산 G수)",
+            "columns": [
+              "패턴",
+              "평균",
+              "계속"
+            ],
+            "rows": [
+              [
+                "후방지원",
+                "30G",
+                "3G"
+              ],
+              [
+                "히로인즈",
+                "60G",
+                "5G"
+              ],
+              [
+                "환상살해",
+                "310G",
+                "최소 3G"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "환상 리플레이",
+            "value": "약 1/99.3·3G 환상 변환",
+            "note": "변환 중 소역을 한 단계 강한 역으로 바꾼다(기대 약 85%). AT 중에도 동작"
+          },
+          {
+            "label": "가산 존 돌입",
+            "value": "레어 역 계기",
+            "note": "超레어 역은 AT 직격 농후이며 더해진 G수는 AT 후에도 이월(초과 40G 이상)"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5053"
+          },
+          {
+            "title": "なな徹 스펙 정보",
+            "url": "https://nana-press.com/kaiseki/machine/1154/37579/"
+          }
+        ]
+      },
+      {
+        "title": "AT 구조와 특화 구간",
+        "kind": "mode",
+        "intro": "초기 40G+α의 게임 수 관리형 AT이고, 배틀 승리로 상승과 특화 존을 얻습니다.",
+        "tables": [],
+        "items": [
+          {
+            "label": "AT 환상살해 러시",
+            "value": "40G+α·순증 약 4.0매/G",
+            "note": "엔딩 중 약 7.0매/G"
+          },
+          {
+            "label": "신의 힘(가브리엘) 배틀",
+            "value": "4G·돌입 약 1/50",
+            "note": "규정 G수 소화와 레어 역이 계기. 소역 성립이 승리 기회, 최종 G 레어 역은 승리 농후"
+          },
+          {
+            "label": "신의 우석 배틀",
+            "value": "가브리엘 배틀 당첨 일부에서 돌입·승리 기대 약 50%",
+            "note": "승리하면 상승에 더해 피암마 배틀도 획득"
+          },
+          {
+            "label": "피암마 배틀 승리 보수",
+            "value": "엔딩 후는 테이블 4~8과 강제 계속 존 획득",
+            "note": "+20G만 연속 획득할수록 테이블 9·10 선택률 상승"
+          },
+          {
+            "label": "LIMIT BREAK CHANCE",
+            "value": "AT 스톡 특화 존",
+            "note": "狙えカットイン 중 赤7 맞춤(약 1/2320) 일부에서 돌입, 赤7 맞춤 시 약 1/11"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5053"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-toaru-index-2/machine.png",
+      "alt": "스마스로 어떤 마술의 금서목록 2 기기 외관",
+      "caption": "기기 외관",
+      "credit": "藤商事 공식 제품 페이지",
+      "sourceUrl": "https://www.fujimarukun.co.jp/products/l_toaru2/"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/398.8",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "4.0매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "113.3%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "CZ와 가산 존",
+        "description": "규정 G수를 소화하면 CZ에 당첨된다. 초전자포 찬스(10G·AT 기대 약 52%)가 기본이고 일부는 액셀러레이터 찬스(약 80%). 레어 역으로는 가산 존을 노린다."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "환상살해 러시",
+        "description": "초기 40G+α·순증 약 4.0매/G. 신의 힘 배틀(4G)과 직접 G수 상승으로 AT를 늘리고, 엔딩 중에는 순증 약 7.0매/G가 된다."
+      },
+      {
+        "phase": "STEP 03 · 특화 구간",
+        "title": "신의 우석 배틀과 LBC",
+        "description": "신의 우석 배틀(승리 기대 약 50%)에 이기면 피암마 배틀이 이어지고, LIMIT BREAK CHANCE에서는 AT 스톡을 노린다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 어떤 마술의 금서목록 2 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "규정 G수 소화로 CZ를 노리고 레어 역으로 가산 존을 노림"
+      },
+      "initialConnector": "AT 진입",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "1/258.5~1/227.9",
+          "title": "초전자포 찬스",
+          "description": "규정 G수 도달\n10G · AT 기대 약 52%",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "1/2668.5~1/2273.0",
+          "title": "액셀러레이터 찬스",
+          "description": "CZ 당첨 일부에서 돌입\nAT 기대 약 80%",
+          "route": "AT 진입",
+          "tone": "premium"
+        },
+        {
+          "rate": "1/7926.8~1/3736.2",
+          "title": "AT 직격",
+          "description": "레어 역에서 직접 AT\n설정 4~6이 크게 우대",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 4.0매/G",
+        "title": "환상살해 러시",
+        "detail": "초기 40G+α · 게임 수 관리형 · 신의 힘 배틀과 G수 상승으로 연장"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "돌입 약 1/50",
+          "title": "신의 힘 배틀",
+          "description": "4G 자력 배틀\n승리하면 상승·특화 존",
+          "route": "G수 상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "승리 기대 약 50%",
+          "title": "신의 우석 배틀",
+          "description": "가브리엘 배틀 일부에서 돌입\n승리 시 피암마 배틀도 획득",
+          "route": "상위 특화",
+          "tone": "premium"
+        },
+        {
+          "rate": "약 1/2320",
+          "title": "赤7 맞춤·LBC",
+          "description": "赤7 맞춤 시 약 1/11로\nAT 스톡 특화 존",
+          "route": "AT 스톡",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "엔딩 도달",
+      "secondaryRush": {
+        "eyebrow": "ENDING",
+        "title": "엔딩",
+        "detail": "엔딩 중 순증 약 7.0매/G · 엔딩 후는 천국 모드 농후"
+      },
+      "secondaryRushConnector": "엔딩 후",
+      "secondaryAriaLabel": "엔딩 후 흐름 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "테이블 4~8",
+          "title": "피암마 배틀 보수",
+          "description": "강제 계속 존도 함께 획득\n특화 존은 최소 '간자키 카오리' 이상",
+          "route": "특화 존",
+          "tone": "premium"
+        },
+        {
+          "rate": "AT 종료",
+          "title": "통상 복귀",
+          "description": "천국 모드 농후 · 100G까지 속행\nAT 후 50%로 고확 이행",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 표시 G수 800G+α(CZ·AT 당첨)와 실제 G수 1200G(AT 당첨). 설정 변경 시 표시 200G+α·실제 777G로 단축"
+    }
+  }
+}
