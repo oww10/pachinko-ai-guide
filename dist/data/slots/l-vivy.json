@@ -1,0 +1,683 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-vivy",
+  "nameKo": "스마스로 Vivy -Fluorite Eye's Song-",
+  "officialNameJa": "スロット Vivy -Fluorite Eye’s Song-",
+  "modelCode": "L/Vivy/A5",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "大都技研",
+  "brand": "DAITO GIKEN",
+  "releaseDate": "2026-11-02",
+  "aliases": [
+    "Vivy",
+    "ヴィヴィ",
+    "비비",
+    "Vivy 슬롯",
+    "프로젝트 싱귤래리티"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/276.5",
+    "cz": "—",
+    "at": "설정1 AT 1/276.5"
+  },
+  "rush": {
+    "nameJa": "プロジェクトシンギュラリティ",
+    "type": "차매수 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 규정 포인트 도달이나 CZ(액세스 찬스 EX·기대 약 50%)로 AT에 당첨되고, 레어 역은 포인트 특화 존이나 CZ 추첨으로 이어진다",
+      "레어 역 재생 기능이 게임성의 중심이며, 직전 15G 안에 뽑은 레어 역이 다시 재생된다",
+      "AT 프로젝트 싱귤래리티는 초기 100매·순증 약 3.2매/G의 차매수 관리형이고, 규정 리플레이 횟수나 레어 역으로 AT 중 CZ 싱귤래리티 배틀(3G)을 노린다",
+      "배틀에 이기면 차매수 상승이나 특화 존(오버드라이브·마쓰모토 찬스·플로라이트 아이즈 스트라이크)을 얻는다"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 차매수 관리형 AT(프로젝트 싱귤래리티)",
+    "netIncrease": "AT 약 3.2매/G",
+    "baseGames": "50매당 약 31G",
+    "czEntry": "액세스 찬스·규정 포인트 (설정별 CZ 확률 미공개)",
+    "czBreakRate": "액세스 찬스 EX 기대 약 50%",
+    "initialATCoins": "초기 차매수 100매",
+    "primaryCeilingLabel": "천장 (G수·주기)",
+    "settingsPrimaryLabel": "CZ 합산 (미공개)",
+    "czCeiling": "AT간 800G+α 또는 최대 6주기",
+    "atCeiling": "천장 도달 시 AT 당첨",
+    "resetCeiling": "500G+α (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/276.5",
+      "payoutRate": "97.7%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/251.7",
+      "payoutRate": "98.7%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "—",
+      "atProbability": "1/272.1",
+      "payoutRate": "100.2%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/222.8",
+      "payoutRate": "104.7%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/235.9",
+      "payoutRate": "108.3%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/210.3",
+      "payoutRate": "112.8%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 주기 모드(통상A 최대 6주기·통상B 최대 3주기·천국 1주기)로 규정 포인트를 관리한다. 규정 포인트에 닿으면 AT를 추첨하고, 레어 역은 포인트 특화 존이나 CZ를 추첨한다.",
+    "CZ 액세스 찬스 EX는 10G·AT 기대 약 50%이며, 5G/세트의 액세스 찬스(포인트 특화 존)에서 세트를 이어 승격을 노린다.",
+    "AT 프로젝트 싱귤래리티는 초기 100매·순증 약 3.2매/G의 차매수 관리형이다. 레어 역 재생 기능과 리플레이 카운터(5pt마다 CZ·보너스 추첨, 20pt에서 CZ 이상 농후)가 핵심이다.",
+    "AT 중 CZ 싱귤래리티 배틀(3G·평균 돌입 약 1/33)에 이기면 차매수 상승이나 오버드라이브·마쓰모토 찬스·플로라이트 아이즈 스트라이크를 얻는다.",
+    "천장은 AT간 800G+α 또는 최대 6주기이며 설정 변경 후에는 500G+α로 단축된다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 AT 초당첨·기계할은 大都技研 공식 기본 정보 이미지에서 확인했고(시뮬레이션 값), なな徹·1geki.jp·パチセブン과 모두 일치한다. 기계할 범위 97.7~112.8%는 p-town 기재와도 일치한다.",
+    "이 기종은 AT 초당첨이 설정 순서대로 좋아지지 않는다(설정1<3<2<5<4<6 순으로 유리). 설정 2는 설정 3보다, 설정 4는 설정 5보다 AT 초당첨이 좋고, 이는 공식 표에도 그대로 실려 있다.",
+    "11-02 導入 신작이라 분석 사이트의 설정별 값 중 상당수(약 체리 확률 등 설정 2~5)가 '조사 중'이며 본 페이지는 판명된 값만 싣는다. 설정별 CZ 확률은 공개되지 않아 '—'로 표시했다.",
+    "베이스는 50매당 약 31G(パチセブン 기재), 천장은 p-town·なな徹 기재이며 공식 확인은 하지 못했다.",
+    "번역 이미지 2장(기본 정보·게임 플로우)은 大都技研 공식 사이트 이미지를 번역한 것이며 원본은 spec-source.jpg·flow-source.jpg로 보존한다. 용어(액세스 찬스·싱귤래리티 배틀·오버드라이브 등)는 임시 번역이며 검수가 필요하다.",
+    "한국어명은 공식 한국어 표기를 확인하지 못한 임시 표기다."
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "title": "大都技研 スロット Vivy -Fluorite Eye’s Song- 公式サイト(機種情報)",
+      "url": "https://www.daitogiken.com/contents/product/slot/vivy/info.html",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT 초당첨·출옥률",
+        "순증·초기 차매수",
+        "게임 플로우",
+        "주기 모드",
+        "특화 존"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スロット Vivy)",
+      "url": "https://p-town.dmm.com/machines/5120",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "AT·CZ 구조",
+        "특화 존",
+        "레어 역 변환 고확"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定判別(設定差・示唆演出)まとめ",
+      "url": "https://nana-press.com/kaiseki/machine/1259/39725/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정 판별 요소",
+        "획득 매수·미니캐릭터 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1259/39244/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT·기계할"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 天井・狙い目・ヤメ時",
+      "url": "https://nana-press.com/kaiseki/machine/1259/39726/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・設定判別",
+      "url": "https://1geki.jp/slot/l_vivy/0/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT 초당첨",
+        "겹침 레어 역 확률"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン スロット Vivy",
+      "url": "https://pachiseven.jp/machines_v2/7489",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT·기계할",
+        "베이스"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10581",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki.jp·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 11-02 導入 신작이라 조사 중인 항목이 많고 값이 갱신될 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "AT간 G수 천장과 주기 천장이 있고, 설정 변경 후에는 G수 천장이 짧아집니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "AT간 G수",
+                "800G+α",
+                "500G+α",
+                "AT 당첨"
+              ],
+              [
+                "주기",
+                "최대 6주기",
+                "—",
+                "보너스 당첨"
+              ]
+            ]
+          },
+          {
+            "caption": "주기 모드(최대 주기 수)",
+            "columns": [
+              "모드",
+              "최대 주기"
+            ],
+            "rows": [
+              [
+                "통상A",
+                "6주기"
+              ],
+              [
+                "통상B",
+                "3주기"
+              ],
+              [
+                "천국",
+                "1주기"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "AT 종료 후 천국 이행률",
+            "value": "약 40%",
+            "note": "공식 이미지 기재(AT 종료 후 천국 이행)"
+          },
+          {
+            "label": "리플레이 카운터",
+            "value": "5pt마다 CZ·보너스 추첨 / 20pt에서 CZ 이상 농후",
+            "note": "액정 오른쪽 위에 표시. 규정 수에 닿아 CHANCE가 표시되면 전조로 이행"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5120"
+          },
+          {
+            "title": "なな徹 天井",
+            "url": "https://nana-press.com/kaiseki/machine/1259/39726/"
+          },
+          {
+            "title": "大都技研 공식",
+            "url": "https://www.daitogiken.com/contents/product/slot/vivy/info.html"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "AT 초당첨은 설정 순서대로 좋아지지 않고 짝수 설정·고설정이 유리합니다(설정1<3<2<5<4<6). 설정 4 이상 기준은 1/230 전후입니다.",
+        "tables": [
+          {
+            "caption": "설정별 AT 초당첨·기계할(공식 시뮬레이션 값)",
+            "columns": [
+              "설정",
+              "AT 초당첨",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/276.5",
+                "97.7%"
+              ],
+              [
+                "설정2",
+                "1/251.7",
+                "98.7%"
+              ],
+              [
+                "설정3",
+                "1/272.1",
+                "100.2%"
+              ],
+              [
+                "설정4",
+                "1/222.8",
+                "104.7%"
+              ],
+              [
+                "설정5",
+                "1/235.9",
+                "108.3%"
+              ],
+              [
+                "설정6",
+                "1/210.3",
+                "112.8%"
+              ]
+            ]
+          },
+          {
+            "caption": "판명된 설정차 소역 확률(설정1 / 설정6)",
+            "columns": [
+              "항목",
+              "설정1",
+              "설정6"
+            ],
+            "rows": [
+              [
+                "통상 시 약 체리",
+                "1/72.8",
+                "1/62.4"
+              ],
+              [
+                "레어 역 변환 고확 Lv2 약 체리",
+                "1/23.6",
+                "1/22.4"
+              ],
+              [
+                "레어 역 변환 고확 Lv3 약 체리",
+                "1/13.9",
+                "1/13.5"
+              ],
+              [
+                "레어 역 합산(재생 제외)",
+                "1/24.5",
+                "1/23.2"
+              ],
+              [
+                "겹침 레어 역(통상 시)",
+                "1/8959",
+                "1/8244"
+              ],
+              [
+                "겹침 레어 역(AT 중)",
+                "1/2429",
+                "1/2222"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "획득 매수 표시(AT 중)",
+            "value": "411=설정 4 이상 / 619=설정 6 / 2161=설정 4 이상 / 2161×2=설정 5 이상 / 2161×3=설정 6",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "엔딩 중 미니 캐릭터",
+            "value": "2체=설정 2 이상 / 3체=3 이상 / 4체=4 이상 / 5체=5 이상 / 6체=설정 6",
+            "note": "공통 벨·레어 역 성립 시 출현. 에스텔라(패턴2)는 설정 2, 마쓰모토(패턴6)는 설정 6에서 나오기 쉬움"
+          },
+          {
+            "label": "조사 중",
+            "value": "설정 2~5의 약 체리·레어 역 합산·겹침 레어 역",
+            "note": "신작이라 설정 1·6만 판명"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 設定判別",
+            "url": "https://nana-press.com/kaiseki/machine/1259/39725/"
+          },
+          {
+            "title": "1geki 設定差",
+            "url": "https://1geki.jp/slot/l_vivy/0/"
+          },
+          {
+            "title": "大都技研 공식",
+            "url": "https://www.daitogiken.com/contents/product/slot/vivy/info.html"
+          }
+        ]
+      },
+      {
+        "title": "통상 시 구조",
+        "kind": "mode",
+        "intro": "레어 역 재생 기능이 게임성의 중심입니다. 직전 15G 안에 뽑은 레어 역이 다시 재생되고, 중단 벨 성립으로 레어 역 변환 고확률로 이행합니다.",
+        "tables": [
+          {
+            "caption": "통상 시 구간",
+            "columns": [
+              "구간",
+              "계기",
+              "계속",
+              "기대·특징"
+            ],
+            "rows": [
+              [
+                "액세스 찬스",
+                "레어 역 등",
+                "5G/세트",
+                "성립 역에 따라 포인트 가산 · 세트 계속"
+              ],
+              [
+                "액세스 찬스 EX(CZ)",
+                "액세스 찬스에서 승격 등",
+                "10G",
+                "AT 기대 약 50%"
+              ],
+              [
+                "레어 역 변환 고확",
+                "중단 벨 성립",
+                "20G+α",
+                "21G째부터 하즈레 약 13%로 전락"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "레어 역 재생 기능",
+            "value": "레어 역 보류 데이터베이스에 기록 → 재생",
+            "note": "3G 후 데이터베이스에 따라 한 번 뽑은 레어 역이 재생된다"
+          },
+          {
+            "label": "싱귤래리티 플래시",
+            "value": "같은 레어 역 재생이 겹치면 발생",
+            "note": "통상이면 AT 이상, AT 중이면 특화 존 이상 당첨(공식 이미지)"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5120"
+          },
+          {
+            "title": "大都技研 공식",
+            "url": "https://www.daitogiken.com/contents/product/slot/vivy/info.html"
+          }
+        ]
+      },
+      {
+        "title": "AT와 특화 구간",
+        "kind": "mode",
+        "intro": "차매수 관리형 AT에서 레어 역·리플레이 카운터로 AT 중 CZ를 노리고, 이기면 상승이나 특화 존을 얻습니다.",
+        "tables": [
+          {
+            "caption": "AT 주요 구간",
+            "columns": [
+              "구간",
+              "계속",
+              "특징"
+            ],
+            "rows": [
+              [
+                "프로젝트 싱귤래리티(AT)",
+                "차매수 관리",
+                "초기 100매 · 순증 약 3.2매/G"
+              ],
+              [
+                "싱귤래리티 배틀(AT 중 CZ)",
+                "3G",
+                "평균 돌입 약 1/33 · 자력 CZ"
+              ],
+              [
+                "오버드라이브",
+                "하즈레 3회까지",
+                "소역마다 표시 차매수 획득 · 최대 10회에 300~1000매"
+              ],
+              [
+                "마쓰모토 찬스",
+                "5G+α",
+                "매G 차매수 상승"
+              ],
+              [
+                "플로라이트 아이즈 스트라이크",
+                "15G",
+                "레어 역 보류를 고확률로 획득"
+              ],
+              [
+                "비비 보너스 / 에피소드 보너스",
+                "30G",
+                "리플레이 카운터·초당첨 일부"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "리부트 존",
+            "value": "AT 종료 후 3G",
+            "note": "레어 역이 성립하면 끌어당김 농후"
+          },
+          {
+            "label": "버그 모드",
+            "value": "쇼트(약 50%)·롱(약 75%)·무한",
+            "note": "버그 목 성립 일부에서 돌입. AT 개시 시 고지되면 초기 300매"
+          },
+          {
+            "label": "오버드라이브 타이틀",
+            "value": "청=전 시나리오 가능 / 적=시나리오 G 이상 농후 / 프리미엄=시나리오 J 농후",
+            "note": "평균 획득 180매 / 340매 / 1000매"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5120"
+          },
+          {
+            "title": "大都技研 공식",
+            "url": "https://www.daitogiken.com/contents/product/slot/vivy/info.html"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-vivy/machine.png",
+      "alt": "스마스로 Vivy 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10581"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 정보",
+        "title": "설정별 AT 초당첨·출옥률과 배당표",
+        "url": "./assets/images/official/l-vivy/spec-ko.png",
+        "alt": "大都技研 공식 사이트 기본 정보 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시·AT·특화 존 흐름",
+        "url": "./assets/images/official/l-vivy/flow-ko.png",
+        "alt": "大都技研 공식 사이트 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/276.5",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "3.2매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "112.8%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "규정 포인트와 CZ",
+        "description": "주기 모드(통상A 6주기·통상B 3주기·천국 1주기)로 규정 포인트를 관리하고 도달 시 AT를 추첨한다. CZ 액세스 찬스 EX는 10G·AT 기대 약 50%. 천장은 AT간 800G+α."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "프로젝트 싱귤래리티",
+        "description": "초기 100매·순증 약 3.2매/G의 차매수 관리형. 레어 역 재생과 리플레이 카운터로 AT 중 CZ 싱귤래리티 배틀(3G)을 노리고, 이기면 차매수 상승이나 특화 존을 얻는다."
+      },
+      {
+        "phase": "STEP 03 · 특화",
+        "title": "오버드라이브·마쓰모토·플로라이트",
+        "description": "오버드라이브(하즈레 3회까지 계속·최대 10회)·마쓰모토 찬스(5G+α·매G 상승)·플로라이트 아이즈 스트라이크(15G·레어 역 보류 획득)로 AT 성능을 끌어올린다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 Vivy 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "규정 포인트·레어 역·액세스 찬스로 AT를 노림 · 레어 역 재생이 핵심"
+      },
+      "initialConnector": "AT 진입",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "AT 1/276.5~1/210.3",
+          "title": "규정 포인트 도달",
+          "description": "주기 모드로 포인트 관리\n도달하면 AT를 추첨",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "기대 약 50%",
+          "title": "액세스 찬스 EX(CZ)",
+          "description": "10G · 포인트 획득과 레어 역\n액세스 찬스에서 승격",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "800G+α · 최대 6주기",
+          "title": "천장",
+          "description": "AT간 800G+α 또는 6주기\n설정 변경 후 500G+α",
+          "route": "AT 진입",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 3.2매/G",
+        "title": "프로젝트 싱귤래리티",
+        "detail": "차매수 관리형 · 초기 100매 · 레어 역·리플레이 카운터로 배틀을 노림"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "평균 돌입 약 1/33",
+          "title": "싱귤래리티 배틀",
+          "description": "3G 자력 CZ\n이기면 차매수 상승·특화 존",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "하즈레 3회까지",
+          "title": "오버드라이브",
+          "description": "소역마다 표시 차매수 획득\n최대 10회에 300~1000매",
+          "route": "상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "5G+α",
+          "title": "마쓰모토 찬스",
+          "description": "매G 차매수 상승\n슈퍼 AI 마쓰모토의 대찬스",
+          "route": "특화",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "엔딩 후·AT 계속 시 일부",
+      "secondaryRush": {
+        "eyebrow": "SPECIAL",
+        "title": "플로라이트 아이즈 스트라이크",
+        "detail": "15G · 레어 역 보류를 고확률로 획득해 AT 성능을 강화"
+      },
+      "secondaryRushConnector": "AT 종료 시",
+      "secondaryAriaLabel": "AT 종료 시 흐름 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "15G",
+          "title": "레어 역 보류 획득",
+          "description": "성립 역에 맞는 레어 역 보류를 획득\n복수 보유로 AT 강화",
+          "route": "AT 강화",
+          "tone": "premium"
+        },
+        {
+          "rate": "AT 종료 후 3G",
+          "title": "리부트 존",
+          "description": "레어 역이 성립하면\n끌어당김 농후",
+          "route": "↩ AT",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 AT간 800G+α 또는 최대 6주기. 설정 변경 후에는 500G+α로 단축. 신작이라 설정별 일부 값은 조사 중"
+    }
+  }
+}
