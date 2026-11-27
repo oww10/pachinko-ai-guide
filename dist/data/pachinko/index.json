@@ -1,9 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "category": "pachinko",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "e-nanatsu-no-taizai-3", "file": "e-nanatsu-no-taizai-3.json", "releaseDate": "2026-08-03" },
     { "id": "pa-super-sea-okinawa-6-enako", "file": "pa-super-sea-okinawa-6-enako.json", "releaseDate": "2026-06-08" },
     { "id": "p-super-sea-okinawa-6", "file": "p-super-sea-okinawa-6.json", "releaseDate": "2025-10-06" },
     { "id": "e-granbelm-319", "file": "e-granbelm-319.json", "releaseDate": "2026-11-02" },
