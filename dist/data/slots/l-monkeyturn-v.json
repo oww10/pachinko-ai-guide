@@ -1,0 +1,701 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-monkeyturn-v",
+  "nameKo": "스마스로 몽키턴 V",
+  "officialNameJa": "スマスロ モンキーターンV",
+  "modelCode": "Lモンキーターン5CE",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "山佐",
+  "brand": "YAMASA NEXT",
+  "releaseDate": "2023-12-04",
+  "aliases": [
+    "モンキーターンV",
+    "スマスロモンキーターン5",
+    "스마트 슬롯 몽키턴 V"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/299.8",
+    "cz": "—",
+    "at": "설정1 AT 1/299.8"
+  },
+  "rush": {
+    "nameJa": "SGラッシュ／青島SG",
+    "type": "시나리오 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": 40,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 격주 포인트를 모아 우출 모드(규정 포인트 도달)에 들어가고, 레이스에 이기면 AT 확정",
+      "CZ 초발 챌린지는 10G·성공 기대 약 50%, 실패 일부는 그랜드슬램 챌린지(10G·기대 약 60%)",
+      "AT SG 러시는 1세트 40G+α(주회 31G+α + SG 레이스 9G)·순증 약 2.5매/G, 세트별 계속률은 시나리오로 관리",
+      "상위 AT 아오시마 SG는 순증 약 4.0매/G·계속률 약 75%(V스톡 포함 약 83%)"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 시나리오 관리형 AT(SG 러시)",
+    "netIncrease": "AT 약 2.5매/G · 아오시마 SG 약 4.0매/G",
+    "baseGames": "50매당 약 32G",
+    "czEntry": "자료 없음 (설정별 CZ 확률 미공개)",
+    "czBreakRate": "초발 챌린지 약 50% · 그랜드슬램 약 60%",
+    "initialATCoins": "1세트 40G+α(SG 레이스 포함)",
+    "primaryCeilingLabel": "천장 (G수·주기)",
+    "settingsPrimaryLabel": "CZ 합산 (미공개)",
+    "czCeiling": "795G+α 또는 6주기째",
+    "atCeiling": "천장 도달 시 AT 당첨",
+    "resetCeiling": "495G / 4주기 (설정 변경·아오시마 VS 하타노 패배 후)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/299.8",
+      "payoutRate": "97.9%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/295.5",
+      "payoutRate": "98.9%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/258.8",
+      "payoutRate": "104.5%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/235.7",
+      "payoutRate": "110.2%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/222.9",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 매 G 격주 포인트를 모아 규정 포인트에 닿으면 우출 모드, 레어 역으로는 격주 차지·초발 챌린지(CZ)를 노린다.",
+    "우출 모드에서 레이스에 이기면 AT 확정, 초발 챌린지(10G·성공 약 50%)에 성공해도 AT에 들어간다.",
+    "AT SG 러시는 1세트 40G+α·순증 약 2.5매/G. 주회 파트에서 G수 상승·전속 모드·압도 배틀을 뽑고 SG 레이스에 이기면 계속한다.",
+    "아오시마가 하타노를 이기면 상위 AT 아오시마 SG(순증 약 4.0매/G·계속 약 75%, V스톡 포함 약 83%)로 이어진다.",
+    "천장은 통상 795G+α 또는 6주기째이며, 설정 변경·아오시마 VS 하타노 패배 후에는 495G·4주기로 단축된다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 공식 표기대로 시뮬레이션 값이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "이 기종에는 설정 3이 없다(설정 1·2·4·5·6과 설정 L). 설정 L은 하단 패널이 상시 점멸하며 기계할·확률 값은 공개되지 않는다.",
+    "설정별 AT 초당첨·기계할은 제조사 공식 사이트·なな徹·1geki.jp가 모두 일치하고, 기계할 범위 97.9~114.9%는 p-town 기재와도 일치한다.",
+    "설정별 CZ 확률은 공개된 자료가 없어 추측하지 않고 '—'로 표시했다.",
+    "한국어 번역 이미지 2장(기본 사양·게임 플로우)은 제조사 공식 사이트 이미지를 번역한 것이며 원본은 spec-source.png·flow-source.png로 보존한다. 용어(우출·초발·격주·압도 등)는 일본어 한자 음독이 아닌 임시 번역이다.",
+    "기기 사진은 P-WORLD 기종 DB에서 해당 슬롯의 ID를 찾지 못해(ID 8700~10400 스캔) 공식 기본 사양 이미지에서 기기 부분을 발췌했다. 저해상도이며 P-WORLD 사진이 아니다.",
+    "AT 직격 표는 p-town과 1geki.jp의 값이 일치한다. 규정 포인트 도달 게임의 레어 역에서도 직격은 추첨된다."
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "title": "山佐 スマスロモンキーターンV 公式サイト(基本スペック·ゲームフロー)",
+      "url": "https://www1.yamasa.co.jp/mnktrn5/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT 초당첨·출옥률",
+        "레어 역",
+        "게임 플로우",
+        "순증·1세트 G수"
+      ]
+    },
+    {
+      "type": "official",
+      "title": "山佐 モンキーターンV 公式ガイドブック(PDF)",
+      "url": "https://www.cdn.yamasa.jp/guide_book/mt5_gb.pdf",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "격주 포인트·우출 모드",
+        "격주 차지·초발 챌린지",
+        "SG 러시 플로우",
+        "G수 상승 계기·압도 배틀"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロモンキーターンV)",
+      "url": "https://p-town.dmm.com/machines/4450",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "모드",
+        "레어 역 확률",
+        "CZ 당첨률",
+        "AT 직격",
+        "AT 구조"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 AT初当たり確率/機械割/小役確率",
+      "url": "https://nana-press.com/kaiseki/machine/644/17233/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT·기계할",
+        "소역 확률",
+        "설정 L",
+        "50매당 G수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・設定判別",
+      "url": "https://1geki.jp/slot/l_monkeyturn5/0/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT",
+        "AT 직격",
+        "라이벌 모드 설정차"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki.jp 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "통상 G수 천장과 주기 천장이 있고, 통상 모드에 따라 주기 천장이 달라집니다. 주기 횟수는 화면 우상단 격주 포인트 아래에 표시됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경·아오시마 VS 하타노 패배 후"
+            ],
+            "rows": [
+              [
+                "통상 G수",
+                "795G+α",
+                "495G"
+              ],
+              [
+                "주기",
+                "6주기째",
+                "4주기째"
+              ]
+            ]
+          },
+          {
+            "caption": "통상 모드별 주기 천장",
+            "columns": [
+              "모드",
+              "주기 천장",
+              "특징"
+            ],
+            "rows": [
+              [
+                "통상A",
+                "6주기",
+                "2주기째·5주기째가 찬스"
+              ],
+              [
+                "통상B",
+                "3주기",
+                "2주기째가 찬스·기계할 100% 이상"
+              ],
+              [
+                "천국",
+                "1주기",
+                "1주기째에 반드시 AT 당첨"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천장 은혜",
+            "value": "AT 당첨",
+            "note": "p-town 기재"
+          },
+          {
+            "label": "1주기째 노림",
+            "value": "기계할 100% 초과",
+            "note": "라이벌 헬멧이 나오면 종류와 무관하게 AT 당첨까지 쳐도 이론상 100% 초과"
+          },
+          {
+            "label": "야메도키",
+            "value": "AT 후 기본적으로 즉야메 가능",
+            "note": "AT 종료 화면·설정 변경 후 1G째 레어 역이면 통상B 이상 확정 → 다음 AT까지. 서브 액정 헬멧이 로고+반짝이면 통상B·천국 농후, 로고+V면 천국 농후 → 1주기째까지"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4450"
+          },
+          {
+            "title": "공식 가이드북",
+            "url": "https://www.cdn.yamasa.jp/guide_book/mt5_gb.pdf"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "AT 초당첨과 AT 직격 확률에 설정차가 있고, 설정별 CZ 확률은 공개되지 않았습니다. 설정 3은 없습니다.",
+        "tables": [
+          {
+            "caption": "설정별 AT 초당첨·기계할(공식)",
+            "columns": [
+              "설정",
+              "AT 초당첨",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/299.8",
+                "97.9%"
+              ],
+              [
+                "설정2",
+                "1/295.5",
+                "98.9%"
+              ],
+              [
+                "설정4",
+                "1/258.8",
+                "104.5%"
+              ],
+              [
+                "설정5",
+                "1/235.7",
+                "110.2%"
+              ],
+              [
+                "설정6",
+                "1/222.9",
+                "114.9%"
+              ]
+            ]
+          },
+          {
+            "caption": "AT 직격 당첨률(우출 모드를 거치지 않음)",
+            "columns": [
+              "설정",
+              "보트·약 체리",
+              "약 찬스메",
+              "강 체리·강 찬스메"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "—",
+                "—",
+                "0.4%"
+              ],
+              [
+                "설정2",
+                "—",
+                "—",
+                "1.2%"
+              ],
+              [
+                "설정4",
+                "0.4%",
+                "0.8%",
+                "2.0%"
+              ],
+              [
+                "설정5",
+                "0.4%",
+                "2.0%",
+                "3.9%"
+              ],
+              [
+                "설정6",
+                "0.4%",
+                "3.1%",
+                "6.3%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "약 레어 직격",
+            "value": "설정 4 이상 시사",
+            "note": "보트·약 체리·약 찬스메에서 AT 직격이 나오면 설정 4 이상"
+          },
+          {
+            "label": "설정 4 이상 기준",
+            "value": "AT 초당첨 1/250 전후",
+            "note": "1geki.jp 기재"
+          },
+          {
+            "label": "설정 L",
+            "value": "하단 패널 상시 점멸",
+            "note": "확인되면 가동을 피한다"
+          },
+          {
+            "label": "라이벌 모드",
+            "value": "에노키·가모·하마오카 突入率에 설정차",
+            "note": "높은 설정일수록 突入하기 쉬움(1geki.jp·なな徹)"
+          },
+          {
+            "label": "AT 후 즉우출·EX 아이템",
+            "value": "설정차 있음",
+            "note": "고설정일수록 즉우출이 나오기 쉽고, 격주 차지 중 EX 아이템 획득률에도 차이"
+          }
+        ],
+        "sources": [
+          {
+            "title": "1geki 設定差・設定判別",
+            "url": "https://1geki.jp/slot/l_monkeyturn5/0/"
+          },
+          {
+            "title": "공식 사양 이미지",
+            "url": "https://www1.yamasa.co.jp/mnktrn5/"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4450"
+          }
+        ]
+      },
+      {
+        "title": "레어 역·CZ 당첨률",
+        "kind": "mode",
+        "intro": "레어 역 확률은 전 설정 공통입니다. 아래 CZ 당첨률은 라이벌 모드가 가모 이외일 때 통상 체류 기준입니다.",
+        "tables": [
+          {
+            "caption": "레어 역 확률(전 설정 공통)",
+            "columns": [
+              "역",
+              "확률"
+            ],
+            "rows": [
+              [
+                "약 체리",
+                "1/69.9"
+              ],
+              [
+                "보트",
+                "1/89.9"
+              ],
+              [
+                "약 찬스메",
+                "1/297.9"
+              ],
+              [
+                "강 찬스메",
+                "1/448.9"
+              ],
+              [
+                "강 체리",
+                "1/569.9"
+              ],
+              [
+                "레어 역 합산",
+                "1/30.5"
+              ]
+            ]
+          },
+          {
+            "caption": "격주 차지·초발 챌린지 당첨률(통상 체류)",
+            "columns": [
+              "역",
+              "격주 차지",
+              "초발 챌린지",
+              "합계"
+            ],
+            "rows": [
+              [
+                "보트",
+                "3.1%",
+                "1.2%",
+                "4.3%"
+              ],
+              [
+                "약 체리",
+                "37.4%",
+                "0.4%",
+                "37.7%"
+              ],
+              [
+                "강 체리",
+                "69.9%",
+                "30.1%",
+                "100%"
+              ],
+              [
+                "약 찬스메",
+                "43.9%",
+                "6.3%",
+                "50.2%"
+              ],
+              [
+                "강 찬스메",
+                "84.8%",
+                "15.2%",
+                "100%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "리플레이 종류",
+            "value": "5종",
+            "note": "통상·페이크·청V 싱글·청V 더블·핑크V"
+          },
+          {
+            "label": "초발 챌린지 천장",
+            "value": "페라·레어 역 9회로 성공",
+            "note": "적구 2회 출현해도 성공"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4450"
+          },
+          {
+            "title": "なな徹 소역 확률",
+            "url": "https://nana-press.com/kaiseki/machine/644/17233/"
+          }
+        ]
+      },
+      {
+        "title": "AT 구조와 특화 구간",
+        "kind": "mode",
+        "intro": "주회 파트에서 상승을 뽑고 SG 레이스에 이기면 다음 세트로 이어집니다.",
+        "tables": [
+          {
+            "caption": "AT 종류 비교",
+            "columns": [
+              "구분",
+              "순증",
+              "1세트",
+              "계속"
+            ],
+            "rows": [
+              [
+                "SG 러시(하타노)",
+                "약 2.5매/G",
+                "31G+α + SG 레이스 9G",
+                "시나리오 관리"
+              ],
+              [
+                "아오시마 SG",
+                "약 4.0매/G",
+                "31·51·101G+α + SG 레이스 9G",
+                "약 75%(V스톡 포함 약 83%)"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "전속 모드",
+            "value": "10G 이상·평균 상승 약 50G",
+            "note": "突入 계기는 찬스메·강 체리·압도 찬스. 강 찬스메·강 체리는 상승 확정"
+          },
+          {
+            "label": "압도 배틀",
+            "value": "2G·승리 기대 약 55%",
+            "note": "승리하면 압도 찬스(5종)로 이어진다"
+          },
+          {
+            "label": "압도 찬스 5종",
+            "value": "G수 상승·전속 모드·V스톡·V스톡 복수·궁극 V 프리즈",
+            "note": "궁극 V 프리즈는 100~500G 상승"
+          },
+          {
+            "label": "그랜드슬램 챌린지",
+            "value": "초발 챌린지 실패 일부에서 突入(10G·성공 약 60%)",
+            "note": "실패해도 AT 당첨, 성공하면 롱 프리즈 확정"
+          },
+          {
+            "label": "롱 프리즈",
+            "value": "하타노 프리즈·아오시마 SP 프리즈",
+            "note": "하타노 프리즈는 8세트 클리어(엔딩) 확정, 아오시마 SP 프리즈는 아오시마 SG 직행+V스톡 복수"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4450"
+          },
+          {
+            "title": "공식 가이드북",
+            "url": "https://www.cdn.yamasa.jp/guide_book/mt5_gb.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-monkeyturn-v/machine.png",
+      "alt": "스마스로 몽키턴 V 기기 외관",
+      "caption": "기기 외관(공식 사양 이미지 발췌)",
+      "credit": "山佐ネクスト 공식 사이트",
+      "sourceUrl": "https://www1.yamasa.co.jp/mnktrn5/"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 기본 사양",
+        "title": "설정별 AT 초당첨·출옥률과 레어 역",
+        "url": "./assets/images/official/l-monkeyturn-v/spec-ko.png",
+        "alt": "山佐 공식 사이트 기본 사양 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "우출 모드·초발 챌린지·SG 러시 흐름",
+        "url": "./assets/images/official/l-monkeyturn-v/flow-ko.png",
+        "alt": "山佐 공식 사이트 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/299.8",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "2.5매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "격주 포인트와 우출 모드",
+        "description": "매 G 격주 포인트(1~30pt)를 모으고 격주 차지로 한 번에 늘린다. 규정 포인트에 닿으면 우출 모드, 레이스에 이기면 AT 확정. 레어 역으로 초발 챌린지(10G·성공 약 50%)를 노린다."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "SG 러시",
+        "description": "1세트 40G+α(주회 31G+α + SG 레이스 9G)·순증 약 2.5매/G. 주회 파트에서 G수 상승·전속 모드·압도 배틀을 뽑고 SG 레이스에 이기면 다음 세트로 간다."
+      },
+      {
+        "phase": "STEP 03 · 상위 AT",
+        "title": "아오시마 SG",
+        "description": "SG 레이스에서 아오시마가 하타노를 이기면 돌입. 순증 약 4.0매/G·계속 약 75%(V스톡 포함 약 83%). 지더라도 다음 천장이 495G·4주기로 단축된다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 몽키턴 V 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "격주 포인트를 모아 우출 모드를 노리고 레어 역으로 CZ를 노림"
+      },
+      "initialConnector": "AT 진입",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "규정 포인트 도달",
+          "title": "우출 모드",
+          "description": "레이스에 이기면 AT 확정\n상대·배경색으로 기대도 변화",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 약 50%",
+          "title": "초발 챌린지(CZ)",
+          "description": "10G · 레어 역으로 突入\n페라·레어 역으로 해제 추첨",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "0.4~6.3%",
+          "title": "AT 직격",
+          "description": "레어 역에서 직접 AT\n약 레어 직격은 설정 4 이상",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 2.5매/G",
+        "title": "SG 러시",
+        "detail": "1세트 40G+α(주회 31G+α + SG 레이스 9G) · 레이스에 이기면 계속"
+      },
+      "rushConnector": "주회 파트 주요 분기",
+      "rushAriaLabel": "주회 파트 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "10G 이상 · 평균 약 50G",
+          "title": "전속 모드",
+          "description": "전통의 상승 특화 존\n강 체리·강 찬스메는 상승 확정",
+          "route": "G수 상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "승리 기대 약 55%",
+          "title": "압도 배틀",
+          "description": "2G 자력 상승 배틀\n승리 후 압도 찬스 5종",
+          "route": "상승·V스톡",
+          "tone": "rush"
+        },
+        {
+          "rate": "100~500G 상승",
+          "title": "궁극 V 프리즈",
+          "description": "압도 찬스 5종 중 최상위\n프리즈로 대량 상승",
+          "route": "최강 특화",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "아오시마 VS 하타노 승리",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT",
+        "title": "아오시마 SG",
+        "detail": "순증 약 4.0매/G · 계속 약 75%(V스톡 포함 약 83%)"
+      },
+      "secondaryRushConnector": "SG 레이스 결과",
+      "secondaryAriaLabel": "아오시마 SG 레이스 결과 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "약 75%",
+          "title": "레이스 승리",
+          "description": "다음 세트로 계속\n일부에서 아오시마 SP 프리즈",
+          "route": "↩ 아오시마 SG",
+          "tone": "premium"
+        },
+        {
+          "rate": "패배",
+          "title": "통상 복귀",
+          "description": "다음 천장이 495G+α(4주기)로 단축",
+          "route": "↩ 통상",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 통상 795G+α 또는 6주기째. 설정 변경·아오시마 VS 하타노 패배 후에는 495G·4주기로 단축"
+    }
+  }
+}

@@ -1,9 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "category": "slot",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "l-monkeyturn-v", "file": "l-monkeyturn-v.json", "releaseDate": "2023-12-04" },
     { "id": "l-mahoako", "file": "l-mahoako.json", "releaseDate": "2026-10-19" },
     { "id": "l-paripi-koumei", "file": "l-paripi-koumei.json", "releaseDate": "2026-10-05" },
     { "id": "l-kanokari", "file": "l-kanokari.json", "releaseDate": "2026-09-07" },
