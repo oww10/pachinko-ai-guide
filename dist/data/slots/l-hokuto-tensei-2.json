@@ -1,0 +1,646 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-hokuto-tensei-2",
+  "nameKo": "스마스로 북두의 권 전생의 장 2",
+  "officialNameJa": "スマスロ 北斗の拳 転生の章2",
+  "modelCode": "L スマスロ北斗の拳 転生の章2MW",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "サミー",
+  "brand": "Sammy",
+  "releaseDate": "2026-01-05",
+  "aliases": [
+    "北斗転生2",
+    "北斗の拳 転生の章2",
+    "북두 전생2",
+    "전생의 장2"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/366.0",
+    "cz": "—",
+    "at": "설정1 AT 1/366.0"
+  },
+  "rush": {
+    "nameJa": "闘神演舞／裏闘神演舞",
+    "type": "아베시 관리형 AT(세트 계속)",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": 30,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 규정 아베시에 도달하거나 레어 역으로 직격하면 CZ 없이 바로 AT에 당첨된다",
+      "AT 투신연무는 1세트 30G·순증 약 4.0매/G이며, 30G 소화 후 신권승무(승무혼 1개당 배틀 1회)에 이기면 다음 세트로 계속",
+      "신권승무는 승무혼 1개당 승리 기대 약 1/5, 승무 정렬 시 약 50%",
+      "상위 CZ 천격(4G)에 성공하면 상위 AT 이면 투신연무(기대 3000매 초과)로 올라간다"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 아베시 관리형 AT(투신연무)",
+    "netIncrease": "AT 약 4.0매/G",
+    "baseGames": "50매당 약 31.5G",
+    "czEntry": "CZ 없음 (규정 아베시·직격으로 AT)",
+    "czBreakRate": "승무혼 1개당 약 1/5 · 승무 정렬 약 50%",
+    "initialATCoins": "1세트 30G",
+    "primaryCeilingLabel": "천장 (아베시)",
+    "settingsPrimaryLabel": "CZ 없음",
+    "czCeiling": "최대 1536아베시+α",
+    "atCeiling": "천장 도달 시 AT 돌입",
+    "resetCeiling": "최대 1280아베시+α (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "—",
+      "atProbability": "1/366.0",
+      "payoutRate": "97.6%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "—",
+      "atProbability": "1/357.0",
+      "payoutRate": "98.4%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "—",
+      "atProbability": "1/336.3",
+      "payoutRate": "100.7%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "—",
+      "atProbability": "1/298.7",
+      "payoutRate": "106.2%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "—",
+      "atProbability": "1/283.2",
+      "payoutRate": "111.1%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "—",
+      "atProbability": "1/273.1",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 아베시를 소화·가산해 규정 아베시에 닿으면 AT에 당첨된다. 레어 역으로 천파의 때(아베시 가산 특화 존)에 들어가거나 직격하기도 하며, CZ는 없다.",
+    "AT 투신연무는 1세트 30G·순증 약 4.0매/G. 30G 소화 후 신권승무에서 승무혼 개수만큼 배틀하고 이기면 다음 세트로 간다.",
+    "오의로 승무혼을 늘리거나 권왕강습·SP 배틀 같은 특화 구간에서 더 늘릴 수 있다.",
+    "상위 CZ 천격에 성공하면 상위 AT 이면 투신연무(기대 3000매 초과)로 올라간다.",
+    "천장은 최대 1536아베시+α이며 설정 변경 후에는 1280아베시+α로 단축된다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "이 기종은 CZ가 없어서 설정표의 CZ 열은 '—'로 두었다. 'AT 초당첨'은 규정 아베시 도달과 직격을 모두 포함한 AT 당첨이다.",
+    "설정별 AT 초당첨·기계할은 パチセブン·なな徹·1geki.jp가 일치하고, 기계할 범위 97.6~114.9%는 p-town 기재와도 일치한다. 설정 6 기계할 약 114.9%와 순증 약 4.0매는 サミー 공식 가이드북 이미지에서 확인했다.",
+    "サミー 공식 제품 페이지에는 설정별 확률표가 없고 가이드북 이미지(특징·게임 플로우 등 13장)만 있다. 그중 '특징 보충'과 '게임 플로우' 2장을 번역했고 원본은 spec-source.jpg·flow-source.jpg로 보존한다.",
+    "번역 이미지의 용어(아베시·천파의 때·신권승무·승무혼·권왕강습 등)는 일본어 한자 음독이 아닌 임시 번역이며 검수가 필요하다. 게임 화면 안의 로고(투신연무·신권승무 등 일러스트)는 번역하지 않았다.",
+    "천장 1536아베시와 설정 변경 후 1280아베시는 p-town 본문 기재이며 공식 확인은 하지 못했다."
+  ],
+  "sources": [
+    {
+      "type": "official",
+      "title": "サミー 北斗の拳 転生の章2 公式ガイドブック画像(特徴·ゲームフロー)",
+      "url": "https://www.sammy.co.jp/japanese/product/pachislot/sp_hok_ke_tensei/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정6 기계할",
+        "순증",
+        "게임 플로우",
+        "상위 AT 기대 매수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(スマスロ 北斗の拳 転生の章2)",
+      "url": "https://p-town.dmm.com/machines/4909",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "AT·상위 AT 구조",
+        "소역 확률",
+        "천파의 때",
+        "특투·극투"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 AT初当たり確率/機械割/小役確率",
+      "url": "https://nana-press.com/kaiseki/machine/1059/33041/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT·기계할",
+        "50매당 G수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "1geki 設定差・設定判別要素まとめ",
+      "url": "https://1geki.jp/slot/l_hokuto_tensei2/0/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT",
+        "상태 이행 설정차",
+        "서미 트로피 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン スマスロ北斗の拳 転生の章2",
+      "url": "https://pachiseven.jp/machines_v2/7282",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 AT·기계할",
+        "베이스"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10370",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·1geki.jp·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "CZ가 없고 아베시(규정 수치)를 소화해 AT에 당첨됩니다. 설정 변경 후에는 최대 천장이 짧아지고 규정 아베시 추첨도 우대됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "아베시",
+                "최대 1536아베시+α",
+                "최대 1280아베시+α",
+                "AT 돌입"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "1473아베시 초과 AT 당첨",
+            "value": "AT 레벨 3 이상 농후",
+            "note": "AT 고지(WIN 표시)가 1473아베시를 넘은 상태의 레어 역 직격도 AT 레벨 3 이상"
+          },
+          {
+            "label": "리셋 후",
+            "value": "규정 아베시 추첨 우대",
+            "note": "아베시가 무작위로 가산된 채 시작하므로 아침에는 존이 어긋날 수 있다"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4909"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "AT 초당첨은 고설정일수록 가벼우며 설정 4 이상의 기준은 1/300 전후입니다. 전승 모드 종료 시 상태 이행에도 설정차가 있습니다.",
+        "tables": [
+          {
+            "caption": "설정별 AT 초당첨·기계할",
+            "columns": [
+              "설정",
+              "AT 초당첨",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/366.0",
+                "97.6%"
+              ],
+              [
+                "설정2",
+                "1/357.0",
+                "98.4%"
+              ],
+              [
+                "설정3",
+                "1/336.3",
+                "100.7%"
+              ],
+              [
+                "설정4",
+                "1/298.7",
+                "106.2%"
+              ],
+              [
+                "설정5",
+                "1/283.2",
+                "111.1%"
+              ],
+              [
+                "설정6",
+                "1/273.1",
+                "114.9%"
+              ]
+            ]
+          },
+          {
+            "caption": "전승 모드 종료 시 상태 이행(설정별)",
+            "columns": [
+              "설정",
+              "저확으로",
+              "통상으로",
+              "고확으로"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "71.9%",
+                "25.0%",
+                "3.1%"
+              ],
+              [
+                "설정2",
+                "71.1%",
+                "25.4%",
+                "3.5%"
+              ],
+              [
+                "설정3",
+                "70.3%",
+                "25.8%",
+                "3.9%"
+              ],
+              [
+                "설정4",
+                "50.0%",
+                "42.2%",
+                "7.8%"
+              ],
+              [
+                "설정5",
+                "43.8%",
+                "46.9%",
+                "9.4%"
+              ],
+              [
+                "설정6",
+                "39.1%",
+                "50.0%",
+                "10.9%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "서미 트로피(AT 종료 시 서브 액정)",
+            "value": "동=설정2 이상 / 은=설정3 이상 / 금=설정4 이상 / 기린=설정5 이상 / 무지개=설정6 농후",
+            "note": "1geki.jp 기재"
+          },
+          {
+            "label": "설정 4 이상 기준",
+            "value": "AT 초당첨 1/300 전후",
+            "note": "1geki.jp 기재"
+          },
+          {
+            "label": "상태 이행",
+            "value": "고설정일수록 저확에 있기 어렵다",
+            "note": "상태는 완전히 판별되지 않으므로 대략의 경향으로만 본다"
+          }
+        ],
+        "sources": [
+          {
+            "title": "1geki 設定差・設定判別",
+            "url": "https://1geki.jp/slot/l_hokuto_tensei2/0/"
+          },
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/1059/33041/"
+          },
+          {
+            "title": "パチセブン",
+            "url": "https://pachiseven.jp/machines_v2/7282"
+          }
+        ]
+      },
+      {
+        "title": "소역·천파의 때",
+        "kind": "mode",
+        "intro": "소역 확률은 전 설정 공통입니다. 천파의 때는 아베시를 가산하는 특화 존입니다.",
+        "tables": [
+          {
+            "caption": "소역 확률(전 설정 공통)",
+            "columns": [
+              "역",
+              "확률"
+            ],
+            "rows": [
+              [
+                "하즈레",
+                "1/1.4"
+              ],
+              [
+                "리플레이",
+                "1/8.7"
+              ],
+              [
+                "우하향 벨",
+                "1/8.2"
+              ],
+              [
+                "승무 정렬",
+                "1/198.6"
+              ],
+              [
+                "찬스메",
+                "1/199.2"
+              ],
+              [
+                "약 체리 A·B(각각)",
+                "1/199.2"
+              ],
+              [
+                "강 체리 A·B(각각)",
+                "1/397.2"
+              ],
+              [
+                "스이카",
+                "1/79.9"
+              ],
+              [
+                "확정 체리",
+                "1/16384.0"
+              ],
+              [
+                "레어 역 합산",
+                "1/26.5"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "천파의 때",
+            "value": "7·14·21G 또는 무한",
+            "note": "레어 역에서 돌입, 1G당 아베시 5~999 가산. 남은 아베시는 AT 종료 후에 이월되고 14G 이상은 7G마다 계속 고지"
+          },
+          {
+            "label": "천명의 때",
+            "value": "규정 아베시 도달 기대 구간",
+            "note": "공식 게임 플로우에 표기"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4909"
+          }
+        ]
+      },
+      {
+        "title": "AT와 상위 AT",
+        "kind": "mode",
+        "intro": "1세트 30G의 AT에서 승무혼을 모아 신권승무(배틀)에서 이기면 계속합니다. 상위 CZ 천격에 성공하면 상위 AT로 올라갑니다.",
+        "tables": [
+          {
+            "caption": "AT·상위 AT 비교",
+            "columns": [
+              "구분",
+              "1세트",
+              "순증",
+              "특징"
+            ],
+            "rows": [
+              [
+                "투신연무(AT)",
+                "30G",
+                "약 4.0매/G",
+                "30G 후 신권승무 · 승무혼 1개당 배틀 1회"
+              ],
+              [
+                "이면 투신연무(상위 AT)",
+                "초기 70G + 적 승무혼 2개 / 2세트 이후 30~300G",
+                "약 4.0매/G",
+                "각 파트가 대폭 강화 · 기대 3000매 초과"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "신권승무",
+            "value": "승무혼 1개당 승리 기대 약 1/5",
+            "note": "승무 정렬 시 승리 기대 약 50%"
+          },
+          {
+            "label": "오의",
+            "value": "승무혼 획득 시 발생",
+            "note": "승무혼이 늘어나며 최대 33개까지"
+          },
+          {
+            "label": "권왕강습",
+            "value": "3~4G",
+            "note": "AT 중 신권 BAR 정렬로 돌입하는 승무혼 특화 존"
+          },
+          {
+            "label": "특투·극투",
+            "value": "특투 루프 77·80·90% / 극투 90% 고정",
+            "note": "스페셜 에피소드 후 돌입. 특투는 캐릭터 승격 5G + 배틀 4G"
+          },
+          {
+            "label": "천격(상위 CZ)",
+            "value": "4G",
+            "note": "성공하면 상위 AT, 실패해도 천국 이행 농후. 투신연무를 20세트 계속하면 AT 종료 후 천격 확정"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4909"
+          },
+          {
+            "title": "サミー 公式",
+            "url": "https://www.sammy.co.jp/japanese/product/pachislot/sp_hok_ke_tensei/"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-hokuto-tensei-2/machine.png",
+      "alt": "스마스로 북두의 권 전생의 장 2 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10370"
+    },
+    "translatedImages": [
+      {
+        "phase": "공식 특징",
+        "title": "설정6 기계할·순증·승률",
+        "url": "./assets/images/official/l-hokuto-tensei-2/spec-ko.png",
+        "alt": "サミー 공식 가이드북 특징 보충 이미지의 한국어 번역본"
+      },
+      {
+        "phase": "공식 게임 플로우",
+        "title": "통상시·천파의 때·AT·상위 AT 흐름",
+        "url": "./assets/images/official/l-hokuto-tensei-2/flow-ko.png",
+        "alt": "サミー 공식 가이드북 게임 플로우 이미지의 한국어 번역본"
+      }
+    ],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/366.0",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "4.0매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "아베시와 천파의 때",
+        "description": "CZ 없이 규정 아베시 도달이나 레어 역 직격으로 AT에 당첨된다. 천파의 때(7·14·21G 또는 무한)에서 아베시를 가산할 수 있고, 최대 천장은 1536아베시+α."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "투신연무와 신권승무",
+        "description": "1세트 30G·순증 약 4.0매/G. 30G 소화 후 신권승무에서 승무혼 1개당 약 1/5로 이기면 다음 세트로 간다. 오의로 승무혼이 늘고 승무 정렬이면 승리 기대 약 50%."
+      },
+      {
+        "phase": "STEP 03 · 상위 AT",
+        "title": "천격과 이면 투신연무",
+        "description": "상위 CZ 천격(4G)에 성공하면 이면 투신연무에 들어간다. 초기 70G+적 승무혼 2개, 기대 3000매 초과. 상위 AT 종료 후에도 천격으로 이어진다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 북두의 권 전생의 장 2 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "규정 아베시·레어 역으로 AT를 노리고 천파의 때로 아베시를 가산"
+      },
+      "initialConnector": "AT 진입",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "최대 1536아베시",
+          "title": "규정 아베시 도달",
+          "description": "아베시를 소화·가산해 AT\n설정 변경 후 천장 1280",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "7·14·21G·무한",
+          "title": "천파의 때",
+          "description": "레어 역에서 돌입\n아베시 5~999 가산(AT 후 이월)",
+          "route": "아베시 가산",
+          "tone": "rush"
+        },
+        {
+          "rate": "레어 역",
+          "title": "AT 직격",
+          "description": "레어 역에서 직접 AT\n1473아베시 초과면 AT 레벨 3 이상",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 4.0매/G",
+        "title": "투신연무",
+        "detail": "1세트 30G · 종료 후 신권승무에 이기면 계속"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "승무혼 1개당 약 1/5",
+          "title": "신권승무",
+          "description": "30G 후 배틀\n승무혼 개수만큼 도전",
+          "route": "세트 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "최대 33개",
+          "title": "오의",
+          "description": "승무혼 획득 후 발생\n승무혼이 늘어난다",
+          "route": "승무혼 증가",
+          "tone": "rush"
+        },
+        {
+          "rate": "계속률 77~90%",
+          "title": "특투·극투",
+          "description": "스페셜 에피소드 후 돌입\n극투는 계속 90% 고정",
+          "route": "특화",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "천격 성공(4G)",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT",
+        "title": "이면 투신연무",
+        "detail": "초기 70G+적 승무혼 2개 · 기대 3000매 초과"
+      },
+      "secondaryRushConnector": "상위 AT 이후",
+      "secondaryAriaLabel": "상위 AT 이후 흐름 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "20세트 계속",
+          "title": "천격 획득 확정",
+          "description": "AT 종료 후 천격 돌입\n실패해도 천국 이행 농후",
+          "route": "상위 도전",
+          "tone": "premium"
+        },
+        {
+          "rate": "종료 후",
+          "title": "이면 신권승무",
+          "description": "상위 AT 종료 후 다시 천격\n상위 AT 루프에 기대",
+          "route": "↩ 천격",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 최대 1536아베시+α. 설정 변경 후에는 1280아베시+α로 단축, 1473아베시 초과 당첨은 AT 레벨 3 이상 농후"
+    }
+  }
+}
