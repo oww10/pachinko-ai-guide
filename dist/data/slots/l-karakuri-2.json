@@ -1,0 +1,663 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-karakuri-2",
+  "nameKo": "스마스로 카라쿠리 서커스 2",
+  "officialNameJa": "Lパチスロ からくりサーカス2",
+  "modelCode": "Lからくりサーカス2jG",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "SANKYO",
+  "brand": "SANKYO",
+  "releaseDate": "2026-07-06",
+  "aliases": [
+    "からくりサーカス2",
+    "카라쿠리서커스2",
+    "카라쿠리 서커스2",
+    "からサー2"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 AT 1/519",
+    "cz": "설정1 1/342",
+    "at": "설정1 AT 1/519"
+  },
+  "rush": {
+    "nameJa": "からくりサーカス／超からくりサーカス",
+    "type": "매수 관리형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": null,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 레어 역과 G수 소화로 CZ(기계장치의 여신·막간 찬스·극장 저지)를 추첨하고, 운명반 성공으로도 보상을 얻는다",
+      "CZ 기계장치의 여신은 10G+α·성공 기대 약 55%, 극장 저지는 4G·성공 기대 약 47%",
+      "AT 카라쿠리 서커스는 초기 150매·순증 약 2.8매/G의 매수 관리형이며, 매수 상승 확률은 약 1/34",
+      "격정 저지(4G·성공 기대 약 50%)를 3회 성공하면 운명의 일극(4G·약 50%) 권리를 얻고, 성공하면 상위 AT 초카라쿠리 서커스(순증 약 8.0매/G)로 간다"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 매수 관리형 AT(카라쿠리 서커스)",
+    "netIncrease": "AT 약 2.8매/G · 상위 AT 약 8.0매/G",
+    "baseGames": "50매당 약 31.8G",
+    "czEntry": "1/342 (3종 CZ 합산)",
+    "czBreakRate": "여신 약 55% · 극장 저지 약 47%",
+    "initialATCoins": "초기 150매(매수 관리)",
+    "primaryCeilingLabel": "천장 (G수·회수)",
+    "czCeiling": "액정 1100G(최심 1200G) 또는 여신간 실제 890G",
+    "atCeiling": "AT간 실제 2500G",
+    "resetCeiling": "액정 500G (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/342",
+      "atProbability": "1/519",
+      "payoutRate": "97.7%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/341",
+      "atProbability": "1/504",
+      "payoutRate": "98.8%"
+    },
+    {
+      "setting": 3,
+      "czProbability": "1/339",
+      "atProbability": "1/474",
+      "payoutRate": "101.2%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/339",
+      "atProbability": "1/458",
+      "payoutRate": "104.3%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/327",
+      "atProbability": "1/430",
+      "payoutRate": "110.5%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/318",
+      "atProbability": "1/410",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 레어 역과 G수 소화로 CZ를 추첨한다. CZ는 기계장치의 여신(10G+α·기대 약 55%), 막간 찬스(10G), 극장 저지(4G·기대 약 47%) 세 종류이고, 스이카 규정 회수로 들어가는 운명반(6G/세트)도 보상을 준다.",
+    "AT 카라쿠리 서커스는 초기 150매·순증 약 2.8매/G. 매수 상승(약 1/34)과 특화 존, 격정 저지로 늘려 간다.",
+    "격정 저지 3회 성공으로 운명의 일극 권리를 얻고, 성공하면 극한 무도를 거쳐 상위 AT 초카라쿠리 서커스(순증 약 8.0매/G·상승이 모두 세 자리)에 들어간다.",
+    "천장은 액정 1100G(최심 1200G)·여신간 실제 890G·여신 4연속 스루·AT간 실제 2500G이며, 설정 변경 후에는 액정 500G로 단축된다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "설정별 CZ 확률·AT 확률·기계할은 なな徹와 パチセブン이 일치하고, 기계할 범위 97.7~114.9%는 p-town 기재와도 일치한다. CZ 확률은 기계장치의 여신·막간 찬스·극장 저지의 합산이다.",
+    "SANKYO 공식 사이트(sankyo-fever.jp)는 봇 차단(Incapsula)으로 열리지 않아 공식 스펙과 스펙 이미지를 직접 확인하지 못했고, 우회하지 않았다. 번역 이미지는 만들지 않았고 '게임 진행 단계' 텍스트 카드를 쓴다.",
+    "1geki.jp는 확인하지 않았다(두 분석 사이트와 p-town으로 교차).",
+    "일본어 고유 명칭(여신·격정·운명의 일극 등)의 한국어 표기는 임시 번역이며 검수가 필요하다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(Lパチスロ からくりサーカス2)",
+      "url": "https://p-town.dmm.com/machines/5019",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "CZ·AT·상위 AT 구조",
+        "기계할 범위",
+        "롱 프리즈"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 スペック情報",
+      "url": "https://nana-press.com/kaiseki/machine/1144/36712/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 CZ·AT·기계할",
+        "소역 확률",
+        "50매당 G수"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定判別(設定差・示唆演出)まとめ",
+      "url": "https://nana-press.com/kaiseki/machine/1144/37426/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정 판별 요소",
+        "강 체리 CZ·AT 당첨률",
+        "AT 종료 화면 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン Lパチスロ からくりサーカス2",
+      "url": "https://pachiseven.jp/machines_v2/7411",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 CZ·AT·기계할",
+        "베이스"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10485",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "G수 천장 두 가지와 여신 스루 회수 천장, AT간 천장이 있습니다. 여신간 G수는 막간 찬스를 뽑아도 리셋되지 않습니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "액정 G수",
+                "1100G 구간(최심 1200G)",
+                "500G",
+                "기계장치의 여신 당첨"
+              ],
+              [
+                "여신간 실제 G수",
+                "890G",
+                "—",
+                "기계장치의 여신 당첨"
+              ],
+              [
+                "여신 4연속 스루",
+                "5회째가 천장",
+                "—",
+                "여신이 AT 직격 + 성공 농후 격정 저지 1개로 변경"
+              ],
+              [
+                "AT간 실제 G수",
+                "2500G",
+                "—",
+                "AT 직격 + 성공 농후 격정 저지 1개"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "1100G 천장 도달 시",
+            "value": "다음 천장 G수가 우대",
+            "note": "p-town 기재"
+          },
+          {
+            "label": "야메도키",
+            "value": "AT 후 시사 확인 후 판단",
+            "note": "운명의 일극 실패 후는 128G 소화. AT 종료 후~100G까지는 기계할 100%를 넘어 상황에 따라 속행"
+          },
+          {
+            "label": "롱 프리즈",
+            "value": "상위 AT 농후 + 극한 무도 상승이 모두 100매 이상",
+            "note": "여신 스루 회수 천장(4스루 후 5회째 여신)의 일부에서 발생. 극한 무도 평균 약 1600매 상승"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5019"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "CZ·AT 확률은 AT에서 설정차가 크고, 강 체리 계기의 CZ·AT 당첨률과 AT 종료 화면 시사가 판별의 중심입니다. AT 1/460을 밑돌면 고설정의 기준입니다.",
+        "tables": [
+          {
+            "caption": "설정별 CZ·AT·기계할",
+            "columns": [
+              "설정",
+              "CZ 합산",
+              "AT",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/342",
+                "1/519",
+                "97.7%"
+              ],
+              [
+                "설정2",
+                "1/341",
+                "1/504",
+                "98.8%"
+              ],
+              [
+                "설정3",
+                "1/339",
+                "1/474",
+                "101.2%"
+              ],
+              [
+                "설정4",
+                "1/339",
+                "1/458",
+                "104.3%"
+              ],
+              [
+                "설정5",
+                "1/327",
+                "1/430",
+                "110.5%"
+              ],
+              [
+                "설정6",
+                "1/318",
+                "1/410",
+                "114.9%"
+              ]
+            ]
+          },
+          {
+            "caption": "강 체리 계기 CZ·AT 당첨률(통상 체류)",
+            "columns": [
+              "설정",
+              "당첨률"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "9.8%"
+              ],
+              [
+                "설정2",
+                "10.2%"
+              ],
+              [
+                "설정3",
+                "12.5%"
+              ],
+              [
+                "설정4",
+                "13.7%"
+              ],
+              [
+                "설정5",
+                "14.8%"
+              ],
+              [
+                "설정6",
+                "16.4%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "운명반 성공 보상",
+            "value": "고설정일수록 AT 직격이 선택되기 쉬움",
+            "note": "각 보상 선택률은 조사 중"
+          },
+          {
+            "label": "설정 6 농후",
+            "value": "AT 종료 화면 시로가네(웃는 얼굴) · 오림피아 연타 상승 +6 · 매수 표시 666 OVER",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "AT 종료 화면",
+            "value": "시로가네=기본 / 최고참 4인=홀수·고설정 / 루실&안젤리나 인형=짝수·고설정 시사",
+            "note": "なな徹 기재"
+          },
+          {
+            "label": "CZ 합산 확률 확인",
+            "value": "액정 아래 '대 데이터' 터치",
+            "note": "CZ·AT 당첨 이력과 스타트 G수를 확인할 수 있음"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 設定判別",
+            "url": "https://nana-press.com/kaiseki/machine/1144/37426/"
+          },
+          {
+            "title": "なな徹 スペック情報",
+            "url": "https://nana-press.com/kaiseki/machine/1144/36712/"
+          },
+          {
+            "title": "パチセブン",
+            "url": "https://pachiseven.jp/machines_v2/7411"
+          }
+        ]
+      },
+      {
+        "title": "소역·CZ 구조",
+        "kind": "mode",
+        "intro": "소역 확률에는 설정 차이가 알려져 있지 않습니다. CZ는 세 종류이고 운명반은 보상 구간입니다.",
+        "tables": [
+          {
+            "caption": "소역 확률",
+            "columns": [
+              "역",
+              "확률"
+            ],
+            "rows": [
+              [
+                "리플레이",
+                "약 1/7.3"
+              ],
+              [
+                "3매 벨",
+                "약 1/24"
+              ],
+              [
+                "찬스 벨",
+                "약 1/150"
+              ],
+              [
+                "스이카",
+                "약 1/100"
+              ],
+              [
+                "약 체리",
+                "약 1/98"
+              ],
+              [
+                "강 체리",
+                "약 1/327"
+              ],
+              [
+                "찬스메",
+                "약 1/175"
+              ]
+            ]
+          },
+          {
+            "caption": "통상 시 구간 비교",
+            "columns": [
+              "구간",
+              "계기",
+              "계속",
+              "기대"
+            ],
+            "rows": [
+              [
+                "기계장치의 여신(CZ)",
+                "규정 G수·레어 역 일부",
+                "10G+α",
+                "약 55%"
+              ],
+              [
+                "막간 찬스",
+                "운명반 성공 일부·AT 종료 후",
+                "10G(AT 후 5G)",
+                "—"
+              ],
+              [
+                "극장 저지",
+                "CZ 당첨 일부",
+                "4G",
+                "약 47%"
+              ],
+              [
+                "운명반",
+                "스이카 규정 회수(최대 7회·평균 2.4회)",
+                "6G/세트",
+                "평균 약 34.2%"
+              ],
+              [
+                "현사 괴뢰 연무",
+                "레어 역 일부·운명반 성공",
+                "2G",
+                "평균 출현 약 1/98"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "기계장치의 여신 중",
+            "value": "2G 연속 소역 성립이면 AT 농후",
+            "note": "최종 G의 소역 성립도 AT 농후"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5019"
+          },
+          {
+            "title": "なな徹 스펙 정보",
+            "url": "https://nana-press.com/kaiseki/machine/1144/36712/"
+          }
+        ]
+      },
+      {
+        "title": "AT와 상위 AT",
+        "kind": "mode",
+        "intro": "매수 관리형 AT에서 격정 저지를 3회 성공하면 운명의 일극 권리를 얻고, 성공하면 상위 AT로 올라갑니다.",
+        "tables": [
+          {
+            "caption": "AT·상위 AT 비교",
+            "columns": [
+              "구분",
+              "초기·계속",
+              "순증",
+              "특징"
+            ],
+            "rows": [
+              [
+                "카라쿠리 서커스(AT)",
+                "초기 150매",
+                "약 2.8매/G",
+                "매수 상승 약 1/34 · 개시 시 쇼타임 스톡 추첨"
+              ],
+              [
+                "초카라쿠리 서커스(상위 AT)",
+                "돌입 경로에 따라 변화",
+                "약 8.0매/G",
+                "모든 매수 상승이 세 자리 · 종료 후 운명의 일극"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "격정 저지",
+            "value": "4G·성공 기대 약 50%",
+            "note": "3회 성공하면 운명의 일극 권리 획득"
+          },
+          {
+            "label": "운명의 일극(상위 CZ)",
+            "value": "4G·성공 기대 약 50%",
+            "note": "성공하면 극한 무도를 거쳐 상위 AT"
+          },
+          {
+            "label": "극한 무도",
+            "value": "1G+α('노려라' 지시 실패까지 계속)",
+            "note": "운명의 일극 성공 후와 상위 AT 중 격정 저지 성공 일부에서 돌입, 상위 AT 매수를 상승"
+          },
+          {
+            "label": "기계장치의 신",
+            "value": "10G+α·성공 기대 약 55%",
+            "note": "격정 저지 3회째 이후 레어 역 일부 등으로 돌입, 성공하면 상위 AT"
+          },
+          {
+            "label": "쇼타임",
+            "value": "1G+α",
+            "note": "AT 개시 시 스톡을 추첨하며, 스톡은 AT 매수 소화 후 방출"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/5019"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-karakuri-2/machine.png",
+      "alt": "스마스로 카라쿠리 서커스 2 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10485"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/519",
+        "label": "설정1 AT 초당첨"
+      },
+      {
+        "value": "2.8매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "CZ와 운명반",
+        "description": "레어 역과 G수 소화로 CZ를 추첨한다. 기계장치의 여신(10G+α·기대 약 55%), 막간 찬스, 극장 저지(4G·약 47%) 세 종류이고 운명반 성공으로도 보상을 얻는다."
+      },
+      {
+        "phase": "STEP 02 · AT",
+        "title": "카라쿠리 서커스",
+        "description": "초기 150매·순증 약 2.8매/G의 매수 관리형. 매수 상승(약 1/34)과 특화 존으로 늘리고, 격정 저지(4G·약 50%)를 3회 성공하면 운명의 일극 권리를 얻는다."
+      },
+      {
+        "phase": "STEP 03 · 상위 AT",
+        "title": "운명의 일극과 초카라쿠리 서커스",
+        "description": "운명의 일극(4G·약 50%)에 성공하면 극한 무도를 거쳐 상위 AT에 들어간다. 순증 약 8.0매/G이고 모든 매수 상승이 세 자리로 강화된다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 카라쿠리 서커스 2 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "레어 역과 G수 소화로 CZ를 노리고 운명반으로 보상을 얻음"
+      },
+      "initialConnector": "AT 진입",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "CZ 합산 1/342~1/318",
+          "title": "기계장치의 여신",
+          "description": "10G+α · 성공 기대 약 55%\n2G 연속 소역이면 AT 농후",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "성공 기대 약 47%",
+          "title": "극장 저지",
+          "description": "CZ 당첨 일부에서 돌입\n4G",
+          "route": "AT 진입",
+          "tone": "rush"
+        },
+        {
+          "rate": "운명반·천장",
+          "title": "AT 직격",
+          "description": "운명반 성공 보상·천장으로\n고설정일수록 직격 우대",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 2.8매/G",
+        "title": "카라쿠리 서커스",
+        "detail": "초기 150매 · 매수 관리형 · 매수 상승 약 1/34"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "매수 상승 약 1/34",
+          "title": "매수 상승",
+          "description": "레어 역 등으로 추첨\n특화 존 돌입도 노림",
+          "route": "매수 상승",
+          "tone": "rush"
+        },
+        {
+          "rate": "4G · 성공 약 50%",
+          "title": "격정 저지",
+          "description": "3회 성공하면\n운명의 일극 권리 획득",
+          "route": "상위 진행",
+          "tone": "premium"
+        },
+        {
+          "rate": "1G+α",
+          "title": "쇼타임",
+          "description": "AT 개시 시 스톡 추첨\n매수 소화 후 방출",
+          "route": "특화 존",
+          "tone": "rush"
+        }
+      ],
+      "secondaryConnector": "운명의 일극 성공(4G·약 50%)",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT",
+        "title": "초카라쿠리 서커스",
+        "detail": "순증 약 8.0매/G · 모든 매수 상승이 세 자리"
+      },
+      "secondaryRushConnector": "상위 AT 중",
+      "secondaryAriaLabel": "상위 AT 흐름 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "1G+α",
+          "title": "극한 무도",
+          "description": "'노려라' 지시 실패까지 계속\n상위 AT 매수 상승",
+          "route": "최강 특화",
+          "tone": "premium"
+        },
+        {
+          "rate": "종료 후",
+          "title": "운명의 일극",
+          "description": "상위 AT 종료 후 다시 4G 판정\n실패하면 128G 소화",
+          "route": "↩ 재도전",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 액정 1100G(최심 1200G)·여신간 실제 890G·여신 4연속 스루·AT간 실제 2500G. 설정 변경 후에는 액정 500G로 단축"
+    }
+  }
+}
