@@ -1,0 +1,648 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "l-valvrave-2",
+  "nameKo": "스마스로 혁명기 발브레이브 2",
+  "officialNameJa": "Lパチスロ 革命機ヴァルヴレイヴ2",
+  "modelCode": "L革命機ヴァルヴレイヴ2jF",
+  "machineType": "slot",
+  "format": "L",
+  "maker": "SANKYO",
+  "brand": "SANKYO",
+  "releaseDate": "2025-11-04",
+  "aliases": [
+    "革命機ヴァルヴレイヴ2",
+    "ヴヴヴ2",
+    "ヴァルヴレイヴ2",
+    "발브레이브2",
+    "혁명기 발브레이브2"
+  ],
+  "verification": {
+    "status": "needs-review",
+    "needsReviewFields": [
+      "nameKo",
+      "settings",
+      "slot",
+      "analysis"
+    ],
+    "lastReviewedAt": "2026-11-27",
+    "reviewedBy": "Claude"
+  },
+  "probabilities": {
+    "base": "설정1 합산 1/476",
+    "cz": "1/324 (전 설정 공통)",
+    "at": "설정1 합산 1/476"
+  },
+  "rush": {
+    "nameJa": "革命ラッシュ／超革命ラッシュ",
+    "type": "고순증 세트 계속형 AT",
+    "entryRatePercent": null,
+    "totalEntryRatePercent": null,
+    "continuationRatePercent": 75,
+    "spins": null,
+    "remainingHolds": null,
+    "timeShortSpins": null,
+    "gates": [
+      "통상시는 주기 포인트가 규정에 닿으면 CZ 도루시아 공방전(11G+α·보너스 기대 약 60%)에 들어간다",
+      "보너스는 혁명 보너스(45G+α·666매 돌파로 AT)와 결전 보너스(최종 결전 클리어 시 AT 농후) 두 종류",
+      "AT 혁명 러시는 순증 약 9.0매/G·세트당 10~100G·계속 기대 약 75%, 세트 종료 후 하라키리 챌린지(4G)로 계속을 판정",
+      "AT 3세트 계속 또는 롱 프리즈로 상위 AT 초혁명 러시(계속 기대 최대 약 90%)로 올라간다"
+    ]
+  },
+  "slot": {
+    "type": "스마트 슬롯 · 고순증 세트 계속형 AT(혁명 러시)",
+    "netIncrease": "AT 약 9.0매/G",
+    "baseGames": "50매당 약 32.7G",
+    "czEntry": "1/324 (전 설정 공통)",
+    "czBreakRate": "도루시아 공방전 보너스 기대 약 60%",
+    "initialATCoins": "세트당 10~100G",
+    "primaryCeilingLabel": "천장 (주기·G수)",
+    "czCeiling": "최대 6주기 또는 CZ간 999G",
+    "atCeiling": "AT·보너스간 1500G (보너스 이상 당첨)",
+    "resetCeiling": "최대 3주기 / 1000G (설정 변경 시)"
+  },
+  "settings": [
+    {
+      "setting": 1,
+      "czProbability": "1/324",
+      "atProbability": "1/476",
+      "payoutRate": "97.7%"
+    },
+    {
+      "setting": 2,
+      "czProbability": "1/324",
+      "atProbability": "1/473",
+      "payoutRate": "99.3%"
+    },
+    {
+      "setting": 4,
+      "czProbability": "1/324",
+      "atProbability": "1/464",
+      "payoutRate": "104.7%"
+    },
+    {
+      "setting": 5,
+      "czProbability": "1/324",
+      "atProbability": "1/459",
+      "payoutRate": "110.8%"
+    },
+    {
+      "setting": 6,
+      "czProbability": "1/324",
+      "atProbability": "1/456",
+      "payoutRate": "114.9%"
+    }
+  ],
+  "payouts": {
+    "basis": "枚",
+    "initial": [],
+    "rush": []
+  },
+  "gameFlow": [
+    "통상시는 매 G 주기 포인트를 모아 규정에 닿으면 CZ 도루시아 공방전(11G+α)에 들어간다. 레어 역으로는 전뇌 존(주기 포인트 가산)과 BAR 맞춤의 룬 드라이브(CZ 고확률 존)를 노린다.",
+    "CZ에 성공하면 혁명 보너스(45G+α·666매 돌파로 AT)나 결전 보너스(최종 결전 클리어 시 AT 농후)에 당첨된다.",
+    "AT 혁명 러시는 순증 약 9.0매/G·세트당 10~100G. 레어 역에서 V스톡과 혁명의 검을 뽑고, 세트가 끝나면 하라키리 챌린지(4G)로 계속을 판정한다.",
+    "3세트 계속하면 상위 AT 초혁명 러시(계속 기대 최대 약 90%)로 올라간다.",
+    "천장은 최대 6주기·CZ간 999G·AT/보너스간 1500G이며, 설정 변경 후에는 3주기·1000G로 단축된다."
+  ],
+  "notes": [
+    "본 페이지의 확률은 장기 평균값이며 당첨이나 수익을 보장하지 않는다.",
+    "설정별 기계할은 이론상 수치이며 실제 결과는 시행 수와 조건에 따라 달라진다.",
+    "이 기종에는 설정 3이 없다(설정 1·2·4·5·6의 5단계). 설정별 표의 'AT 초당첨' 열은 혁명 보너스·결전 보너스·혁명 러시 직격·초혁명 러시 직격을 합산한 초당첨이다. CZ 확률 1/324는 전 설정 공통이다.",
+    "설정별 합산 초당첨·기계할은 なな徹와 パチセブン이 일치하고, 기계할 범위 97.7~114.9%는 p-town 기재와도 일치한다. CZ 1/324는 p-town과 パチセブン이 일치한다.",
+    "SANKYO 공식 사이트(sankyo-fever.jp)는 봇 차단으로 열리지 않아 공식 스펙을 직접 확인하지 못했고, 우회하지 않았다. 공식 개발 비화 사이트(secret-story.sankyo-fever.jp)는 열렸으나 스펙·플로우 이미지가 없어 번역 이미지는 만들지 않았다. 대신 '게임 진행 단계' 텍스트 카드를 쓴다.",
+    "1geki.jp에서는 이 기종 페이지를 찾지 못했다(검색에는 전작 페이지만 나옴).",
+    "일본어 고유 명칭(혁명·결전·하라키리 등)의 한국어 표기는 임시 번역이며 검수가 필요하다."
+  ],
+  "sources": [
+    {
+      "type": "secondary",
+      "title": "p-town 機種情報(Lパチスロ 革命機ヴァルヴレイヴ2)",
+      "url": "https://p-town.dmm.com/machines/4885",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "천장",
+        "모드",
+        "CZ·보너스·AT 구조",
+        "기계할 범위",
+        "BAR 맞춤"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "なな徹 設定判別(設定差・示唆演出)まとめ",
+      "url": "https://nana-press.com/kaiseki/machine/1040/32804/",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 합산·기계할",
+        "BAR 맞춤 AT 직격",
+        "특수 테이블 선택률",
+        "설정 시사"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "パチセブン Lパチスロ 革命機ヴァルヴレイヴ2",
+      "url": "https://pachiseven.jp/machines_v2/7259",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "설정별 합산·기계할",
+        "CZ 1/324",
+        "베이스",
+        "천장"
+      ]
+    },
+    {
+      "type": "secondary",
+      "title": "P-WORLD 機種データベース(기기 사진)",
+      "url": "https://www.p-world.co.jp/machine/database/10352",
+      "accessedAt": "2026-11-27",
+      "supports": [
+        "기기 사진"
+      ]
+    }
+  ],
+  "analysis": {
+    "notice": "해석 사이트(p-town·なな徹·パチセブン 등)가 조사한 값이며 공식 수치가 아닙니다. 사이트마다 값이 다르거나 조사 중인 항목이 있고, 실제 동작과 다를 수 있습니다. 확인일 2026-11-27.",
+    "sections": [
+      {
+        "title": "천장과 리셋",
+        "kind": "mode",
+        "intro": "주기 천장, CZ간·AT/보너스간 G수 천장, 결전 보너스 3연속 후 천장이 있습니다. 주기 횟수는 릴 아래에 표시됩니다.",
+        "tables": [
+          {
+            "caption": "천장 구간",
+            "columns": [
+              "구분",
+              "천장",
+              "설정 변경 시",
+              "은혜"
+            ],
+            "rows": [
+              [
+                "주기",
+                "최대 6주기",
+                "최대 3주기",
+                "CZ 당첨"
+              ],
+              [
+                "CZ간 G수",
+                "999G",
+                "—",
+                "CZ 당첨"
+              ],
+              [
+                "결전 보너스 3연속 후",
+                "—",
+                "—",
+                "다음 보너스는 혁명 보너스 농후"
+              ],
+              [
+                "AT·보너스간 G수",
+                "1500G",
+                "1000G",
+                "보너스 이상 당첨"
+              ]
+            ]
+          },
+          {
+            "caption": "모드별 규정 포인트·천장 주기(2주기째 이후)",
+            "columns": [
+              "모드",
+              "최대 규정 포인트",
+              "천장 주기"
+            ],
+            "rows": [
+              [
+                "통상A",
+                "600pt",
+                "6주기"
+              ],
+              [
+                "통상B",
+                "600pt",
+                "3주기"
+              ],
+              [
+                "통상C",
+                "400pt",
+                "5주기"
+              ],
+              [
+                "천국",
+                "100pt",
+                "1주기"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "1주기 규정 포인트",
+            "value": "최대 600pt(설정 변경 후 300pt)",
+            "note": "600pt가 규정이었다면 다음은 400pt 이하로 단축"
+          },
+          {
+            "label": "AT·보너스간 천장 은혜 비율",
+            "value": "결전 보너스 : 혁명 보너스 : AT = 1 : 1 : 1",
+            "note": "전작보다 강화됐다고 p-town이 기재"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4885"
+          }
+        ]
+      },
+      {
+        "title": "설정 판별 요소",
+        "kind": "condition",
+        "intro": "초당첨 합산의 설정차는 작고, 특수 테이블 선택률과 하라키리 드라이브 발생률, 종료 화면·표시 매수 시사가 판별의 중심입니다. 설정 3은 없습니다.",
+        "tables": [
+          {
+            "caption": "설정별 초당첨 합산·기계할",
+            "columns": [
+              "설정",
+              "CZ",
+              "초당첨 합산",
+              "기계할"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "1/324",
+                "1/476",
+                "97.7%"
+              ],
+              [
+                "설정2",
+                "1/324",
+                "1/473",
+                "99.3%"
+              ],
+              [
+                "설정4",
+                "1/324",
+                "1/464",
+                "104.7%"
+              ],
+              [
+                "설정5",
+                "1/324",
+                "1/459",
+                "110.8%"
+              ],
+              [
+                "설정6",
+                "1/324",
+                "1/456",
+                "114.9%"
+              ]
+            ]
+          },
+          {
+            "caption": "BAR 맞춤 AT 직격·특수 테이블 선택률",
+            "columns": [
+              "설정",
+              "BAR 맞춤 AT 직격",
+              "특수 테이블 선택률"
+            ],
+            "rows": [
+              [
+                "설정1",
+                "약 3%",
+                "약 1%"
+              ],
+              [
+                "설정2",
+                "약 4%",
+                "약 2%"
+              ],
+              [
+                "설정4",
+                "약 5%",
+                "약 4%"
+              ],
+              [
+                "설정5",
+                "약 6%",
+                "약 8%"
+              ],
+              [
+                "설정6",
+                "약 7%",
+                "약 12%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "혁명 보너스·AT 직격 비율",
+            "value": "설정1 약 55% / 설정6 약 60%",
+            "note": "설정 2·4·5는 조사 중"
+          },
+          {
+            "label": "하라키리 드라이브 발생률",
+            "value": "설정 1·2는 15~20연 1회 / 설정 4 이상은 6~8연 1회",
+            "note": "6~8연에 1회 페이스면 설정 4 이상 기대"
+          },
+          {
+            "label": "설정 2 이상 시사",
+            "value": "CZ·보너스 종료 화면 보라 프레임(쇼코&사키) · AT 게임 수 +22G"
+          },
+          {
+            "label": "설정 4 이상 농후",
+            "value": "은 프레임(피노&플뤼) · +44G · 456매 OVER"
+          },
+          {
+            "label": "설정 6 농후",
+            "value": "금 프레임(집합 화면) · +66G · 666매 OVER · AT 종료 화면에 디스플레이 표시"
+          },
+          {
+            "label": "마기우스 마크",
+            "value": "주기 추첨 맵에 4개 이상이면 천국 모드 농후 + 설정 4 이상 농후",
+            "note": "p-town 기재"
+          }
+        ],
+        "sources": [
+          {
+            "title": "なな徹 設定判別",
+            "url": "https://nana-press.com/kaiseki/machine/1040/32804/"
+          },
+          {
+            "title": "パチセブン",
+            "url": "https://pachiseven.jp/machines_v2/7259"
+          },
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4885"
+          }
+        ]
+      },
+      {
+        "title": "CZ·전뇌 존·룬 드라이브",
+        "kind": "mode",
+        "intro": "CZ 도루시아 공방전에 성공하면 보너스가 됩니다. 전뇌 존과 룬 드라이브는 CZ와 주기 포인트를 늘리는 구간입니다.",
+        "tables": [
+          {
+            "caption": "통상 시 구간 비교",
+            "columns": [
+              "구간",
+              "계기",
+              "계속",
+              "기대"
+            ],
+            "rows": [
+              [
+                "도루시아 공방전(CZ)",
+                "주기 도달·룬 드라이브 성공",
+                "11G+α",
+                "보너스 약 60%"
+              ],
+              [
+                "전뇌 존",
+                "레어 역 추첨",
+                "5G ST(소역으로 재세트)",
+                "10세트 계속으로 혁명 보너스"
+              ],
+              [
+                "룬 드라이브",
+                "BAR 맞춤",
+                "8G+α ST",
+                "룬 3회(3세트)로 CZ 농후"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "CZ 확률",
+            "value": "약 1/324 (전 설정 공통)"
+          },
+          {
+            "label": "BAR 맞춤",
+            "value": "약 1/682",
+            "note": "룬 드라이브 돌입 계기. BAR가 어긋나면(BAR 어긋남) AT 직격 농후이며 일부에서 롱 프리즈"
+          },
+          {
+            "label": "롱 프리즈",
+            "value": "상위 AT 20G + V스톡 9개",
+            "note": "BAR 어긋남 일부에서 발생"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4885"
+          },
+          {
+            "title": "パチセブン",
+            "url": "https://pachiseven.jp/machines_v2/7259"
+          }
+        ]
+      },
+      {
+        "title": "보너스와 AT 구조",
+        "kind": "mode",
+        "intro": "보너스를 통과하면 AT가 되고, AT는 세트 계속형입니다. 3세트 계속하면 상위 AT로 올라갑니다.",
+        "tables": [
+          {
+            "caption": "보너스·AT 비교",
+            "columns": [
+              "구분",
+              "계속",
+              "순증",
+              "특징"
+            ],
+            "rows": [
+              [
+                "혁명 보너스",
+                "45G+α",
+                "약 9.0매/G",
+                "666매 돌파로 AT · AT 기대 약 53%"
+              ],
+              [
+                "결전 보너스",
+                "전개에 따라 변화",
+                "—",
+                "최종 결전 클리어 시 AT 농후"
+              ],
+              [
+                "혁명 러시(AT)",
+                "10~100G/세트",
+                "약 9.0매/G",
+                "계속 기대 약 75%"
+              ],
+              [
+                "초혁명 러시(상위 AT)",
+                "10~100G/세트",
+                "약 9.0매/G",
+                "계속 기대 최대 약 90%"
+              ]
+            ]
+          }
+        ],
+        "items": [
+          {
+            "label": "하라키리 챌린지",
+            "value": "세트 종료 후 4G · AT 계속 기대 약 75%(상위 AT 중 약 90%)",
+            "note": "레어 역은 계속 농후. 성공 일부에서 하라키리 드라이브·혁명 분기"
+          },
+          {
+            "label": "혁명의 검",
+            "value": "2G · V스톡 기대 약 46%",
+            "note": "레어 역 계기, 룬 2개 정렬 시 기대"
+          },
+          {
+            "label": "혁명 분기",
+            "value": "2택 맞추기로 +100G 하라키리 드라이브",
+            "note": "실패해도 AT 계속(보너스 중은 AT 농후)"
+          },
+          {
+            "label": "하라키리 드라이브",
+            "value": "최소 +50G",
+            "note": "AT 게임 수가 50G 이상일 때 선택될 수 있는 상승 요소. AT 중 갑자기 발생하는 '돌발 하라키리 드라이브'도 있음"
+          }
+        ],
+        "sources": [
+          {
+            "title": "p-town 機種情報",
+            "url": "https://p-town.dmm.com/machines/4885"
+          }
+        ]
+      }
+    ]
+  },
+  "visualGuide": {
+    "mainImage": {
+      "url": "./assets/images/official/l-valvrave-2/machine.png",
+      "alt": "스마스로 혁명기 발브레이브 2 기기 외관",
+      "caption": "기기 외관",
+      "credit": "P-WORLD 기종 데이터베이스",
+      "sourceUrl": "https://www.p-world.co.jp/machine/database/10352"
+    },
+    "translatedImages": [],
+    "distributionCharts": [],
+    "keyStats": [
+      {
+        "value": "1/476",
+        "label": "설정1 초당첨 합산"
+      },
+      {
+        "value": "9.0매/G",
+        "label": "AT 순증(약)"
+      },
+      {
+        "value": "114.9%",
+        "label": "설정6 기계할"
+      }
+    ],
+    "steps": [
+      {
+        "phase": "STEP 01 · 통상시",
+        "title": "주기 포인트와 CZ",
+        "description": "매 G 주기 포인트를 모아 규정에 닿으면 CZ 도루시아 공방전(11G+α·보너스 기대 약 60%). 레어 역으로 전뇌 존, BAR 맞춤으로 룬 드라이브를 노린다."
+      },
+      {
+        "phase": "STEP 02 · 보너스·AT",
+        "title": "혁명 보너스와 혁명 러시",
+        "description": "혁명 보너스(45G+α)에서 666매를 넘기면 AT. 혁명 러시는 순증 약 9.0매/G·세트당 10~100G이며, 세트가 끝나면 하라키리 챌린지(4G)로 계속을 판정한다(기대 약 75%)."
+      },
+      {
+        "phase": "STEP 03 · 상위 AT",
+        "title": "초혁명 러시",
+        "description": "AT 3세트 계속 또는 롱 프리즈로 돌입. 계속 기대 최대 약 90%이며 추첨 구조는 혁명 러시와 같고 각 추첨값이 약간 우대된다."
+      }
+    ],
+    "flowDiagram": {
+      "ariaLabel": "스마스로 혁명기 발브레이브 2 게임 진행 흐름",
+      "normal": {
+        "eyebrow": "NORMAL",
+        "title": "통상시",
+        "detail": "주기 포인트로 CZ를 노리고 레어 역으로 전뇌 존·룬 드라이브"
+      },
+      "initialConnector": "AT 진입",
+      "initialAriaLabel": "AT 진입 경로 3가지",
+      "initialOutcomes": [
+        {
+          "rate": "CZ 약 1/324",
+          "title": "도루시아 공방전",
+          "description": "11G+α · 소역으로 발전\n성공하면 보너스 (기대 약 60%)",
+          "route": "보너스 → AT",
+          "tone": "rush"
+        },
+        {
+          "rate": "BAR 맞춤 약 1/682",
+          "title": "룬 드라이브",
+          "description": "ST형 CZ 고확률 존\n룬 3회로 CZ 농후",
+          "route": "CZ 농후",
+          "tone": "rush"
+        },
+        {
+          "rate": "BAR 맞춤 시 약 3~7%",
+          "title": "AT 직격",
+          "description": "BAR 맞춤 일부에서 직격\n설정이 높을수록 우대",
+          "route": "AT 직행",
+          "tone": "premium"
+        }
+      ],
+      "mergeLabel": "AT 진입",
+      "rush": {
+        "eyebrow": "AT · 약 9.0매/G",
+        "title": "혁명 러시",
+        "detail": "세트당 10~100G · V스톡과 혁명의 검으로 계속 · 계속 기대 약 75%"
+      },
+      "rushConnector": "AT 중 주요 분기",
+      "rushAriaLabel": "AT 중 주요 분기 3가지",
+      "rushOutcomes": [
+        {
+          "rate": "V스톡 기대 약 46%",
+          "title": "혁명의 검",
+          "description": "레어 역에서 2G 찬스 존\nV스톡 획득 대찬스",
+          "route": "V스톡",
+          "tone": "rush"
+        },
+        {
+          "rate": "계속 기대 약 75%",
+          "title": "하라키리 챌린지",
+          "description": "세트 종료 후 4G 계속 판정\n레어 역은 계속 농후",
+          "route": "세트 계속",
+          "tone": "rush"
+        },
+        {
+          "rate": "최소 +50G",
+          "title": "하라키리 드라이브",
+          "description": "혁명 분기 성공(+100G) 등\nAT 게임 수 상승 특화",
+          "route": "G수 상승",
+          "tone": "premium"
+        }
+      ],
+      "secondaryConnector": "3세트 계속·롱 프리즈",
+      "secondaryRush": {
+        "eyebrow": "UPPER AT",
+        "title": "초혁명 러시",
+        "detail": "계속 기대 최대 약 90% · 추첨 구조는 혁명 러시와 동일"
+      },
+      "secondaryRushConnector": "초혁명 러시 중",
+      "secondaryAriaLabel": "초혁명 러시 흐름 2가지",
+      "secondaryOutcomes": [
+        {
+          "rate": "롱 프리즈",
+          "title": "상위 AT 20G + V스톡 9개",
+          "description": "BAR 어긋남(AT 직격 농후)의\n일부에서 발생",
+          "route": "최강 특화",
+          "tone": "premium"
+        },
+        {
+          "rate": "계속 기대 약 90%",
+          "title": "세트 계속",
+          "description": "하라키리 챌린지로 판정\n실패하면 통상 복귀",
+          "route": "↩ 초혁명 러시",
+          "tone": "return"
+        }
+      ],
+      "loopNote": "천장은 최대 6주기·CZ간 999G·AT/보너스간 1500G. 설정 변경 후에는 3주기·1000G로 단축"
+    }
+  }
+}

@@ -4,6 +4,7 @@
   "category": "slot",
   "selectionBasis": "owner-selected starter set; not a popularity ranking",
   "machines": [
+    { "id": "l-valvrave-2", "file": "l-valvrave-2.json", "releaseDate": "2025-11-04" },
     { "id": "l-toaru-index-2", "file": "l-toaru-index-2.json", "releaseDate": "2026-08-03" },
     { "id": "l-monkeyturn-v", "file": "l-monkeyturn-v.json", "releaseDate": "2023-12-04" },
     { "id": "l-mahoako", "file": "l-mahoako.json", "releaseDate": "2026-10-19" },
